@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 selenium = "*"
+beautifulsoup4 = "*"
+types-beautifulsoup4 = "*"
 
 [dev-packages]
 black = "*"
