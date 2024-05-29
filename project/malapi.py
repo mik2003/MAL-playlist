@@ -27,19 +27,20 @@ class MALAPI:
     # Sleep time between API calls [s]
     sleep_time = 0.1
 
+    # MAL anime page URL
+    url_anime = "https://myanimelist.net/anime/{}/"
+    url_animelist = "https://myanimelist.net/animelist/{}?order=-5&status=2"
+
 
 def get_keys(path: str) -> Any:
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
-if __name__ == "__main__":
+def mal_api_call(user_name: str, offset: int = 0) -> None:
     keys = get_keys(MALAPI.keys)
     client_id = keys["Client_ID"]
     headers = {"X-MAL-CLIENT-ID": client_id}
-
-    user_name = "MysticReaction"
-    offset = 300
 
     # Set log to None to print to the console instead
     log = open(
@@ -72,7 +73,7 @@ if __name__ == "__main__":
         )
         r = requests.get(
             MALAPI.v2 + MALAPI.animelist.format(user_name, offset),
-            headers={"X-MAL-CLIENT-ID": client_id},
+            headers=headers,
             timeout=10,
         )
         time.sleep(MALAPI.sleep_time)
@@ -102,15 +103,9 @@ if __name__ == "__main__":
 
         if os.path.exists(MALAPI.anime_cache.format(anime_id)):
             print(
-                f"Retrieving '{anime_title}' information from cache...",
+                f"'{anime_title}' information is already in cache.",
                 file=log,
             )
-            with open(
-                MALAPI.anime_cache.format(anime_id),
-                "r",
-                encoding="utf-8",
-            ) as anime_file:
-                anime_data = json.load(anime_file)
         else:
             print(
                 f"Retrieving '{anime_title}' information from MyAnimeList...",
@@ -118,19 +113,12 @@ if __name__ == "__main__":
             )
             r = requests.get(
                 MALAPI.v2 + MALAPI.anime.format(anime_id),
-                headers={"X-MAL-CLIENT-ID": client_id},
+                headers=headers,
                 timeout=10,
             )
             time.sleep(MALAPI.sleep_time)
             if r.status_code == 200:
                 print(f"Caching '{anime_title}' information...", file=log)
-                with open(
-                    MALAPI.anime_cache.format(anime_id),
-                    "w",
-                    encoding="utf-8",
-                ) as anime_file:
-                    anime_file.write(r.text)
-                anime_data = r.json()
             else:
                 print(
                     f"Retrieval of '{anime_title}' information failed: "
@@ -142,3 +130,7 @@ if __name__ == "__main__":
 
     if log:
         log.close()
+
+
+if __name__ == "__main__":
+    mal_api_call("mik2003", 0)
