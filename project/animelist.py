@@ -56,8 +56,8 @@ class ThemeSong:
         pattern = (
             r"(?:#(?P<index>\d+):)?"
             + r"\s*\"(?P<name>[^\"]+)\""
-            + r"\s*(?:by\s+(?P<artist>(?:(?!\s+\(ep).)+))?"
-            + r"\s*(?:\((?P<episode>ep.+)\))?"
+            + r"\s*(?:by\s+(?P<artist>(?:(?!\s+\([^()]*ep[^()]+\)$).)+))?"
+            + r"\s*(?:\((?P<episode>[^()]*ep[^()]+)\)$)?"
         )
 
         # Match regex
