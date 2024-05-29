@@ -1,6 +1,5 @@
 from project.animelist import AnimeList
 from project.malapi import MALAPI
-from project.youtube import yt_search
 
 
 def html_encode(username: str) -> None:
@@ -21,33 +20,30 @@ def html_encode(username: str) -> None:
             + f"""<a href="{MALAPI.url_animelist.format(username)}">"""
             + f"""Anime playlist {username}</a></h1><ol>"""
         )
-        n = len(anime_list.anime)
-        i = 0
         for anime in anime_list.anime:
-            i += 1
-            print(
-                f"({i:0{len(str(n))}d}/{n}) "
-                + f"[YT] Searching theme songs: {anime.title}"
-            )
             f.write(
                 f"""<li><a href="{MALAPI.url_anime.format(anime.id)}">"""
                 + f"""{anime.title}</a></li>"""
                 + """<ul><li>Opening Theme</li><ol>"""
             )
             for opening in anime.opening_themes:
-                videos = yt_search(f"{opening.name} {opening.artist}")
-                if videos:
-                    f.write(
-                        f"""<li><a href="{videos[0]}">{opening.name} """
-                        + f"""by {opening.artist} {opening.episode}</a></li>"""
-                    )
+                li_content = (
+                    (f'<a href="{opening.url[0]}">' if opening.url else "")
+                    + f'"{opening.name}"'
+                    + (f" by {opening.artist}" if opening.artist else "")
+                    + (f" ({opening.episode})" if opening.episode else "")
+                    + ("</a>" if opening.url else "")
+                )
+                f.write(f"<li>{li_content}</li>")
             f.write("""</ol><li>Ending Theme</a></li><ol>""")
             for ending in anime.ending_themes:
-                videos = yt_search(f"{ending.name} {ending.artist}")
-                if videos:
-                    f.write(
-                        f"""<li><a href="{videos[0]}">{ending.name} """
-                        + f"""by {ending.artist} {ending.episode}</a></li>"""
-                    )
+                li_content = (
+                    (f'<a href="{ending.url[0]}">' if ending.url else "")
+                    + f'"{ending.name}"'
+                    + (f" by {ending.artist}" if ending.artist else "")
+                    + (f" ({ending.episode})" if ending.episode else "")
+                    + ("</a>" if ending.url else "")
+                )
+                f.write(f"<li>{li_content}</li>")
             f.write("""</ol></ul>""")
         f.write("""</ol></body></html>""")

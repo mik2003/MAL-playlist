@@ -7,6 +7,7 @@ import re
 from typing import Any
 
 from project.malapi import MALAPI
+from project.youtube import yt_search
 
 
 class ThemeSong:
@@ -46,24 +47,37 @@ class ThemeSong:
         self.name: str
         self.artist: str
         self.episode: str
+        self.yt_url: list[str]
         self._parse_text()
+        self._retrieve_yt_url()
 
     def _parse_text(self) -> None:
-        # Extract index
-        index_match = re.search(r"#(\d+):", self.text)
-        self.index = index_match.group(1) if index_match else ""
+        # Regular expression (hope it's right...)
+        pattern = (
+            r"(?:#(?P<index>\d+):)?"
+            + r"\s*\"(?P<name>[^\"]+)\""
+            + r"\s*(?:by\s+(?P<artist>(?:(?!\s+\(ep).)+))?"
+            + r"\s*(?:\((?P<episode>ep.+)\))?"
+        )
 
-        # Extract name
-        name_match = re.search(r"\"(.+?)\" by", self.text)
-        self.name = name_match.group(1) if name_match else ""
+        # Match regex
+        match = re.search(pattern, self.text)
+        if match:
+            self.index = match.group("index")
+            self.name = match.group("name")
+            self.artist = match.group("artist")
+            self.episode = match.group("episode")
 
-        # Extract artist
-        artist_match = re.search(r"by (.+?) \(", self.text)
-        self.artist = artist_match.group(1) if artist_match else ""
-
-        # Extract episode
-        episode_match = re.search(r"\((ep \d+)\)", self.text)
-        self.episode = episode_match.group(1) if episode_match else ""
+    def _retrieve_yt_url(self) -> None:
+        with open(MALAPI.yt, "r", encoding="utf-8") as youtube_json:
+            youtube_data = json.load(youtube_json)
+        if str(self.id) in youtube_data:
+            self.url = youtube_data[str(self.id)]
+        else:
+            self.url = yt_search(f"{self.name} {self.artist}")
+            youtube_data[str(self.id)] = self.url
+            with open(MALAPI.yt, "w", encoding="utf-8") as youtube_json:
+                json.dump(youtube_data, youtube_json, indent=4)
 
     def __repr__(self) -> str:
         return (
@@ -170,7 +184,13 @@ class AnimeList:
                     animelist_data = json.load(animelist_json)
                 if animelist_data:
                     if "data" in animelist_data:
+                        n = len(animelist_data["data"]) + offset
+                        i = 0 + offset
                         for anime in animelist_data["data"]:
+                            i += 1
+                            print(
+                                f"({i:0{len(str(n))}d}/{n}) Initializing "
+                                + f"anime '{anime["node"]["title"]}'")
                             self.anime.append(Anime(anime["node"]["id"]))
                 else:
                     print(
@@ -184,6 +204,7 @@ class AnimeList:
             except FileNotFoundError as file_err:
                 print(file_err)
                 break
+        self.anime.reverse()
 
     def __repr__(self) -> str:
         return (

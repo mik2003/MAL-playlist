@@ -31,6 +31,9 @@ class MALAPI:
     url_anime = "https://myanimelist.net/anime/{}/"
     url_animelist = "https://myanimelist.net/animelist/{}?order=-5&status=2"
 
+    # YouTube Data Cache
+    yt = os.path.join("project", "cache", "youtube", "youtube.json")
+
 
 def get_keys(path: str) -> Any:
     with open(path, "r", encoding="utf-8") as f:
@@ -133,4 +136,4 @@ def mal_api_call(user_name: str, offset: int = 0) -> None:
 
 
 if __name__ == "__main__":
-    mal_api_call("mik2003", 0)
+    mal_api_call("mik2003", 500)

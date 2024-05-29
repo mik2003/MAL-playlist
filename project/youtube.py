@@ -26,6 +26,8 @@ def yt_search(search_str: str, suffix: str = "") -> list[str]:
     list[str]
         List of search results URLs by order of search result.
     """
+    print(f"[YT] Searching theme song '{search_str}'...")
+
     # Encode str to URL
     search_keyword = quote(search_str)
     if suffix:
