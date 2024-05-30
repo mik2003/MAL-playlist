@@ -9,3 +9,6 @@ To obtain your own anime list playlist, you need to change the "\_\_main\_\_.py"
 When you run the program an HTML file with name "anime_playlist_{username}.html" is created. While the program is still running, progress is printed in the console.
 
 For now, the program uses the MAL API only for retrieving individual anime information, because there are some inconsistences between the anime list retrieved through the API and the one scraped using selenium.
+
+## See also
+[Take a look at my MAL profile :)](https://myanimelist.net/profile/mik2003)
