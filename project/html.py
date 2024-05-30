@@ -20,7 +20,7 @@ def html_encode(username: str) -> None:
         f.write(
             f"""<!DOCTYPE html><html><head><title>Anime playlist {username}"""
             + """</title><style>
-                ol {
+                ol.anime-list {
                     counter-reset: anime-counter;
                     margin-left: -30px;
                 }
@@ -54,7 +54,7 @@ def html_encode(username: str) -> None:
                 }
                 </style></head><body><h1>"""
             + f"""<a href="{MALAPI.url_animelist.format(username)}">"""
-            + f"""Anime playlist {username}</a></h1><ol>"""
+            + f"""Anime playlist {username}</a></h1><ol class="anime-list">"""
         )
         for anime in anime_list.anime:
             f.write(
