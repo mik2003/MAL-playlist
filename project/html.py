@@ -36,6 +36,9 @@ def html_encode(username: str) -> None:
                 }
                 .anime-content img {
                     margin-right: 15px;
+                    float: left;
+                    display: block;
+                    overflow: hidden;
                 }
                 .anime-details {
                     flex: 1;
@@ -56,7 +59,7 @@ def html_encode(username: str) -> None:
         for anime in anime_list.anime:
             f.write(
                 """<li class="anime-item"><div class="anime-content"><img sr"""
-                + f"""c="{anime.picture}" alt="{anime.title}" height="150">"""
+                + f"""c="{anime.picture}" alt="{anime.title}" width="100">"""
                 + """<div class="anime-details"><a href"""
                 f"""="{MALAPI.url_anime.format(anime.id)}", """
                 + f"""style="font-weight: bold;">{anime.title}</a>"""
