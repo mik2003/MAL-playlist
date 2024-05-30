@@ -20,6 +20,26 @@ def html_encode(username: str) -> None:
         f.write(
             f"""<!DOCTYPE html><html><head><title>Anime playlist {username}"""
             + """</title><style>
+                /* Light mode */
+                @media (prefers-color-scheme: light) {
+                    :root {
+                        --body-bg: #FFFFFF;
+                        --body-color: #000000;
+                    }
+                }
+
+                /* Dark mode */
+                @media (prefers-color-scheme: dark) {
+                    :root {
+                        --body-bg: #000000;
+                        --body-color: #FFFFFF;
+                    }
+                }
+
+                body {
+                    background: var(--body-bg);
+                    color: var(--body-color);
+                }
                 ol.anime-list {
                     counter-reset: anime-counter;
                     margin-left: -30px;
