@@ -4,9 +4,12 @@ Module for anime theme songs retrieval from MyAnimeList.
 
 import json
 import re
+import time
 from typing import Any
 
-from project.malapi import MALAPI
+from selenium import webdriver
+
+from project.malapi import MALAPI, mal_api_retrieve_anime
 from project.youtube import yt_search
 
 
@@ -115,6 +118,7 @@ class Anime:
         self.title: str = ""
         self.opening_themes: list[ThemeSong] = []
         self.ending_themes: list[ThemeSong] = []
+
         try:
             with open(
                 MALAPI.anime_cache.format(anime_id), "r", encoding="utf-8"
@@ -169,12 +173,12 @@ class AnimeList:
 
     def __init__(
         self,
-        username: str,
+        username: str | None,
     ) -> None:
         self.username = username
         self.anime: list[Anime] = []
         offset = 0
-        while True:
+        while True and username is not None:
             try:
                 with open(
                     MALAPI.animelist_cache.format(username, offset),
@@ -190,7 +194,8 @@ class AnimeList:
                             i += 1
                             print(
                                 f"({i:0{len(str(n))}d}/{n}) Initializing "
-                                + f"anime '{anime["node"]["title"]}'")
+                                + f"anime '{anime["node"]["title"]}'"
+                            )
                             self.anime.append(Anime(anime["node"]["id"]))
                 else:
                     print(
@@ -213,3 +218,70 @@ class AnimeList:
             + f"Anime: {self.anime}, "
             + ")"
         )
+
+    @staticmethod
+    def mal_scrape(
+        username: str
+    ) -> "AnimeList":
+        """
+        Retrieve User's MyAnimeList.
+
+        Parameters
+        ----------
+        username : str
+            User's MyAnimeList username.
+        driver : webdriver.firefox.webdriver.WebDriver
+            Firefox webdriver, initiated from `project.util.init_firefox`.
+
+        Returns
+        -------
+        list[tuple[str, str]]
+            List of entries in anime list. Each entry contains the
+            MyAnimeList anime page URL and the anime title.
+        """
+        print(f"Scraping anime list for {username} from MyAnimeList...")
+
+        # Initialize a headless Firefox browser.
+        options = webdriver.FirefoxOptions()
+        options.add_argument("--headless")
+        driver = webdriver.Firefox(options=options)
+
+        # Load the MAL page
+        driver.get(
+            MALAPI.url_animelist.format(username)
+        )
+
+        # Scroll to the bottom of the page multiple times
+        num_scrolls = 5
+        for _ in range(num_scrolls):
+            # Scroll to the bottom of the page
+            driver.execute_script(
+                "window.scrollTo(0, document.body.scrollHeight);"
+            )
+            # Wait for some time to let content load
+            time.sleep(2)
+
+        # Extract anime titles
+        anime_list_raw = re.findall(
+            r'<a href="/anime/(\d+)/[^"]+" class="link sort">([^<]+)</a>',
+            driver.page_source
+        )
+
+        # Terminate browser
+        driver.quit()
+
+        n = len(anime_list_raw)
+
+        print(f"Found list of {n} anime for {username}!")
+        print("Initializing anime list...")
+
+        anime_list = AnimeList(None)
+
+        i = 0
+        for anime in anime_list_raw:
+            i += 1
+            print(f"({i:0{len(str(n))}d}/{n}) {anime[1]}")
+            mal_api_retrieve_anime(anime[0], anime[1])
+            anime_list.anime.append(Anime(anime[0]))
+
+        return anime_list

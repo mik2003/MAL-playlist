@@ -11,7 +11,10 @@ def html_encode(username: str) -> None:
     username : str
         User's MyAnimeList username.
     """
-    anime_list = AnimeList(username)
+    # Use this to load from the MAL API cache
+    # anime_list = AnimeList(username)
+    # Use this to scrape MyAnimeList directly
+    anime_list = AnimeList.mal_scrape(username)
 
     with open(f"anime_playlist_{username}.html", "w", encoding="utf-8") as f:
         f.write(
