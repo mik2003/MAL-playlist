@@ -4,6 +4,27 @@
 <head>
     <title>Anime playlist mik2003</title>
     <style>
+        /* Light mode */
+        @media (prefers-color-scheme: light) {
+            :root {
+                --body-bg: #FFFFFF;
+                --body-color: #000000;
+            }
+        }
+
+        /* Dark mode */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --body-bg: #000000;
+                --body-color: #FFFFFF;
+            }
+        }
+
+        body {
+            background: var(--body-bg);
+            color: var(--body-color);
+        }
+
         ol.anime-list {
             counter-reset: anime-counter;
             margin-left: -30px;
