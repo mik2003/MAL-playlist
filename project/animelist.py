@@ -107,6 +107,8 @@ class Anime:
         Anime ID, as defined in the MAL API.+
     title : str
         Anime title.
+    picture : str
+        URL to the anime picture.
     opening_themes : list[ThemeSong]
         List of anime opening themes.
     ending_themes : list[ThemeSong]
@@ -116,6 +118,7 @@ class Anime:
     def __init__(self, anime_id: str) -> None:
         self.id: str = ""
         self.title: str = ""
+        self.picture: str = ""
         self.opening_themes: list[ThemeSong] = []
         self.ending_themes: list[ThemeSong] = []
 
@@ -129,6 +132,12 @@ class Anime:
                     self.id = anime_data["id"]
                 if "title" in anime_data:
                     self.title = anime_data["title"]
+                if "main_picture" in anime_data:
+                    anime_picture = anime_data["main_picture"]
+                    if "medium" in anime_picture:
+                        self.picture = anime_picture["medium"]
+                    elif "large" in anime_picture:
+                        self.picture = anime_picture["large"]
                 if "opening_themes" in anime_data:
                     for opening_theme in anime_data["opening_themes"]:
                         self.opening_themes.append(ThemeSong(opening_theme))
