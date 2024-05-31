@@ -20,7 +20,13 @@ class MALAPI:
     )
     anime = "/anime/{}?fields=opening_themes,ending_themes"
     animelist_cache = os.path.join(
-        "project", "cache", "animelist", "{}_{}.json"
+        "project", "cache", "animelist", "partial_{}_{}.json"
+    )
+    animelist_raw_cache = os.path.join(
+        "project", "cache", "animelist", "raw_{}.json"
+    )
+    animelist_full_cache = os.path.join(
+        "project", "cache", "animelist", "full_{}.json"
     )
     anime_cache = os.path.join("project", "cache", "anime", "{}.json")
     log = os.path.join("project", "log", "{}.log")

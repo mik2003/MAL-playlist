@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Playlist</title>
+
+    <link rel="stylesheet" href="../css/youtube_playlist.css">
+</head>
+
+<body>
+    <h1>Anime Playlist</h1>
+    <ul class="playlist" id="playlist"></ul>
+    <div class="controls">
+        <button onclick="prevTrack()">Previous</button>
+        <button onclick="nextTrack()">Next</button>
+        <button onclick="toggleShuffle()">Shuffle</button>
+        <button onclick="toggleRepeat()">Repeat</button>
+    </div>
+    <div class="current-track" id="current-track">Current Track: None</div>
+
+    <script src="../js/youtube_playlist.js"></script>
+</body>
+
+</html>

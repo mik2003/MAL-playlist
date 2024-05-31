@@ -14,7 +14,7 @@ def html_encode(username: str) -> None:
     # Use this to load from the MAL API cache
     # anime_list = AnimeList(username)
     # Use this to scrape MyAnimeList directly
-    anime_list = AnimeList.mal_scrape(username)
+    anime_list = AnimeList.full(username)
 
     with open(f"anime_playlist_{username}.html", "w", encoding="utf-8") as f:
         f.write(
@@ -35,21 +35,25 @@ def html_encode(username: str) -> None:
             )
             for opening in anime.opening_themes:
                 li_content = (
-                    (f'<a href="{opening.url[0]}">' if opening.url else "")
+                    (
+                        f'<a href="{opening.yt_url[0]}">'
+                        if opening.yt_url
+                        else ""
+                    )
                     + f'"{opening.name}"'
                     + (f" by {opening.artist}" if opening.artist else "")
                     + (f" ({opening.episode})" if opening.episode else "")
-                    + ("</a>" if opening.url else "")
+                    + ("</a>" if opening.yt_url else "")
                 )
                 f.write(f"<li>{li_content}</li>")
             f.write("</ol><li>Ending Theme</li><ol>")
             for ending in anime.ending_themes:
                 li_content = (
-                    (f'<a href="{ending.url[0]}">' if ending.url else "")
+                    (f'<a href="{ending.yt_url[0]}">' if ending.yt_url else "")
                     + f'"{ending.name}"'
                     + (f" by {ending.artist}" if ending.artist else "")
                     + (f" ({ending.episode})" if ending.episode else "")
-                    + ("</a>" if ending.url else "")
+                    + ("</a>" if ending.yt_url else "")
                 )
                 f.write(f"<li>{li_content}</li>")
             f.write("</ol></li></ul></div></div></li>")
