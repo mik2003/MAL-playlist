@@ -3,67 +3,8 @@
 
 <head>
     <title>Anime playlist mik2003</title>
-    <style>
-        /* Light mode */
-        @media (prefers-color-scheme: light) {
-            :root {
-                --body-bg: #FFFFFF;
-                --body-color: #000000;
-            }
-        }
 
-        /* Dark mode */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --body-bg: #000000;
-                --body-color: #FFFFFF;
-            }
-        }
-
-        body {
-            background: var(--body-bg);
-            color: var(--body-color);
-        }
-
-        ol.anime-list {
-            counter-reset: anime-counter;
-            margin-left: -30px;
-        }
-
-        li.anime-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-            counter-increment: anime-counter;
-        }
-
-        .anime-content {
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .anime-content img {
-            margin-right: 15px;
-            float: left;
-            display: block;
-            overflow: hidden;
-        }
-
-        .anime-details {
-            flex: 1;
-        }
-
-        .anime-details::before {
-            content: "[" counter(anime-counter) "]";
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        .anime-details ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
