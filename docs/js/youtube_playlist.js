@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             console.log('JSON data loaded successfully:', data); // Check if JSON is loaded
             buildPlaylist(data);
+            onYouTubeIframeAPIReady();  // Ensure the player is ready
             loadTrack(0);
         })
         .catch(error => console.error('Error loading JSON:', error));
