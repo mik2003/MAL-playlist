@@ -40,6 +40,9 @@ function loadTrack(index) {
         const track = playlist[currentTrackIndex];
         const currentTrackElement = document.getElementById('current-track');
         currentTrackElement.innerHTML = `Current Track: <a href="${track.yt_url}" target="_blank">${track.name} by ${track.artist}</a>`;
+        const videoPlayer = document.getElementById('video-player');
+        const videoId = track.yt_url.split('v=')[1].split('&')[0]; // Extract video ID from URL
+        videoPlayer.src = `https://www.youtube.com/embed/${videoId}`;
         console.log('Loaded track:', track); // Check if track is loaded correctly
     } else {
         console.error('Invalid track index:', index);
