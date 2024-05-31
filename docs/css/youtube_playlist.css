@@ -17,47 +17,4 @@
 body {
     background: var(--body-bg);
     color: var(--body-color);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.playlist-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f2f2f2;
-    border-radius: 5px;
-}
-
-.video-container {
-    margin-bottom: 20px;
-}
-
-.controls button {
-    margin-right: 10px;
-    padding: 8px 16px;
-    cursor: pointer;
-    border: none;
-    background-color: #4caf50;
-    color: white;
-    border-radius: 5px;
-}
-
-.controls button:hover {
-    background-color: #45a049;
-}
-
-.playlist {
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-.playlist-items li {
-    cursor: pointer;
-    padding: 8px;
-}
-
-.playlist-items li:hover {
-    background-color: #e6e6e6;
 }

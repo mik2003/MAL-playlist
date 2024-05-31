@@ -2,28 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playlist</title>
+    <title>Anime Themes Playlist</title>
     <link rel="stylesheet" href="../css/youtube_playlist.css">
 </head>
 
 <body>
-    <div class="playlist-container">
-        <div class="video-container">
-            <iframe id="youtube-video" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="controls">
-            <button id="prev-btn">Previous</button>
-            <button id="play-btn">Play</button>
-            <button id="next-btn">Next</button>
-            <button id="shuffle-btn">Shuffle</button>
-            <button id="repeat-btn">Repeat</button>
-        </div>
-        <div class="playlist">
-            <ul id="playlist-items"></ul>
+    <h1>Anime Themes Playlist</h1>
+    <div id="player">
+        <iframe id="yt-player"></iframe>
+        <div id="controls">
+            <button id="prev"></button>
+            <button id="play"></button>
+            <button id="pause"></button>
+            <button id="next"></button>
+            <button id="shuffle"></button>
+            <button id="repeat"></button>
         </div>
     </div>
+    <div id="playlist">
+        <div class="playlist-item"></div>
+
+    </div>
+
     <script src="../js/youtube_playlist.js"></script>
 </body>
 
