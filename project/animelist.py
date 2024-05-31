@@ -457,8 +457,18 @@ class AnimeList:
 
         return anime_list_full
 
+    def json_encode_songs(self, filename: str) -> None:
+        songs: dict[str, Any] = {}
+        for anime in self.anime:
+            for op in anime.opening_themes:
+                songs[str(op.id)] = op.json_encode()
+            for ed in anime.ending_themes:
+                songs[str(ed.id)] = ed.json_encode()
+        with open(filename, "w", encoding="utf-8") as songs_json:
+            songs_json.write(json.dumps(songs))
+
 
 if __name__ == "__main__":
     un = "mik2003"
     al = AnimeList.full(un)
-    print(al)
+    al.json_encode_songs("songs.json")

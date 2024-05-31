@@ -1,11 +1,11 @@
 const playlist = [
     {
         title: "Rouge no Dengon (Message of Rouge)",
-        yt_url: "https://www.youtube.com/embed/UJwtKY_iWkM"
+        yt_id: "UJwtKY_iWkM"
     },
     {
         title: "Soaring",
-        yt_url: "https://www.youtube.com/embed/gCVoKhGgShc"
+        yt_id: "gCVoKhGgShc"
     },
     // Add more playlist items here
 ];
@@ -17,8 +17,7 @@ const playlistItemsContainer = document.getElementById("playlist-items");
 
 function loadVideo(index) {
     const currentItem = playlist[index];
-    youtubePlayer.src = currentItem.yt_url;
-    youtubePlayer.play();
+    youtubePlayer.contentWindow.postMessage('{"event":"command","func":"' + 'loadVideoByUrl' + '","args":["https://www.youtube.com/embed/' + currentItem.yt_id + '?autoplay=1&enablejsapi=1","0","normal"]}', '*');
 }
 
 function loadPlaylistItems() {
