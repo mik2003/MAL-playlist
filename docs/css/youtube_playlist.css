@@ -49,7 +49,7 @@ body {
     font-size: 1.2em;
 }
 
-iframe {
+#player {
     width: 560px;
     height: 315px;
     margin-top: 20px;
