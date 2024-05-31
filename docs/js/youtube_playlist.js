@@ -2,6 +2,7 @@ let playlist = [];
 let currentTrackIndex = 0;
 let shuffle = false;
 let repeat = false;
+let player;
 
 document.addEventListener('DOMContentLoaded', () => {
     fetch('../data/animelist.json')
@@ -19,6 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error loading JSON:', error));
 });
 
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '315',
+        width: '560',
+        events: {
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.ENDED) {
+        nextTrack();
+    }
+}
+
 function buildPlaylist(data) {
     const playlistElement = document.getElementById('playlist');
     data.anime.forEach(anime => {
@@ -34,15 +51,24 @@ function buildPlaylist(data) {
     console.log('Playlist built:', playlist); // Check if playlist is built correctly
 }
 
+function extractVideoId(url) {
+    const urlObj = new URL(url);
+    let videoId = urlObj.searchParams.get('v');
+    if (!videoId) {
+        const pathSegments = urlObj.pathname.split('/');
+        videoId = pathSegments[pathSegments.length - 1];
+    }
+    return videoId;
+}
+
 function loadTrack(index) {
     if (index >= 0 && index < playlist.length) {
         currentTrackIndex = index;
         const track = playlist[currentTrackIndex];
         const currentTrackElement = document.getElementById('current-track');
         currentTrackElement.innerHTML = `Current Track: <a href="${track.yt_url}" target="_blank">${track.name} by ${track.artist}</a>`;
-        const videoPlayer = document.getElementById('video-player');
-        const videoId = track.yt_url.split('v=')[1].split('&')[0]; // Extract video ID from URL
-        videoPlayer.src = `https://www.youtube.com/embed/${videoId}`;
+        const videoId = extractVideoId(track.yt_url);
+        player.loadVideoById(videoId);  // Load the video and start playing
         console.log('Loaded track:', track); // Check if track is loaded correctly
     } else {
         console.error('Invalid track index:', index);
