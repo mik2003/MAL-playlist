@@ -32,7 +32,10 @@ function goToNextSong() {
 // Next video button
 document.getElementById('next').addEventListener('click', goToNextSong);
 
-
+navigator.mediaSession.setActionHandler('nexttrack', () => {
+    console.log("mediaSession nexttrack");
+    goToNextSong();
+});
 
 var animeList;
 
@@ -91,7 +94,7 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '390',
         width: '640',
-        videoId: getNextSongID(animeList, i, j, k),
+        videoId: getNextSongID(),
         playerVars: {
             'autoplay': 1,
         },
