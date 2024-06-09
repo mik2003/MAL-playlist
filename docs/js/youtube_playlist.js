@@ -1,12 +1,74 @@
+var animeList;
+var animePlaylist;
+var i, j, k;
+
+var player;
+
 async function fetchAnimeList(animeListUrl) {
     let response = await fetch(animeListUrl);
     let data = await response.json()
     return data
 }
 
+async function loadAnimeList() {
+
+    animeList = await fetchAnimeList('https://mik2003.github.io/MAL-playlist/data/animelist.json');
+    console.log(animeList);
+
+}
+
+
+async function retrievePlaylist() {
+    await loadAnimeList();
+
+    animePlaylist = [];
+
+    for (i = 0; i < animeList.anime.length; i++) {
+        for (j = 0; j < animeList.anime[i].opening_themes.length; j++) {
+            animePlaylist[animePlaylist.length] = animeList.anime[i].opening_themes[j].yt_url.slice(32, 43)
+        }
+        for (k = 0; k < animeList.anime[i].ending_themes.length; k++) {
+            animePlaylist[animePlaylist.length] = animeList.anime[i].ending_themes[k].yt_url.slice(32, 43)
+        }
+    }
+
+    i = 0; j = 0; k = 0;
+
+    console.log(animePlaylist);
+}
+
+async function initializePlayer() {
+    await retrievePlaylist();
+
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+}
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '390',
+        width: '640',
+        videoId: getNextSongID(),
+        playerVars: {
+            'autoplay': 1,
+            // 'listType': 'playlist',
+        },
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
 
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
+    player.cuePlaylist(animePlaylist.slice(0, 10));
     event.target.playVideo();
 }
 
@@ -25,33 +87,15 @@ function stopVideo() {
 }
 
 function goToNextSong() {
-    player.loadVideoById(getNextSongID());
+    // player.loadVideoById(getNextSongID());
+    console.log('next');
+    player.nextVideo();
 }
 
-
-// Next video button
-document.getElementById('next').addEventListener('click', goToNextSong);
-
-navigator.mediaSession.setActionHandler('nexttrack', () => {
-    console.log("mediaSession nexttrack");
-    goToNextSong();
-});
-
-var animeList;
-
-async function loadAnimeList() {
-
-    animeList = await fetchAnimeList('https://mik2003.github.io/MAL-playlist/data/animelist.json')
-    console.log(animeList)
-
+function goToPreviousSong() {
+    player.previousVideo();
 }
 
-loadAnimeList();
-
-
-var i = 0;
-var j = 0;
-var k = 0;
 
 function getNextSongID() {
     console.log([i, j, k])
@@ -80,27 +124,17 @@ function getNextSongID() {
     }
 }
 
-// 2. This code loads the IFrame Player API code asynchronously.
-var tag = document.createElement('script');
+initializePlayer();
 
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// Previous video button
+document.getElementById('prev').addEventListener('click', goToPreviousSong)
 
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
-var player;
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-        height: '390',
-        width: '640',
-        videoId: getNextSongID(),
-        playerVars: {
-            'autoplay': 1,
-        },
-        events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-        }
-    });
-}
+// Next video button
+document.getElementById('next').addEventListener('click', goToNextSong);
+
+// var audio = document.createElement('audio');
+
+// navigator.mediaSession.setActionHandler('nexttrack', () => {
+//     console.log("mediaSession nexttrack");
+//     goToNextSong();
+// });
