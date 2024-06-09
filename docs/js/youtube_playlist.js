@@ -1,6 +1,25 @@
+// Function to create an array with n integers
+function createArray(n) {
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        array.push(i);
+    }
+    return array;
+}
+
+// Function to shuffle an array randomly
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+    return array;
+}
+
 var animeList;
 var animePlaylist;
-var i, j, k;
+var playlistIndeces;
+var i, j, k, n = 0;
 
 var player;
 
@@ -35,6 +54,8 @@ async function retrievePlaylist() {
     i = 0; j = 0; k = 0;
 
     console.log(animePlaylist);
+
+    playlistIndeces = createArray(animePlaylist.length);
 }
 
 async function initializePlayer() {
@@ -54,7 +75,7 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '390',
         width: '640',
-        videoId: getNextSongID(),
+        videoId: getNextSongId(),
         playerVars: {
             'autoplay': 1,
             // 'listType': 'playlist',
@@ -68,7 +89,7 @@ function onYouTubeIframeAPIReady() {
 
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
-    player.cuePlaylist(animePlaylist.slice(0, 10));
+    // player.cuePlaylist(animePlaylist.slice(0, 10));
     event.target.playVideo();
 }
 
@@ -87,50 +108,88 @@ function stopVideo() {
 }
 
 function goToNextSong() {
-    // player.loadVideoById(getNextSongID());
+    player.loadVideoById(getNextSongId());
     console.log('next');
-    player.nextVideo();
+    // player.nextVideo();
 }
 
 function goToPreviousSong() {
-    player.previousVideo();
+    player.loadVideoById(getPreviousSongId());
+    console.log('prev')
+}
+
+function pauseSong() {
+    player.pauseVideo();
+}
+
+function playSong() {
+    player.playVideo();
 }
 
 
-function getNextSongID() {
-    console.log([i, j, k])
-    if (i < animeList.anime.length) {
-        if (j < animeList.anime[i].opening_themes.length) {
-            j += 1;
-            console.log(animeList.anime[i].opening_themes[j - 1].yt_url);
-            return animeList.anime[i].opening_themes[j - 1].yt_url.slice(32, 43)
-        }
-        else if (k < animeList.anime[i].ending_themes.length) {
-            k += 1;
-            console.log(animeList.anime[i].ending_themes[j - 1].yt_url);
-            return animeList.anime[i].ending_themes[k - 1].yt_url.slice(32, 43)
-        } else {
-            i += 1;
-            j = 0;
-            k = 0;
-            return getNextSongID();
-        }
+function getNextSongId() {
+    if (n < animePlaylist.length) {
+        n += 1
     } else {
-        // Finished playlist
-        i = 0;
-        j = 0;
-        k = 0;
-        return getNextSongID();
+        n = 1
     }
+    return animePlaylist[playlistIndeces[n - 1]]
+
+    // console.log([i, j, k])
+    // if (i < animeList.anime.length) {
+    //     if (j < animeList.anime[i].opening_themes.length) {
+    //         j += 1;
+    //         console.log(animeList.anime[i].opening_themes[j - 1].yt_url);
+    //         return animeList.anime[i].opening_themes[j - 1].yt_url.slice(32, 43)
+    //     }
+    //     else if (k < animeList.anime[i].ending_themes.length) {
+    //         k += 1;
+    //         console.log(animeList.anime[i].ending_themes[j - 1].yt_url);
+    //         return animeList.anime[i].ending_themes[k - 1].yt_url.slice(32, 43)
+    //     } else {
+    //         i += 1;
+    //         j = 0;
+    //         k = 0;
+    //         return getNextSongID();
+    //     }
+    // } else {
+    //     // Finished playlist
+    //     i = 0;
+    //     j = 0;
+    //     k = 0;
+    //     return getNextSongID();
+    // }
+}
+
+function getPreviousSongId() {
+    if (n > 1) {
+        n -= 1
+    } else {
+        n = animePlaylist.length
+    }
+    return animePlaylist[playlistIndeces[n - 1]]
+}
+
+function shufflePlaylist() {
+    shuffleArray(playlistIndeces);
 }
 
 initializePlayer();
 
 // Previous video button
-document.getElementById('prev').addEventListener('click', goToPreviousSong)
+document.getElementById('prev').addEventListener('click', goToPreviousSong);
 
 // Next video button
 document.getElementById('next').addEventListener('click', goToNextSong);
+
+// Pause button
+document.getElementById('pause').addEventListener('click', pauseSong);
+
+// Play button
+document.getElementById('play').addEventListener('click', playSong);
+
+// Shuffle button
+document.getElementById('shuffle').addEventListener('click', shufflePlaylist);
 
 // var audio = document.createElement('audio');
 

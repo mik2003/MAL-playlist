@@ -10,5 +10,8 @@ When you run the program an HTML file with name "anime_playlist_{username}.html"
 
 For now, the program uses the MAL API only for retrieving individual anime information, because there are some inconsistences between the anime list retrieved through the API and the one scraped using selenium.
 
+## Contributing
+I welcome any contribution, especially for the YT player, since it's my first time writing JS... Just make an issue or contact me directly. Thanks!
+
 ## See also
 [Take a look at my MAL profile :)](https://myanimelist.net/profile/mik2003)
