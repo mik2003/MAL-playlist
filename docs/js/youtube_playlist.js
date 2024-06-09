@@ -82,7 +82,8 @@ function onYouTubeIframeAPIReady() {
         },
         events: {
             'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
+            'onStateChange': onPlayerStateChange,
+            'onError': onPlayerError,
         }
     });
 }
@@ -101,6 +102,23 @@ function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.ENDED) {
         goToNextSong();
     }
+}
+
+function onPlayerError(event) {
+    if (event.data == 2) {
+        console.log('onError 2: Invalid video ID')
+    } else if (event.data == 5) {
+        console.log('onError 5: HTML5 error')
+    } else if (event.data == 100) {
+        console.log('onError 100: Video not found')
+    } else if (event.data == 101) {
+        console.log('onError 101: Video cannot be embedded')
+    } else if (event.data == 150) {
+        console.log('onError 150: Video cannot be embedded')
+    } else {
+        console.log('onError: Unknown error')
+    }
+    goToNextSong();
 }
 
 function stopVideo() {
