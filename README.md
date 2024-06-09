@@ -10,6 +10,13 @@ When you run the program an HTML file with name "anime_playlist_{username}.html"
 
 For now, the program uses the MAL API only for retrieving individual anime information, because there are some inconsistences between the anime list retrieved through the API and the one scraped using selenium.
 
+Keep in mind that you will have to make your own MAL API key, you can do so [here](https://myanimelist.net/apiconfig). If you are unsure what to fill in I used the [following guide](https://myanimelist.net/forum/?topicid=1973141). Once you have your client ID, put it in a JSON file at `project/.secret/mal_api.json` structured as follows:
+```
+{
+    'Client_ID': 'your-client-id'
+}
+```
+
 ## Contributing
 I welcome any contribution, especially for the YT player, since it's my first time writing JS... Just make an issue or contact me directly. Thanks!
 
