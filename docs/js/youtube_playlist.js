@@ -3,6 +3,7 @@ var animePlaylist;
 var playlistIndeces;
 var animePlaylistMap;
 var songDiv;
+var playlistDiv;
 var i, j, k, n = 0;
 var player;
 var loop = true;
@@ -34,10 +35,11 @@ function populatePlaylistDiv() {
     for (i = 0; i < animePlaylistMap.length; i++) {
         playlistItem = document.createElement("div");
         playlistItem.setAttribute("class", "playlist-item");
-        playlistItem.setAttribute("id", playlistIndeces[i])
-        currentSongMap = animePlaylistMap[i];
+        playlistItem.setAttribute("id", i)
+        currentSongMap = animePlaylistMap[playlistIndeces[i]];
         currentSong = animeList.anime[currentSongMap[0]][currentSongMap[1]][currentSongMap[2]];
         playlistItem.innerText = currentSong.text;
+        playlistItem.setAttribute('onclick', 'goToSong(' + i + ')');
 
         playlistDiv.appendChild(playlistItem);
     }
@@ -197,6 +199,7 @@ function clearSongDivStyle() {
 function applySongDivStyle() {
     songDiv = document.getElementById(n);
     songDiv.style.color = "#0000FF";
+    songDiv.scrollIntoView();
 }
 
 function goToNextSong() {
@@ -212,12 +215,21 @@ function goToNextSong() {
 function goToPreviousSong() {
     clearSongDivStyle();
     n = jumpN(-1);
-    console.log(n);
     applySongDivStyle();
     player.loadVideoById(getCurrentSongId());
     updateMediaSession();
 
     console.log('prev ' + n);
+}
+
+function goToSong(new_n) {
+    clearSongDivStyle();
+    n = new_n;
+    applySongDivStyle();
+    player.loadVideoById(getCurrentSongId());
+    updateMediaSession();
+
+    console.log('song ' + n);
 }
 
 function pauseSong() {
@@ -247,6 +259,12 @@ function getCurrentSongId() {
 
 function shufflePlaylist() {
     shuffleArray(playlistIndeces);
+    playlistDiv = document.getElementById("playlist");
+    playlistDiv.innerHTML = "";
+    populatePlaylistDiv();
+    applySongDivStyle();
+    player.loadVideoById(getCurrentSongId());
+    updateMediaSession();
 }
 
 function toggleLoop() {

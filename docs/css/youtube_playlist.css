@@ -18,3 +18,10 @@ body {
     background: var(--body-bg);
     color: var(--body-color);
 }
+
+#playlist {
+    width: 600px;
+    height: 400px;
+    overflow-x: auto;
+    overflow-y: scroll;
+}
