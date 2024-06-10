@@ -105,7 +105,7 @@ function onYouTubeIframeAPIReady() {
         videoId: getCurrentSongId(),
         playerVars: {
             'autoplay': 1,
-            'controls': 0,
+            'controls': 1,
         },
         events: {
             'onReady': onPlayerReady,
