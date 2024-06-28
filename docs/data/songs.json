@@ -99,26 +99,6 @@
         "episode": null,
         "yt_url": "https://www.youtube.com/watch?v=NKhJa-zA69k"
     },
-    "69448": {
-        "id": 69448,
-        "anime_id": 38826,
-        "text": "#1: \"Ai ni Dekiru Koto wa Mada Aru Kai (\u611b\u306b\u3067\u304d\u308b\u3053\u3068\u306f\u307e\u3060\u3042\u308b\u304b\u3044; Is There Still Anything That Love Can Do?)\" by RADWIMPS",
-        "index": "1",
-        "name": "Ai ni Dekiru Koto wa Mada Aru Kai (\u611b\u306b\u3067\u304d\u308b\u3053\u3068\u306f\u307e\u3060\u3042\u308b\u304b\u3044; Is There Still Anything That Love Can Do?)",
-        "artist": "RADWIMPS",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=EQ94zflNqn4"
-    },
-    "69449": {
-        "id": 69449,
-        "anime_id": 38826,
-        "text": "#2: \"Daijoubu (Movie Edit) (\u5927\u4e08\u592b; We'll be Alright)\" by RADWIMPS",
-        "index": "2",
-        "name": "Daijoubu (Movie Edit) (\u5927\u4e08\u592b; We'll be Alright)",
-        "artist": "RADWIMPS",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=VcQIpQB4Fiw"
-    },
     "59246": {
         "id": 59246,
         "anime_id": 33352,
@@ -16908,5 +16888,175 @@
         "artist": "Fujioka Fujimaki and Nozomi \u014chashi",
         "episode": null,
         "yt_url": "https://www.youtube.com/watch?v=kDy3rDedXBM"
+    },
+    "69448": {
+        "id": 69448,
+        "anime_id": 38826,
+        "text": "#1: \"Ai ni Dekiru Koto wa Mada Aru Kai (\u611b\u306b\u3067\u304d\u308b\u3053\u3068\u306f\u307e\u3060\u3042\u308b\u304b\u3044; Is There Still Anything That Love Can Do?)\" by RADWIMPS",
+        "index": "1",
+        "name": "Ai ni Dekiru Koto wa Mada Aru Kai (\u611b\u306b\u3067\u304d\u308b\u3053\u3068\u306f\u307e\u3060\u3042\u308b\u304b\u3044; Is There Still Anything That Love Can Do?)",
+        "artist": "RADWIMPS",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=EQ94zflNqn4"
+    },
+    "69449": {
+        "id": 69449,
+        "anime_id": 38826,
+        "text": "#2: \"Daijoubu (Movie Edit) (\u5927\u4e08\u592b; We'll be Alright)\" by RADWIMPS",
+        "index": "2",
+        "name": "Daijoubu (Movie Edit) (\u5927\u4e08\u592b; We'll be Alright)",
+        "artist": "RADWIMPS",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=VcQIpQB4Fiw"
+    },
+    "79232": {
+        "id": 79232,
+        "anime_id": 53434,
+        "text": "\"Wakaranai Ai (\u30ef\u30ab\u30e9\u30ca\u30a4\u30a2\u30a4)\" by The Brow Beat (eps 1-10, 12)",
+        "index": null,
+        "name": "Wakaranai Ai (\u30ef\u30ab\u30e9\u30ca\u30a4\u30a2\u30a4)",
+        "artist": "The Brow Beat",
+        "episode": "eps 1-10, 12",
+        "yt_url": "https://www.youtube.com/watch?v=cSLevMrV1Yo"
+    },
+    "78475": {
+        "id": 78475,
+        "anime_id": 53434,
+        "text": "\"Blue Star (\u30d6\u30eb\u30fc\u30b9\u30bf\u30fc)\" by Sayaka Yamamoto (\u5c71\u672c\u5f69)",
+        "index": null,
+        "name": "Blue Star (\u30d6\u30eb\u30fc\u30b9\u30bf\u30fc)",
+        "artist": "Sayaka Yamamoto (\u5c71\u672c\u5f69)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=FVyb7few4Bk"
+    },
+    "79328": {
+        "id": 79328,
+        "anime_id": 53835,
+        "text": "\"Yobigoe (\u547c\u3073\u58f0)\" by Tei (\u4e01) (eps 1-11)",
+        "index": null,
+        "name": "Yobigoe (\u547c\u3073\u58f0)",
+        "artist": "Tei (\u4e01)",
+        "episode": "eps 1-11",
+        "yt_url": "https://www.youtube.com/watch?v=dpEdweWbHiU"
+    },
+    "79329": {
+        "id": 79329,
+        "anime_id": 53835,
+        "text": "#1: \"blan_\" by Arika (eps 1-11)",
+        "index": "1",
+        "name": "blan_",
+        "artist": "Arika",
+        "episode": "eps 1-11",
+        "yt_url": "https://www.youtube.com/watch?v=DrfAFXsH_-A"
+    },
+    "79330": {
+        "id": 79330,
+        "anime_id": 53835,
+        "text": "#2: \"Yobigoe (\u547c\u3073\u58f0)\" by Tei (\u4e01) (ep 12)",
+        "index": "2",
+        "name": "Yobigoe (\u547c\u3073\u58f0)",
+        "artist": "Tei (\u4e01)",
+        "episode": "ep 12",
+        "yt_url": "https://www.youtube.com/watch?v=dpEdweWbHiU"
+    },
+    "78293": {
+        "id": 78293,
+        "anime_id": 53516,
+        "text": "\"Kyunrious (\u30ad\u30e5\u30f3\u30ea\u30a2\u30b9)\" by Kaede Higuchi",
+        "index": null,
+        "name": "Kyunrious (\u30ad\u30e5\u30f3\u30ea\u30a2\u30b9)",
+        "artist": "Kaede Higuchi",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=wKrb1q5hWWI"
+    },
+    "79241": {
+        "id": 79241,
+        "anime_id": 53516,
+        "text": "\"Happy no Hiketsu (\u30cf\u30c3\u30d4\u30fc\u306e\u79d8\u8a23)\" by Akane Kumada (\u718a\u7530\u831c\u97f3)",
+        "index": null,
+        "name": "Happy no Hiketsu (\u30cf\u30c3\u30d4\u30fc\u306e\u79d8\u8a23)",
+        "artist": "Akane Kumada (\u718a\u7530\u831c\u97f3)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=DiDDWexFjmg"
+    },
+    "78387": {
+        "id": 78387,
+        "anime_id": 49889,
+        "text": "#1: \"Utopia (\u30e6\u30fc\u30c8\u30d4\u30a2)\" by Keina Suda (\u9808\u7530\u666f\u51ea)",
+        "index": "1",
+        "name": "Utopia (\u30e6\u30fc\u30c8\u30d4\u30a2)",
+        "artist": "Keina Suda (\u9808\u7530\u666f\u51ea)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=PG5Shdaib7w"
+    },
+    "78388": {
+        "id": 78388,
+        "anime_id": 49889,
+        "text": "#2: \"Reversal (\u30ea\u30f4\u30a1\u30fc\u30b5\u30eb)\" by syudou",
+        "index": "2",
+        "name": "Reversal (\u30ea\u30f4\u30a1\u30fc\u30b5\u30eb)",
+        "artist": "syudou",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=Ik7YdU2eI58"
+    },
+    "78617": {
+        "id": 78617,
+        "anime_id": 49889,
+        "text": "#1: \"My Factor\" by Kento Itou (\u4f0a\u6771\u5065\u4eba)",
+        "index": "1",
+        "name": "My Factor",
+        "artist": "Kento Itou (\u4f0a\u6771\u5065\u4eba)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=nNEicyjXDjI"
+    },
+    "78618": {
+        "id": 78618,
+        "anime_id": 49889,
+        "text": "#2: \"Joushiki Hazure Human (\u5e38\u8b58\u5916\u308c\u30d2\u30e5\u30fc\u30de\u30f3)\" by Kaori Maeda (\u524d\u7530 \u4f73\u7e54\u91cc)",
+        "index": "2",
+        "name": "Joushiki Hazure Human (\u5e38\u8b58\u5916\u308c\u30d2\u30e5\u30fc\u30de\u30f3)",
+        "artist": "Kaori Maeda (\u524d\u7530 \u4f73\u7e54\u91cc)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=r0Q9X3F36yU"
+    },
+    "77030": {
+        "id": 77030,
+        "anime_id": 56690,
+        "text": "\"Into the Fire\" by CHANSUNG(2PM), AK-69 feat.CHANGMIN(2AM)",
+        "index": null,
+        "name": "Into the Fire",
+        "artist": "CHANSUNG(2PM), AK-69 feat.CHANGMIN(2AM)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=Mpxw1XJ3mx8"
+    },
+    "78223": {
+        "id": 78223,
+        "anime_id": 56690,
+        "text": "\"Sadame (\u904b\u547d [\u3055\u3060\u3081])\" by EverdreaM",
+        "index": null,
+        "name": "Sadame (\u904b\u547d [\u3055\u3060\u3081])",
+        "artist": "EverdreaM",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=fDjA2Alcx34"
+    },
+    "78313": {
+        "id": 78313,
+        "anime_id": 55265,
+        "text": "\"Blue Days (\u30d6\u30eb\u30fc\u30c7\u30a4\u30ba)\" by TRUE",
+        "index": null,
+        "name": "Blue Days (\u30d6\u30eb\u30fc\u30c7\u30a4\u30ba)",
+        "artist": "TRUE",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=TcQXtGYFFkM"
+    },
+    "79318": {
+        "id": 79318,
+        "anime_id": 55265,
+        "text": "\"Finally\" by Licia Pleide (CV: Kana Hanazawa) (eps 2-12)",
+        "index": null,
+        "name": "Finally",
+        "artist": "Licia Pleide (CV: Kana Hanazawa)",
+        "episode": "eps 2-12",
+        "yt_url": "https://www.youtube.com/watch?v=RfGHSp4oViI"
     }
 }

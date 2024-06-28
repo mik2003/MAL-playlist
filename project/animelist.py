@@ -323,7 +323,7 @@ class AnimeList:
         AnimeList
             Initialised AnimeList object.
         """
-        anime_list_raw = AnimeList.raw(username)
+        anime_list_raw = AnimeList.raw(username, update_cache=True)
 
         n = len(anime_list_raw)
 
@@ -470,5 +470,5 @@ class AnimeList:
 
 if __name__ == "__main__":
     un = "mik2003"
-    al = AnimeList.full(un)
+    al = AnimeList.full(un, update_cache=True)
     al.json_encode_songs("songs.json")

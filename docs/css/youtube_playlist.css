@@ -24,7 +24,7 @@ body {
     padding: 20px;
     justify-content: center;
     align-items: center;
-    /* display: flex; */
+    display: flex;
 }
 
 #player {
