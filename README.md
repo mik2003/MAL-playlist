@@ -13,7 +13,7 @@ For now, the program uses the MAL API only for retrieving individual anime infor
 Keep in mind that you will have to make your own MAL API key, you can do so [here](https://myanimelist.net/apiconfig). If you are unsure what to fill in I used the [following guide](https://myanimelist.net/forum/?topicid=1973141). Once you have your client ID, put it in a JSON file at `project/.secret/mal_api.json` structured as follows:
 ```
 {
-    'Client_ID': 'your-client-id'
+    "Client_ID": "your-client-id"
 }
 ```
 
