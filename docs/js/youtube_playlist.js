@@ -225,12 +225,14 @@ function updateMediaSession() {
 
 function clearSongDivStyle() {
     songDiv = document.getElementById(n);
-    songDiv.style.color = "#FFFFFF";
+    songDiv.style.color = "#f8f9fa";
+    songDiv.style.backgroundColor = "#495057";
 }
 
 function applySongDivStyle() {
     songDiv = document.getElementById(n);
-    songDiv.style.color = "#4a8bad";
+    songDiv.style.color = "#f8f9fa";
+    songDiv.style.backgroundColor = "#1c7ed6";
     scrollParentToChild(document.getElementById("playlist"), songDiv);
     // songDiv.scrollIntoView();
 }
