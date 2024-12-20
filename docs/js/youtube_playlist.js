@@ -79,20 +79,18 @@ function populatePlaylistDiv() {
 
         let artistLine = document.createElement("span");
         artistLine.setAttribute("class", "playlist-item-artistline");
-        artistLine.innerText = `\nby ${currentSong.artist}`;
+        artistLine.innerText = ` by ${currentSong.artist}`;
         playlistItem.appendChild(artistLine);
 
         let animeLine = document.createElement("span");
         animeLine.setAttribute("class", "playlist-item-animeline");
-        animeLine.innerText = `\nAnime: ${animeList.anime[currentSongMap[0]].title}`;
+        animeLine.innerText = `\n【${animeList.anime[currentSongMap[0]].title}】`;
         playlistItem.appendChild(animeLine);
 
         let episodeLine = document.createElement("span");
         episodeLine.setAttribute("class", "playlist-item-episodeline");
-        episodeLine.innerText = `\n${currentSongMap[1].split("_")[0]}${currentSong.index !== null ? ` #${currentSong.index}` : ''}${currentSong.episode !== null ? ` (${currentSong.episode})` : ''}`;
+        episodeLine.innerText = ` ${currentSongMap[1].split("_")[0]}${currentSong.index !== null ? ` #${currentSong.index}` : ''}${currentSong.episode !== null ? ` (${currentSong.episode})` : ''}`;
         playlistItem.appendChild(episodeLine);
-
-        //playlistItem.innerText = `${currentSong.name}\nby ${currentSong.artist}\nAnime: ${animeList.anime[currentSongMap[0]].title}\n${currentSongMap[1].split("_")[0]}${currentSong.index !== null ? ` #${currentSong.index} (${currentSong.episode})` : ''}`;
 
         playlistItem.setAttribute('onclick', 'goToSong(' + i + ')');
 

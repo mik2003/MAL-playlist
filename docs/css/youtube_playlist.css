@@ -95,6 +95,20 @@ body {
     margin-bottom: 0;
 }
 
+.playlist-item-nameline {
+    font-weight: bold;
+}
+
+/*.playlist-item-artistline {}*/
+
+.playlist-item-animeline {
+    font-size: small;
+}
+
+.playlist-item-episodeline {
+    font-size: small;
+}
+
 @media (max-width: 600px) {
     #controls button {
         padding: 10px;
