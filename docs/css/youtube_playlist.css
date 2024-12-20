@@ -20,21 +20,51 @@ body {
     font-family: Arial, sans-serif;
     background-color: #212529;
     color: #f8f9fa;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
-    padding: 20px;
     justify-content: center;
-    align-items: center;
     display: flex;
-    flex-direction: column;
+}
+
+@media (orientation: landscape) {
+    body {
+        flex-direction: row;
+        align-items: top;
+    }
+
+    #player {
+        width: 40vw;
+        max-width: 400px;
+        height: auto;
+    }
+
+    #playlist {
+        max-height: 90vh;
+    }
+}
+
+@media (orientation: portrait) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #player {
+        width: 90vw;
+        max-width: 400px;
+        height: auto;
+    }
+
+    #playlist {
+        max-width: 90%;
+    }
 }
 
 #player {
-    width: 80%;
-    height: 25%;
-    max-width: 600px;
-    max-height: 300px;
-    margin: 20px auto;
+    aspect-ratio: 16/9;
     padding: 20px;
+    margin: 10px;
     background-color: #343a40;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -64,15 +94,11 @@ body {
 }
 
 #playlist {
-    width: 90%;
-    height: 60%;
-    max-width: 600px;
-    margin: 20px auto;
     padding: 20px;
+    margin: 10px;
     background-color: #343a40;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    height: 400px;
     overflow-x: auto;
     overflow-y: scroll;
 }
