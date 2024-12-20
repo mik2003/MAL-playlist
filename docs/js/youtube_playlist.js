@@ -255,7 +255,6 @@ function applySongDivStyle() {
     songDiv.style.color = "#f8f9fa";
     songDiv.style.backgroundColor = "#1c7ed6";
     scrollParentToChild(document.getElementById("playlist"), songDiv);
-    // songDiv.scrollIntoView();
 }
 
 function goToNextSong() {
