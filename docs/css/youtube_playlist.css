@@ -110,6 +110,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: flex;
 }
 
 .playlist-item:hover {
@@ -123,6 +124,15 @@ body {
 
 .playlist-item-nameline {
     font-weight: bold;
+}
+
+.playlist-item-image {
+    margin-right: 10px;
+}
+
+.playlist-item-animeimage {
+    width: 50px;
+    height: auto;
 }
 
 /*.playlist-item-artistline {}*/

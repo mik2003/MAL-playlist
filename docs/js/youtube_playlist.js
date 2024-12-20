@@ -68,31 +68,50 @@ function populatePlaylistDiv() {
         let playlistItem = document.createElement("div");
         playlistItem.setAttribute("class", "playlist-item");
         playlistItem.setAttribute("id", i);
+        let playlistItemText = document.createElement("div");
+        playlistItemText.setAttribute("class", "playlist-item-text");
+        let playlistItemImage = document.createElement("div");
+        playlistItemImage.setAttribute("class", "playlist-item-image");
 
         let currentSongMap = animePlaylistMap[playlistIndeces[i]];
         let currentSong = animeList.anime[currentSongMap[0]][currentSongMap[1]][currentSongMap[2]];
 
+        let animeImage = document.createElement("img");
+        animeImage.setAttribute("class", "playlist-item-animeimage");
+        animeImage.setAttribute("src", animeList.anime[currentSongMap[0]].picture);
+
+
         let nameLine = document.createElement("span");
         nameLine.setAttribute("class", "playlist-item-nameline");
         nameLine.innerText = `${currentSong.name}`;
-        playlistItem.appendChild(nameLine);
+        playlistItemText.appendChild(nameLine);
 
         let artistLine = document.createElement("span");
         artistLine.setAttribute("class", "playlist-item-artistline");
         artistLine.innerText = ` by ${currentSong.artist}`;
-        playlistItem.appendChild(artistLine);
+        playlistItemText.appendChild(artistLine);
 
         let animeLine = document.createElement("span");
         animeLine.setAttribute("class", "playlist-item-animeline");
         animeLine.innerText = `\n【${animeList.anime[currentSongMap[0]].title}】`;
-        playlistItem.appendChild(animeLine);
+        playlistItemText.appendChild(animeLine);
 
         let episodeLine = document.createElement("span");
         episodeLine.setAttribute("class", "playlist-item-episodeline");
         episodeLine.innerText = ` ${currentSongMap[1].split("_")[0]}${currentSong.index !== null ? ` #${currentSong.index}` : ''}${currentSong.episode !== null ? ` (${currentSong.episode})` : ''}`;
-        playlistItem.appendChild(episodeLine);
+        playlistItemText.appendChild(episodeLine);
+
+        // Create the anchor tag for the image and set the dynamic URL
+        let animeLink = document.createElement("a");
+        animeLink.setAttribute("href", `https://myanimelist.net/anime/${currentSong.anime_id}`);
+        animeLink.setAttribute("target", "_blank"); // Opens the link in a new tab
+        animeLink.appendChild(animeImage);
+        playlistItemImage.appendChild(animeLink);
 
         playlistItem.setAttribute('onclick', 'goToSong(' + i + ')');
+
+        playlistItem.appendChild(playlistItemImage);
+        playlistItem.appendChild(playlistItemText);
 
         playlistDiv.appendChild(playlistItem);
     }
