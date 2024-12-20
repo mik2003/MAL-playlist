@@ -61,16 +61,39 @@ function shuffleArray(array) {
 function populatePlaylistDiv() {
     playlistDiv = document.getElementById('playlist');
 
-    var playlistItem;
-    var currentSongMap;
-    var currentSong;
+    //var playlistItem;
+    //var currentSongMap;
+    //var currentSong;
     for (i = 0; i < animePlaylistMap.length; i++) {
-        playlistItem = document.createElement("div");
+        let playlistItem = document.createElement("div");
         playlistItem.setAttribute("class", "playlist-item");
-        playlistItem.setAttribute("id", i)
-        currentSongMap = animePlaylistMap[playlistIndeces[i]];
-        currentSong = animeList.anime[currentSongMap[0]][currentSongMap[1]][currentSongMap[2]];
-        playlistItem.innerText = currentSong.text;
+        playlistItem.setAttribute("id", i);
+
+        let currentSongMap = animePlaylistMap[playlistIndeces[i]];
+        let currentSong = animeList.anime[currentSongMap[0]][currentSongMap[1]][currentSongMap[2]];
+
+        let nameLine = document.createElement("span");
+        nameLine.setAttribute("class", "playlist-item-nameline");
+        nameLine.innerText = `${currentSong.name}`;
+        playlistItem.appendChild(nameLine);
+
+        let artistLine = document.createElement("span");
+        artistLine.setAttribute("class", "playlist-item-artistline");
+        artistLine.innerText = `\nby ${currentSong.artist}`;
+        playlistItem.appendChild(artistLine);
+
+        let animeLine = document.createElement("span");
+        animeLine.setAttribute("class", "playlist-item-animeline");
+        animeLine.innerText = `\nAnime: ${animeList.anime[currentSongMap[0]].title}`;
+        playlistItem.appendChild(animeLine);
+
+        let episodeLine = document.createElement("span");
+        episodeLine.setAttribute("class", "playlist-item-episodeline");
+        episodeLine.innerText = `\n${currentSongMap[1].split("_")[0]}${currentSong.index !== null ? ` #${currentSong.index}` : ''}${currentSong.episode !== null ? ` (${currentSong.episode})` : ''}`;
+        playlistItem.appendChild(episodeLine);
+
+        //playlistItem.innerText = `${currentSong.name}\nby ${currentSong.artist}\nAnime: ${animeList.anime[currentSongMap[0]].title}\n${currentSongMap[1].split("_")[0]}${currentSong.index !== null ? ` #${currentSong.index} (${currentSong.episode})` : ''}`;
+
         playlistItem.setAttribute('onclick', 'goToSong(' + i + ')');
 
         playlistDiv.appendChild(playlistItem);
