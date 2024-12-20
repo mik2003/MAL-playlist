@@ -444,84 +444,6 @@
             ]
         },
         {
-            "id": 40591,
-            "title": "Kaguya-sama wa Kokurasetai? Tensai-tachi no Renai Zunousen",
-            "picture": "https://cdn.myanimelist.net/images/anime/1764/106659.jpg",
-            "opening_themes": [
-                {
-                    "id": 68430,
-                    "anime_id": 40591,
-                    "text": "\"DADDY! DADDY! DO! feat. Airi Suzuki (DADDY! DADDY! DO! feat. \u9234\u6728\u611b\u7406)\" by Masayuki Suzuki (eps 2-10)",
-                    "index": null,
-                    "name": "DADDY! DADDY! DO! feat. Airi Suzuki (DADDY! DADDY! DO! feat. \u9234\u6728\u611b\u7406)",
-                    "artist": "Masayuki Suzuki",
-                    "episode": "eps 2-10",
-                    "yt_url": "https://www.youtube.com/watch?v=DTJsnV0WTVU"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 68162,
-                    "anime_id": 40591,
-                    "text": "#1: \"DADDY! DADDY! DO! feat. Airi Suzuki (DADDY! DADDY! DO! feat. \u9234\u6728\u611b\u7406)\" by Masayuki Suzuki (eps 1, 12)",
-                    "index": "1",
-                    "name": "DADDY! DADDY! DO! feat. Airi Suzuki (DADDY! DADDY! DO! feat. \u9234\u6728\u611b\u7406)",
-                    "artist": "Masayuki Suzuki",
-                    "episode": "eps 1, 12",
-                    "yt_url": "https://www.youtube.com/watch?v=DTJsnV0WTVU"
-                },
-                {
-                    "id": 68163,
-                    "anime_id": 40591,
-                    "text": "#2: \"Kaze ni Fukarete (\u98a8\u306b\u5439\u304b\u308c\u3066)\" by Haruka Fukuhara (eps 2-4, 6-11)",
-                    "index": "2",
-                    "name": "Kaze ni Fukarete (\u98a8\u306b\u5439\u304b\u308c\u3066)",
-                    "artist": "Haruka Fukuhara",
-                    "episode": "eps 2-4, 6-11",
-                    "yt_url": "https://www.youtube.com/watch?v=ncnHddqNqhM"
-                }
-            ]
-        },
-        {
-            "id": 37999,
-            "title": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
-            "picture": "https://cdn.myanimelist.net/images/anime/1295/106551.jpg",
-            "opening_themes": [
-                {
-                    "id": 69623,
-                    "anime_id": 37999,
-                    "text": "\"Love Dramatic feat. Rikka Ihara (\u30e9\u30d6\u30fb\u30c9\u30e9\u30de\u30c6\u30a3\u30c3\u30af feat.\u4f0a\u539f\u516d\u82b1)\" by Masayuki Suzuki (\u9234\u6728\u96c5\u4e4b) (eps 1-12)",
-                    "index": null,
-                    "name": "Love Dramatic feat. Rikka Ihara (\u30e9\u30d6\u30fb\u30c9\u30e9\u30de\u30c6\u30a3\u30c3\u30af feat.\u4f0a\u539f\u516d\u82b1)",
-                    "artist": "Masayuki Suzuki (\u9234\u6728\u96c5\u4e4b)",
-                    "episode": "eps 1-12",
-                    "yt_url": "https://www.youtube.com/watch?v=P_XF8vjOrWE"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 69621,
-                    "anime_id": 37999,
-                    "text": "#1: \"Sentimental Crisis (\u30bb\u30f3\u30c1\u30e1\u30f3\u30bf\u30eb\u30af\u30e9\u30a4\u30b7\u30b9)\" by halca (eps 1-2, 4-12)",
-                    "index": "1",
-                    "name": "Sentimental Crisis (\u30bb\u30f3\u30c1\u30e1\u30f3\u30bf\u30eb\u30af\u30e9\u30a4\u30b7\u30b9)",
-                    "artist": "halca",
-                    "episode": "eps 1-2, 4-12",
-                    "yt_url": "https://www.youtube.com/watch?v=RHfaZZAMwA0"
-                },
-                {
-                    "id": 69622,
-                    "anime_id": 37999,
-                    "text": "#2: \"Chikatto Chika Chika\u2661 (\u30c1\u30ab\u3063\u3068\u30c1\u30ab\u5343\u82b1\u3063\u2661)\" by Chika Fujiwara (Konomi Kohara (ep 3)",
-                    "index": "2",
-                    "name": "Chikatto Chika Chika\u2661 (\u30c1\u30ab\u3063\u3068\u30c1\u30ab\u5343\u82b1\u3063\u2661)",
-                    "artist": "Chika Fujiwara (Konomi Kohara",
-                    "episode": "ep 3",
-                    "yt_url": "https://www.youtube.com/watch?v=Qe46yzEcQOo"
-                }
-            ]
-        },
-        {
             "id": 40839,
             "title": "Kanojo, Okarishimasu",
             "picture": "https://cdn.myanimelist.net/images/anime/1902/128382.jpg",
@@ -10016,35 +9938,6 @@
             ]
         },
         {
-            "id": 40507,
-            "title": "Arifureta Shokugyou de Sekai Saikyou 2nd Season",
-            "picture": "https://cdn.myanimelist.net/images/anime/1877/119668.jpg",
-            "opening_themes": [
-                {
-                    "id": 71912,
-                    "anime_id": 40507,
-                    "text": "\"Daylight\" by MindaRyn",
-                    "index": null,
-                    "name": "Daylight",
-                    "artist": "MindaRyn",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=k2-ygljRjsk"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 72000,
-                    "anime_id": 40507,
-                    "text": "\"Gedou Sanka (\u5916\u9053\u8b83\u6b4c)\" by FantasticYouth",
-                    "index": null,
-                    "name": "Gedou Sanka (\u5916\u9053\u8b83\u6b4c)",
-                    "artist": "FantasticYouth",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=GR5bjT5o5_s"
-                }
-            ]
-        },
-        {
             "id": 433,
             "title": "Kumo no Mukou, Yakusoku no Basho",
             "picture": "https://cdn.myanimelist.net/images/anime/1725/133738.jpg",
@@ -11866,55 +11759,6 @@
             ]
         },
         {
-            "id": 43608,
-            "title": "Kaguya-sama wa Kokurasetai: Ultra Romantic",
-            "picture": "https://cdn.myanimelist.net/images/anime/1160/122627.webp",
-            "opening_themes": [
-                {
-                    "id": 72907,
-                    "anime_id": 43608,
-                    "text": "\"GIRI GIRI feat Suu (GIRI GIRI feat. \u3059\u3045)\" by Masayuki Suzuki (eps 2-4, 6-8, 10-13)",
-                    "index": null,
-                    "name": "GIRI GIRI feat Suu (GIRI GIRI feat. \u3059\u3045)",
-                    "artist": "Masayuki Suzuki",
-                    "episode": "eps 2-4, 6-8, 10-13",
-                    "yt_url": "https://www.youtube.com/watch?v=vptdHEUZN10"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 72908,
-                    "anime_id": 43608,
-                    "text": "#1: \"GIRI GIRI feat Suu (GIRI GIRI feat. \u3059\u3045)\" by Masayuki Suzuki (ep 1)",
-                    "index": "1",
-                    "name": "GIRI GIRI feat Suu (GIRI GIRI feat. \u3059\u3045)",
-                    "artist": "Masayuki Suzuki",
-                    "episode": "ep 1",
-                    "yt_url": "https://www.youtube.com/watch?v=vptdHEUZN10"
-                },
-                {
-                    "id": 72909,
-                    "anime_id": 43608,
-                    "text": "#2: \"Heart wa Oteage (\u30cf\u30fc\u30c8\u306f\u304a\u624b\u4e0a\u3052)\" by Airi Suzuki (eps 2-4, 6-13)",
-                    "index": "2",
-                    "name": "Heart wa Oteage (\u30cf\u30fc\u30c8\u306f\u304a\u624b\u4e0a\u3052)",
-                    "artist": "Airi Suzuki",
-                    "episode": "eps 2-4, 6-13",
-                    "yt_url": "https://www.youtube.com/watch?v=GSuselwRqcE"
-                },
-                {
-                    "id": 72910,
-                    "anime_id": 43608,
-                    "text": "#3: \"My Nonfiction\" by Miyuki Shirogane (Makoto Furukawa) & Chika Fujiwara (Konomi Kohara) (ep 5)",
-                    "index": "3",
-                    "name": "My Nonfiction",
-                    "artist": "Miyuki Shirogane (Makoto Furukawa) & Chika Fujiwara (Konomi Kohara)",
-                    "episode": "ep 5",
-                    "yt_url": "https://www.youtube.com/watch?v=kuEl3LL3CD0"
-                }
-            ]
-        },
-        {
             "id": 37786,
             "title": "Yagate Kimi ni Naru",
             "picture": "https://cdn.myanimelist.net/images/anime/1783/96153.webp",
@@ -12668,55 +12512,6 @@
                     "artist": "LiSA",
                     "episode": null,
                     "yt_url": "https://www.youtube.com/watch?v=Ff7k1zxBe1I"
-                }
-            ]
-        },
-        {
-            "id": 43523,
-            "title": "Tsuki ga Michibiku Isekai Douchuu",
-            "picture": "https://cdn.myanimelist.net/images/anime/1950/116474.jpg",
-            "opening_themes": [
-                {
-                    "id": 70949,
-                    "anime_id": 43523,
-                    "text": "\"Gamble (\u30ae\u30e3\u30f3\u30d6\u30eb)\" by syudou",
-                    "index": null,
-                    "name": "Gamble (\u30ae\u30e3\u30f3\u30d6\u30eb)",
-                    "artist": "syudou",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=7GBn6IuTQ6w"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 71320,
-                    "anime_id": 43523,
-                    "text": "#1: \"Aa Jinsei ni Namida Ari (\u3042\u3042\u4eba\u751f\u306b\u6d99\u3042\u308a)\" by Makoto Misumi (CV: Natsuki Hanae) (ep 1)",
-                    "index": "1",
-                    "name": "Aa Jinsei ni Namida Ari (\u3042\u3042\u4eba\u751f\u306b\u6d99\u3042\u308a)",
-                    "artist": "Makoto Misumi (CV: Natsuki Hanae)",
-                    "episode": "ep 1",
-                    "yt_url": "https://www.youtube.com/watch?v=4xlyZehaZ-E"
-                },
-                {
-                    "id": 71321,
-                    "anime_id": 43523,
-                    "text": "#2: \"Beautiful Dreamer (\u30d3\u30e5\u30fc\u30c6\u30a3\u30d5\u30eb\u30fb\u30c9\u30ea\u30fc\u30de\u30fc)\" by Ezoshika Gourmet Club (eps 2-3)",
-                    "index": "2",
-                    "name": "Beautiful Dreamer (\u30d3\u30e5\u30fc\u30c6\u30a3\u30d5\u30eb\u30fb\u30c9\u30ea\u30fc\u30de\u30fc)",
-                    "artist": "Ezoshika Gourmet Club",
-                    "episode": "eps 2-3",
-                    "yt_url": "https://www.youtube.com/watch?v=wS-PCSv7r2I"
-                },
-                {
-                    "id": 71322,
-                    "anime_id": 43523,
-                    "text": "#3: \"Aa, Jinsei ni Namida Ari (\u3042\u3042\u4eba\u751f\u306b\u6d99\u3042\u308a)\" by Tomoe (CV: Ayane Sakura), Mio (CV: Akari Kitou) (ep 4)",
-                    "index": "3",
-                    "name": "Aa, Jinsei ni Namida Ari (\u3042\u3042\u4eba\u751f\u306b\u6d99\u3042\u308a)",
-                    "artist": "Tomoe (CV: Ayane Sakura), Mio (CV: Akari Kitou)",
-                    "episode": "ep 4",
-                    "yt_url": "https://www.youtube.com/watch?v=SzbTcdPwNGo"
                 }
             ]
         },
@@ -14315,45 +14110,6 @@
             ]
         },
         {
-            "id": 39535,
-            "title": "Mushoku Tensei: Isekai Ittara Honki Dasu",
-            "picture": "https://cdn.myanimelist.net/images/anime/1530/117776.jpg",
-            "opening_themes": [
-                {
-                    "id": 70363,
-                    "anime_id": 39535,
-                    "text": "#1: \"Tabibito no Uta (\u65c5\u4eba\u306e\u5504)\" by Yuiko Oohara (eps 3-4, 6-8)",
-                    "index": "1",
-                    "name": "Tabibito no Uta (\u65c5\u4eba\u306e\u5504)",
-                    "artist": "Yuiko Oohara",
-                    "episode": "eps 3-4, 6-8",
-                    "yt_url": "https://www.youtube.com/watch?v=hZ6TnKvB2rc"
-                },
-                {
-                    "id": 70364,
-                    "anime_id": 39535,
-                    "text": "#2: \"Mezame no uta (\u76ee\u899a\u3081\u306e\u5504)\" by Yuiko Oohara (ep 10)",
-                    "index": "2",
-                    "name": "Mezame no uta (\u76ee\u899a\u3081\u306e\u5504)",
-                    "artist": "Yuiko Oohara",
-                    "episode": "ep 10",
-                    "yt_url": "https://www.youtube.com/watch?v=NEh3-Qmq1LE"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 69838,
-                    "anime_id": 39535,
-                    "text": "\"Only (\u30aa\u30f3\u30ea\u30fc)\" by Yuiko Oohara",
-                    "index": null,
-                    "name": "Only (\u30aa\u30f3\u30ea\u30fc)",
-                    "artist": "Yuiko Oohara",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=ebaaWokWIo4"
-                }
-            ]
-        },
-        {
             "id": 45576,
             "title": "Mushoku Tensei: Isekai Ittara Honki Dasu Part 2",
             "picture": "https://cdn.myanimelist.net/images/anime/1028/117777.jpg",
@@ -15914,35 +15670,6 @@
             ]
         },
         {
-            "id": 48239,
-            "title": "Leadale no Daichi nite",
-            "picture": "https://cdn.myanimelist.net/images/anime/1671/120628.webp",
-            "opening_themes": [
-                {
-                    "id": 71866,
-                    "anime_id": 48239,
-                    "text": "\"Happy Encount\" by TRUE",
-                    "index": null,
-                    "name": "Happy Encount",
-                    "artist": "TRUE",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=l-126BD6zVI"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 71822,
-                    "anime_id": 48239,
-                    "text": "\"Hakone no Koufuku (\u7bb1\u5ead\u306e\u5e78\u798f)\" by Azusa Tadokoro",
-                    "index": null,
-                    "name": "Hakone no Koufuku (\u7bb1\u5ead\u306e\u5e78\u798f)",
-                    "artist": "Azusa Tadokoro",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=8xronI95g38"
-                }
-            ]
-        },
-        {
             "id": 37984,
             "title": "Kumo desu ga, Nani ka?",
             "picture": "https://cdn.myanimelist.net/images/anime/1593/113724.webp",
@@ -16075,35 +15802,6 @@
                     "artist": "Aira Yuuki (\u7d50\u57ce\u30a2\u30a4\u30e9)",
                     "episode": null,
                     "yt_url": "https://www.youtube.com/watch?v=pKGPCyr-PdA"
-                }
-            ]
-        },
-        {
-            "id": 36882,
-            "title": "Arifureta Shokugyou de Sekai Saikyou",
-            "picture": "https://cdn.myanimelist.net/images/anime/1776/97682.jpg",
-            "opening_themes": [
-                {
-                    "id": 65371,
-                    "anime_id": 36882,
-                    "text": "\"FLARE\" by Void_Chords feat.LIO",
-                    "index": null,
-                    "name": "FLARE",
-                    "artist": "Void_Chords feat.LIO",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=jekubzaLQ3w"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 65372,
-                    "anime_id": 36882,
-                    "text": "\"Hajime no Uta (\u30cf\u30b8\u30e1\u30ce\u30a6\u30bf)\" by DracoVirgo",
-                    "index": null,
-                    "name": "Hajime no Uta (\u30cf\u30b8\u30e1\u30ce\u30a6\u30bf)",
-                    "artist": "DracoVirgo",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=7V6JvkAg2OY"
                 }
             ]
         },
@@ -17314,35 +17012,6 @@
             "ending_themes": []
         },
         {
-            "id": 32542,
-            "title": "Sakamoto desu ga?",
-            "picture": "https://cdn.myanimelist.net/images/anime/4/79468.webp",
-            "opening_themes": [
-                {
-                    "id": 54011,
-                    "anime_id": 32542,
-                    "text": "\"COOLEST\" by Customi Z",
-                    "index": null,
-                    "name": "COOLEST",
-                    "artist": "Customi Z",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=f607MHZ8s0U"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 54012,
-                    "anime_id": 32542,
-                    "text": "\"Nakushita Hibi ni Sayonara (\u7121\u304f\u3057\u305f\u65e5\u3005\u306b\u3055\u3088\u306a\u3089)\" by Suneohair",
-                    "index": null,
-                    "name": "Nakushita Hibi ni Sayonara (\u7121\u304f\u3057\u305f\u65e5\u3005\u306b\u3055\u3088\u306a\u3089)",
-                    "artist": "Suneohair",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=JcuFqdmX0VY"
-                }
-            ]
-        },
-        {
             "id": 41623,
             "title": "Isekai Maou to Shoukan Shoujo no Dorei Majutsu \u03a9",
             "picture": "https://cdn.myanimelist.net/images/anime/1011/113703.webp",
@@ -18067,35 +17736,6 @@
             ]
         },
         {
-            "id": 17265,
-            "title": "Log Horizon",
-            "picture": "https://cdn.myanimelist.net/images/anime/5/84004.jpg",
-            "opening_themes": [
-                {
-                    "id": 37381,
-                    "anime_id": 17265,
-                    "text": "\"database feat. TAKUMA (10 Feet)\" by MAN WITH A MISSION",
-                    "index": null,
-                    "name": "database feat. TAKUMA (10 Feet)",
-                    "artist": "MAN WITH A MISSION",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=d2Kj7YybM5o"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 35083,
-                    "anime_id": 17265,
-                    "text": "\"Your song*\" by Yun*chi",
-                    "index": null,
-                    "name": "Your song*",
-                    "artist": "Yun*chi",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=fNfboNEFh-g"
-                }
-            ]
-        },
-        {
             "id": 22877,
             "title": "Seireitsukai no Blade Dance",
             "picture": "https://cdn.myanimelist.net/images/anime/7/63031.jpg",
@@ -18121,45 +17761,6 @@
                     "artist": "Ni-Sokkususu [Claire Rouge (Ibuki Kido), Rinslet Laurenfrost (Kana Yuuki), Ellis Fahrengart (Shizuka Ishigami), Fianna Ray Ordesia (Saori Oonishi), Terminus Est (Ai Kakuma)]",
                     "episode": null,
                     "yt_url": "https://www.youtube.com/watch?v=QMZTkoSBJBQ"
-                }
-            ]
-        },
-        {
-            "id": 38555,
-            "title": "Otome Game no Hametsu Flag shika Nai Akuyaku Reijou ni Tensei shiteshimatta...",
-            "picture": "https://cdn.myanimelist.net/images/anime/1483/107061.jpg",
-            "opening_themes": [
-                {
-                    "id": 68071,
-                    "anime_id": 38555,
-                    "text": "\"Otome no Route wa Hitotsu janai! (\u4e59\u5973\u306e\u30eb\u30fc\u30c8\u306f\u3072\u3068\u3064\u3058\u3083\u306a\u3044\uff01)\" by angela (eps 1-11)",
-                    "index": null,
-                    "name": "Otome no Route wa Hitotsu janai! (\u4e59\u5973\u306e\u30eb\u30fc\u30c8\u306f\u3072\u3068\u3064\u3058\u3083\u306a\u3044\uff01)",
-                    "artist": "angela",
-                    "episode": "eps 1-11",
-                    "yt_url": "https://www.youtube.com/watch?v=wrub7h0EGn4"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 72786,
-                    "anime_id": 38555,
-                    "text": "#1: \"BAD END\" by Shouta Aoi (\u84bc\u4e95\u7fd4\u592a) (eps 2-11)",
-                    "index": "1",
-                    "name": "BAD END",
-                    "artist": "Shouta Aoi (\u84bc\u4e95\u7fd4\u592a)",
-                    "episode": "eps 2-11",
-                    "yt_url": "https://www.youtube.com/watch?v=uVTSGCWCxrY"
-                },
-                {
-                    "id": 72787,
-                    "anime_id": 38555,
-                    "text": "#2: \"Otome no Route wa Hitotsu Janai! (\u4e59\u5973\u306e\u30eb\u30fc\u30c8\u306f\u3072\u3068\u3064\u3058\u3083\u306a\u3044\uff01)\" by angela (ep 12)",
-                    "index": "2",
-                    "name": "Otome no Route wa Hitotsu Janai! (\u4e59\u5973\u306e\u30eb\u30fc\u30c8\u306f\u3072\u3068\u3064\u3058\u3083\u306a\u3044\uff01)",
-                    "artist": "angela",
-                    "episode": "ep 12",
-                    "yt_url": "https://www.youtube.com/watch?v=wrub7h0EGn4"
                 }
             ]
         },
@@ -18258,45 +17859,6 @@
             ]
         },
         {
-            "id": 54856,
-            "title": "Horimiya: Piece",
-            "picture": "https://cdn.myanimelist.net/images/anime/1007/136277.jpg",
-            "opening_themes": [
-                {
-                    "id": 75734,
-                    "anime_id": 54856,
-                    "text": "\"Shiawase (\u5e78\u305b)\" by Omoinotake",
-                    "index": null,
-                    "name": "Shiawase (\u5e78\u305b)",
-                    "artist": "Omoinotake",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=WSJQcgBAyys"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 76556,
-                    "anime_id": 54856,
-                    "text": "1: \"URL\" by Ami Sakaguchi (eps 1-6, 8-13)",
-                    "index": null,
-                    "name": "URL",
-                    "artist": "Ami Sakaguchi",
-                    "episode": "eps 1-6, 8-13",
-                    "yt_url": "https://www.youtube.com/watch?v=71EHMNg6KIc"
-                },
-                {
-                    "id": 76557,
-                    "anime_id": 54856,
-                    "text": "2: \"Dokuro Ninja Konoha (\u30c9\u30af\u30ed\u30cb\u30f3\u30b8\u30e3\u30b3\u30ce\u30cf)\" by Sakura Kouno (CV: Reina Kondou) & Akane Yanagi (CV: Jun Fukuyama) (ep 7)",
-                    "index": null,
-                    "name": "Dokuro Ninja Konoha (\u30c9\u30af\u30ed\u30cb\u30f3\u30b8\u30e3\u30b3\u30ce\u30cf)",
-                    "artist": "Sakura Kouno (CV: Reina Kondou) & Akane Yanagi (CV: Jun Fukuyama)",
-                    "episode": "ep 7",
-                    "yt_url": "https://www.youtube.com/watch?v=gXgjL0TrRD4"
-                }
-            ]
-        },
-        {
             "id": 36038,
             "title": "Net-juu no Susume",
             "picture": "https://cdn.myanimelist.net/images/anime/3/87463.webp",
@@ -18351,35 +17913,6 @@
                     "artist": "Yuuka Aisaka",
                     "episode": null,
                     "yt_url": "https://www.youtube.com/watch?v=FxMA3bLm8rk"
-                }
-            ]
-        },
-        {
-            "id": 42897,
-            "title": "Horimiya",
-            "picture": "https://cdn.myanimelist.net/images/anime/1695/111486.jpg",
-            "opening_themes": [
-                {
-                    "id": 69851,
-                    "anime_id": 42897,
-                    "text": "\"Iro Kousui (\u8272\u9999\u6c34)\" by You Kamiyama",
-                    "index": null,
-                    "name": "Iro Kousui (\u8272\u9999\u6c34)",
-                    "artist": "You Kamiyama",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=kQYLHjgUh_g"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 69852,
-                    "anime_id": 42897,
-                    "text": "\"Yakusoku (\u7d04\u675f)\" by Friends (\u30d5\u30ec\u30f3\u30ba)",
-                    "index": null,
-                    "name": "Yakusoku (\u7d04\u675f)",
-                    "artist": "Friends (\u30d5\u30ec\u30f3\u30ba)",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=fd1jD7-XX5g"
                 }
             ]
         },
@@ -20238,35 +19771,6 @@
             ]
         },
         {
-            "id": 44203,
-            "title": "Seirei Gensouki",
-            "picture": "https://cdn.myanimelist.net/images/anime/1836/116060.webp",
-            "opening_themes": [
-                {
-                    "id": 70692,
-                    "anime_id": 44203,
-                    "text": "\"New story\" by Marika Kouno",
-                    "index": null,
-                    "name": "New story",
-                    "artist": "Marika Kouno",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=-SdEFi3yqOc"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 70693,
-                    "anime_id": 44203,
-                    "text": "\"Elder flower\" by Aguri Oonishi",
-                    "index": null,
-                    "name": "Elder flower",
-                    "artist": "Aguri Oonishi",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=oAyY_NhZgqE"
-                }
-            ]
-        },
-        {
             "id": 52962,
             "title": "Tearmoon Teikoku Monogatari: Dantoudai kara Hajimaru, Hime no Tensei Gyakuten Story",
             "picture": "https://cdn.myanimelist.net/images/anime/1901/139910.jpg",
@@ -20292,65 +19796,6 @@
                     "artist": "KanoeRana",
                     "episode": null,
                     "yt_url": "https://www.youtube.com/watch?v=uI93Pxd0W2E"
-                }
-            ]
-        },
-        {
-            "id": 20785,
-            "title": "Mahouka Koukou no Rettousei",
-            "picture": "https://cdn.myanimelist.net/images/anime/11/61039.jpg",
-            "opening_themes": [
-                {
-                    "id": 44875,
-                    "anime_id": 20785,
-                    "text": "#1: \"Rising Hope\" by LiSA (eps 2-3, 5-13)",
-                    "index": "1",
-                    "name": "Rising Hope",
-                    "artist": "LiSA",
-                    "episode": "eps 2-3, 5-13",
-                    "yt_url": "https://www.youtube.com/watch?v=IzhMzY5avLI"
-                },
-                {
-                    "id": 44877,
-                    "anime_id": 20785,
-                    "text": "#2: \"grilletto\" by GARNiDELiA (eps 14-26)",
-                    "index": "2",
-                    "name": "grilletto",
-                    "artist": "GARNiDELiA",
-                    "episode": "eps 14-26",
-                    "yt_url": "https://www.youtube.com/watch?v=hUf1NoPK-8Q"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 44879,
-                    "anime_id": 20785,
-                    "text": "#1: \"Rising Hope\" by LiSA (ep 1)",
-                    "index": "1",
-                    "name": "Rising Hope",
-                    "artist": "LiSA",
-                    "episode": "ep 1",
-                    "yt_url": "https://www.youtube.com/watch?v=IzhMzY5avLI"
-                },
-                {
-                    "id": 44881,
-                    "anime_id": 20785,
-                    "text": "#2: \"Millenario (\u30df\u30ec\u30ca\u30ea\u30aa)\" by ELISA (eps 2-13, 18)",
-                    "index": "2",
-                    "name": "Millenario (\u30df\u30ec\u30ca\u30ea\u30aa)",
-                    "artist": "ELISA",
-                    "episode": "eps 2-13, 18",
-                    "yt_url": "https://www.youtube.com/watch?v=MNlaZt5i8jU"
-                },
-                {
-                    "id": 44883,
-                    "anime_id": 20785,
-                    "text": "#3: \"Mirror\" by Rei Yasuda (eps 14-17, 19-26)",
-                    "index": "3",
-                    "name": "Mirror",
-                    "artist": "Rei Yasuda",
-                    "episode": "eps 14-17, 19-26",
-                    "yt_url": "https://www.youtube.com/watch?v=j0N5XpHDfUM"
                 }
             ]
         },
@@ -20804,122 +20249,6 @@
                     "artist": "Alex Xiao (\u8427\u5fc6\u60c5)",
                     "episode": null,
                     "yt_url": "https://www.youtube.com/watch?v=KhcHCaxv_FI"
-                }
-            ]
-        },
-        {
-            "id": 29803,
-            "title": "Overlord",
-            "picture": "https://cdn.myanimelist.net/images/anime/7/88019.webp",
-            "opening_themes": [
-                {
-                    "id": 50896,
-                    "anime_id": 29803,
-                    "text": "\"Clattanoia\" by O\u00d7T (Masayoshi Oishi \u00d7 Tom-H@ck)",
-                    "index": null,
-                    "name": "Clattanoia",
-                    "artist": "O\u00d7T (Masayoshi Oishi \u00d7 Tom-H@ck)",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=saah9UTwaUI"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 50897,
-                    "anime_id": 29803,
-                    "text": "\"L.L.L.\" by MYTH&ROID",
-                    "index": null,
-                    "name": "L.L.L.",
-                    "artist": "MYTH&ROID",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=skqKOt73rvM"
-                }
-            ]
-        },
-        {
-            "id": 35073,
-            "title": "Overlord II",
-            "picture": "https://cdn.myanimelist.net/images/anime/1212/113415.jpg",
-            "opening_themes": [
-                {
-                    "id": 60532,
-                    "anime_id": 35073,
-                    "text": "\"GO CRY GO\" by OxT",
-                    "index": null,
-                    "name": "GO CRY GO",
-                    "artist": "OxT",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=efL4a9zIMBQ"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 60533,
-                    "anime_id": 35073,
-                    "text": "\"HYDRA\" by MYTH\uff06ROID",
-                    "index": null,
-                    "name": "HYDRA",
-                    "artist": "MYTH\uff06ROID",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=qrvCAJbXc_o"
-                }
-            ]
-        },
-        {
-            "id": 37675,
-            "title": "Overlord III",
-            "picture": "https://cdn.myanimelist.net/images/anime/1511/93473.webp",
-            "opening_themes": [
-                {
-                    "id": 62556,
-                    "anime_id": 37675,
-                    "text": "\"VORACITY\" by MYTH\uff06ROID",
-                    "index": null,
-                    "name": "VORACITY",
-                    "artist": "MYTH\uff06ROID",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=XPOIe6WdhPQ"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 62889,
-                    "anime_id": 37675,
-                    "text": "\"Silent Solitude\" by OxT",
-                    "index": null,
-                    "name": "Silent Solitude",
-                    "artist": "OxT",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=KnZhuGMnhds"
-                }
-            ]
-        },
-        {
-            "id": 48895,
-            "title": "Overlord IV",
-            "picture": "https://cdn.myanimelist.net/images/anime/1530/120110.jpg",
-            "opening_themes": [
-                {
-                    "id": 72607,
-                    "anime_id": 48895,
-                    "text": "\"HOLLOW HUNGER\" by OxT",
-                    "index": null,
-                    "name": "HOLLOW HUNGER",
-                    "artist": "OxT",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=Tkkp3FhDVxQ"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 72615,
-                    "anime_id": 48895,
-                    "text": "\"No Man's Dawn\" by Mayu Maeshima",
-                    "index": null,
-                    "name": "No Man's Dawn",
-                    "artist": "Mayu Maeshima",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=9kPy5LT56v8"
                 }
             ]
         },
@@ -21586,55 +20915,6 @@
             ]
         },
         {
-            "id": 54837,
-            "title": "Akuyaku Reijou Level 99: Watashi wa Ura-Boss desu ga Maou dewa Arimasen",
-            "picture": "https://cdn.myanimelist.net/images/anime/1150/140028.jpg",
-            "opening_themes": [
-                {
-                    "id": 78669,
-                    "anime_id": 54837,
-                    "text": "#1: \"Ray of Light\" by Hanatan (\u82b1\u305f\u3093) (ep 1)",
-                    "index": "1",
-                    "name": "Ray of Light",
-                    "artist": "Hanatan (\u82b1\u305f\u3093)",
-                    "episode": "ep 1",
-                    "yt_url": "https://www.youtube.com/watch?v=UtVQ5uMEQWI"
-                },
-                {
-                    "id": 78670,
-                    "anime_id": 54837,
-                    "text": "#2: \"LOVE or HATE?\" by Mayu Maeshima (\u524d\u5cf6\u9ebb\u7531) (eps 2-12)",
-                    "index": "2",
-                    "name": "LOVE or HATE?",
-                    "artist": "Mayu Maeshima (\u524d\u5cf6\u9ebb\u7531)",
-                    "episode": "eps 2-12",
-                    "yt_url": "https://www.youtube.com/watch?v=4noCHoUpWFY"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 78873,
-                    "anime_id": 54837,
-                    "text": "#1: \"LOVE or HATE?\" by Mayu Maeshima (\u524d\u5cf6\u9ebb\u7531) (eps 1, 12)",
-                    "index": "1",
-                    "name": "LOVE or HATE?",
-                    "artist": "Mayu Maeshima (\u524d\u5cf6\u9ebb\u7531)",
-                    "episode": "eps 1, 12",
-                    "yt_url": "https://www.youtube.com/watch?v=4noCHoUpWFY"
-                },
-                {
-                    "id": 78874,
-                    "anime_id": 54837,
-                    "text": "#2: \"Suki ga Levechi (\u597d\u304d\u304c\u30ec\u30d9\u30c1)\" by Eleanora Hillrose (CV: Rina Hidaka), Yumiella Dolkness (CV: Fairouz Ai) (eps 2-11)",
-                    "index": "2",
-                    "name": "Suki ga Levechi (\u597d\u304d\u304c\u30ec\u30d9\u30c1)",
-                    "artist": "Eleanora Hillrose (CV: Rina Hidaka), Yumiella Dolkness (CV: Fairouz Ai)",
-                    "episode": "eps 2-11",
-                    "yt_url": "https://www.youtube.com/watch?v=qcnBSbuz5rk"
-                }
-            ]
-        },
-        {
             "id": 51180,
             "title": "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e 3rd Season",
             "picture": "https://cdn.myanimelist.net/images/anime/1332/139318.webp",
@@ -22130,24 +21410,6 @@
             ]
         },
         {
-            "id": 2890,
-            "title": "Gake no Ue no Ponyo",
-            "picture": "https://cdn.myanimelist.net/images/anime/1331/138727.jpg",
-            "opening_themes": [],
-            "ending_themes": [
-                {
-                    "id": 2690,
-                    "anime_id": 2890,
-                    "text": "\"Gake no Ue no Ponyo (\u5d16\u306e\u4e0a\u306e\u30dd\u30cb\u30e7)\" by Fujioka Fujimaki and Nozomi \u014chashi",
-                    "index": null,
-                    "name": "Gake no Ue no Ponyo (\u5d16\u306e\u4e0a\u306e\u30dd\u30cb\u30e7)",
-                    "artist": "Fujioka Fujimaki and Nozomi \u014chashi",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=kDy3rDedXBM"
-                }
-            ]
-        },
-        {
             "id": 38826,
             "title": "Tenki no Ko",
             "picture": "https://cdn.myanimelist.net/images/anime/1880/101146.webp",
@@ -22273,55 +21535,6 @@
             ]
         },
         {
-            "id": 49889,
-            "title": "Tsuki ga Michibiku Isekai Douchuu 2nd Season",
-            "picture": "https://cdn.myanimelist.net/images/anime/1794/142621.jpg",
-            "opening_themes": [
-                {
-                    "id": 78387,
-                    "anime_id": 49889,
-                    "text": "#1: \"Utopia (\u30e6\u30fc\u30c8\u30d4\u30a2)\" by Keina Suda (\u9808\u7530\u666f\u51ea)",
-                    "index": "1",
-                    "name": "Utopia (\u30e6\u30fc\u30c8\u30d4\u30a2)",
-                    "artist": "Keina Suda (\u9808\u7530\u666f\u51ea)",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=PG5Shdaib7w"
-                },
-                {
-                    "id": 78388,
-                    "anime_id": 49889,
-                    "text": "#2: \"Reversal (\u30ea\u30f4\u30a1\u30fc\u30b5\u30eb)\" by syudou",
-                    "index": "2",
-                    "name": "Reversal (\u30ea\u30f4\u30a1\u30fc\u30b5\u30eb)",
-                    "artist": "syudou",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=Ik7YdU2eI58"
-                }
-            ],
-            "ending_themes": [
-                {
-                    "id": 78617,
-                    "anime_id": 49889,
-                    "text": "#1: \"My Factor\" by Kento Itou (\u4f0a\u6771\u5065\u4eba)",
-                    "index": "1",
-                    "name": "My Factor",
-                    "artist": "Kento Itou (\u4f0a\u6771\u5065\u4eba)",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=nNEicyjXDjI"
-                },
-                {
-                    "id": 78618,
-                    "anime_id": 49889,
-                    "text": "#2: \"Joushiki Hazure Human (\u5e38\u8b58\u5916\u308c\u30d2\u30e5\u30fc\u30de\u30f3)\" by Kaori Maeda (\u524d\u7530 \u4f73\u7e54\u91cc)",
-                    "index": "2",
-                    "name": "Joushiki Hazure Human (\u5e38\u8b58\u5916\u308c\u30d2\u30e5\u30fc\u30de\u30f3)",
-                    "artist": "Kaori Maeda (\u524d\u7530 \u4f73\u7e54\u91cc)",
-                    "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=r0Q9X3F36yU"
-                }
-            ]
-        },
-        {
             "id": 56690,
             "title": "Re:Monster",
             "picture": "https://cdn.myanimelist.net/images/anime/1523/141680.jpg",
@@ -22376,6 +21589,2294 @@
                     "artist": "Licia Pleide (CV: Kana Hanazawa)",
                     "episode": "eps 2-12",
                     "yt_url": "https://www.youtube.com/watch?v=RfGHSp4oViI"
+                }
+            ]
+        },
+        {
+            "id": 50713,
+            "title": "Mahouka Koukou no Rettousei 3rd Season",
+            "picture": "https://cdn.myanimelist.net/images/anime/1100/142255.jpg",
+            "opening_themes": [
+                {
+                    "id": 79340,
+                    "anime_id": 50713,
+                    "text": "\"Shouted Serenade\" by LiSA (eps 2-13)",
+                    "index": null,
+                    "name": "Shouted Serenade",
+                    "artist": "LiSA",
+                    "episode": "eps 2-13",
+                    "yt_url": "https://www.youtube.com/watch?v=fR7e0N1UkRI"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 79341,
+                    "anime_id": 50713,
+                    "text": "#1: \"Shouted Serenade\" by LiSA (ep 1)",
+                    "index": "1",
+                    "name": "Shouted Serenade",
+                    "artist": "LiSA",
+                    "episode": "ep 1",
+                    "yt_url": "https://www.youtube.com/watch?v=fR7e0N1UkRI"
+                },
+                {
+                    "id": 79342,
+                    "anime_id": 50713,
+                    "text": "#2: \"recall\" by Kairi Yagi (\u516b\u6728\u6d77\u8389) (eps 2-4)",
+                    "index": "2",
+                    "name": "recall",
+                    "artist": "Kairi Yagi (\u516b\u6728\u6d77\u8389)",
+                    "episode": "eps 2-4",
+                    "yt_url": "https://www.youtube.com/watch?v=RADvWaefL_U"
+                },
+                {
+                    "id": 79343,
+                    "anime_id": 50713,
+                    "text": "#3: \"Snow Noir (\u30b9\u30ce\u30fc\u30ce\u30ef\u30fc\u30eb)\" by Sangatsu no Phantasia (\u4e09\u6708\u306e\u30d1\u30f3\u30bf\u30b7\u30a2) (eps 5-8)",
+                    "index": "3",
+                    "name": "Snow Noir (\u30b9\u30ce\u30fc\u30ce\u30ef\u30fc\u30eb)",
+                    "artist": "Sangatsu no Phantasia (\u4e09\u6708\u306e\u30d1\u30f3\u30bf\u30b7\u30a2)",
+                    "episode": "eps 5-8",
+                    "yt_url": "https://www.youtube.com/watch?v=72Sg07BdE3E"
+                },
+                {
+                    "id": 79344,
+                    "anime_id": 50713,
+                    "text": "#4: \"Shion no Hanataba wo (\u7d2b\u82d1\u306e\u82b1\u675f\u3092)\" by ASCA (eps 9-13)",
+                    "index": "4",
+                    "name": "Shion no Hanataba wo (\u7d2b\u82d1\u306e\u82b1\u675f\u3092)",
+                    "artist": "ASCA",
+                    "episode": "eps 9-13",
+                    "yt_url": "https://www.youtube.com/watch?v=IbmrFglLWNk"
+                }
+            ]
+        },
+        {
+            "id": 57100,
+            "title": "The New Gate",
+            "picture": "https://cdn.myanimelist.net/images/anime/1898/141857.jpg",
+            "opening_themes": [
+                {
+                    "id": 79287,
+                    "anime_id": 57100,
+                    "text": "\"Sekai wo Yanuite (\u4e16\u754c\u3092\u5c04\u629c\u3044\u3066)\" by Sou (eps 2-10)",
+                    "index": null,
+                    "name": "Sekai wo Yanuite (\u4e16\u754c\u3092\u5c04\u629c\u3044\u3066)",
+                    "artist": "Sou",
+                    "episode": "eps 2-10",
+                    "yt_url": "https://www.youtube.com/watch?v=6Rdw3zrjwzo"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 79363,
+                    "anime_id": 57100,
+                    "text": "#1: \"Sekai wo Yanuite (\u4e16\u754c\u3092\u5c04\u629c\u3044\u3066)\" by Sou (ep 1)",
+                    "index": "1",
+                    "name": "Sekai wo Yanuite (\u4e16\u754c\u3092\u5c04\u629c\u3044\u3066)",
+                    "artist": "Sou",
+                    "episode": "ep 1",
+                    "yt_url": "https://www.youtube.com/watch?v=6Rdw3zrjwzo"
+                },
+                {
+                    "id": 79364,
+                    "anime_id": 57100,
+                    "text": "#2: \"Kanataboshi (\u30ab\u30ca\u30bf\u30dc\u30b7)\" by Miho Okasaki (\u5ca1\u54b2\u7f8e\u4fdd) (eps 2-12)",
+                    "index": "2",
+                    "name": "Kanataboshi (\u30ab\u30ca\u30bf\u30dc\u30b7)",
+                    "artist": "Miho Okasaki (\u5ca1\u54b2\u7f8e\u4fdd)",
+                    "episode": "eps 2-12",
+                    "yt_url": "https://www.youtube.com/watch?v=u9WiU9bnPMA"
+                }
+            ]
+        },
+        {
+            "id": 30276,
+            "title": "One Punch Man",
+            "picture": "https://cdn.myanimelist.net/images/anime/12/76049.jpg",
+            "opening_themes": [
+                {
+                    "id": 51905,
+                    "anime_id": 30276,
+                    "text": "\"THE HERO !! ~Okoreru Kobushi ni Hi wo Tsukero~ (THE HERO !! \uff5e\u6012\u308c\u308b\u62f3\u306b\u706b\u3092\u3064\u3051\u308d\uff5e)\" by JAM Project",
+                    "index": null,
+                    "name": "THE HERO !! ~Okoreru Kobushi ni Hi wo Tsukero~ (THE HERO !! \uff5e\u6012\u308c\u308b\u62f3\u306b\u706b\u3092\u3064\u3051\u308d\uff5e)",
+                    "artist": "JAM Project",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=QImBolnTVH8"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 53114,
+                    "anime_id": 30276,
+                    "text": "#1: \"Hoshi yori Saki ni Mitsukete Ageru (\u661f\u3088\u308a\u5148\u306b\u898b\u3064\u3051\u3066\u3042\u3052\u308b)\" by Hiroko Moriguchi (eps 1-11)",
+                    "index": "1",
+                    "name": "Hoshi yori Saki ni Mitsukete Ageru (\u661f\u3088\u308a\u5148\u306b\u898b\u3064\u3051\u3066\u3042\u3052\u308b)",
+                    "artist": "Hiroko Moriguchi",
+                    "episode": "eps 1-11",
+                    "yt_url": "https://www.youtube.com/watch?v=f-TxAUiwo18"
+                },
+                {
+                    "id": 53115,
+                    "anime_id": 30276,
+                    "text": "#2: \"Kanashimitachi wo Dakishimete (\u60b2\u3057\u307f\u305f\u3061\u3092\u62b1\u304d\u3057\u3081\u3066)\" by Hiroko Moriguchi (ep 12)",
+                    "index": "2",
+                    "name": "Kanashimitachi wo Dakishimete (\u60b2\u3057\u307f\u305f\u3061\u3092\u62b1\u304d\u3057\u3081\u3066)",
+                    "artist": "Hiroko Moriguchi",
+                    "episode": "ep 12",
+                    "yt_url": "https://www.youtube.com/watch?v=atr8aHPZcAk"
+                }
+            ]
+        },
+        {
+            "id": 55888,
+            "title": "Mushoku Tensei II: Isekai Ittara Honki Dasu Part 2",
+            "picture": "https://cdn.myanimelist.net/images/anime/1876/141251.jpg",
+            "opening_themes": [
+                {
+                    "id": 78408,
+                    "anime_id": 55888,
+                    "text": "\"On the Frontline (\u30aa\u30f3\u30fb\u30b6\u30fb\u30d5\u30ed\u30f3\u30c8\u30e9\u30a4\u30f3)\" by hitorie",
+                    "index": null,
+                    "name": "On the Frontline (\u30aa\u30f3\u30fb\u30b6\u30fb\u30d5\u30ed\u30f3\u30c8\u30e9\u30a4\u30f3)",
+                    "artist": "hitorie",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=xBwmPob9flU"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 80066,
+                    "anime_id": 55888,
+                    "text": "#1: \"Mamoritai Mono (\u5b88\u308a\u305f\u3044\u3082\u306e)\" by Yuiko Ohara (eps 1-2, 4-5, 7-9, 11)",
+                    "index": "1",
+                    "name": "Mamoritai Mono (\u5b88\u308a\u305f\u3044\u3082\u306e)",
+                    "artist": "Yuiko Ohara",
+                    "episode": "eps 1-2, 4-5, 7-9, 11",
+                    "yt_url": "https://www.youtube.com/watch?v=v7FApIxb4Y8"
+                },
+                {
+                    "id": 80067,
+                    "anime_id": 55888,
+                    "text": "#2: \"Tsubasa (\u30c4\u30d0\u30b5)\" by Nanahoshi (CV: Shion Wakayama) (ep 3)",
+                    "index": "2",
+                    "name": "Tsubasa (\u30c4\u30d0\u30b5)",
+                    "artist": "Nanahoshi (CV: Shion Wakayama)",
+                    "episode": "ep 3",
+                    "yt_url": "https://www.youtube.com/watch?v=s9u7oQ7aaV0"
+                },
+                {
+                    "id": 80068,
+                    "anime_id": 55888,
+                    "text": "#3: \"Kagerurabe no Uta (\u304b\u3052\u304f\u3089\u3079\u306e\u5504)\" by Yuiko Ohara (ep 12)",
+                    "index": "3",
+                    "name": "Kagerurabe no Uta (\u304b\u3052\u304f\u3089\u3079\u306e\u5504)",
+                    "artist": "Yuiko Ohara",
+                    "episode": "ep 12",
+                    "yt_url": "https://www.youtube.com/watch?v=fDcufjgMoSA"
+                }
+            ]
+        },
+        {
+            "id": 2890,
+            "title": "Gake no Ue no Ponyo",
+            "picture": "https://cdn.myanimelist.net/images/anime/1331/138727.jpg",
+            "opening_themes": [],
+            "ending_themes": [
+                {
+                    "id": 2690,
+                    "anime_id": 2890,
+                    "text": "\"Gake no Ue no Ponyo (\u5d16\u306e\u4e0a\u306e\u30dd\u30cb\u30e7)\" by Fujioka Fujimaki and Nozomi \u014chashi",
+                    "index": null,
+                    "name": "Gake no Ue no Ponyo (\u5d16\u306e\u4e0a\u306e\u30dd\u30cb\u30e7)",
+                    "artist": "Fujioka Fujimaki and Nozomi \u014chashi",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=kDy3rDedXBM"
+                }
+            ]
+        },
+        {
+            "id": 55717,
+            "title": "Dekisokonai to Yobareta Motoeiyuu wa Jikka kara Tsuihou sareta node Sukikatte ni Ikiru Koto ni Shita",
+            "picture": "https://cdn.myanimelist.net/images/anime/1158/141710.webp",
+            "opening_themes": [
+                {
+                    "id": 78281,
+                    "anime_id": 55717,
+                    "text": "\"EVOLVE\" by Shouta Aoi (\u84bc\u4e95\u7fd4\u592a)",
+                    "index": null,
+                    "name": "EVOLVE",
+                    "artist": "Shouta Aoi (\u84bc\u4e95\u7fd4\u592a)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=jG40Xe4inww"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 78466,
+                    "anime_id": 55717,
+                    "text": "\"Meritocracy (\u30e1\u30ea\u30c8\u30af\u30e9\u30b7\u30fc)\" by Aimi",
+                    "index": null,
+                    "name": "Meritocracy (\u30e1\u30ea\u30c8\u30af\u30e9\u30b7\u30fc)",
+                    "artist": "Aimi",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=p46GnXMcByM"
+                }
+            ]
+        },
+        {
+            "id": 56923,
+            "title": "Lv2 kara Cheat datta Motoyuusha Kouho no Mattari Isekai Life",
+            "picture": "https://cdn.myanimelist.net/images/anime/1103/142513.jpg",
+            "opening_themes": [
+                {
+                    "id": 79320,
+                    "anime_id": 56923,
+                    "text": "\"Dannasama to no Love Love Love Song (\u65e6\u90a3\u69d8\u3068\u306e\u30e9\u30d6\u30e9\u30d6\u30fb\u30e9\u30d6\u30bd\u30f3\u30b0)\" by Fenrys (CV: Rie Kugimiya) (eps 2-12)",
+                    "index": null,
+                    "name": "Dannasama to no Love Love Love Song (\u65e6\u90a3\u69d8\u3068\u306e\u30e9\u30d6\u30e9\u30d6\u30fb\u30e9\u30d6\u30bd\u30f3\u30b0)",
+                    "artist": "Fenrys (CV: Rie Kugimiya)",
+                    "episode": "eps 2-12",
+                    "yt_url": "https://www.youtube.com/watch?v=0agwONvJmxY"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 78236,
+                    "anime_id": 56923,
+                    "text": "\"Utopia-gaku Gairon (\u30e6\u30fc\u30c8\u30d4\u30a2\u5b66\u6982\u8ad6)\" by DIALOGUE+",
+                    "index": null,
+                    "name": "Utopia-gaku Gairon (\u30e6\u30fc\u30c8\u30d4\u30a2\u5b66\u6982\u8ad6)",
+                    "artist": "DIALOGUE+",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=2oAtUTe-57A"
+                }
+            ]
+        },
+        {
+            "id": 1030,
+            "title": "Heisei Tanuki Gassen Ponpoko",
+            "picture": "https://cdn.myanimelist.net/images/anime/1962/138712.webp",
+            "opening_themes": [],
+            "ending_themes": [
+                {
+                    "id": 2233,
+                    "anime_id": 1030,
+                    "text": "\"Itsu demo Dare ka ga (\u3044\u3064\u3067\u3082\u8ab0\u304b\u304c; Always, someone is...)\" by Shang Shang Typhoon",
+                    "index": null,
+                    "name": "Itsu demo Dare ka ga (\u3044\u3064\u3067\u3082\u8ab0\u304b\u304c; Always, someone is...)",
+                    "artist": "Shang Shang Typhoon",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=PLTBzTCog9c"
+                }
+            ]
+        },
+        {
+            "id": 11887,
+            "title": "Kokoro Connect",
+            "picture": "https://cdn.myanimelist.net/images/anime/2/39665.jpg",
+            "opening_themes": [
+                {
+                    "id": 30047,
+                    "anime_id": 11887,
+                    "text": "#1: \"Paradigm (\u30d1\u30e9\u30c0\u30a4\u30e0)\" by eufonius (eps 1-10)",
+                    "index": "1",
+                    "name": "Paradigm (\u30d1\u30e9\u30c0\u30a4\u30e0)",
+                    "artist": "eufonius",
+                    "episode": "eps 1-10",
+                    "yt_url": "https://www.youtube.com/watch?v=pYBTzbnYFcc"
+                },
+                {
+                    "id": 30049,
+                    "anime_id": 11887,
+                    "text": "#2: \"Kimi Rhythm (\u30ad\u30df\u30ea\u30ba\u30e0)\" by Masaki Imai (eps 12-13)",
+                    "index": "2",
+                    "name": "Kimi Rhythm (\u30ad\u30df\u30ea\u30ba\u30e0)",
+                    "artist": "Masaki Imai",
+                    "episode": "eps 12-13",
+                    "yt_url": "https://www.youtube.com/watch?v=TkLhw7P0oRQ"
+                },
+                {
+                    "id": 30051,
+                    "anime_id": 11887,
+                    "text": "#BD: \"Kimochi Signal (\u30ad\u30e2\u30c1\u30b7\u30b0\u30ca\u30eb)\" by Sayuri Horishita (eps 1-10)",
+                    "index": null,
+                    "name": "Kimochi Signal (\u30ad\u30e2\u30c1\u30b7\u30b0\u30ca\u30eb)",
+                    "artist": "Sayuri Horishita",
+                    "episode": "eps 1-10",
+                    "yt_url": "https://www.youtube.com/watch?v=hWeMIpoNB_Q"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 27693,
+                    "anime_id": 11887,
+                    "text": "#1: \"Kokoro no Kara (\u30b3\u30b3\u30ed\u30ce\u30ab\u30e9)\" by Team.Nekokan [Neko] featuring. Junca Amaoto (eps 1-5)",
+                    "index": "1",
+                    "name": "Kokoro no Kara (\u30b3\u30b3\u30ed\u30ce\u30ab\u30e9)",
+                    "artist": "Team.Nekokan [Neko] featuring. Junca Amaoto",
+                    "episode": "eps 1-5",
+                    "yt_url": "https://www.youtube.com/watch?v=sgh9pSQNlHo"
+                },
+                {
+                    "id": 27695,
+                    "anime_id": 11887,
+                    "text": "#2: \"Cry out\" by Team.Nekokan [Neko] featuring. atsuko (eps 6-10)",
+                    "index": "2",
+                    "name": "Cry out",
+                    "artist": "Team.Nekokan [Neko] featuring. atsuko",
+                    "episode": "eps 6-10",
+                    "yt_url": "https://www.youtube.com/watch?v=cBXKiMA3euc"
+                },
+                {
+                    "id": 27697,
+                    "anime_id": 11887,
+                    "text": "#3: \"Salvage\" by Team.Nekokan [Neko] featuring. Rekka Katakiri (eps 11-13)",
+                    "index": "3",
+                    "name": "Salvage",
+                    "artist": "Team.Nekokan [Neko] featuring. Rekka Katakiri",
+                    "episode": "eps 11-13",
+                    "yt_url": "https://www.youtube.com/watch?v=3UWYY5JqQZk"
+                }
+            ]
+        },
+        {
+            "id": 1029,
+            "title": "Omoide Poroporo",
+            "picture": "https://cdn.myanimelist.net/images/anime/1289/138708.webp",
+            "opening_themes": [
+                {
+                    "id": 53840,
+                    "anime_id": 1029,
+                    "text": "\"Teremt\u00e9s\" by Muzsik\u00e1s",
+                    "index": null,
+                    "name": "Teremt\u00e9s",
+                    "artist": "Muzsik\u00e1s",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=Tt_oCPANgdc"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 1473,
+                    "anime_id": 1029,
+                    "text": "\"Ai wa Hana, Kimi wa Sono Tane (\u611b\u306f\u82b1\u3001\u541b\u306f\u305d\u306e\u7a2e\u5b50; Love Is a Flower, You Are the Seed)\" by Harumi Miyako",
+                    "index": null,
+                    "name": "Ai wa Hana, Kimi wa Sono Tane (\u611b\u306f\u82b1\u3001\u541b\u306f\u305d\u306e\u7a2e\u5b50; Love Is a Flower, You Are the Seed)",
+                    "artist": "Harumi Miyako",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=-fWlUFay50s"
+                }
+            ]
+        },
+        {
+            "id": 35737,
+            "title": "Pluto",
+            "picture": "https://cdn.myanimelist.net/images/anime/1021/138568.jpg",
+            "opening_themes": [],
+            "ending_themes": [
+                {
+                    "id": 77835,
+                    "anime_id": 35737,
+                    "text": "#1: \"Clues to the Truth\" by Yugo Kanno (eps 1-5)",
+                    "index": "1",
+                    "name": "Clues to the Truth",
+                    "artist": "Yugo Kanno",
+                    "episode": "eps 1-5",
+                    "yt_url": "https://www.youtube.com/watch?v=V5hR5DzP1vs"
+                },
+                {
+                    "id": 77836,
+                    "anime_id": 35737,
+                    "text": "#2: \"Zeal for Life\" by Yugo Kanno (eps 6-8)",
+                    "index": "2",
+                    "name": "Zeal for Life",
+                    "artist": "Yugo Kanno",
+                    "episode": "eps 6-8",
+                    "yt_url": "https://www.youtube.com/watch?v=yaxC6Fo-XHs"
+                }
+            ]
+        },
+        {
+            "id": 57810,
+            "title": "Shoushimin Series",
+            "picture": "https://cdn.myanimelist.net/images/anime/1164/143459.webp",
+            "opening_themes": [
+                {
+                    "id": 79179,
+                    "anime_id": 57810,
+                    "text": "\"Sweet Memory (\u30b9\u30a4\u30fc\u30c8\u30e1\u30e2\u30ea\u30fc)\" by Eve",
+                    "index": null,
+                    "name": "Sweet Memory (\u30b9\u30a4\u30fc\u30c8\u30e1\u30e2\u30ea\u30fc)",
+                    "artist": "Eve",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=CaW5teT0oLc"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 79279,
+                    "anime_id": 57810,
+                    "text": "\"Itokenai (\u610f\u89e3\u3051\u306a\u3044)\" by ammo",
+                    "index": null,
+                    "name": "Itokenai (\u610f\u89e3\u3051\u306a\u3044)",
+                    "artist": "ammo",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=v0rm5rrgJYg"
+                }
+            ]
+        },
+        {
+            "id": 43523,
+            "title": "Tsuki ga Michibiku Isekai Douchuu",
+            "picture": "https://cdn.myanimelist.net/images/anime/1950/116474.jpg",
+            "opening_themes": [
+                {
+                    "id": 70949,
+                    "anime_id": 43523,
+                    "text": "\"Gamble (\u30ae\u30e3\u30f3\u30d6\u30eb)\" by syudou",
+                    "index": null,
+                    "name": "Gamble (\u30ae\u30e3\u30f3\u30d6\u30eb)",
+                    "artist": "syudou",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=7GBn6IuTQ6w"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 71320,
+                    "anime_id": 43523,
+                    "text": "#1: \"Aa Jinsei ni Namida Ari (\u3042\u3042\u4eba\u751f\u306b\u6d99\u3042\u308a)\" by Makoto Misumi (CV: Natsuki Hanae) (ep 1)",
+                    "index": "1",
+                    "name": "Aa Jinsei ni Namida Ari (\u3042\u3042\u4eba\u751f\u306b\u6d99\u3042\u308a)",
+                    "artist": "Makoto Misumi (CV: Natsuki Hanae)",
+                    "episode": "ep 1",
+                    "yt_url": "https://www.youtube.com/watch?v=4xlyZehaZ-E"
+                },
+                {
+                    "id": 71321,
+                    "anime_id": 43523,
+                    "text": "#2: \"Beautiful Dreamer (\u30d3\u30e5\u30fc\u30c6\u30a3\u30d5\u30eb\u30fb\u30c9\u30ea\u30fc\u30de\u30fc)\" by Ezoshika Gourmet Club (eps 2-3)",
+                    "index": "2",
+                    "name": "Beautiful Dreamer (\u30d3\u30e5\u30fc\u30c6\u30a3\u30d5\u30eb\u30fb\u30c9\u30ea\u30fc\u30de\u30fc)",
+                    "artist": "Ezoshika Gourmet Club",
+                    "episode": "eps 2-3",
+                    "yt_url": "https://www.youtube.com/watch?v=wS-PCSv7r2I"
+                },
+                {
+                    "id": 71322,
+                    "anime_id": 43523,
+                    "text": "#3: \"Aa, Jinsei ni Namida Ari (\u3042\u3042\u4eba\u751f\u306b\u6d99\u3042\u308a)\" by Tomoe (CV: Ayane Sakura), Mio (CV: Akari Kitou) (ep 4)",
+                    "index": "3",
+                    "name": "Aa, Jinsei ni Namida Ari (\u3042\u3042\u4eba\u751f\u306b\u6d99\u3042\u308a)",
+                    "artist": "Tomoe (CV: Ayane Sakura), Mio (CV: Akari Kitou)",
+                    "episode": "ep 4",
+                    "yt_url": "https://www.youtube.com/watch?v=SzbTcdPwNGo"
+                }
+            ]
+        },
+        {
+            "id": 57380,
+            "title": "Isekai Yururi Kikou: Kosodateshinagara Boukensha Shimasu",
+            "picture": "https://cdn.myanimelist.net/images/anime/1690/141987.jpg",
+            "opening_themes": [
+                {
+                    "id": 78877,
+                    "anime_id": 57380,
+                    "text": "\"Yuru Ring Travel days (\u3086\u308b\u30ea\u30f3\u30b0 Travel days)\" by Tebasaki Sensation (\u624b\u7fbd\u5148\u30bb\u30f3\u30bb\u30fc\u30b7\u30e7\u30f3)",
+                    "index": null,
+                    "name": "Yuru Ring Travel days (\u3086\u308b\u30ea\u30f3\u30b0 Travel days)",
+                    "artist": "Tebasaki Sensation (\u624b\u7fbd\u5148\u30bb\u30f3\u30bb\u30fc\u30b7\u30e7\u30f3)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=qS_aONIIBbw"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 78471,
+                    "anime_id": 57380,
+                    "text": "\"MAKUAKE\" by Goboubi (\u30b4\u30db\u30a6\u30d3)",
+                    "index": null,
+                    "name": "MAKUAKE",
+                    "artist": "Goboubi (\u30b4\u30db\u30a6\u30d3)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=iDBglLE9L6c"
+                }
+            ]
+        },
+        {
+            "id": 49889,
+            "title": "Tsuki ga Michibiku Isekai Douchuu 2nd Season",
+            "picture": "https://cdn.myanimelist.net/images/anime/1794/142621.jpg",
+            "opening_themes": [
+                {
+                    "id": 78387,
+                    "anime_id": 49889,
+                    "text": "#1: \"Utopia (\u30e6\u30fc\u30c8\u30d4\u30a2)\" by Keina Suda (\u9808\u7530\u666f\u51ea)",
+                    "index": "1",
+                    "name": "Utopia (\u30e6\u30fc\u30c8\u30d4\u30a2)",
+                    "artist": "Keina Suda (\u9808\u7530\u666f\u51ea)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=PG5Shdaib7w"
+                },
+                {
+                    "id": 78388,
+                    "anime_id": 49889,
+                    "text": "#2: \"Reversal (\u30ea\u30f4\u30a1\u30fc\u30b5\u30eb)\" by syudou",
+                    "index": "2",
+                    "name": "Reversal (\u30ea\u30f4\u30a1\u30fc\u30b5\u30eb)",
+                    "artist": "syudou",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=Ik7YdU2eI58"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 78617,
+                    "anime_id": 49889,
+                    "text": "#1: \"My Factor\" by Kento Itou (\u4f0a\u6771\u5065\u4eba)",
+                    "index": "1",
+                    "name": "My Factor",
+                    "artist": "Kento Itou (\u4f0a\u6771\u5065\u4eba)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=nNEicyjXDjI"
+                },
+                {
+                    "id": 78618,
+                    "anime_id": 49889,
+                    "text": "#2: \"Joushiki Hazure Human (\u5e38\u8b58\u5916\u308c\u30d2\u30e5\u30fc\u30de\u30f3)\" by Kaori Maeda (\u524d\u7530 \u4f73\u7e54\u91cc)",
+                    "index": "2",
+                    "name": "Joushiki Hazure Human (\u5e38\u8b58\u5916\u308c\u30d2\u30e5\u30fc\u30de\u30f3)",
+                    "artist": "Kaori Maeda (\u524d\u7530 \u4f73\u7e54\u91cc)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=r0Q9X3F36yU"
+                }
+            ]
+        },
+        {
+            "id": 40357,
+            "title": "Tate no Yuusha no Nariagari Season 3",
+            "picture": "https://cdn.myanimelist.net/images/anime/1317/139802.jpg",
+            "opening_themes": [
+                {
+                    "id": 76364,
+                    "anime_id": 40357,
+                    "text": "\"SIN\" by MADKID",
+                    "index": null,
+                    "name": "SIN",
+                    "artist": "MADKID",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=zAK7IIYxY1M"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 77912,
+                    "anime_id": 40357,
+                    "text": "1: \"Suki ni Natte wa Ikenai Riyuu (\u597d\u304d\u306b\u306a\u3063\u3066\u306f\u3044\u3051\u306a\u3044\u7406\u7531)\" by Chiai Fujikawa (\u85e4\u5ddd\u5343\u611b) (eps 2, 5-12)",
+                    "index": null,
+                    "name": "Suki ni Natte wa Ikenai Riyuu (\u597d\u304d\u306b\u306a\u3063\u3066\u306f\u3044\u3051\u306a\u3044\u7406\u7531)",
+                    "artist": "Chiai Fujikawa (\u85e4\u5ddd\u5343\u611b)",
+                    "episode": "eps 2, 5-12",
+                    "yt_url": "https://www.youtube.com/watch?v=RcPU6yzR29k"
+                },
+                {
+                    "id": 77913,
+                    "anime_id": 40357,
+                    "text": "2: \"Kirakira Kyu (\u30ad\u30e9\u30ad\u30e9\u30ad\u30e5\u3063)\" by Filo (CV: Rina Hidaka) (ep 4)",
+                    "index": null,
+                    "name": "Kirakira Kyu (\u30ad\u30e9\u30ad\u30e9\u30ad\u30e5\u3063)",
+                    "artist": "Filo (CV: Rina Hidaka)",
+                    "episode": "ep 4",
+                    "yt_url": "https://www.youtube.com/watch?v=WnGNTTNt8Cg"
+                }
+            ]
+        },
+        {
+            "id": 54744,
+            "title": "Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san",
+            "picture": "https://cdn.myanimelist.net/images/anime/1825/142258.jpg",
+            "opening_themes": [
+                {
+                    "id": 78985,
+                    "anime_id": 54744,
+                    "text": "\"1-Ban Kagayaku Hoshi (1\u756a\u8f1d\u304f\u661f)\" by Alya (CV: Sumire Uesaka)",
+                    "index": null,
+                    "name": "1-Ban Kagayaku Hoshi (1\u756a\u8f1d\u304f\u661f)",
+                    "artist": "Alya (CV: Sumire Uesaka)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=c_yY9BfcmDk"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 80088,
+                    "anime_id": 54744,
+                    "text": "#01: \"Gakuen Tengoku (\u5b66\u5712\u5929\u56fd)\" by Alya (CV: Sumire Uesaka) (ep 1)",
+                    "index": "01",
+                    "name": "Gakuen Tengoku (\u5b66\u5712\u5929\u56fd)",
+                    "artist": "Alya (CV: Sumire Uesaka)",
+                    "episode": "ep 1",
+                    "yt_url": "https://www.youtube.com/watch?v=1UNJx4KBWqU"
+                },
+                {
+                    "id": 80089,
+                    "anime_id": 54744,
+                    "text": "#02: \"Kawaikute Gomen (\u53ef\u611b\u304f\u3066\u3054\u3081\u3093)\" by Alya (CV: Sumire Uesaka) (ep 2)",
+                    "index": "02",
+                    "name": "Kawaikute Gomen (\u53ef\u611b\u304f\u3066\u3054\u3081\u3093)",
+                    "artist": "Alya (CV: Sumire Uesaka)",
+                    "episode": "ep 2",
+                    "yt_url": "https://www.youtube.com/watch?v=O9S2bWkaiMI"
+                },
+                {
+                    "id": 80090,
+                    "anime_id": 54744,
+                    "text": "#03: \"Omoide ga Ippai (\u60f3\u3044\u51fa\u304c\u3044\u3063\u3071\u3044)\" by Alya (CV: Sumire Uesaka) (ep 3)",
+                    "index": "03",
+                    "name": "Omoide ga Ippai (\u60f3\u3044\u51fa\u304c\u3044\u3063\u3071\u3044)",
+                    "artist": "Alya (CV: Sumire Uesaka)",
+                    "episode": "ep 3",
+                    "yt_url": "https://www.youtube.com/watch?v=TFOJzZNMFyQ"
+                },
+                {
+                    "id": 80091,
+                    "anime_id": 54744,
+                    "text": "#04: \"Hare Hare Yukai (\u30cf\u30ec\u6674\u30ec\u30e6\u30ab\u30a4)\" by Alya (CV: Sumire Uesaka) (ep 4)",
+                    "index": "04",
+                    "name": "Hare Hare Yukai (\u30cf\u30ec\u6674\u30ec\u30e6\u30ab\u30a4)",
+                    "artist": "Alya (CV: Sumire Uesaka)",
+                    "episode": "ep 4",
+                    "yt_url": "https://www.youtube.com/watch?v=YbKqZF3wc5g"
+                },
+                {
+                    "id": 80092,
+                    "anime_id": 54744,
+                    "text": "#05: \"Chiisana Koi no Uta (\u5c0f\u3055\u306a\u604b\u306e\u3046\u305f)\" by Alya (CV: Sumire Uesaka) (ep 5)",
+                    "index": "05",
+                    "name": "Chiisana Koi no Uta (\u5c0f\u3055\u306a\u604b\u306e\u3046\u305f)",
+                    "artist": "Alya (CV: Sumire Uesaka)",
+                    "episode": "ep 5",
+                    "yt_url": "https://www.youtube.com/watch?v=W8LIW8ciGjM"
+                },
+                {
+                    "id": 80093,
+                    "anime_id": 54744,
+                    "text": "#06: \"Himitsu no Kotoba (\u79d8\u5bc6\u306e\u8a00\u8449)\" by Alya (CV: Sumire Uesaka)\u00d7KAF (\u82b1\u8b5c)  (ep 6)",
+                    "index": "06",
+                    "name": "Himitsu no Kotoba (\u79d8\u5bc6\u306e\u8a00\u8449)",
+                    "artist": "Alya (CV: Sumire Uesaka)\u00d7KAF (\u82b1\u8b5c)",
+                    "episode": "ep 6",
+                    "yt_url": "https://www.youtube.com/watch?v=rnpL3ZugPLc"
+                },
+                {
+                    "id": 80094,
+                    "anime_id": 54744,
+                    "text": "#07: \"Love Story wa Totsuzen ni (\u30e9\u30d6\u30fb\u30b9\u30c8\u30fc\u30ea\u30fc\u306f\u7a81\u7136\u306b)\" by Alya (CV: Sumire Uesaka) (ep 7)",
+                    "index": "07",
+                    "name": "Love Story wa Totsuzen ni (\u30e9\u30d6\u30fb\u30b9\u30c8\u30fc\u30ea\u30fc\u306f\u7a81\u7136\u306b)",
+                    "artist": "Alya (CV: Sumire Uesaka)",
+                    "episode": "ep 7",
+                    "yt_url": "https://www.youtube.com/watch?v=Q0w3e6Aj9I4"
+                },
+                {
+                    "id": 80095,
+                    "anime_id": 54744,
+                    "text": "#08: \"CHE.R.RY\" by Alya (CV: Sumire Uesaka) (ep 8)",
+                    "index": "08",
+                    "name": "CHE.R.RY",
+                    "artist": "Alya (CV: Sumire Uesaka)",
+                    "episode": "ep 8",
+                    "yt_url": "https://www.youtube.com/watch?v=Y7jnokmSD6A"
+                },
+                {
+                    "id": 80096,
+                    "anime_id": 54744,
+                    "text": "#09: \"World Is Mine (\u30ef\u30fc\u30eb\u30c9\u30a4\u30ba\u30de\u30a4\u30f3)\" by Alya (CV: Sumire Uesaka) (ep 9)",
+                    "index": "09",
+                    "name": "World Is Mine (\u30ef\u30fc\u30eb\u30c9\u30a4\u30ba\u30de\u30a4\u30f3)",
+                    "artist": "Alya (CV: Sumire Uesaka)",
+                    "episode": "ep 9",
+                    "yt_url": "https://www.youtube.com/watch?v=CK33ESHOOvk"
+                },
+                {
+                    "id": 80097,
+                    "anime_id": 54744,
+                    "text": "#10: \"Koi no Uta (\u3053\u3044\u306e\u3046\u305f)\" by Alya (CV: Sumire Uesaka) (ep 10)",
+                    "index": "10",
+                    "name": "Koi no Uta (\u3053\u3044\u306e\u3046\u305f)",
+                    "artist": "Alya (CV: Sumire Uesaka)",
+                    "episode": "ep 10",
+                    "yt_url": "https://www.youtube.com/watch?v=W8LIW8ciGjM"
+                },
+                {
+                    "id": 80098,
+                    "anime_id": 54744,
+                    "text": "#11: \"Kimagure Romantic (\u6c17\u307e\u3050\u308c\u30ed\u30de\u30f3\u30c6\u30a3\u30c3\u30af)\" by Alya (CV: Sumire Uesaka) (ep 11)",
+                    "index": "11",
+                    "name": "Kimagure Romantic (\u6c17\u307e\u3050\u308c\u30ed\u30de\u30f3\u30c6\u30a3\u30c3\u30af)",
+                    "artist": "Alya (CV: Sumire Uesaka)",
+                    "episode": "ep 11",
+                    "yt_url": "https://www.youtube.com/watch?v=ZX9KkHhAlXY"
+                },
+                {
+                    "id": 80099,
+                    "anime_id": 54744,
+                    "text": "#12: \"Hanamoyoi (\u30cf\u30ca\u30e2\u30e8\u30a4)\" by Alya (CV: Sumire Uesaka) (ep 12)",
+                    "index": "12",
+                    "name": "Hanamoyoi (\u30cf\u30ca\u30e2\u30e8\u30a4)",
+                    "artist": "Alya (CV: Sumire Uesaka)",
+                    "episode": "ep 12",
+                    "yt_url": "https://www.youtube.com/watch?v=2wX8WJUOfzQ"
+                }
+            ]
+        },
+        {
+            "id": 57058,
+            "title": "Ore wa Subete wo \"Parry\" suru: Gyaku Kanchigai no Sekai Saikyou wa Boukensha ni Naritai",
+            "picture": "https://cdn.myanimelist.net/images/anime/1747/143101.jpg",
+            "opening_themes": [
+                {
+                    "id": 78977,
+                    "anime_id": 57058,
+                    "text": "\"AMBITION\" by Maika Sakuragi [Utahime Dream]",
+                    "index": null,
+                    "name": "AMBITION",
+                    "artist": "Maika Sakuragi [Utahime Dream]",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=jxAhY6SKcMw"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 78975,
+                    "anime_id": 57058,
+                    "text": "\"No Gifted (\u30ce\u30fc\u30ae\u30d5\u30c6\u30c3\u30c9)\" by Utahime Dream All-Stars (\u30a6\u30bf\u30d2\u30e1\u30c9\u30ea\u30fc\u30e0 \u30aa\u30fc\u30eb\u30b9\u30bf\u30fc\u30ba)",
+                    "index": null,
+                    "name": "No Gifted (\u30ce\u30fc\u30ae\u30d5\u30c6\u30c3\u30c9)",
+                    "artist": "Utahime Dream All-Stars (\u30a6\u30bf\u30d2\u30e1\u30c9\u30ea\u30fc\u30e0 \u30aa\u30fc\u30eb\u30b9\u30bf\u30fc\u30ba)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=0xoj7hZKQWQ"
+                }
+            ]
+        },
+        {
+            "id": 52481,
+            "title": "Gimai Seikatsu",
+            "picture": "https://cdn.myanimelist.net/images/anime/1420/143707.webp",
+            "opening_themes": [
+                {
+                    "id": 80133,
+                    "anime_id": 52481,
+                    "text": "#1: \"Tenshi-tachi no Uta (\u5929\u4f7f\u305f\u3061\u306e\u6b4c)\" by fh\u00e1na (eps 2, 4-11)",
+                    "index": "1",
+                    "name": "Tenshi-tachi no Uta (\u5929\u4f7f\u305f\u3061\u306e\u6b4c)",
+                    "artist": "fh\u00e1na",
+                    "episode": "eps 2, 4-11",
+                    "yt_url": "https://www.youtube.com/watch?v=GBvAVGsZPNA"
+                },
+                {
+                    "id": 80134,
+                    "anime_id": 52481,
+                    "text": "#2: \"Suisou no Buranko (\u6c34\u69fd\u306e\u30d6\u30e9\u30f3\u30b3)\" by Kitri (ep 12)",
+                    "index": "2",
+                    "name": "Suisou no Buranko (\u6c34\u69fd\u306e\u30d6\u30e9\u30f3\u30b3)",
+                    "artist": "Kitri",
+                    "episode": "ep 12",
+                    "yt_url": "https://www.youtube.com/watch?v=22Btuugzr6E"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 80131,
+                    "anime_id": 52481,
+                    "text": "#1: \"Tenshi-tachi no Uta (\u5929\u4f7f\u305f\u3061\u306e\u6b4c)\" by fh\u00e1na (ep 1)",
+                    "index": "1",
+                    "name": "Tenshi-tachi no Uta (\u5929\u4f7f\u305f\u3061\u306e\u6b4c)",
+                    "artist": "fh\u00e1na",
+                    "episode": "ep 1",
+                    "yt_url": "https://www.youtube.com/watch?v=GBvAVGsZPNA"
+                },
+                {
+                    "id": 80132,
+                    "anime_id": 52481,
+                    "text": "#2: \"Suisou no Buranko (\u6c34\u69fd\u306e\u30d6\u30e9\u30f3\u30b3)\" by Kitri (eps 2-8, 10-11)",
+                    "index": "2",
+                    "name": "Suisou no Buranko (\u6c34\u69fd\u306e\u30d6\u30e9\u30f3\u30b3)",
+                    "artist": "Kitri",
+                    "episode": "eps 2-8, 10-11",
+                    "yt_url": "https://www.youtube.com/watch?v=22Btuugzr6E"
+                }
+            ]
+        },
+        {
+            "id": 54968,
+            "title": "Giji Harem",
+            "picture": "https://cdn.myanimelist.net/images/anime/1607/143547.jpg",
+            "opening_themes": [
+                {
+                    "id": 80137,
+                    "anime_id": 54968,
+                    "text": "\"Blouse (\u30d6\u30e9\u30a6\u30b9)\" by Gohobi (\u30b4\u30db\u30a6\u30d3) (eps 1-11)",
+                    "index": null,
+                    "name": "Blouse (\u30d6\u30e9\u30a6\u30b9)",
+                    "artist": "Gohobi (\u30b4\u30db\u30a6\u30d3)",
+                    "episode": "eps 1-11",
+                    "yt_url": "https://www.youtube.com/watch?v=XV6H7KyFcwY"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 80135,
+                    "anime_id": 54968,
+                    "text": "#1: \"Ad-lib (\u30a2\u30c9\u30ea\u30d6)\" by Rin Nanakura (CV: Saori Hayami) (eps 1-11)",
+                    "index": "1",
+                    "name": "Ad-lib (\u30a2\u30c9\u30ea\u30d6)",
+                    "artist": "Rin Nanakura (CV: Saori Hayami)",
+                    "episode": "eps 1-11",
+                    "yt_url": "https://www.youtube.com/watch?v=ib6xGN31BjE"
+                },
+                {
+                    "id": 80136,
+                    "anime_id": 54968,
+                    "text": "#2: \"Blouse (\u30d6\u30e9\u30a6\u30b9)\" by Gohobi (\u30b4\u30db\u30a6\u30d3) (ep 12)",
+                    "index": "2",
+                    "name": "Blouse (\u30d6\u30e9\u30a6\u30b9)",
+                    "artist": "Gohobi (\u30b4\u30db\u30a6\u30d3)",
+                    "episode": "ep 12",
+                    "yt_url": "https://www.youtube.com/watch?v=XV6H7KyFcwY"
+                }
+            ]
+        },
+        {
+            "id": 50346,
+            "title": "Yofukashi no Uta",
+            "picture": "https://cdn.myanimelist.net/images/anime/1045/123711.jpg",
+            "opening_themes": [
+                {
+                    "id": 72687,
+                    "anime_id": 50346,
+                    "text": "\"Daten (\u5815\u5929)\" by Creepy Nuts",
+                    "index": null,
+                    "name": "Daten (\u5815\u5929)",
+                    "artist": "Creepy Nuts",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=HRL5Cp_mPeo"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 72688,
+                    "anime_id": 50346,
+                    "text": "\"Yofukashi no Uta (\u3088\u3075\u304b\u3057\u306e\u3046\u305f)\" by Creepy Nuts",
+                    "index": null,
+                    "name": "Yofukashi no Uta (\u3088\u3075\u304b\u3057\u306e\u3046\u305f)",
+                    "artist": "Creepy Nuts",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=F6_zbnfxoBA"
+                }
+            ]
+        },
+        {
+            "id": 44074,
+            "title": "Shiguang Dailiren",
+            "picture": "https://cdn.myanimelist.net/images/anime/1135/114867.jpg",
+            "opening_themes": [
+                {
+                    "id": 76102,
+                    "anime_id": 44074,
+                    "text": "\"Dive Back In Time\" by Bai Sha JAWS (\u767d\u9ca8JAWS)",
+                    "index": null,
+                    "name": "Dive Back In Time",
+                    "artist": "Bai Sha JAWS (\u767d\u9ca8JAWS)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=33YjUPqiQEo"
+                },
+                {
+                    "id": 76103,
+                    "anime_id": 44074,
+                    "text": "J1: \"Dive Back In Time\" by bicaso feat. Gen Kakon",
+                    "index": null,
+                    "name": "Dive Back In Time",
+                    "artist": "bicaso feat. Gen Kakon",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=mEj8RQRBo_E"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 76107,
+                    "anime_id": 44074,
+                    "text": "J1: \"OverThink\" by bicaso feat. EAERAN",
+                    "index": null,
+                    "name": "OverThink",
+                    "artist": "bicaso feat. EAERAN",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=uumQcmD313M"
+                },
+                {
+                    "id": 76108,
+                    "anime_id": 44074,
+                    "text": "\"OverThink\" by Fan Ka (\u996d\u5361)",
+                    "index": null,
+                    "name": "OverThink",
+                    "artist": "Fan Ka (\u996d\u5361)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=J92G4o8wQnU"
+                }
+            ]
+        },
+        {
+            "id": 56449,
+            "title": "Madougushi Dahliya wa Utsumukanai",
+            "picture": "https://cdn.myanimelist.net/images/anime/1572/144060.jpg",
+            "opening_themes": [
+                {
+                    "id": 78521,
+                    "anime_id": 56449,
+                    "text": "\"Chiisana Tsubomi (\u3061\u3044\u3055\u306a\u857e)\" by Nako Misaki (\u5cac\u306a\u3053)",
+                    "index": null,
+                    "name": "Chiisana Tsubomi (\u3061\u3044\u3055\u306a\u857e)",
+                    "artist": "Nako Misaki (\u5cac\u306a\u3053)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=La20U_Cyd6g"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 78522,
+                    "anime_id": 56449,
+                    "text": "\"Glitter\" by Marina Horiuchi (\u5800\u5185\u307e\u308a\u83dc)",
+                    "index": null,
+                    "name": "Glitter",
+                    "artist": "Marina Horiuchi (\u5800\u5185\u307e\u308a\u83dc)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=du20uVdkeiM"
+                }
+            ]
+        },
+        {
+            "id": 54913,
+            "title": "Shinmai Ossan Boukensha, Saikyou Party ni Shinu hodo Kitaerarete Muteki ni Naru.",
+            "picture": "https://cdn.myanimelist.net/images/anime/1212/144711.jpg",
+            "opening_themes": [
+                {
+                    "id": 80177,
+                    "anime_id": 54913,
+                    "text": "\"Kouya ni Sake yo Boukensha-tachi (\u8352\u91ce\u306b\u54b2\u3051\u3088\u5192\u967a\u8005\u305f\u3061)\" by Akira Kushida (\u4e32\u7530\u30a2\u30ad\u30e9) (eps 1-9, 11)",
+                    "index": null,
+                    "name": "Kouya ni Sake yo Boukensha-tachi (\u8352\u91ce\u306b\u54b2\u3051\u3088\u5192\u967a\u8005\u305f\u3061)",
+                    "artist": "Akira Kushida (\u4e32\u7530\u30a2\u30ad\u30e9)",
+                    "episode": "eps 1-9, 11",
+                    "yt_url": "https://www.youtube.com/watch?v=JQuF8WFs2JQ"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 80175,
+                    "anime_id": 54913,
+                    "text": "#1: \"Sagashimono (\u3055\u304c\u3057\u3082\u306e)\" by Chiai Fujikawa (\u85e4\u5ddd\u5343\u611b) (eps 2-11)",
+                    "index": "1",
+                    "name": "Sagashimono (\u3055\u304c\u3057\u3082\u306e)",
+                    "artist": "Chiai Fujikawa (\u85e4\u5ddd\u5343\u611b)",
+                    "episode": "eps 2-11",
+                    "yt_url": "https://www.youtube.com/watch?v=0W16us5sFno"
+                },
+                {
+                    "id": 80176,
+                    "anime_id": 54913,
+                    "text": "#2: \"Kouya ni Sake yo Boukensha-tachi (\u8352\u91ce\u306b\u54b2\u3051\u3088\u5192\u967a\u8005\u305f\u3061)\" by Akira Kushida (\u4e32\u7530\u30a2\u30ad\u30e9) (ep 12)",
+                    "index": "2",
+                    "name": "Kouya ni Sake yo Boukensha-tachi (\u8352\u91ce\u306b\u54b2\u3051\u3088\u5192\u967a\u8005\u305f\u3061)",
+                    "artist": "Akira Kushida (\u4e32\u7530\u30a2\u30ad\u30e9)",
+                    "episode": "ep 12",
+                    "yt_url": "https://www.youtube.com/watch?v=JQuF8WFs2JQ"
+                }
+            ]
+        },
+        {
+            "id": 38680,
+            "title": "Fruits Basket 1st Season",
+            "picture": "https://cdn.myanimelist.net/images/anime/1447/99827.webp",
+            "opening_themes": [
+                {
+                    "id": 66316,
+                    "anime_id": 38680,
+                    "text": "#1: \"Again\" by Beverly (eps 1-13)",
+                    "index": "1",
+                    "name": "Again",
+                    "artist": "Beverly",
+                    "episode": "eps 1-13",
+                    "yt_url": "https://www.youtube.com/watch?v=-T1m089pABo"
+                },
+                {
+                    "id": 66317,
+                    "anime_id": 38680,
+                    "text": "#2: \"Chime\" by Ai Otsuka (eps 14-24)",
+                    "index": "2",
+                    "name": "Chime",
+                    "artist": "Ai Otsuka",
+                    "episode": "eps 14-24",
+                    "yt_url": "https://www.youtube.com/watch?v=BQqt2UmzGUY"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 67548,
+                    "anime_id": 38680,
+                    "text": "#1: \"Lucky Ending\" by Vickeblanka (eps 1-13)",
+                    "index": "1",
+                    "name": "Lucky Ending",
+                    "artist": "Vickeblanka",
+                    "episode": "eps 1-13",
+                    "yt_url": "https://www.youtube.com/watch?v=iINmKP6N6Fo"
+                },
+                {
+                    "id": 67549,
+                    "anime_id": 38680,
+                    "text": "#2: \"One Step Closer\" by INTERSECTION (eps 14-25)",
+                    "index": "2",
+                    "name": "One Step Closer",
+                    "artist": "INTERSECTION",
+                    "episode": "eps 14-25",
+                    "yt_url": "https://www.youtube.com/watch?v=YZg8DYDR_8g"
+                }
+            ]
+        },
+        {
+            "id": 40417,
+            "title": "Fruits Basket 2nd Season",
+            "picture": "https://cdn.myanimelist.net/images/anime/1972/111635.jpg",
+            "opening_themes": [
+                {
+                    "id": 68946,
+                    "anime_id": 40417,
+                    "text": "#1: \"Prism\" by AmPm ft. Miyuna (eps 1-13)",
+                    "index": "1",
+                    "name": "Prism",
+                    "artist": "AmPm ft. Miyuna",
+                    "episode": "eps 1-13",
+                    "yt_url": "https://www.youtube.com/watch?v=BEIVwm1XyDQ"
+                },
+                {
+                    "id": 68947,
+                    "anime_id": 40417,
+                    "text": "#2: \"HOME\" by Asako Toki (\u571f\u5c90\u9ebb\u5b50) (eps 14-25)",
+                    "index": "2",
+                    "name": "HOME",
+                    "artist": "Asako Toki (\u571f\u5c90\u9ebb\u5b50)",
+                    "episode": "eps 14-25",
+                    "yt_url": "https://www.youtube.com/watch?v=ti62cJ_3oEM"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 68948,
+                    "anime_id": 40417,
+                    "text": "#1: \"ad meliora\" by THE CHARM PARK (eps 1-6, 8-13)",
+                    "index": "1",
+                    "name": "ad meliora",
+                    "artist": "THE CHARM PARK",
+                    "episode": "eps 1-6, 8-13",
+                    "yt_url": "https://www.youtube.com/watch?v=rzB5eAj9kYw"
+                },
+                {
+                    "id": 68949,
+                    "anime_id": 40417,
+                    "text": "#2: \"Haseru Mirai (\u99b3\u305b\u308b\u672a\u6765)\" by Uta Arii (\u30a6\u30bf\u30fb\u30a2\u30ea\u30a3) (ep 7)",
+                    "index": "2",
+                    "name": "Haseru Mirai (\u99b3\u305b\u308b\u672a\u6765)",
+                    "artist": "Uta Arii (\u30a6\u30bf\u30fb\u30a2\u30ea\u30a3)",
+                    "episode": "ep 7",
+                    "yt_url": "https://www.youtube.com/watch?v=n4VrQx7Ta7I"
+                },
+                {
+                    "id": 68950,
+                    "anime_id": 40417,
+                    "text": "#3: \"Eden\" by MONKEY MAJIK (eps 14-25)",
+                    "index": "3",
+                    "name": "Eden",
+                    "artist": "MONKEY MAJIK",
+                    "episode": "eps 14-25",
+                    "yt_url": "https://www.youtube.com/watch?v=tkJMlcQESto"
+                }
+            ]
+        },
+        {
+            "id": 42938,
+            "title": "Fruits Basket: The Final",
+            "picture": "https://cdn.myanimelist.net/images/anime/1085/114792.jpg",
+            "opening_themes": [
+                {
+                    "id": 71121,
+                    "anime_id": 42938,
+                    "text": "\"Pleasure\" by WARPs UP (eps 1-12)",
+                    "index": null,
+                    "name": "Pleasure",
+                    "artist": "WARPs UP",
+                    "episode": "eps 1-12",
+                    "yt_url": "https://www.youtube.com/watch?v=j98v9k9_0I0"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 71130,
+                    "anime_id": 42938,
+                    "text": "\"Haru Urara (\u6625\u3046\u3089\u3089)\" by GENIC (eps 1-11, 13)",
+                    "index": null,
+                    "name": "Haru Urara (\u6625\u3046\u3089\u3089)",
+                    "artist": "GENIC",
+                    "episode": "eps 1-11, 13",
+                    "yt_url": "https://www.youtube.com/watch?v=3FKqAbb2X9c"
+                }
+            ]
+        },
+        {
+            "id": 55996,
+            "title": "Koi wa Futago de Warikirenai",
+            "picture": "https://cdn.myanimelist.net/images/anime/1315/142250.jpg",
+            "opening_themes": [
+                {
+                    "id": 80192,
+                    "anime_id": 55996,
+                    "text": "\"Parallel na Heart (\u30d1\u30e9\u30ec\u30eb\u306a\u30cf\u30fc\u30c8)\" by Maaya Uchida (eps 1-11)",
+                    "index": null,
+                    "name": "Parallel na Heart (\u30d1\u30e9\u30ec\u30eb\u306a\u30cf\u30fc\u30c8)",
+                    "artist": "Maaya Uchida",
+                    "episode": "eps 1-11",
+                    "yt_url": "https://www.youtube.com/watch?v=QUGaLWd_R8Y"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 80189,
+                    "anime_id": 55996,
+                    "text": "#1: \"Honey Citron -Strings Arrange- (\u30cf\u30cb\u30fc\u30b7\u30c8\u30ed\u30f3 -Strings Arrange-) \" by Rumi Jinguuji (CV: Moeha Nochimoto), Naori Jinguuji (CV: Maaya Uchida) (eps 1, 4, 7-8, 10)",
+                    "index": "1",
+                    "name": "Honey Citron -Strings Arrange- (\u30cf\u30cb\u30fc\u30b7\u30c8\u30ed\u30f3 -Strings Arrange-) ",
+                    "artist": "Rumi Jinguuji (CV: Moeha Nochimoto), Naori Jinguuji (CV: Maaya Uchida)",
+                    "episode": "eps 1, 4, 7-8, 10",
+                    "yt_url": []
+                },
+                {
+                    "id": 80190,
+                    "anime_id": 55996,
+                    "text": "#2: \"Honey Citron (\u30cf\u30cb\u30fc\u30b7\u30c8\u30ed\u30f3)\" by Rumi Jinguuji (CV: Moeha Nochimoto), Naori Jinguuji (CV: Maaya Uchida) (eps 2-3, 5-6, 9, 11)",
+                    "index": "2",
+                    "name": "Honey Citron (\u30cf\u30cb\u30fc\u30b7\u30c8\u30ed\u30f3)",
+                    "artist": "Rumi Jinguuji (CV: Moeha Nochimoto), Naori Jinguuji (CV: Maaya Uchida)",
+                    "episode": "eps 2-3, 5-6, 9, 11",
+                    "yt_url": "https://www.youtube.com/watch?v=5PCpTuMjIN8"
+                },
+                {
+                    "id": 80191,
+                    "anime_id": 55996,
+                    "text": "#3: \"Parallel na Heart (\u30d1\u30e9\u30ec\u30eb\u306a\u30cf\u30fc\u30c8)\" by Maaya Uchida (ep 12)",
+                    "index": "3",
+                    "name": "Parallel na Heart (\u30d1\u30e9\u30ec\u30eb\u306a\u30cf\u30fc\u30c8)",
+                    "artist": "Maaya Uchida",
+                    "episode": "ep 12",
+                    "yt_url": "https://www.youtube.com/watch?v=QUGaLWd_R8Y"
+                }
+            ]
+        },
+        {
+            "id": 57892,
+            "title": "Hazurewaku no \"Joutai Ijou Skill\" de Saikyou ni Natta Ore ga Subete wo Juurin suru made",
+            "picture": "https://cdn.myanimelist.net/images/anime/1914/143630.webp",
+            "opening_themes": [
+                {
+                    "id": 80106,
+                    "anime_id": 57892,
+                    "text": "\"Hazure\" by Chogakusei (\u8d85\u5b66\u751f) (eps 3-10)",
+                    "index": null,
+                    "name": "Hazure",
+                    "artist": "Chogakusei (\u8d85\u5b66\u751f)",
+                    "episode": "eps 3-10",
+                    "yt_url": "https://www.youtube.com/watch?v=t7ktk2GI0OI"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 80138,
+                    "anime_id": 57892,
+                    "text": "#1: \"Hazure\" by Chogakusei (\u8d85\u5b66\u751f) (eps 1, 12)",
+                    "index": "1",
+                    "name": "Hazure",
+                    "artist": "Chogakusei (\u8d85\u5b66\u751f)",
+                    "episode": "eps 1, 12",
+                    "yt_url": "https://www.youtube.com/watch?v=t7ktk2GI0OI"
+                },
+                {
+                    "id": 80139,
+                    "anime_id": 57892,
+                    "text": "#2: \"pray\" by Hakubi (eps 2-11)",
+                    "index": "2",
+                    "name": "pray",
+                    "artist": "Hakubi",
+                    "episode": "eps 2-11",
+                    "yt_url": "https://www.youtube.com/watch?v=dvrzGJNUvRk"
+                }
+            ]
+        },
+        {
+            "id": 29803,
+            "title": "Overlord",
+            "picture": "https://cdn.myanimelist.net/images/anime/7/88019.webp",
+            "opening_themes": [
+                {
+                    "id": 50896,
+                    "anime_id": 29803,
+                    "text": "\"Clattanoia\" by O\u00d7T (Masayoshi Oishi \u00d7 Tom-H@ck)",
+                    "index": null,
+                    "name": "Clattanoia",
+                    "artist": "O\u00d7T (Masayoshi Oishi \u00d7 Tom-H@ck)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=saah9UTwaUI"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 50897,
+                    "anime_id": 29803,
+                    "text": "\"L.L.L.\" by MYTH&ROID",
+                    "index": null,
+                    "name": "L.L.L.",
+                    "artist": "MYTH&ROID",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=skqKOt73rvM"
+                }
+            ]
+        },
+        {
+            "id": 53580,
+            "title": "Tensei shitara Slime Datta Ken 3rd Season",
+            "picture": "https://cdn.myanimelist.net/images/anime/1211/143476.jpg",
+            "opening_themes": [
+                {
+                    "id": 79184,
+                    "anime_id": 53580,
+                    "text": "#1: \"PEACEKEEPER\" by STEREO DIVE FOUNDATION",
+                    "index": "1",
+                    "name": "PEACEKEEPER",
+                    "artist": "STEREO DIVE FOUNDATION",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=X7M8WjlKBkE"
+                },
+                {
+                    "id": 79185,
+                    "anime_id": 53580,
+                    "text": "#2: \"Renacer Serenade (\u30ec\u30ca\u30bb\u30fc\u30eb\u30bb\u30ec\u30ca\u30fc\u30c7)\" by Momoiro Clover Z (\u3082\u3082\u3044\u308d\u30af\u30ed\u30fc\u30d0\u30fcZ)",
+                    "index": "2",
+                    "name": "Renacer Serenade (\u30ec\u30ca\u30bb\u30fc\u30eb\u30bb\u30ec\u30ca\u30fc\u30c7)",
+                    "artist": "Momoiro Clover Z (\u3082\u3082\u3044\u308d\u30af\u30ed\u30fc\u30d0\u30fcZ)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=_qxHz8vH5KM"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 79186,
+                    "anime_id": 53580,
+                    "text": "#1: \"Believer\" by Rin Kurusu (\u6765\u6816\u308a\u3093)",
+                    "index": "1",
+                    "name": "Believer",
+                    "artist": "Rin Kurusu (\u6765\u6816\u308a\u3093)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=ptyp93BBwJs"
+                },
+                {
+                    "id": 79187,
+                    "anime_id": 53580,
+                    "text": "#2: \"Miracle soup\" by MindaRyn",
+                    "index": "2",
+                    "name": "Miracle soup",
+                    "artist": "MindaRyn",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=fOGS2tn-eog"
+                }
+            ]
+        },
+        {
+            "id": 54855,
+            "title": "Senpai wa Otokonoko",
+            "picture": "https://cdn.myanimelist.net/images/anime/1049/144505.webp",
+            "opening_themes": [
+                {
+                    "id": 78913,
+                    "anime_id": 54855,
+                    "text": "\"Wagamama (\u6211\u304c\u307e\u307e)\" by Kujira (\u304f\u3058\u3089)",
+                    "index": null,
+                    "name": "Wagamama (\u6211\u304c\u307e\u307e)",
+                    "artist": "Kujira (\u304f\u3058\u3089)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=q2uxFkb7znE"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 78914,
+                    "anime_id": 54855,
+                    "text": "\"Are ga Koi Datta no ka na (\u3042\u308c\u304c\u604b\u3060\u3063\u305f\u306e\u304b\u306a)\" by Kujira (\u304f\u3058\u3089)",
+                    "index": null,
+                    "name": "Are ga Koi Datta no ka na (\u3042\u308c\u304c\u604b\u3060\u3063\u305f\u306e\u304b\u306a)",
+                    "artist": "Kujira (\u304f\u3058\u3089)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=LItcuyLdnsk"
+                }
+            ]
+        },
+        {
+            "id": 35073,
+            "title": "Overlord II",
+            "picture": "https://cdn.myanimelist.net/images/anime/1212/113415.jpg",
+            "opening_themes": [
+                {
+                    "id": 60532,
+                    "anime_id": 35073,
+                    "text": "\"GO CRY GO\" by OxT",
+                    "index": null,
+                    "name": "GO CRY GO",
+                    "artist": "OxT",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=efL4a9zIMBQ"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 60533,
+                    "anime_id": 35073,
+                    "text": "\"HYDRA\" by MYTH\uff06ROID",
+                    "index": null,
+                    "name": "HYDRA",
+                    "artist": "MYTH\uff06ROID",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=qrvCAJbXc_o"
+                }
+            ]
+        },
+        {
+            "id": 57524,
+            "title": "Make Heroine ga Oosugiru!",
+            "picture": "https://cdn.myanimelist.net/images/anime/1332/143513.jpg",
+            "opening_themes": [
+                {
+                    "id": 80115,
+                    "anime_id": 57524,
+                    "text": "\"Tsuyogaru Girl (\u3064\u3088\u304c\u308b\u30ac\u30fc\u30eb)\" by Botchi Boromaru feat. Mossa (Necry Talkie) (eps 2-10)",
+                    "index": null,
+                    "name": "Tsuyogaru Girl (\u3064\u3088\u304c\u308b\u30ac\u30fc\u30eb)",
+                    "artist": "Botchi Boromaru feat. Mossa (Necry Talkie)",
+                    "episode": "eps 2-10",
+                    "yt_url": "https://www.youtube.com/watch?v=AuRNbKRVV-Y"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 80213,
+                    "anime_id": 57524,
+                    "text": "#1: \"LOVE 2000\" by Anna Yanami (CV: Hikaru Toono) (eps 1-4)",
+                    "index": "1",
+                    "name": "LOVE 2000",
+                    "artist": "Anna Yanami (CV: Hikaru Toono)",
+                    "episode": "eps 1-4",
+                    "yt_url": "https://www.youtube.com/watch?v=oXZcuHIR5ko"
+                },
+                {
+                    "id": 80214,
+                    "anime_id": 57524,
+                    "text": "#2: \"CRAZY FOR YOU\" by Lemon Yakishio (CV: Shion Wakayama) (eps 5-7)",
+                    "index": "2",
+                    "name": "CRAZY FOR YOU",
+                    "artist": "Lemon Yakishio (CV: Shion Wakayama)",
+                    "episode": "eps 5-7",
+                    "yt_url": "https://www.youtube.com/watch?v=fWVhcojPqQI"
+                },
+                {
+                    "id": 80215,
+                    "anime_id": 57524,
+                    "text": "#3: \"feel my soul\" by Chika Komari (CV: Momoka Terasawa) (eps 8-11)",
+                    "index": "3",
+                    "name": "feel my soul",
+                    "artist": "Chika Komari (CV: Momoka Terasawa)",
+                    "episode": "eps 8-11",
+                    "yt_url": "https://www.youtube.com/watch?v=7vEp8UPHdnE"
+                },
+                {
+                    "id": 80216,
+                    "anime_id": 57524,
+                    "text": "#4: \"Tsuyogaru Girl (\u3064\u3088\u304c\u308b\u30ac\u30fc\u30eb)\" by Botchi Boromaru feat. Mossa (Necry Talkie) (ep 12)",
+                    "index": "4",
+                    "name": "Tsuyogaru Girl (\u3064\u3088\u304c\u308b\u30ac\u30fc\u30eb)",
+                    "artist": "Botchi Boromaru feat. Mossa (Necry Talkie)",
+                    "episode": "ep 12",
+                    "yt_url": "https://www.youtube.com/watch?v=AuRNbKRVV-Y"
+                }
+            ]
+        },
+        {
+            "id": 54724,
+            "title": "Nige Jouzu no Wakagimi",
+            "picture": "https://cdn.myanimelist.net/images/anime/1386/140401.webp",
+            "opening_themes": [
+                {
+                    "id": 79311,
+                    "anime_id": 54724,
+                    "text": "\"Plan A (\u30d7\u30e9\u30f3A)\" by DISH//",
+                    "index": null,
+                    "name": "Plan A (\u30d7\u30e9\u30f3A)",
+                    "artist": "DISH//",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=l1HeItO98FI"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 79312,
+                    "anime_id": 54724,
+                    "text": "\"Kamakura STYLE (\u938c\u5009STYLE)\" by Botchi Boromaru (\u307c\u3063\u3061\u307c\u308d\u307e\u308b)",
+                    "index": null,
+                    "name": "Kamakura STYLE (\u938c\u5009STYLE)",
+                    "artist": "Botchi Boromaru (\u307c\u3063\u3061\u307c\u308d\u307e\u308b)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=ikzBo9_Qdnk"
+                }
+            ]
+        },
+        {
+            "id": 58059,
+            "title": "Tsue to Tsurugi no Wistoria",
+            "picture": "https://cdn.myanimelist.net/images/anime/1281/144104.jpg",
+            "opening_themes": [
+                {
+                    "id": 80226,
+                    "anime_id": 58059,
+                    "text": "\"Fire and Fear\" by PENGUIN RESEARCH (eps 2-12)",
+                    "index": null,
+                    "name": "Fire and Fear",
+                    "artist": "PENGUIN RESEARCH",
+                    "episode": "eps 2-12",
+                    "yt_url": "https://www.youtube.com/watch?v=-ly2itFTLfQ"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 80227,
+                    "anime_id": 58059,
+                    "text": "#1: \"Fire and Fear\" by PENGUIN RESEARCH (ep 1)",
+                    "index": "1",
+                    "name": "Fire and Fear",
+                    "artist": "PENGUIN RESEARCH",
+                    "episode": "ep 1",
+                    "yt_url": "https://www.youtube.com/watch?v=-ly2itFTLfQ"
+                },
+                {
+                    "id": 80228,
+                    "anime_id": 58059,
+                    "text": "#2: \"Frozen (\u30d5\u30ed\u30fc\u30ba\u30f3)\" by TRUE (eps 2-9, 12)",
+                    "index": "2",
+                    "name": "Frozen (\u30d5\u30ed\u30fc\u30ba\u30f3)",
+                    "artist": "TRUE",
+                    "episode": "eps 2-9, 12",
+                    "yt_url": "https://www.youtube.com/watch?v=YJJSdQldxtM"
+                }
+            ]
+        },
+        {
+            "id": 37675,
+            "title": "Overlord III",
+            "picture": "https://cdn.myanimelist.net/images/anime/1511/93473.webp",
+            "opening_themes": [
+                {
+                    "id": 62556,
+                    "anime_id": 37675,
+                    "text": "\"VORACITY\" by MYTH\uff06ROID",
+                    "index": null,
+                    "name": "VORACITY",
+                    "artist": "MYTH\uff06ROID",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=XPOIe6WdhPQ"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 62889,
+                    "anime_id": 37675,
+                    "text": "\"Silent Solitude\" by OxT",
+                    "index": null,
+                    "name": "Silent Solitude",
+                    "artist": "OxT",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=KnZhuGMnhds"
+                }
+            ]
+        },
+        {
+            "id": 48895,
+            "title": "Overlord IV",
+            "picture": "https://cdn.myanimelist.net/images/anime/1530/120110.jpg",
+            "opening_themes": [
+                {
+                    "id": 72607,
+                    "anime_id": 48895,
+                    "text": "\"HOLLOW HUNGER\" by OxT",
+                    "index": null,
+                    "name": "HOLLOW HUNGER",
+                    "artist": "OxT",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=Tkkp3FhDVxQ"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 72615,
+                    "anime_id": 48895,
+                    "text": "\"No Man's Dawn\" by Mayu Maeshima",
+                    "index": null,
+                    "name": "No Man's Dawn",
+                    "artist": "Mayu Maeshima",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=9kPy5LT56v8"
+                }
+            ]
+        },
+        {
+            "id": 34280,
+            "title": "Gamers!",
+            "picture": "https://cdn.myanimelist.net/images/anime/4/86828.jpg",
+            "opening_themes": [
+                {
+                    "id": 59197,
+                    "anime_id": 34280,
+                    "text": "\"GAMERS!\" by Karen Tendou (Hisako Kanemoto), Chiaki Hoshinomori (Manaka Iwami), Aguri (Rumi Ookubo)",
+                    "index": null,
+                    "name": "GAMERS!",
+                    "artist": "Karen Tendou (Hisako Kanemoto), Chiaki Hoshinomori (Manaka Iwami), Aguri (Rumi Ookubo)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=BAQXoW3ljpE"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 60975,
+                    "anime_id": 34280,
+                    "text": "#1: \"Fight on!\" by Luce Twinkle Wink\u2606 (eps 2-8, ep 11-12)",
+                    "index": "1",
+                    "name": "Fight on!",
+                    "artist": "Luce Twinkle Wink\u2606",
+                    "episode": "eps 2-8, ep 11-12",
+                    "yt_url": "https://www.youtube.com/watch?v=HpqxXlCqo4U"
+                },
+                {
+                    "id": 60976,
+                    "anime_id": 34280,
+                    "text": "#2: \"Koi no Prologue* (\u604b\u306eprologue\uff0a)\" by Luce Twinkle Wink\u2606 (eps 9-10)",
+                    "index": "2",
+                    "name": "Koi no Prologue* (\u604b\u306eprologue\uff0a)",
+                    "artist": "Luce Twinkle Wink\u2606",
+                    "episode": "eps 9-10",
+                    "yt_url": "https://www.youtube.com/watch?v=L44cwmkxDqg"
+                }
+            ]
+        },
+        {
+            "id": 38555,
+            "title": "Otome Game no Hametsu Flag shika Nai Akuyaku Reijou ni Tensei shiteshimatta...",
+            "picture": "https://cdn.myanimelist.net/images/anime/1483/107061.jpg",
+            "opening_themes": [
+                {
+                    "id": 68071,
+                    "anime_id": 38555,
+                    "text": "\"Otome no Route wa Hitotsu janai! (\u4e59\u5973\u306e\u30eb\u30fc\u30c8\u306f\u3072\u3068\u3064\u3058\u3083\u306a\u3044\uff01)\" by angela (eps 1-11)",
+                    "index": null,
+                    "name": "Otome no Route wa Hitotsu janai! (\u4e59\u5973\u306e\u30eb\u30fc\u30c8\u306f\u3072\u3068\u3064\u3058\u3083\u306a\u3044\uff01)",
+                    "artist": "angela",
+                    "episode": "eps 1-11",
+                    "yt_url": "https://www.youtube.com/watch?v=wrub7h0EGn4"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 72786,
+                    "anime_id": 38555,
+                    "text": "#1: \"BAD END\" by Shouta Aoi (\u84bc\u4e95\u7fd4\u592a) (eps 2-11)",
+                    "index": "1",
+                    "name": "BAD END",
+                    "artist": "Shouta Aoi (\u84bc\u4e95\u7fd4\u592a)",
+                    "episode": "eps 2-11",
+                    "yt_url": "https://www.youtube.com/watch?v=uVTSGCWCxrY"
+                },
+                {
+                    "id": 72787,
+                    "anime_id": 38555,
+                    "text": "#2: \"Otome no Route wa Hitotsu Janai! (\u4e59\u5973\u306e\u30eb\u30fc\u30c8\u306f\u3072\u3068\u3064\u3058\u3083\u306a\u3044\uff01)\" by angela (ep 12)",
+                    "index": "2",
+                    "name": "Otome no Route wa Hitotsu Janai! (\u4e59\u5973\u306e\u30eb\u30fc\u30c8\u306f\u3072\u3068\u3064\u3058\u3083\u306a\u3044\uff01)",
+                    "artist": "angela",
+                    "episode": "ep 12",
+                    "yt_url": "https://www.youtube.com/watch?v=wrub7h0EGn4"
+                }
+            ]
+        },
+        {
+            "id": 32542,
+            "title": "Sakamoto desu ga?",
+            "picture": "https://cdn.myanimelist.net/images/anime/4/79468.webp",
+            "opening_themes": [
+                {
+                    "id": 54011,
+                    "anime_id": 32542,
+                    "text": "\"COOLEST\" by Customi Z",
+                    "index": null,
+                    "name": "COOLEST",
+                    "artist": "Customi Z",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=f607MHZ8s0U"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 54012,
+                    "anime_id": 32542,
+                    "text": "\"Nakushita Hibi ni Sayonara (\u7121\u304f\u3057\u305f\u65e5\u3005\u306b\u3055\u3088\u306a\u3089)\" by Suneohair",
+                    "index": null,
+                    "name": "Nakushita Hibi ni Sayonara (\u7121\u304f\u3057\u305f\u65e5\u3005\u306b\u3055\u3088\u306a\u3089)",
+                    "artist": "Suneohair",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=JcuFqdmX0VY"
+                }
+            ]
+        },
+        {
+            "id": 55791,
+            "title": "\"Oshi no Ko\" 2nd Season",
+            "picture": "https://cdn.myanimelist.net/images/anime/1006/143302.jpg",
+            "opening_themes": [
+                {
+                    "id": 79025,
+                    "anime_id": 55791,
+                    "text": "\"Fatale (\u30d5\u30a1\u30bf\u30fc\u30eb)\" by GEMN",
+                    "index": null,
+                    "name": "Fatale (\u30d5\u30a1\u30bf\u30fc\u30eb)",
+                    "artist": "GEMN",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=8tQiWHXSGN0"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 79365,
+                    "anime_id": 55791,
+                    "text": "\"Burning\" by Hitsujibungaku (\u7f8a\u6587\u5b66)",
+                    "index": null,
+                    "name": "Burning",
+                    "artist": "Hitsujibungaku (\u7f8a\u6587\u5b66)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=AmrXrZ_LhQ8"
+                }
+            ]
+        },
+        {
+            "id": 56538,
+            "title": "Kimi ni Todoke 3rd Season",
+            "picture": "https://cdn.myanimelist.net/images/anime/1617/142448.webp",
+            "opening_themes": [
+                {
+                    "id": 79397,
+                    "anime_id": 56538,
+                    "text": "\"Et cetera (\u30a8\u30c8\u30bb\u30c8\u30e9)\" by imase",
+                    "index": null,
+                    "name": "Et cetera (\u30a8\u30c8\u30bb\u30c8\u30e9)",
+                    "artist": "imase",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=xaojVEqHIqc"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 79520,
+                    "anime_id": 56538,
+                    "text": "#1: \"First Song Kimi ni Todoke! (\u30d5\u30a1\u30fc\u30b9\u30c8\u30fb\u30bd\u30f3\u30b0 \u541b\u306b\u5c4a\u3051\uff01)\" by Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc) (ep 1)",
+                    "index": "1",
+                    "name": "First Song Kimi ni Todoke! (\u30d5\u30a1\u30fc\u30b9\u30c8\u30fb\u30bd\u30f3\u30b0 \u541b\u306b\u5c4a\u3051\uff01)",
+                    "artist": "Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc)",
+                    "episode": "ep 1",
+                    "yt_url": "https://www.youtube.com/watch?v=wklsbhzT3Zg"
+                },
+                {
+                    "id": 79521,
+                    "anime_id": 56538,
+                    "text": "#2: \"Natsu no Oto (\u590f\u306e\u97f3)\" by Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc) (ep 2)",
+                    "index": "2",
+                    "name": "Natsu no Oto (\u590f\u306e\u97f3)",
+                    "artist": "Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc)",
+                    "episode": "ep 2",
+                    "yt_url": "https://www.youtube.com/watch?v=OF699hcALvc"
+                },
+                {
+                    "id": 79522,
+                    "anime_id": 56538,
+                    "text": "#3: \"Everything Is but a Passing Point\" by Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc) (ep 3)",
+                    "index": "3",
+                    "name": "Everything Is but a Passing Point",
+                    "artist": "Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc)",
+                    "episode": "ep 3",
+                    "yt_url": "https://www.youtube.com/watch?v=j8bYM2iplo8"
+                },
+                {
+                    "id": 79523,
+                    "anime_id": 56538,
+                    "text": "#4: \"Second Dance\" by Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc) (ep 4)",
+                    "index": "4",
+                    "name": "Second Dance",
+                    "artist": "Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc)",
+                    "episode": "ep 4",
+                    "yt_url": "https://www.youtube.com/watch?v=qVfsaYrDsOs"
+                },
+                {
+                    "id": 79524,
+                    "anime_id": 56538,
+                    "text": "#5: \"Que Sera Sera (\u30b1\u30fb\u30bb\u30e9\u30fb\u30bb\u30e9)\" by Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc) (ep 5)",
+                    "index": "5",
+                    "name": "Que Sera Sera (\u30b1\u30fb\u30bb\u30e9\u30fb\u30bb\u30e9)",
+                    "artist": "Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc)",
+                    "episode": "ep 5",
+                    "yt_url": "https://www.youtube.com/watch?v=5JR3wrRtzCo"
+                }
+            ]
+        },
+        {
+            "id": 36882,
+            "title": "Arifureta Shokugyou de Sekai Saikyou",
+            "picture": "https://cdn.myanimelist.net/images/anime/1776/97682.jpg",
+            "opening_themes": [
+                {
+                    "id": 65371,
+                    "anime_id": 36882,
+                    "text": "\"FLARE\" by Void_Chords feat.LIO",
+                    "index": null,
+                    "name": "FLARE",
+                    "artist": "Void_Chords feat.LIO",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=jekubzaLQ3w"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 65372,
+                    "anime_id": 36882,
+                    "text": "\"Hajime no Uta (\u30cf\u30b8\u30e1\u30ce\u30a6\u30bf)\" by DracoVirgo",
+                    "index": null,
+                    "name": "Hajime no Uta (\u30cf\u30b8\u30e1\u30ce\u30a6\u30bf)",
+                    "artist": "DracoVirgo",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=7V6JvkAg2OY"
+                }
+            ]
+        },
+        {
+            "id": 40507,
+            "title": "Arifureta Shokugyou de Sekai Saikyou 2nd Season",
+            "picture": "https://cdn.myanimelist.net/images/anime/1877/119668.jpg",
+            "opening_themes": [
+                {
+                    "id": 71912,
+                    "anime_id": 40507,
+                    "text": "\"Daylight\" by MindaRyn",
+                    "index": null,
+                    "name": "Daylight",
+                    "artist": "MindaRyn",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=k2-ygljRjsk"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 72000,
+                    "anime_id": 40507,
+                    "text": "\"Gedou Sanka (\u5916\u9053\u8b83\u6b4c)\" by FantasticYouth",
+                    "index": null,
+                    "name": "Gedou Sanka (\u5916\u9053\u8b83\u6b4c)",
+                    "artist": "FantasticYouth",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=GR5bjT5o5_s"
+                }
+            ]
+        },
+        {
+            "id": 37999,
+            "title": "Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen",
+            "picture": "https://cdn.myanimelist.net/images/anime/1295/106551.jpg",
+            "opening_themes": [
+                {
+                    "id": 69623,
+                    "anime_id": 37999,
+                    "text": "\"Love Dramatic feat. Rikka Ihara (\u30e9\u30d6\u30fb\u30c9\u30e9\u30de\u30c6\u30a3\u30c3\u30af feat.\u4f0a\u539f\u516d\u82b1)\" by Masayuki Suzuki (\u9234\u6728\u96c5\u4e4b) (eps 1-12)",
+                    "index": null,
+                    "name": "Love Dramatic feat. Rikka Ihara (\u30e9\u30d6\u30fb\u30c9\u30e9\u30de\u30c6\u30a3\u30c3\u30af feat.\u4f0a\u539f\u516d\u82b1)",
+                    "artist": "Masayuki Suzuki (\u9234\u6728\u96c5\u4e4b)",
+                    "episode": "eps 1-12",
+                    "yt_url": "https://www.youtube.com/watch?v=P_XF8vjOrWE"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 69621,
+                    "anime_id": 37999,
+                    "text": "#1: \"Sentimental Crisis (\u30bb\u30f3\u30c1\u30e1\u30f3\u30bf\u30eb\u30af\u30e9\u30a4\u30b7\u30b9)\" by halca (eps 1-2, 4-12)",
+                    "index": "1",
+                    "name": "Sentimental Crisis (\u30bb\u30f3\u30c1\u30e1\u30f3\u30bf\u30eb\u30af\u30e9\u30a4\u30b7\u30b9)",
+                    "artist": "halca",
+                    "episode": "eps 1-2, 4-12",
+                    "yt_url": "https://www.youtube.com/watch?v=RHfaZZAMwA0"
+                },
+                {
+                    "id": 69622,
+                    "anime_id": 37999,
+                    "text": "#2: \"Chikatto Chika Chika\u2661 (\u30c1\u30ab\u3063\u3068\u30c1\u30ab\u5343\u82b1\u3063\u2661)\" by Chika Fujiwara (Konomi Kohara (ep 3)",
+                    "index": "2",
+                    "name": "Chikatto Chika Chika\u2661 (\u30c1\u30ab\u3063\u3068\u30c1\u30ab\u5343\u82b1\u3063\u2661)",
+                    "artist": "Chika Fujiwara (Konomi Kohara",
+                    "episode": "ep 3",
+                    "yt_url": "https://www.youtube.com/watch?v=Qe46yzEcQOo"
+                }
+            ]
+        },
+        {
+            "id": 40591,
+            "title": "Kaguya-sama wa Kokurasetai? Tensai-tachi no Renai Zunousen",
+            "picture": "https://cdn.myanimelist.net/images/anime/1764/106659.jpg",
+            "opening_themes": [
+                {
+                    "id": 68430,
+                    "anime_id": 40591,
+                    "text": "\"DADDY! DADDY! DO! feat. Airi Suzuki (DADDY! DADDY! DO! feat. \u9234\u6728\u611b\u7406)\" by Masayuki Suzuki (eps 2-10)",
+                    "index": null,
+                    "name": "DADDY! DADDY! DO! feat. Airi Suzuki (DADDY! DADDY! DO! feat. \u9234\u6728\u611b\u7406)",
+                    "artist": "Masayuki Suzuki",
+                    "episode": "eps 2-10",
+                    "yt_url": "https://www.youtube.com/watch?v=DTJsnV0WTVU"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 68162,
+                    "anime_id": 40591,
+                    "text": "#1: \"DADDY! DADDY! DO! feat. Airi Suzuki (DADDY! DADDY! DO! feat. \u9234\u6728\u611b\u7406)\" by Masayuki Suzuki (eps 1, 12)",
+                    "index": "1",
+                    "name": "DADDY! DADDY! DO! feat. Airi Suzuki (DADDY! DADDY! DO! feat. \u9234\u6728\u611b\u7406)",
+                    "artist": "Masayuki Suzuki",
+                    "episode": "eps 1, 12",
+                    "yt_url": "https://www.youtube.com/watch?v=DTJsnV0WTVU"
+                },
+                {
+                    "id": 68163,
+                    "anime_id": 40591,
+                    "text": "#2: \"Kaze ni Fukarete (\u98a8\u306b\u5439\u304b\u308c\u3066)\" by Haruka Fukuhara (eps 2-4, 6-11)",
+                    "index": "2",
+                    "name": "Kaze ni Fukarete (\u98a8\u306b\u5439\u304b\u308c\u3066)",
+                    "artist": "Haruka Fukuhara",
+                    "episode": "eps 2-4, 6-11",
+                    "yt_url": "https://www.youtube.com/watch?v=ncnHddqNqhM"
+                }
+            ]
+        },
+        {
+            "id": 43608,
+            "title": "Kaguya-sama wa Kokurasetai: Ultra Romantic",
+            "picture": "https://cdn.myanimelist.net/images/anime/1160/122627.webp",
+            "opening_themes": [
+                {
+                    "id": 72907,
+                    "anime_id": 43608,
+                    "text": "\"GIRI GIRI feat Suu (GIRI GIRI feat. \u3059\u3045)\" by Masayuki Suzuki (eps 2-4, 6-8, 10-13)",
+                    "index": null,
+                    "name": "GIRI GIRI feat Suu (GIRI GIRI feat. \u3059\u3045)",
+                    "artist": "Masayuki Suzuki",
+                    "episode": "eps 2-4, 6-8, 10-13",
+                    "yt_url": "https://www.youtube.com/watch?v=vptdHEUZN10"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 72908,
+                    "anime_id": 43608,
+                    "text": "#1: \"GIRI GIRI feat Suu (GIRI GIRI feat. \u3059\u3045)\" by Masayuki Suzuki (ep 1)",
+                    "index": "1",
+                    "name": "GIRI GIRI feat Suu (GIRI GIRI feat. \u3059\u3045)",
+                    "artist": "Masayuki Suzuki",
+                    "episode": "ep 1",
+                    "yt_url": "https://www.youtube.com/watch?v=vptdHEUZN10"
+                },
+                {
+                    "id": 72909,
+                    "anime_id": 43608,
+                    "text": "#2: \"Heart wa Oteage (\u30cf\u30fc\u30c8\u306f\u304a\u624b\u4e0a\u3052)\" by Airi Suzuki (eps 2-4, 6-13)",
+                    "index": "2",
+                    "name": "Heart wa Oteage (\u30cf\u30fc\u30c8\u306f\u304a\u624b\u4e0a\u3052)",
+                    "artist": "Airi Suzuki",
+                    "episode": "eps 2-4, 6-13",
+                    "yt_url": "https://www.youtube.com/watch?v=GSuselwRqcE"
+                },
+                {
+                    "id": 72910,
+                    "anime_id": 43608,
+                    "text": "#3: \"My Nonfiction\" by Miyuki Shirogane (Makoto Furukawa) & Chika Fujiwara (Konomi Kohara) (ep 5)",
+                    "index": "3",
+                    "name": "My Nonfiction",
+                    "artist": "Miyuki Shirogane (Makoto Furukawa) & Chika Fujiwara (Konomi Kohara)",
+                    "episode": "ep 5",
+                    "yt_url": "https://www.youtube.com/watch?v=kuEl3LL3CD0"
+                }
+            ]
+        },
+        {
+            "id": 48239,
+            "title": "Leadale no Daichi nite",
+            "picture": "https://cdn.myanimelist.net/images/anime/1671/120628.webp",
+            "opening_themes": [
+                {
+                    "id": 71866,
+                    "anime_id": 48239,
+                    "text": "\"Happy Encount\" by TRUE",
+                    "index": null,
+                    "name": "Happy Encount",
+                    "artist": "TRUE",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=l-126BD6zVI"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 71822,
+                    "anime_id": 48239,
+                    "text": "\"Hakone no Koufuku (\u7bb1\u5ead\u306e\u5e78\u798f)\" by Azusa Tadokoro",
+                    "index": null,
+                    "name": "Hakone no Koufuku (\u7bb1\u5ead\u306e\u5e78\u798f)",
+                    "artist": "Azusa Tadokoro",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=8xronI95g38"
+                }
+            ]
+        },
+        {
+            "id": 42897,
+            "title": "Horimiya",
+            "picture": "https://cdn.myanimelist.net/images/anime/1695/111486.jpg",
+            "opening_themes": [
+                {
+                    "id": 69851,
+                    "anime_id": 42897,
+                    "text": "\"Iro Kousui (\u8272\u9999\u6c34)\" by You Kamiyama",
+                    "index": null,
+                    "name": "Iro Kousui (\u8272\u9999\u6c34)",
+                    "artist": "You Kamiyama",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=kQYLHjgUh_g"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 69852,
+                    "anime_id": 42897,
+                    "text": "\"Yakusoku (\u7d04\u675f)\" by Friends (\u30d5\u30ec\u30f3\u30ba)",
+                    "index": null,
+                    "name": "Yakusoku (\u7d04\u675f)",
+                    "artist": "Friends (\u30d5\u30ec\u30f3\u30ba)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=fd1jD7-XX5g"
+                }
+            ]
+        },
+        {
+            "id": 20785,
+            "title": "Mahouka Koukou no Rettousei",
+            "picture": "https://cdn.myanimelist.net/images/anime/11/61039.jpg",
+            "opening_themes": [
+                {
+                    "id": 44875,
+                    "anime_id": 20785,
+                    "text": "#1: \"Rising Hope\" by LiSA (eps 2-3, 5-13)",
+                    "index": "1",
+                    "name": "Rising Hope",
+                    "artist": "LiSA",
+                    "episode": "eps 2-3, 5-13",
+                    "yt_url": "https://www.youtube.com/watch?v=IzhMzY5avLI"
+                },
+                {
+                    "id": 44877,
+                    "anime_id": 20785,
+                    "text": "#2: \"grilletto\" by GARNiDELiA (eps 14-26)",
+                    "index": "2",
+                    "name": "grilletto",
+                    "artist": "GARNiDELiA",
+                    "episode": "eps 14-26",
+                    "yt_url": "https://www.youtube.com/watch?v=hUf1NoPK-8Q"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 44879,
+                    "anime_id": 20785,
+                    "text": "#1: \"Rising Hope\" by LiSA (ep 1)",
+                    "index": "1",
+                    "name": "Rising Hope",
+                    "artist": "LiSA",
+                    "episode": "ep 1",
+                    "yt_url": "https://www.youtube.com/watch?v=IzhMzY5avLI"
+                },
+                {
+                    "id": 44881,
+                    "anime_id": 20785,
+                    "text": "#2: \"Millenario (\u30df\u30ec\u30ca\u30ea\u30aa)\" by ELISA (eps 2-13, 18)",
+                    "index": "2",
+                    "name": "Millenario (\u30df\u30ec\u30ca\u30ea\u30aa)",
+                    "artist": "ELISA",
+                    "episode": "eps 2-13, 18",
+                    "yt_url": "https://www.youtube.com/watch?v=MNlaZt5i8jU"
+                },
+                {
+                    "id": 44883,
+                    "anime_id": 20785,
+                    "text": "#3: \"Mirror\" by Rei Yasuda (eps 14-17, 19-26)",
+                    "index": "3",
+                    "name": "Mirror",
+                    "artist": "Rei Yasuda",
+                    "episode": "eps 14-17, 19-26",
+                    "yt_url": "https://www.youtube.com/watch?v=j0N5XpHDfUM"
+                }
+            ]
+        },
+        {
+            "id": 54856,
+            "title": "Horimiya: Piece",
+            "picture": "https://cdn.myanimelist.net/images/anime/1007/136277.jpg",
+            "opening_themes": [
+                {
+                    "id": 75734,
+                    "anime_id": 54856,
+                    "text": "\"Shiawase (\u5e78\u305b)\" by Omoinotake",
+                    "index": null,
+                    "name": "Shiawase (\u5e78\u305b)",
+                    "artist": "Omoinotake",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=WSJQcgBAyys"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 76556,
+                    "anime_id": 54856,
+                    "text": "1: \"URL\" by Ami Sakaguchi (eps 1-6, 8-13)",
+                    "index": null,
+                    "name": "URL",
+                    "artist": "Ami Sakaguchi",
+                    "episode": "eps 1-6, 8-13",
+                    "yt_url": "https://www.youtube.com/watch?v=71EHMNg6KIc"
+                },
+                {
+                    "id": 76557,
+                    "anime_id": 54856,
+                    "text": "2: \"Dokuro Ninja Konoha (\u30c9\u30af\u30ed\u30cb\u30f3\u30b8\u30e3\u30b3\u30ce\u30cf)\" by Sakura Kouno (CV: Reina Kondou) & Akane Yanagi (CV: Jun Fukuyama) (ep 7)",
+                    "index": null,
+                    "name": "Dokuro Ninja Konoha (\u30c9\u30af\u30ed\u30cb\u30f3\u30b8\u30e3\u30b3\u30ce\u30cf)",
+                    "artist": "Sakura Kouno (CV: Reina Kondou) & Akane Yanagi (CV: Jun Fukuyama)",
+                    "episode": "ep 7",
+                    "yt_url": "https://www.youtube.com/watch?v=gXgjL0TrRD4"
+                }
+            ]
+        },
+        {
+            "id": 23289,
+            "title": "Gekkan Shoujo Nozaki-kun",
+            "picture": "https://cdn.myanimelist.net/images/anime/5/66083.webp",
+            "opening_themes": [
+                {
+                    "id": 41957,
+                    "anime_id": 23289,
+                    "text": "\"Kimi ja Nakya Dame Mitai (\u541b\u3058\u3083\u306a\u304d\u3083\u30c0\u30e1\u307f\u305f\u3044)\" by Masayoshi Ooishi (\u5927\u77f3\u660c\u826f)",
+                    "index": null,
+                    "name": "Kimi ja Nakya Dame Mitai (\u541b\u3058\u3083\u306a\u304d\u3083\u30c0\u30e1\u307f\u305f\u3044)",
+                    "artist": "Masayoshi Ooishi (\u5927\u77f3\u660c\u826f)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=_NbjKXEbde4"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 44575,
+                    "anime_id": 23289,
+                    "text": "\"Ura Omote Fortune (\u30a6\u30e9\u30aa\u30e2\u30c6\u30fb\u30d5\u30a9\u30fc\u30c1\u30e5\u30f3)\" by Chiyo Sakura (CV: Ari Ozawa) (eps 1-11)",
+                    "index": null,
+                    "name": "Ura Omote Fortune (\u30a6\u30e9\u30aa\u30e2\u30c6\u30fb\u30d5\u30a9\u30fc\u30c1\u30e5\u30f3)",
+                    "artist": "Chiyo Sakura (CV: Ari Ozawa)",
+                    "episode": "eps 1-11",
+                    "yt_url": "https://www.youtube.com/watch?v=U_3aFM3H1DE"
+                }
+            ]
+        },
+        {
+            "id": 44203,
+            "title": "Seirei Gensouki",
+            "picture": "https://cdn.myanimelist.net/images/anime/1836/116060.webp",
+            "opening_themes": [
+                {
+                    "id": 70692,
+                    "anime_id": 44203,
+                    "text": "\"New story\" by Marika Kouno",
+                    "index": null,
+                    "name": "New story",
+                    "artist": "Marika Kouno",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=-SdEFi3yqOc"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 70693,
+                    "anime_id": 44203,
+                    "text": "\"Elder flower\" by Aguri Oonishi",
+                    "index": null,
+                    "name": "Elder flower",
+                    "artist": "Aguri Oonishi",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=oAyY_NhZgqE"
+                }
+            ]
+        },
+        {
+            "id": 17265,
+            "title": "Log Horizon",
+            "picture": "https://cdn.myanimelist.net/images/anime/5/84004.jpg",
+            "opening_themes": [
+                {
+                    "id": 37381,
+                    "anime_id": 17265,
+                    "text": "\"database feat. TAKUMA (10 Feet)\" by MAN WITH A MISSION",
+                    "index": null,
+                    "name": "database feat. TAKUMA (10 Feet)",
+                    "artist": "MAN WITH A MISSION",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=d2Kj7YybM5o"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 35083,
+                    "anime_id": 17265,
+                    "text": "\"Your song*\" by Yun*chi",
+                    "index": null,
+                    "name": "Your song*",
+                    "artist": "Yun*chi",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=fNfboNEFh-g"
+                }
+            ]
+        },
+        {
+            "id": 34599,
+            "title": "Made in Abyss",
+            "picture": "https://cdn.myanimelist.net/images/anime/6/86733.jpg",
+            "opening_themes": [
+                {
+                    "id": 70718,
+                    "anime_id": 34599,
+                    "text": "\"Deep in Abyss\" by Riko (Miyu Tomita) and Regu (Mariya Ise) (eps 2-13)",
+                    "index": null,
+                    "name": "Deep in Abyss",
+                    "artist": "Riko (Miyu Tomita) and Regu (Mariya Ise)",
+                    "episode": "eps 2-13",
+                    "yt_url": "https://www.youtube.com/watch?v=EJYKsY0Vcts"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 70719,
+                    "anime_id": 34599,
+                    "text": "#1: \"Deep in Abyss\" by Riko (Miyu Tomita) and Regu (Mariya Ise) (ep 1)",
+                    "index": "1",
+                    "name": "Deep in Abyss",
+                    "artist": "Riko (Miyu Tomita) and Regu (Mariya Ise)",
+                    "episode": "ep 1",
+                    "yt_url": "https://www.youtube.com/watch?v=EJYKsY0Vcts"
+                },
+                {
+                    "id": 70720,
+                    "anime_id": 34599,
+                    "text": "#2: \"Tabi no Hidarite, Saihate no Migite (\u65c5\u306e\u5de6\u624b\u3001\u6700\u679c\u3066\u306e\u53f3\u624b)\" by Riko (Miyu Tomita) and Regu (Mariya Ise) (eps 2, 4-9)",
+                    "index": "2",
+                    "name": "Tabi no Hidarite, Saihate no Migite (\u65c5\u306e\u5de6\u624b\u3001\u6700\u679c\u3066\u306e\u53f3\u624b)",
+                    "artist": "Riko (Miyu Tomita) and Regu (Mariya Ise)",
+                    "episode": "eps 2, 4-9",
+                    "yt_url": "https://www.youtube.com/watch?v=B2StG3qW5HI"
+                },
+                {
+                    "id": 70721,
+                    "anime_id": 34599,
+                    "text": "#3: \"Tabi no Hidarite, Saihate no Migite (\u65c5\u306e\u5de6\u624b\u3001\u6700\u679c\u3066\u306e\u53f3\u624b)\" by Riko (Miyu Tomita), Regu (Mariya Ise), and Nanachi (Shiori Izawa) (eps 10-12)",
+                    "index": "3",
+                    "name": "Tabi no Hidarite, Saihate no Migite (\u65c5\u306e\u5de6\u624b\u3001\u6700\u679c\u3066\u306e\u53f3\u624b)",
+                    "artist": "Riko (Miyu Tomita), Regu (Mariya Ise), and Nanachi (Shiori Izawa)",
+                    "episode": "eps 10-12",
+                    "yt_url": "https://www.youtube.com/watch?v=B2StG3qW5HI"
+                }
+            ]
+        },
+        {
+            "id": 36862,
+            "title": "Made in Abyss Movie 3: Fukaki Tamashii no Reimei",
+            "picture": "https://cdn.myanimelist.net/images/anime/1502/110723.jpg",
+            "opening_themes": [],
+            "ending_themes": [
+                {
+                    "id": 68228,
+                    "anime_id": 36862,
+                    "text": "\"Forever Lost\" by MYTH & ROID",
+                    "index": null,
+                    "name": "Forever Lost",
+                    "artist": "MYTH & ROID",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=HE5ld2PCWvw"
+                }
+            ]
+        },
+        {
+            "id": 41084,
+            "title": "Made in Abyss: Retsujitsu no Ougonkyou",
+            "picture": "https://cdn.myanimelist.net/images/anime/1864/122519.jpg",
+            "opening_themes": [
+                {
+                    "id": 76642,
+                    "anime_id": 41084,
+                    "text": "#1: \"GRAVITY\" by Arn\u00f3r Dan (ep 1)",
+                    "index": "1",
+                    "name": "GRAVITY",
+                    "artist": "Arn\u00f3r Dan",
+                    "episode": "ep 1",
+                    "yt_url": "https://www.youtube.com/watch?v=Gyi2rurV4JE"
+                },
+                {
+                    "id": 76643,
+                    "anime_id": 41084,
+                    "text": "#2: \"Katachi (\u304b\u305f\u3061)\" by Riko Azuna (eps 2-6, 8-9, 11-12)",
+                    "index": "2",
+                    "name": "Katachi (\u304b\u305f\u3061)",
+                    "artist": "Riko Azuna",
+                    "episode": "eps 2-6, 8-9, 11-12",
+                    "yt_url": "https://www.youtube.com/watch?v=8GGu3fILcGA"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 72589,
+                    "anime_id": 41084,
+                    "text": "\"Endless Embrace\" by MYTH & ROID",
+                    "index": null,
+                    "name": "Endless Embrace",
+                    "artist": "MYTH & ROID",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=Q-0s23Wu4QI"
                 }
             ]
         }

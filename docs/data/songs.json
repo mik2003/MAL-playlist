@@ -329,66 +329,6 @@
         "episode": "ep 12",
         "yt_url": "https://www.youtube.com/watch?v=qDE4pm6yiHM"
     },
-    "68430": {
-        "id": 68430,
-        "anime_id": 40591,
-        "text": "\"DADDY! DADDY! DO! feat. Airi Suzuki (DADDY! DADDY! DO! feat. \u9234\u6728\u611b\u7406)\" by Masayuki Suzuki (eps 2-10)",
-        "index": null,
-        "name": "DADDY! DADDY! DO! feat. Airi Suzuki (DADDY! DADDY! DO! feat. \u9234\u6728\u611b\u7406)",
-        "artist": "Masayuki Suzuki",
-        "episode": "eps 2-10",
-        "yt_url": "https://www.youtube.com/watch?v=DTJsnV0WTVU"
-    },
-    "68162": {
-        "id": 68162,
-        "anime_id": 40591,
-        "text": "#1: \"DADDY! DADDY! DO! feat. Airi Suzuki (DADDY! DADDY! DO! feat. \u9234\u6728\u611b\u7406)\" by Masayuki Suzuki (eps 1, 12)",
-        "index": "1",
-        "name": "DADDY! DADDY! DO! feat. Airi Suzuki (DADDY! DADDY! DO! feat. \u9234\u6728\u611b\u7406)",
-        "artist": "Masayuki Suzuki",
-        "episode": "eps 1, 12",
-        "yt_url": "https://www.youtube.com/watch?v=DTJsnV0WTVU"
-    },
-    "68163": {
-        "id": 68163,
-        "anime_id": 40591,
-        "text": "#2: \"Kaze ni Fukarete (\u98a8\u306b\u5439\u304b\u308c\u3066)\" by Haruka Fukuhara (eps 2-4, 6-11)",
-        "index": "2",
-        "name": "Kaze ni Fukarete (\u98a8\u306b\u5439\u304b\u308c\u3066)",
-        "artist": "Haruka Fukuhara",
-        "episode": "eps 2-4, 6-11",
-        "yt_url": "https://www.youtube.com/watch?v=ncnHddqNqhM"
-    },
-    "69623": {
-        "id": 69623,
-        "anime_id": 37999,
-        "text": "\"Love Dramatic feat. Rikka Ihara (\u30e9\u30d6\u30fb\u30c9\u30e9\u30de\u30c6\u30a3\u30c3\u30af feat.\u4f0a\u539f\u516d\u82b1)\" by Masayuki Suzuki (\u9234\u6728\u96c5\u4e4b) (eps 1-12)",
-        "index": null,
-        "name": "Love Dramatic feat. Rikka Ihara (\u30e9\u30d6\u30fb\u30c9\u30e9\u30de\u30c6\u30a3\u30c3\u30af feat.\u4f0a\u539f\u516d\u82b1)",
-        "artist": "Masayuki Suzuki (\u9234\u6728\u96c5\u4e4b)",
-        "episode": "eps 1-12",
-        "yt_url": "https://www.youtube.com/watch?v=P_XF8vjOrWE"
-    },
-    "69621": {
-        "id": 69621,
-        "anime_id": 37999,
-        "text": "#1: \"Sentimental Crisis (\u30bb\u30f3\u30c1\u30e1\u30f3\u30bf\u30eb\u30af\u30e9\u30a4\u30b7\u30b9)\" by halca (eps 1-2, 4-12)",
-        "index": "1",
-        "name": "Sentimental Crisis (\u30bb\u30f3\u30c1\u30e1\u30f3\u30bf\u30eb\u30af\u30e9\u30a4\u30b7\u30b9)",
-        "artist": "halca",
-        "episode": "eps 1-2, 4-12",
-        "yt_url": "https://www.youtube.com/watch?v=RHfaZZAMwA0"
-    },
-    "69622": {
-        "id": 69622,
-        "anime_id": 37999,
-        "text": "#2: \"Chikatto Chika Chika\u2661 (\u30c1\u30ab\u3063\u3068\u30c1\u30ab\u5343\u82b1\u3063\u2661)\" by Chika Fujiwara (Konomi Kohara (ep 3)",
-        "index": "2",
-        "name": "Chikatto Chika Chika\u2661 (\u30c1\u30ab\u3063\u3068\u30c1\u30ab\u5343\u82b1\u3063\u2661)",
-        "artist": "Chika Fujiwara (Konomi Kohara",
-        "episode": "ep 3",
-        "yt_url": "https://www.youtube.com/watch?v=Qe46yzEcQOo"
-    },
     "67890": {
         "id": 67890,
         "anime_id": 40839,
@@ -7769,26 +7709,6 @@
         "episode": "ep 64",
         "yt_url": "https://www.youtube.com/watch?v=THvFrrNVj6w"
     },
-    "71912": {
-        "id": 71912,
-        "anime_id": 40507,
-        "text": "\"Daylight\" by MindaRyn",
-        "index": null,
-        "name": "Daylight",
-        "artist": "MindaRyn",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=k2-ygljRjsk"
-    },
-    "72000": {
-        "id": 72000,
-        "anime_id": 40507,
-        "text": "\"Gedou Sanka (\u5916\u9053\u8b83\u6b4c)\" by FantasticYouth",
-        "index": null,
-        "name": "Gedou Sanka (\u5916\u9053\u8b83\u6b4c)",
-        "artist": "FantasticYouth",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=GR5bjT5o5_s"
-    },
     "79020": {
         "id": 79020,
         "anime_id": 433,
@@ -9199,46 +9119,6 @@
         "episode": null,
         "yt_url": "https://www.youtube.com/watch?v=muma1W1t3Xo"
     },
-    "72907": {
-        "id": 72907,
-        "anime_id": 43608,
-        "text": "\"GIRI GIRI feat Suu (GIRI GIRI feat. \u3059\u3045)\" by Masayuki Suzuki (eps 2-4, 6-8, 10-13)",
-        "index": null,
-        "name": "GIRI GIRI feat Suu (GIRI GIRI feat. \u3059\u3045)",
-        "artist": "Masayuki Suzuki",
-        "episode": "eps 2-4, 6-8, 10-13",
-        "yt_url": "https://www.youtube.com/watch?v=vptdHEUZN10"
-    },
-    "72908": {
-        "id": 72908,
-        "anime_id": 43608,
-        "text": "#1: \"GIRI GIRI feat Suu (GIRI GIRI feat. \u3059\u3045)\" by Masayuki Suzuki (ep 1)",
-        "index": "1",
-        "name": "GIRI GIRI feat Suu (GIRI GIRI feat. \u3059\u3045)",
-        "artist": "Masayuki Suzuki",
-        "episode": "ep 1",
-        "yt_url": "https://www.youtube.com/watch?v=vptdHEUZN10"
-    },
-    "72909": {
-        "id": 72909,
-        "anime_id": 43608,
-        "text": "#2: \"Heart wa Oteage (\u30cf\u30fc\u30c8\u306f\u304a\u624b\u4e0a\u3052)\" by Airi Suzuki (eps 2-4, 6-13)",
-        "index": "2",
-        "name": "Heart wa Oteage (\u30cf\u30fc\u30c8\u306f\u304a\u624b\u4e0a\u3052)",
-        "artist": "Airi Suzuki",
-        "episode": "eps 2-4, 6-13",
-        "yt_url": "https://www.youtube.com/watch?v=GSuselwRqcE"
-    },
-    "72910": {
-        "id": 72910,
-        "anime_id": 43608,
-        "text": "#3: \"My Nonfiction\" by Miyuki Shirogane (Makoto Furukawa) & Chika Fujiwara (Konomi Kohara) (ep 5)",
-        "index": "3",
-        "name": "My Nonfiction",
-        "artist": "Miyuki Shirogane (Makoto Furukawa) & Chika Fujiwara (Konomi Kohara)",
-        "episode": "ep 5",
-        "yt_url": "https://www.youtube.com/watch?v=kuEl3LL3CD0"
-    },
     "63147": {
         "id": 63147,
         "anime_id": 37786,
@@ -9808,46 +9688,6 @@
         "artist": "LiSA",
         "episode": null,
         "yt_url": "https://www.youtube.com/watch?v=Ff7k1zxBe1I"
-    },
-    "70949": {
-        "id": 70949,
-        "anime_id": 43523,
-        "text": "\"Gamble (\u30ae\u30e3\u30f3\u30d6\u30eb)\" by syudou",
-        "index": null,
-        "name": "Gamble (\u30ae\u30e3\u30f3\u30d6\u30eb)",
-        "artist": "syudou",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=7GBn6IuTQ6w"
-    },
-    "71320": {
-        "id": 71320,
-        "anime_id": 43523,
-        "text": "#1: \"Aa Jinsei ni Namida Ari (\u3042\u3042\u4eba\u751f\u306b\u6d99\u3042\u308a)\" by Makoto Misumi (CV: Natsuki Hanae) (ep 1)",
-        "index": "1",
-        "name": "Aa Jinsei ni Namida Ari (\u3042\u3042\u4eba\u751f\u306b\u6d99\u3042\u308a)",
-        "artist": "Makoto Misumi (CV: Natsuki Hanae)",
-        "episode": "ep 1",
-        "yt_url": "https://www.youtube.com/watch?v=4xlyZehaZ-E"
-    },
-    "71321": {
-        "id": 71321,
-        "anime_id": 43523,
-        "text": "#2: \"Beautiful Dreamer (\u30d3\u30e5\u30fc\u30c6\u30a3\u30d5\u30eb\u30fb\u30c9\u30ea\u30fc\u30de\u30fc)\" by Ezoshika Gourmet Club (eps 2-3)",
-        "index": "2",
-        "name": "Beautiful Dreamer (\u30d3\u30e5\u30fc\u30c6\u30a3\u30d5\u30eb\u30fb\u30c9\u30ea\u30fc\u30de\u30fc)",
-        "artist": "Ezoshika Gourmet Club",
-        "episode": "eps 2-3",
-        "yt_url": "https://www.youtube.com/watch?v=wS-PCSv7r2I"
-    },
-    "71322": {
-        "id": 71322,
-        "anime_id": 43523,
-        "text": "#3: \"Aa, Jinsei ni Namida Ari (\u3042\u3042\u4eba\u751f\u306b\u6d99\u3042\u308a)\" by Tomoe (CV: Ayane Sakura), Mio (CV: Akari Kitou) (ep 4)",
-        "index": "3",
-        "name": "Aa, Jinsei ni Namida Ari (\u3042\u3042\u4eba\u751f\u306b\u6d99\u3042\u308a)",
-        "artist": "Tomoe (CV: Ayane Sakura), Mio (CV: Akari Kitou)",
-        "episode": "ep 4",
-        "yt_url": "https://www.youtube.com/watch?v=SzbTcdPwNGo"
     },
     "69392": {
         "id": 69392,
@@ -10978,36 +10818,6 @@
         "artist": "Anisphia Wynn Palletia (CV: Sayaka Senbongi), Euphyllia Magenta (CV: Manaka Iwami)",
         "episode": null,
         "yt_url": "https://www.youtube.com/watch?v=s5cBUCZedzg"
-    },
-    "70363": {
-        "id": 70363,
-        "anime_id": 39535,
-        "text": "#1: \"Tabibito no Uta (\u65c5\u4eba\u306e\u5504)\" by Yuiko Oohara (eps 3-4, 6-8)",
-        "index": "1",
-        "name": "Tabibito no Uta (\u65c5\u4eba\u306e\u5504)",
-        "artist": "Yuiko Oohara",
-        "episode": "eps 3-4, 6-8",
-        "yt_url": "https://www.youtube.com/watch?v=hZ6TnKvB2rc"
-    },
-    "70364": {
-        "id": 70364,
-        "anime_id": 39535,
-        "text": "#2: \"Mezame no uta (\u76ee\u899a\u3081\u306e\u5504)\" by Yuiko Oohara (ep 10)",
-        "index": "2",
-        "name": "Mezame no uta (\u76ee\u899a\u3081\u306e\u5504)",
-        "artist": "Yuiko Oohara",
-        "episode": "ep 10",
-        "yt_url": "https://www.youtube.com/watch?v=NEh3-Qmq1LE"
-    },
-    "69838": {
-        "id": 69838,
-        "anime_id": 39535,
-        "text": "\"Only (\u30aa\u30f3\u30ea\u30fc)\" by Yuiko Oohara",
-        "index": null,
-        "name": "Only (\u30aa\u30f3\u30ea\u30fc)",
-        "artist": "Yuiko Oohara",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=ebaaWokWIo4"
     },
     "76065": {
         "id": 76065,
@@ -12149,26 +11959,6 @@
         "episode": "ep 12",
         "yt_url": "https://www.youtube.com/watch?v=ZeDldD53qxI"
     },
-    "71866": {
-        "id": 71866,
-        "anime_id": 48239,
-        "text": "\"Happy Encount\" by TRUE",
-        "index": null,
-        "name": "Happy Encount",
-        "artist": "TRUE",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=l-126BD6zVI"
-    },
-    "71822": {
-        "id": 71822,
-        "anime_id": 48239,
-        "text": "\"Hakone no Koufuku (\u7bb1\u5ead\u306e\u5e78\u798f)\" by Azusa Tadokoro",
-        "index": null,
-        "name": "Hakone no Koufuku (\u7bb1\u5ead\u306e\u5e78\u798f)",
-        "artist": "Azusa Tadokoro",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=8xronI95g38"
-    },
     "70278": {
         "id": 70278,
         "anime_id": 37984,
@@ -12268,26 +12058,6 @@
         "artist": "Aira Yuuki (\u7d50\u57ce\u30a2\u30a4\u30e9)",
         "episode": null,
         "yt_url": "https://www.youtube.com/watch?v=pKGPCyr-PdA"
-    },
-    "65371": {
-        "id": 65371,
-        "anime_id": 36882,
-        "text": "\"FLARE\" by Void_Chords feat.LIO",
-        "index": null,
-        "name": "FLARE",
-        "artist": "Void_Chords feat.LIO",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=jekubzaLQ3w"
-    },
-    "65372": {
-        "id": 65372,
-        "anime_id": 36882,
-        "text": "\"Hajime no Uta (\u30cf\u30b8\u30e1\u30ce\u30a6\u30bf)\" by DracoVirgo",
-        "index": null,
-        "name": "Hajime no Uta (\u30cf\u30b8\u30e1\u30ce\u30a6\u30bf)",
-        "artist": "DracoVirgo",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=7V6JvkAg2OY"
     },
     "52003": {
         "id": 52003,
@@ -13249,26 +13019,6 @@
         "episode": "eps 13-25",
         "yt_url": "https://www.youtube.com/watch?v=GF6jCEb6Ee8"
     },
-    "54011": {
-        "id": 54011,
-        "anime_id": 32542,
-        "text": "\"COOLEST\" by Customi Z",
-        "index": null,
-        "name": "COOLEST",
-        "artist": "Customi Z",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=f607MHZ8s0U"
-    },
-    "54012": {
-        "id": 54012,
-        "anime_id": 32542,
-        "text": "\"Nakushita Hibi ni Sayonara (\u7121\u304f\u3057\u305f\u65e5\u3005\u306b\u3055\u3088\u306a\u3089)\" by Suneohair",
-        "index": null,
-        "name": "Nakushita Hibi ni Sayonara (\u7121\u304f\u3057\u305f\u65e5\u3005\u306b\u3055\u3088\u306a\u3089)",
-        "artist": "Suneohair",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=JcuFqdmX0VY"
-    },
     "70332": {
         "id": 70332,
         "anime_id": 41623,
@@ -13849,26 +13599,6 @@
         "episode": "eps 2-11",
         "yt_url": "https://www.youtube.com/watch?v=_X35C9Y-EEk"
     },
-    "37381": {
-        "id": 37381,
-        "anime_id": 17265,
-        "text": "\"database feat. TAKUMA (10 Feet)\" by MAN WITH A MISSION",
-        "index": null,
-        "name": "database feat. TAKUMA (10 Feet)",
-        "artist": "MAN WITH A MISSION",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=d2Kj7YybM5o"
-    },
-    "35083": {
-        "id": 35083,
-        "anime_id": 17265,
-        "text": "\"Your song*\" by Yun*chi",
-        "index": null,
-        "name": "Your song*",
-        "artist": "Yun*chi",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=fNfboNEFh-g"
-    },
     "41451": {
         "id": 41451,
         "anime_id": 22877,
@@ -13888,36 +13618,6 @@
         "artist": "Ni-Sokkususu [Claire Rouge (Ibuki Kido), Rinslet Laurenfrost (Kana Yuuki), Ellis Fahrengart (Shizuka Ishigami), Fianna Ray Ordesia (Saori Oonishi), Terminus Est (Ai Kakuma)]",
         "episode": null,
         "yt_url": "https://www.youtube.com/watch?v=QMZTkoSBJBQ"
-    },
-    "68071": {
-        "id": 68071,
-        "anime_id": 38555,
-        "text": "\"Otome no Route wa Hitotsu janai! (\u4e59\u5973\u306e\u30eb\u30fc\u30c8\u306f\u3072\u3068\u3064\u3058\u3083\u306a\u3044\uff01)\" by angela (eps 1-11)",
-        "index": null,
-        "name": "Otome no Route wa Hitotsu janai! (\u4e59\u5973\u306e\u30eb\u30fc\u30c8\u306f\u3072\u3068\u3064\u3058\u3083\u306a\u3044\uff01)",
-        "artist": "angela",
-        "episode": "eps 1-11",
-        "yt_url": "https://www.youtube.com/watch?v=wrub7h0EGn4"
-    },
-    "72786": {
-        "id": 72786,
-        "anime_id": 38555,
-        "text": "#1: \"BAD END\" by Shouta Aoi (\u84bc\u4e95\u7fd4\u592a) (eps 2-11)",
-        "index": "1",
-        "name": "BAD END",
-        "artist": "Shouta Aoi (\u84bc\u4e95\u7fd4\u592a)",
-        "episode": "eps 2-11",
-        "yt_url": "https://www.youtube.com/watch?v=uVTSGCWCxrY"
-    },
-    "72787": {
-        "id": 72787,
-        "anime_id": 38555,
-        "text": "#2: \"Otome no Route wa Hitotsu Janai! (\u4e59\u5973\u306e\u30eb\u30fc\u30c8\u306f\u3072\u3068\u3064\u3058\u3083\u306a\u3044\uff01)\" by angela (ep 12)",
-        "index": "2",
-        "name": "Otome no Route wa Hitotsu Janai! (\u4e59\u5973\u306e\u30eb\u30fc\u30c8\u306f\u3072\u3068\u3064\u3058\u3083\u306a\u3044\uff01)",
-        "artist": "angela",
-        "episode": "ep 12",
-        "yt_url": "https://www.youtube.com/watch?v=wrub7h0EGn4"
     },
     "58860": {
         "id": 58860,
@@ -13979,36 +13679,6 @@
         "episode": null,
         "yt_url": "https://www.youtube.com/watch?v=Ilxy59s_s2o"
     },
-    "75734": {
-        "id": 75734,
-        "anime_id": 54856,
-        "text": "\"Shiawase (\u5e78\u305b)\" by Omoinotake",
-        "index": null,
-        "name": "Shiawase (\u5e78\u305b)",
-        "artist": "Omoinotake",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=WSJQcgBAyys"
-    },
-    "76556": {
-        "id": 76556,
-        "anime_id": 54856,
-        "text": "1: \"URL\" by Ami Sakaguchi (eps 1-6, 8-13)",
-        "index": null,
-        "name": "URL",
-        "artist": "Ami Sakaguchi",
-        "episode": "eps 1-6, 8-13",
-        "yt_url": "https://www.youtube.com/watch?v=71EHMNg6KIc"
-    },
-    "76557": {
-        "id": 76557,
-        "anime_id": 54856,
-        "text": "2: \"Dokuro Ninja Konoha (\u30c9\u30af\u30ed\u30cb\u30f3\u30b8\u30e3\u30b3\u30ce\u30cf)\" by Sakura Kouno (CV: Reina Kondou) & Akane Yanagi (CV: Jun Fukuyama) (ep 7)",
-        "index": null,
-        "name": "Dokuro Ninja Konoha (\u30c9\u30af\u30ed\u30cb\u30f3\u30b8\u30e3\u30b3\u30ce\u30cf)",
-        "artist": "Sakura Kouno (CV: Reina Kondou) & Akane Yanagi (CV: Jun Fukuyama)",
-        "episode": "ep 7",
-        "yt_url": "https://www.youtube.com/watch?v=gXgjL0TrRD4"
-    },
     "59417": {
         "id": 59417,
         "anime_id": 36038,
@@ -14048,26 +13718,6 @@
         "artist": "Yuuka Aisaka",
         "episode": null,
         "yt_url": "https://www.youtube.com/watch?v=FxMA3bLm8rk"
-    },
-    "69851": {
-        "id": 69851,
-        "anime_id": 42897,
-        "text": "\"Iro Kousui (\u8272\u9999\u6c34)\" by You Kamiyama",
-        "index": null,
-        "name": "Iro Kousui (\u8272\u9999\u6c34)",
-        "artist": "You Kamiyama",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=kQYLHjgUh_g"
-    },
-    "69852": {
-        "id": 69852,
-        "anime_id": 42897,
-        "text": "\"Yakusoku (\u7d04\u675f)\" by Friends (\u30d5\u30ec\u30f3\u30ba)",
-        "index": null,
-        "name": "Yakusoku (\u7d04\u675f)",
-        "artist": "Friends (\u30d5\u30ec\u30f3\u30ba)",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=fd1jD7-XX5g"
     },
     "33397": {
         "id": 33397,
@@ -15469,26 +15119,6 @@
         "episode": null,
         "yt_url": "https://www.youtube.com/watch?v=hg_HL8fjBcM"
     },
-    "70692": {
-        "id": 70692,
-        "anime_id": 44203,
-        "text": "\"New story\" by Marika Kouno",
-        "index": null,
-        "name": "New story",
-        "artist": "Marika Kouno",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=-SdEFi3yqOc"
-    },
-    "70693": {
-        "id": 70693,
-        "anime_id": 44203,
-        "text": "\"Elder flower\" by Aguri Oonishi",
-        "index": null,
-        "name": "Elder flower",
-        "artist": "Aguri Oonishi",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=oAyY_NhZgqE"
-    },
     "76237": {
         "id": 76237,
         "anime_id": 52962,
@@ -15508,56 +15138,6 @@
         "artist": "KanoeRana",
         "episode": null,
         "yt_url": "https://www.youtube.com/watch?v=uI93Pxd0W2E"
-    },
-    "44875": {
-        "id": 44875,
-        "anime_id": 20785,
-        "text": "#1: \"Rising Hope\" by LiSA (eps 2-3, 5-13)",
-        "index": "1",
-        "name": "Rising Hope",
-        "artist": "LiSA",
-        "episode": "eps 2-3, 5-13",
-        "yt_url": "https://www.youtube.com/watch?v=IzhMzY5avLI"
-    },
-    "44877": {
-        "id": 44877,
-        "anime_id": 20785,
-        "text": "#2: \"grilletto\" by GARNiDELiA (eps 14-26)",
-        "index": "2",
-        "name": "grilletto",
-        "artist": "GARNiDELiA",
-        "episode": "eps 14-26",
-        "yt_url": "https://www.youtube.com/watch?v=hUf1NoPK-8Q"
-    },
-    "44879": {
-        "id": 44879,
-        "anime_id": 20785,
-        "text": "#1: \"Rising Hope\" by LiSA (ep 1)",
-        "index": "1",
-        "name": "Rising Hope",
-        "artist": "LiSA",
-        "episode": "ep 1",
-        "yt_url": "https://www.youtube.com/watch?v=IzhMzY5avLI"
-    },
-    "44881": {
-        "id": 44881,
-        "anime_id": 20785,
-        "text": "#2: \"Millenario (\u30df\u30ec\u30ca\u30ea\u30aa)\" by ELISA (eps 2-13, 18)",
-        "index": "2",
-        "name": "Millenario (\u30df\u30ec\u30ca\u30ea\u30aa)",
-        "artist": "ELISA",
-        "episode": "eps 2-13, 18",
-        "yt_url": "https://www.youtube.com/watch?v=MNlaZt5i8jU"
-    },
-    "44883": {
-        "id": 44883,
-        "anime_id": 20785,
-        "text": "#3: \"Mirror\" by Rei Yasuda (eps 14-17, 19-26)",
-        "index": "3",
-        "name": "Mirror",
-        "artist": "Rei Yasuda",
-        "episode": "eps 14-17, 19-26",
-        "yt_url": "https://www.youtube.com/watch?v=j0N5XpHDfUM"
     },
     "44297": {
         "id": 44297,
@@ -15888,86 +15468,6 @@
         "artist": "Alex Xiao (\u8427\u5fc6\u60c5)",
         "episode": null,
         "yt_url": "https://www.youtube.com/watch?v=KhcHCaxv_FI"
-    },
-    "50896": {
-        "id": 50896,
-        "anime_id": 29803,
-        "text": "\"Clattanoia\" by O\u00d7T (Masayoshi Oishi \u00d7 Tom-H@ck)",
-        "index": null,
-        "name": "Clattanoia",
-        "artist": "O\u00d7T (Masayoshi Oishi \u00d7 Tom-H@ck)",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=saah9UTwaUI"
-    },
-    "50897": {
-        "id": 50897,
-        "anime_id": 29803,
-        "text": "\"L.L.L.\" by MYTH&ROID",
-        "index": null,
-        "name": "L.L.L.",
-        "artist": "MYTH&ROID",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=skqKOt73rvM"
-    },
-    "60532": {
-        "id": 60532,
-        "anime_id": 35073,
-        "text": "\"GO CRY GO\" by OxT",
-        "index": null,
-        "name": "GO CRY GO",
-        "artist": "OxT",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=efL4a9zIMBQ"
-    },
-    "60533": {
-        "id": 60533,
-        "anime_id": 35073,
-        "text": "\"HYDRA\" by MYTH\uff06ROID",
-        "index": null,
-        "name": "HYDRA",
-        "artist": "MYTH\uff06ROID",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=qrvCAJbXc_o"
-    },
-    "62556": {
-        "id": 62556,
-        "anime_id": 37675,
-        "text": "\"VORACITY\" by MYTH\uff06ROID",
-        "index": null,
-        "name": "VORACITY",
-        "artist": "MYTH\uff06ROID",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=XPOIe6WdhPQ"
-    },
-    "62889": {
-        "id": 62889,
-        "anime_id": 37675,
-        "text": "\"Silent Solitude\" by OxT",
-        "index": null,
-        "name": "Silent Solitude",
-        "artist": "OxT",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=KnZhuGMnhds"
-    },
-    "72607": {
-        "id": 72607,
-        "anime_id": 48895,
-        "text": "\"HOLLOW HUNGER\" by OxT",
-        "index": null,
-        "name": "HOLLOW HUNGER",
-        "artist": "OxT",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=Tkkp3FhDVxQ"
-    },
-    "72615": {
-        "id": 72615,
-        "anime_id": 48895,
-        "text": "\"No Man's Dawn\" by Mayu Maeshima",
-        "index": null,
-        "name": "No Man's Dawn",
-        "artist": "Mayu Maeshima",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=9kPy5LT56v8"
     },
     "41763": {
         "id": 41763,
@@ -16469,46 +15969,6 @@
         "episode": null,
         "yt_url": "https://www.youtube.com/watch?v=ISaEEvP40p4"
     },
-    "78669": {
-        "id": 78669,
-        "anime_id": 54837,
-        "text": "#1: \"Ray of Light\" by Hanatan (\u82b1\u305f\u3093) (ep 1)",
-        "index": "1",
-        "name": "Ray of Light",
-        "artist": "Hanatan (\u82b1\u305f\u3093)",
-        "episode": "ep 1",
-        "yt_url": "https://www.youtube.com/watch?v=UtVQ5uMEQWI"
-    },
-    "78670": {
-        "id": 78670,
-        "anime_id": 54837,
-        "text": "#2: \"LOVE or HATE?\" by Mayu Maeshima (\u524d\u5cf6\u9ebb\u7531) (eps 2-12)",
-        "index": "2",
-        "name": "LOVE or HATE?",
-        "artist": "Mayu Maeshima (\u524d\u5cf6\u9ebb\u7531)",
-        "episode": "eps 2-12",
-        "yt_url": "https://www.youtube.com/watch?v=4noCHoUpWFY"
-    },
-    "78873": {
-        "id": 78873,
-        "anime_id": 54837,
-        "text": "#1: \"LOVE or HATE?\" by Mayu Maeshima (\u524d\u5cf6\u9ebb\u7531) (eps 1, 12)",
-        "index": "1",
-        "name": "LOVE or HATE?",
-        "artist": "Mayu Maeshima (\u524d\u5cf6\u9ebb\u7531)",
-        "episode": "eps 1, 12",
-        "yt_url": "https://www.youtube.com/watch?v=4noCHoUpWFY"
-    },
-    "78874": {
-        "id": 78874,
-        "anime_id": 54837,
-        "text": "#2: \"Suki ga Levechi (\u597d\u304d\u304c\u30ec\u30d9\u30c1)\" by Eleanora Hillrose (CV: Rina Hidaka), Yumiella Dolkness (CV: Fairouz Ai) (eps 2-11)",
-        "index": "2",
-        "name": "Suki ga Levechi (\u597d\u304d\u304c\u30ec\u30d9\u30c1)",
-        "artist": "Eleanora Hillrose (CV: Rina Hidaka), Yumiella Dolkness (CV: Fairouz Ai)",
-        "episode": "eps 2-11",
-        "yt_url": "https://www.youtube.com/watch?v=qcnBSbuz5rk"
-    },
     "78604": {
         "id": 78604,
         "anime_id": 51180,
@@ -16879,16 +16339,6 @@
         "episode": null,
         "yt_url": "https://www.youtube.com/watch?v=VUsURj_OYdA"
     },
-    "2690": {
-        "id": 2690,
-        "anime_id": 2890,
-        "text": "\"Gake no Ue no Ponyo (\u5d16\u306e\u4e0a\u306e\u30dd\u30cb\u30e7)\" by Fujioka Fujimaki and Nozomi \u014chashi",
-        "index": null,
-        "name": "Gake no Ue no Ponyo (\u5d16\u306e\u4e0a\u306e\u30dd\u30cb\u30e7)",
-        "artist": "Fujioka Fujimaki and Nozomi \u014chashi",
-        "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=kDy3rDedXBM"
-    },
     "69448": {
         "id": 69448,
         "anime_id": 38826,
@@ -16979,6 +16429,436 @@
         "episode": null,
         "yt_url": "https://www.youtube.com/watch?v=DiDDWexFjmg"
     },
+    "77030": {
+        "id": 77030,
+        "anime_id": 56690,
+        "text": "\"Into the Fire\" by CHANSUNG(2PM), AK-69 feat.CHANGMIN(2AM)",
+        "index": null,
+        "name": "Into the Fire",
+        "artist": "CHANSUNG(2PM), AK-69 feat.CHANGMIN(2AM)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=Mpxw1XJ3mx8"
+    },
+    "78223": {
+        "id": 78223,
+        "anime_id": 56690,
+        "text": "\"Sadame (\u904b\u547d [\u3055\u3060\u3081])\" by EverdreaM",
+        "index": null,
+        "name": "Sadame (\u904b\u547d [\u3055\u3060\u3081])",
+        "artist": "EverdreaM",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=fDjA2Alcx34"
+    },
+    "78313": {
+        "id": 78313,
+        "anime_id": 55265,
+        "text": "\"Blue Days (\u30d6\u30eb\u30fc\u30c7\u30a4\u30ba)\" by TRUE",
+        "index": null,
+        "name": "Blue Days (\u30d6\u30eb\u30fc\u30c7\u30a4\u30ba)",
+        "artist": "TRUE",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=TcQXtGYFFkM"
+    },
+    "79318": {
+        "id": 79318,
+        "anime_id": 55265,
+        "text": "\"Finally\" by Licia Pleide (CV: Kana Hanazawa) (eps 2-12)",
+        "index": null,
+        "name": "Finally",
+        "artist": "Licia Pleide (CV: Kana Hanazawa)",
+        "episode": "eps 2-12",
+        "yt_url": "https://www.youtube.com/watch?v=RfGHSp4oViI"
+    },
+    "79340": {
+        "id": 79340,
+        "anime_id": 50713,
+        "text": "\"Shouted Serenade\" by LiSA (eps 2-13)",
+        "index": null,
+        "name": "Shouted Serenade",
+        "artist": "LiSA",
+        "episode": "eps 2-13",
+        "yt_url": "https://www.youtube.com/watch?v=fR7e0N1UkRI"
+    },
+    "79341": {
+        "id": 79341,
+        "anime_id": 50713,
+        "text": "#1: \"Shouted Serenade\" by LiSA (ep 1)",
+        "index": "1",
+        "name": "Shouted Serenade",
+        "artist": "LiSA",
+        "episode": "ep 1",
+        "yt_url": "https://www.youtube.com/watch?v=fR7e0N1UkRI"
+    },
+    "79342": {
+        "id": 79342,
+        "anime_id": 50713,
+        "text": "#2: \"recall\" by Kairi Yagi (\u516b\u6728\u6d77\u8389) (eps 2-4)",
+        "index": "2",
+        "name": "recall",
+        "artist": "Kairi Yagi (\u516b\u6728\u6d77\u8389)",
+        "episode": "eps 2-4",
+        "yt_url": "https://www.youtube.com/watch?v=RADvWaefL_U"
+    },
+    "79343": {
+        "id": 79343,
+        "anime_id": 50713,
+        "text": "#3: \"Snow Noir (\u30b9\u30ce\u30fc\u30ce\u30ef\u30fc\u30eb)\" by Sangatsu no Phantasia (\u4e09\u6708\u306e\u30d1\u30f3\u30bf\u30b7\u30a2) (eps 5-8)",
+        "index": "3",
+        "name": "Snow Noir (\u30b9\u30ce\u30fc\u30ce\u30ef\u30fc\u30eb)",
+        "artist": "Sangatsu no Phantasia (\u4e09\u6708\u306e\u30d1\u30f3\u30bf\u30b7\u30a2)",
+        "episode": "eps 5-8",
+        "yt_url": "https://www.youtube.com/watch?v=72Sg07BdE3E"
+    },
+    "79344": {
+        "id": 79344,
+        "anime_id": 50713,
+        "text": "#4: \"Shion no Hanataba wo (\u7d2b\u82d1\u306e\u82b1\u675f\u3092)\" by ASCA (eps 9-13)",
+        "index": "4",
+        "name": "Shion no Hanataba wo (\u7d2b\u82d1\u306e\u82b1\u675f\u3092)",
+        "artist": "ASCA",
+        "episode": "eps 9-13",
+        "yt_url": "https://www.youtube.com/watch?v=IbmrFglLWNk"
+    },
+    "79287": {
+        "id": 79287,
+        "anime_id": 57100,
+        "text": "\"Sekai wo Yanuite (\u4e16\u754c\u3092\u5c04\u629c\u3044\u3066)\" by Sou (eps 2-10)",
+        "index": null,
+        "name": "Sekai wo Yanuite (\u4e16\u754c\u3092\u5c04\u629c\u3044\u3066)",
+        "artist": "Sou",
+        "episode": "eps 2-10",
+        "yt_url": "https://www.youtube.com/watch?v=6Rdw3zrjwzo"
+    },
+    "79363": {
+        "id": 79363,
+        "anime_id": 57100,
+        "text": "#1: \"Sekai wo Yanuite (\u4e16\u754c\u3092\u5c04\u629c\u3044\u3066)\" by Sou (ep 1)",
+        "index": "1",
+        "name": "Sekai wo Yanuite (\u4e16\u754c\u3092\u5c04\u629c\u3044\u3066)",
+        "artist": "Sou",
+        "episode": "ep 1",
+        "yt_url": "https://www.youtube.com/watch?v=6Rdw3zrjwzo"
+    },
+    "79364": {
+        "id": 79364,
+        "anime_id": 57100,
+        "text": "#2: \"Kanataboshi (\u30ab\u30ca\u30bf\u30dc\u30b7)\" by Miho Okasaki (\u5ca1\u54b2\u7f8e\u4fdd) (eps 2-12)",
+        "index": "2",
+        "name": "Kanataboshi (\u30ab\u30ca\u30bf\u30dc\u30b7)",
+        "artist": "Miho Okasaki (\u5ca1\u54b2\u7f8e\u4fdd)",
+        "episode": "eps 2-12",
+        "yt_url": "https://www.youtube.com/watch?v=u9WiU9bnPMA"
+    },
+    "51905": {
+        "id": 51905,
+        "anime_id": 30276,
+        "text": "\"THE HERO !! ~Okoreru Kobushi ni Hi wo Tsukero~ (THE HERO !! \uff5e\u6012\u308c\u308b\u62f3\u306b\u706b\u3092\u3064\u3051\u308d\uff5e)\" by JAM Project",
+        "index": null,
+        "name": "THE HERO !! ~Okoreru Kobushi ni Hi wo Tsukero~ (THE HERO !! \uff5e\u6012\u308c\u308b\u62f3\u306b\u706b\u3092\u3064\u3051\u308d\uff5e)",
+        "artist": "JAM Project",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=QImBolnTVH8"
+    },
+    "53114": {
+        "id": 53114,
+        "anime_id": 30276,
+        "text": "#1: \"Hoshi yori Saki ni Mitsukete Ageru (\u661f\u3088\u308a\u5148\u306b\u898b\u3064\u3051\u3066\u3042\u3052\u308b)\" by Hiroko Moriguchi (eps 1-11)",
+        "index": "1",
+        "name": "Hoshi yori Saki ni Mitsukete Ageru (\u661f\u3088\u308a\u5148\u306b\u898b\u3064\u3051\u3066\u3042\u3052\u308b)",
+        "artist": "Hiroko Moriguchi",
+        "episode": "eps 1-11",
+        "yt_url": "https://www.youtube.com/watch?v=f-TxAUiwo18"
+    },
+    "53115": {
+        "id": 53115,
+        "anime_id": 30276,
+        "text": "#2: \"Kanashimitachi wo Dakishimete (\u60b2\u3057\u307f\u305f\u3061\u3092\u62b1\u304d\u3057\u3081\u3066)\" by Hiroko Moriguchi (ep 12)",
+        "index": "2",
+        "name": "Kanashimitachi wo Dakishimete (\u60b2\u3057\u307f\u305f\u3061\u3092\u62b1\u304d\u3057\u3081\u3066)",
+        "artist": "Hiroko Moriguchi",
+        "episode": "ep 12",
+        "yt_url": "https://www.youtube.com/watch?v=atr8aHPZcAk"
+    },
+    "78408": {
+        "id": 78408,
+        "anime_id": 55888,
+        "text": "\"On the Frontline (\u30aa\u30f3\u30fb\u30b6\u30fb\u30d5\u30ed\u30f3\u30c8\u30e9\u30a4\u30f3)\" by hitorie",
+        "index": null,
+        "name": "On the Frontline (\u30aa\u30f3\u30fb\u30b6\u30fb\u30d5\u30ed\u30f3\u30c8\u30e9\u30a4\u30f3)",
+        "artist": "hitorie",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=xBwmPob9flU"
+    },
+    "80066": {
+        "id": 80066,
+        "anime_id": 55888,
+        "text": "#1: \"Mamoritai Mono (\u5b88\u308a\u305f\u3044\u3082\u306e)\" by Yuiko Ohara (eps 1-2, 4-5, 7-9, 11)",
+        "index": "1",
+        "name": "Mamoritai Mono (\u5b88\u308a\u305f\u3044\u3082\u306e)",
+        "artist": "Yuiko Ohara",
+        "episode": "eps 1-2, 4-5, 7-9, 11",
+        "yt_url": "https://www.youtube.com/watch?v=v7FApIxb4Y8"
+    },
+    "80067": {
+        "id": 80067,
+        "anime_id": 55888,
+        "text": "#2: \"Tsubasa (\u30c4\u30d0\u30b5)\" by Nanahoshi (CV: Shion Wakayama) (ep 3)",
+        "index": "2",
+        "name": "Tsubasa (\u30c4\u30d0\u30b5)",
+        "artist": "Nanahoshi (CV: Shion Wakayama)",
+        "episode": "ep 3",
+        "yt_url": "https://www.youtube.com/watch?v=s9u7oQ7aaV0"
+    },
+    "80068": {
+        "id": 80068,
+        "anime_id": 55888,
+        "text": "#3: \"Kagerurabe no Uta (\u304b\u3052\u304f\u3089\u3079\u306e\u5504)\" by Yuiko Ohara (ep 12)",
+        "index": "3",
+        "name": "Kagerurabe no Uta (\u304b\u3052\u304f\u3089\u3079\u306e\u5504)",
+        "artist": "Yuiko Ohara",
+        "episode": "ep 12",
+        "yt_url": "https://www.youtube.com/watch?v=fDcufjgMoSA"
+    },
+    "2690": {
+        "id": 2690,
+        "anime_id": 2890,
+        "text": "\"Gake no Ue no Ponyo (\u5d16\u306e\u4e0a\u306e\u30dd\u30cb\u30e7)\" by Fujioka Fujimaki and Nozomi \u014chashi",
+        "index": null,
+        "name": "Gake no Ue no Ponyo (\u5d16\u306e\u4e0a\u306e\u30dd\u30cb\u30e7)",
+        "artist": "Fujioka Fujimaki and Nozomi \u014chashi",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=kDy3rDedXBM"
+    },
+    "78281": {
+        "id": 78281,
+        "anime_id": 55717,
+        "text": "\"EVOLVE\" by Shouta Aoi (\u84bc\u4e95\u7fd4\u592a)",
+        "index": null,
+        "name": "EVOLVE",
+        "artist": "Shouta Aoi (\u84bc\u4e95\u7fd4\u592a)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=jG40Xe4inww"
+    },
+    "78466": {
+        "id": 78466,
+        "anime_id": 55717,
+        "text": "\"Meritocracy (\u30e1\u30ea\u30c8\u30af\u30e9\u30b7\u30fc)\" by Aimi",
+        "index": null,
+        "name": "Meritocracy (\u30e1\u30ea\u30c8\u30af\u30e9\u30b7\u30fc)",
+        "artist": "Aimi",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=p46GnXMcByM"
+    },
+    "79320": {
+        "id": 79320,
+        "anime_id": 56923,
+        "text": "\"Dannasama to no Love Love Love Song (\u65e6\u90a3\u69d8\u3068\u306e\u30e9\u30d6\u30e9\u30d6\u30fb\u30e9\u30d6\u30bd\u30f3\u30b0)\" by Fenrys (CV: Rie Kugimiya) (eps 2-12)",
+        "index": null,
+        "name": "Dannasama to no Love Love Love Song (\u65e6\u90a3\u69d8\u3068\u306e\u30e9\u30d6\u30e9\u30d6\u30fb\u30e9\u30d6\u30bd\u30f3\u30b0)",
+        "artist": "Fenrys (CV: Rie Kugimiya)",
+        "episode": "eps 2-12",
+        "yt_url": "https://www.youtube.com/watch?v=0agwONvJmxY"
+    },
+    "78236": {
+        "id": 78236,
+        "anime_id": 56923,
+        "text": "\"Utopia-gaku Gairon (\u30e6\u30fc\u30c8\u30d4\u30a2\u5b66\u6982\u8ad6)\" by DIALOGUE+",
+        "index": null,
+        "name": "Utopia-gaku Gairon (\u30e6\u30fc\u30c8\u30d4\u30a2\u5b66\u6982\u8ad6)",
+        "artist": "DIALOGUE+",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=2oAtUTe-57A"
+    },
+    "2233": {
+        "id": 2233,
+        "anime_id": 1030,
+        "text": "\"Itsu demo Dare ka ga (\u3044\u3064\u3067\u3082\u8ab0\u304b\u304c; Always, someone is...)\" by Shang Shang Typhoon",
+        "index": null,
+        "name": "Itsu demo Dare ka ga (\u3044\u3064\u3067\u3082\u8ab0\u304b\u304c; Always, someone is...)",
+        "artist": "Shang Shang Typhoon",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=PLTBzTCog9c"
+    },
+    "30047": {
+        "id": 30047,
+        "anime_id": 11887,
+        "text": "#1: \"Paradigm (\u30d1\u30e9\u30c0\u30a4\u30e0)\" by eufonius (eps 1-10)",
+        "index": "1",
+        "name": "Paradigm (\u30d1\u30e9\u30c0\u30a4\u30e0)",
+        "artist": "eufonius",
+        "episode": "eps 1-10",
+        "yt_url": "https://www.youtube.com/watch?v=pYBTzbnYFcc"
+    },
+    "30049": {
+        "id": 30049,
+        "anime_id": 11887,
+        "text": "#2: \"Kimi Rhythm (\u30ad\u30df\u30ea\u30ba\u30e0)\" by Masaki Imai (eps 12-13)",
+        "index": "2",
+        "name": "Kimi Rhythm (\u30ad\u30df\u30ea\u30ba\u30e0)",
+        "artist": "Masaki Imai",
+        "episode": "eps 12-13",
+        "yt_url": "https://www.youtube.com/watch?v=TkLhw7P0oRQ"
+    },
+    "30051": {
+        "id": 30051,
+        "anime_id": 11887,
+        "text": "#BD: \"Kimochi Signal (\u30ad\u30e2\u30c1\u30b7\u30b0\u30ca\u30eb)\" by Sayuri Horishita (eps 1-10)",
+        "index": null,
+        "name": "Kimochi Signal (\u30ad\u30e2\u30c1\u30b7\u30b0\u30ca\u30eb)",
+        "artist": "Sayuri Horishita",
+        "episode": "eps 1-10",
+        "yt_url": "https://www.youtube.com/watch?v=hWeMIpoNB_Q"
+    },
+    "27693": {
+        "id": 27693,
+        "anime_id": 11887,
+        "text": "#1: \"Kokoro no Kara (\u30b3\u30b3\u30ed\u30ce\u30ab\u30e9)\" by Team.Nekokan [Neko] featuring. Junca Amaoto (eps 1-5)",
+        "index": "1",
+        "name": "Kokoro no Kara (\u30b3\u30b3\u30ed\u30ce\u30ab\u30e9)",
+        "artist": "Team.Nekokan [Neko] featuring. Junca Amaoto",
+        "episode": "eps 1-5",
+        "yt_url": "https://www.youtube.com/watch?v=sgh9pSQNlHo"
+    },
+    "27695": {
+        "id": 27695,
+        "anime_id": 11887,
+        "text": "#2: \"Cry out\" by Team.Nekokan [Neko] featuring. atsuko (eps 6-10)",
+        "index": "2",
+        "name": "Cry out",
+        "artist": "Team.Nekokan [Neko] featuring. atsuko",
+        "episode": "eps 6-10",
+        "yt_url": "https://www.youtube.com/watch?v=cBXKiMA3euc"
+    },
+    "27697": {
+        "id": 27697,
+        "anime_id": 11887,
+        "text": "#3: \"Salvage\" by Team.Nekokan [Neko] featuring. Rekka Katakiri (eps 11-13)",
+        "index": "3",
+        "name": "Salvage",
+        "artist": "Team.Nekokan [Neko] featuring. Rekka Katakiri",
+        "episode": "eps 11-13",
+        "yt_url": "https://www.youtube.com/watch?v=3UWYY5JqQZk"
+    },
+    "53840": {
+        "id": 53840,
+        "anime_id": 1029,
+        "text": "\"Teremt\u00e9s\" by Muzsik\u00e1s",
+        "index": null,
+        "name": "Teremt\u00e9s",
+        "artist": "Muzsik\u00e1s",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=Tt_oCPANgdc"
+    },
+    "1473": {
+        "id": 1473,
+        "anime_id": 1029,
+        "text": "\"Ai wa Hana, Kimi wa Sono Tane (\u611b\u306f\u82b1\u3001\u541b\u306f\u305d\u306e\u7a2e\u5b50; Love Is a Flower, You Are the Seed)\" by Harumi Miyako",
+        "index": null,
+        "name": "Ai wa Hana, Kimi wa Sono Tane (\u611b\u306f\u82b1\u3001\u541b\u306f\u305d\u306e\u7a2e\u5b50; Love Is a Flower, You Are the Seed)",
+        "artist": "Harumi Miyako",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=-fWlUFay50s"
+    },
+    "77835": {
+        "id": 77835,
+        "anime_id": 35737,
+        "text": "#1: \"Clues to the Truth\" by Yugo Kanno (eps 1-5)",
+        "index": "1",
+        "name": "Clues to the Truth",
+        "artist": "Yugo Kanno",
+        "episode": "eps 1-5",
+        "yt_url": "https://www.youtube.com/watch?v=V5hR5DzP1vs"
+    },
+    "77836": {
+        "id": 77836,
+        "anime_id": 35737,
+        "text": "#2: \"Zeal for Life\" by Yugo Kanno (eps 6-8)",
+        "index": "2",
+        "name": "Zeal for Life",
+        "artist": "Yugo Kanno",
+        "episode": "eps 6-8",
+        "yt_url": "https://www.youtube.com/watch?v=yaxC6Fo-XHs"
+    },
+    "79179": {
+        "id": 79179,
+        "anime_id": 57810,
+        "text": "\"Sweet Memory (\u30b9\u30a4\u30fc\u30c8\u30e1\u30e2\u30ea\u30fc)\" by Eve",
+        "index": null,
+        "name": "Sweet Memory (\u30b9\u30a4\u30fc\u30c8\u30e1\u30e2\u30ea\u30fc)",
+        "artist": "Eve",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=CaW5teT0oLc"
+    },
+    "79279": {
+        "id": 79279,
+        "anime_id": 57810,
+        "text": "\"Itokenai (\u610f\u89e3\u3051\u306a\u3044)\" by ammo",
+        "index": null,
+        "name": "Itokenai (\u610f\u89e3\u3051\u306a\u3044)",
+        "artist": "ammo",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=v0rm5rrgJYg"
+    },
+    "70949": {
+        "id": 70949,
+        "anime_id": 43523,
+        "text": "\"Gamble (\u30ae\u30e3\u30f3\u30d6\u30eb)\" by syudou",
+        "index": null,
+        "name": "Gamble (\u30ae\u30e3\u30f3\u30d6\u30eb)",
+        "artist": "syudou",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=7GBn6IuTQ6w"
+    },
+    "71320": {
+        "id": 71320,
+        "anime_id": 43523,
+        "text": "#1: \"Aa Jinsei ni Namida Ari (\u3042\u3042\u4eba\u751f\u306b\u6d99\u3042\u308a)\" by Makoto Misumi (CV: Natsuki Hanae) (ep 1)",
+        "index": "1",
+        "name": "Aa Jinsei ni Namida Ari (\u3042\u3042\u4eba\u751f\u306b\u6d99\u3042\u308a)",
+        "artist": "Makoto Misumi (CV: Natsuki Hanae)",
+        "episode": "ep 1",
+        "yt_url": "https://www.youtube.com/watch?v=4xlyZehaZ-E"
+    },
+    "71321": {
+        "id": 71321,
+        "anime_id": 43523,
+        "text": "#2: \"Beautiful Dreamer (\u30d3\u30e5\u30fc\u30c6\u30a3\u30d5\u30eb\u30fb\u30c9\u30ea\u30fc\u30de\u30fc)\" by Ezoshika Gourmet Club (eps 2-3)",
+        "index": "2",
+        "name": "Beautiful Dreamer (\u30d3\u30e5\u30fc\u30c6\u30a3\u30d5\u30eb\u30fb\u30c9\u30ea\u30fc\u30de\u30fc)",
+        "artist": "Ezoshika Gourmet Club",
+        "episode": "eps 2-3",
+        "yt_url": "https://www.youtube.com/watch?v=wS-PCSv7r2I"
+    },
+    "71322": {
+        "id": 71322,
+        "anime_id": 43523,
+        "text": "#3: \"Aa, Jinsei ni Namida Ari (\u3042\u3042\u4eba\u751f\u306b\u6d99\u3042\u308a)\" by Tomoe (CV: Ayane Sakura), Mio (CV: Akari Kitou) (ep 4)",
+        "index": "3",
+        "name": "Aa, Jinsei ni Namida Ari (\u3042\u3042\u4eba\u751f\u306b\u6d99\u3042\u308a)",
+        "artist": "Tomoe (CV: Ayane Sakura), Mio (CV: Akari Kitou)",
+        "episode": "ep 4",
+        "yt_url": "https://www.youtube.com/watch?v=SzbTcdPwNGo"
+    },
+    "78877": {
+        "id": 78877,
+        "anime_id": 57380,
+        "text": "\"Yuru Ring Travel days (\u3086\u308b\u30ea\u30f3\u30b0 Travel days)\" by Tebasaki Sensation (\u624b\u7fbd\u5148\u30bb\u30f3\u30bb\u30fc\u30b7\u30e7\u30f3)",
+        "index": null,
+        "name": "Yuru Ring Travel days (\u3086\u308b\u30ea\u30f3\u30b0 Travel days)",
+        "artist": "Tebasaki Sensation (\u624b\u7fbd\u5148\u30bb\u30f3\u30bb\u30fc\u30b7\u30e7\u30f3)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=qS_aONIIBbw"
+    },
+    "78471": {
+        "id": 78471,
+        "anime_id": 57380,
+        "text": "\"MAKUAKE\" by Goboubi (\u30b4\u30db\u30a6\u30d3)",
+        "index": null,
+        "name": "MAKUAKE",
+        "artist": "Goboubi (\u30b4\u30db\u30a6\u30d3)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=iDBglLE9L6c"
+    },
     "78387": {
         "id": 78387,
         "anime_id": 49889,
@@ -17019,44 +16899,1344 @@
         "episode": null,
         "yt_url": "https://www.youtube.com/watch?v=r0Q9X3F36yU"
     },
-    "77030": {
-        "id": 77030,
-        "anime_id": 56690,
-        "text": "\"Into the Fire\" by CHANSUNG(2PM), AK-69 feat.CHANGMIN(2AM)",
+    "76364": {
+        "id": 76364,
+        "anime_id": 40357,
+        "text": "\"SIN\" by MADKID",
         "index": null,
-        "name": "Into the Fire",
-        "artist": "CHANSUNG(2PM), AK-69 feat.CHANGMIN(2AM)",
+        "name": "SIN",
+        "artist": "MADKID",
         "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=Mpxw1XJ3mx8"
+        "yt_url": "https://www.youtube.com/watch?v=zAK7IIYxY1M"
     },
-    "78223": {
-        "id": 78223,
-        "anime_id": 56690,
-        "text": "\"Sadame (\u904b\u547d [\u3055\u3060\u3081])\" by EverdreaM",
+    "77912": {
+        "id": 77912,
+        "anime_id": 40357,
+        "text": "1: \"Suki ni Natte wa Ikenai Riyuu (\u597d\u304d\u306b\u306a\u3063\u3066\u306f\u3044\u3051\u306a\u3044\u7406\u7531)\" by Chiai Fujikawa (\u85e4\u5ddd\u5343\u611b) (eps 2, 5-12)",
         "index": null,
-        "name": "Sadame (\u904b\u547d [\u3055\u3060\u3081])",
-        "artist": "EverdreaM",
+        "name": "Suki ni Natte wa Ikenai Riyuu (\u597d\u304d\u306b\u306a\u3063\u3066\u306f\u3044\u3051\u306a\u3044\u7406\u7531)",
+        "artist": "Chiai Fujikawa (\u85e4\u5ddd\u5343\u611b)",
+        "episode": "eps 2, 5-12",
+        "yt_url": "https://www.youtube.com/watch?v=RcPU6yzR29k"
+    },
+    "77913": {
+        "id": 77913,
+        "anime_id": 40357,
+        "text": "2: \"Kirakira Kyu (\u30ad\u30e9\u30ad\u30e9\u30ad\u30e5\u3063)\" by Filo (CV: Rina Hidaka) (ep 4)",
+        "index": null,
+        "name": "Kirakira Kyu (\u30ad\u30e9\u30ad\u30e9\u30ad\u30e5\u3063)",
+        "artist": "Filo (CV: Rina Hidaka)",
+        "episode": "ep 4",
+        "yt_url": "https://www.youtube.com/watch?v=WnGNTTNt8Cg"
+    },
+    "78985": {
+        "id": 78985,
+        "anime_id": 54744,
+        "text": "\"1-Ban Kagayaku Hoshi (1\u756a\u8f1d\u304f\u661f)\" by Alya (CV: Sumire Uesaka)",
+        "index": null,
+        "name": "1-Ban Kagayaku Hoshi (1\u756a\u8f1d\u304f\u661f)",
+        "artist": "Alya (CV: Sumire Uesaka)",
         "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=fDjA2Alcx34"
+        "yt_url": "https://www.youtube.com/watch?v=c_yY9BfcmDk"
     },
-    "78313": {
-        "id": 78313,
-        "anime_id": 55265,
-        "text": "\"Blue Days (\u30d6\u30eb\u30fc\u30c7\u30a4\u30ba)\" by TRUE",
+    "80088": {
+        "id": 80088,
+        "anime_id": 54744,
+        "text": "#01: \"Gakuen Tengoku (\u5b66\u5712\u5929\u56fd)\" by Alya (CV: Sumire Uesaka) (ep 1)",
+        "index": "01",
+        "name": "Gakuen Tengoku (\u5b66\u5712\u5929\u56fd)",
+        "artist": "Alya (CV: Sumire Uesaka)",
+        "episode": "ep 1",
+        "yt_url": "https://www.youtube.com/watch?v=1UNJx4KBWqU"
+    },
+    "80089": {
+        "id": 80089,
+        "anime_id": 54744,
+        "text": "#02: \"Kawaikute Gomen (\u53ef\u611b\u304f\u3066\u3054\u3081\u3093)\" by Alya (CV: Sumire Uesaka) (ep 2)",
+        "index": "02",
+        "name": "Kawaikute Gomen (\u53ef\u611b\u304f\u3066\u3054\u3081\u3093)",
+        "artist": "Alya (CV: Sumire Uesaka)",
+        "episode": "ep 2",
+        "yt_url": "https://www.youtube.com/watch?v=O9S2bWkaiMI"
+    },
+    "80090": {
+        "id": 80090,
+        "anime_id": 54744,
+        "text": "#03: \"Omoide ga Ippai (\u60f3\u3044\u51fa\u304c\u3044\u3063\u3071\u3044)\" by Alya (CV: Sumire Uesaka) (ep 3)",
+        "index": "03",
+        "name": "Omoide ga Ippai (\u60f3\u3044\u51fa\u304c\u3044\u3063\u3071\u3044)",
+        "artist": "Alya (CV: Sumire Uesaka)",
+        "episode": "ep 3",
+        "yt_url": "https://www.youtube.com/watch?v=TFOJzZNMFyQ"
+    },
+    "80091": {
+        "id": 80091,
+        "anime_id": 54744,
+        "text": "#04: \"Hare Hare Yukai (\u30cf\u30ec\u6674\u30ec\u30e6\u30ab\u30a4)\" by Alya (CV: Sumire Uesaka) (ep 4)",
+        "index": "04",
+        "name": "Hare Hare Yukai (\u30cf\u30ec\u6674\u30ec\u30e6\u30ab\u30a4)",
+        "artist": "Alya (CV: Sumire Uesaka)",
+        "episode": "ep 4",
+        "yt_url": "https://www.youtube.com/watch?v=YbKqZF3wc5g"
+    },
+    "80092": {
+        "id": 80092,
+        "anime_id": 54744,
+        "text": "#05: \"Chiisana Koi no Uta (\u5c0f\u3055\u306a\u604b\u306e\u3046\u305f)\" by Alya (CV: Sumire Uesaka) (ep 5)",
+        "index": "05",
+        "name": "Chiisana Koi no Uta (\u5c0f\u3055\u306a\u604b\u306e\u3046\u305f)",
+        "artist": "Alya (CV: Sumire Uesaka)",
+        "episode": "ep 5",
+        "yt_url": "https://www.youtube.com/watch?v=W8LIW8ciGjM"
+    },
+    "80093": {
+        "id": 80093,
+        "anime_id": 54744,
+        "text": "#06: \"Himitsu no Kotoba (\u79d8\u5bc6\u306e\u8a00\u8449)\" by Alya (CV: Sumire Uesaka)\u00d7KAF (\u82b1\u8b5c)  (ep 6)",
+        "index": "06",
+        "name": "Himitsu no Kotoba (\u79d8\u5bc6\u306e\u8a00\u8449)",
+        "artist": "Alya (CV: Sumire Uesaka)\u00d7KAF (\u82b1\u8b5c)",
+        "episode": "ep 6",
+        "yt_url": "https://www.youtube.com/watch?v=rnpL3ZugPLc"
+    },
+    "80094": {
+        "id": 80094,
+        "anime_id": 54744,
+        "text": "#07: \"Love Story wa Totsuzen ni (\u30e9\u30d6\u30fb\u30b9\u30c8\u30fc\u30ea\u30fc\u306f\u7a81\u7136\u306b)\" by Alya (CV: Sumire Uesaka) (ep 7)",
+        "index": "07",
+        "name": "Love Story wa Totsuzen ni (\u30e9\u30d6\u30fb\u30b9\u30c8\u30fc\u30ea\u30fc\u306f\u7a81\u7136\u306b)",
+        "artist": "Alya (CV: Sumire Uesaka)",
+        "episode": "ep 7",
+        "yt_url": "https://www.youtube.com/watch?v=Q0w3e6Aj9I4"
+    },
+    "80095": {
+        "id": 80095,
+        "anime_id": 54744,
+        "text": "#08: \"CHE.R.RY\" by Alya (CV: Sumire Uesaka) (ep 8)",
+        "index": "08",
+        "name": "CHE.R.RY",
+        "artist": "Alya (CV: Sumire Uesaka)",
+        "episode": "ep 8",
+        "yt_url": "https://www.youtube.com/watch?v=Y7jnokmSD6A"
+    },
+    "80096": {
+        "id": 80096,
+        "anime_id": 54744,
+        "text": "#09: \"World Is Mine (\u30ef\u30fc\u30eb\u30c9\u30a4\u30ba\u30de\u30a4\u30f3)\" by Alya (CV: Sumire Uesaka) (ep 9)",
+        "index": "09",
+        "name": "World Is Mine (\u30ef\u30fc\u30eb\u30c9\u30a4\u30ba\u30de\u30a4\u30f3)",
+        "artist": "Alya (CV: Sumire Uesaka)",
+        "episode": "ep 9",
+        "yt_url": "https://www.youtube.com/watch?v=CK33ESHOOvk"
+    },
+    "80097": {
+        "id": 80097,
+        "anime_id": 54744,
+        "text": "#10: \"Koi no Uta (\u3053\u3044\u306e\u3046\u305f)\" by Alya (CV: Sumire Uesaka) (ep 10)",
+        "index": "10",
+        "name": "Koi no Uta (\u3053\u3044\u306e\u3046\u305f)",
+        "artist": "Alya (CV: Sumire Uesaka)",
+        "episode": "ep 10",
+        "yt_url": "https://www.youtube.com/watch?v=W8LIW8ciGjM"
+    },
+    "80098": {
+        "id": 80098,
+        "anime_id": 54744,
+        "text": "#11: \"Kimagure Romantic (\u6c17\u307e\u3050\u308c\u30ed\u30de\u30f3\u30c6\u30a3\u30c3\u30af)\" by Alya (CV: Sumire Uesaka) (ep 11)",
+        "index": "11",
+        "name": "Kimagure Romantic (\u6c17\u307e\u3050\u308c\u30ed\u30de\u30f3\u30c6\u30a3\u30c3\u30af)",
+        "artist": "Alya (CV: Sumire Uesaka)",
+        "episode": "ep 11",
+        "yt_url": "https://www.youtube.com/watch?v=ZX9KkHhAlXY"
+    },
+    "80099": {
+        "id": 80099,
+        "anime_id": 54744,
+        "text": "#12: \"Hanamoyoi (\u30cf\u30ca\u30e2\u30e8\u30a4)\" by Alya (CV: Sumire Uesaka) (ep 12)",
+        "index": "12",
+        "name": "Hanamoyoi (\u30cf\u30ca\u30e2\u30e8\u30a4)",
+        "artist": "Alya (CV: Sumire Uesaka)",
+        "episode": "ep 12",
+        "yt_url": "https://www.youtube.com/watch?v=2wX8WJUOfzQ"
+    },
+    "78977": {
+        "id": 78977,
+        "anime_id": 57058,
+        "text": "\"AMBITION\" by Maika Sakuragi [Utahime Dream]",
         "index": null,
-        "name": "Blue Days (\u30d6\u30eb\u30fc\u30c7\u30a4\u30ba)",
+        "name": "AMBITION",
+        "artist": "Maika Sakuragi [Utahime Dream]",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=jxAhY6SKcMw"
+    },
+    "78975": {
+        "id": 78975,
+        "anime_id": 57058,
+        "text": "\"No Gifted (\u30ce\u30fc\u30ae\u30d5\u30c6\u30c3\u30c9)\" by Utahime Dream All-Stars (\u30a6\u30bf\u30d2\u30e1\u30c9\u30ea\u30fc\u30e0 \u30aa\u30fc\u30eb\u30b9\u30bf\u30fc\u30ba)",
+        "index": null,
+        "name": "No Gifted (\u30ce\u30fc\u30ae\u30d5\u30c6\u30c3\u30c9)",
+        "artist": "Utahime Dream All-Stars (\u30a6\u30bf\u30d2\u30e1\u30c9\u30ea\u30fc\u30e0 \u30aa\u30fc\u30eb\u30b9\u30bf\u30fc\u30ba)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=0xoj7hZKQWQ"
+    },
+    "80133": {
+        "id": 80133,
+        "anime_id": 52481,
+        "text": "#1: \"Tenshi-tachi no Uta (\u5929\u4f7f\u305f\u3061\u306e\u6b4c)\" by fh\u00e1na (eps 2, 4-11)",
+        "index": "1",
+        "name": "Tenshi-tachi no Uta (\u5929\u4f7f\u305f\u3061\u306e\u6b4c)",
+        "artist": "fh\u00e1na",
+        "episode": "eps 2, 4-11",
+        "yt_url": "https://www.youtube.com/watch?v=GBvAVGsZPNA"
+    },
+    "80134": {
+        "id": 80134,
+        "anime_id": 52481,
+        "text": "#2: \"Suisou no Buranko (\u6c34\u69fd\u306e\u30d6\u30e9\u30f3\u30b3)\" by Kitri (ep 12)",
+        "index": "2",
+        "name": "Suisou no Buranko (\u6c34\u69fd\u306e\u30d6\u30e9\u30f3\u30b3)",
+        "artist": "Kitri",
+        "episode": "ep 12",
+        "yt_url": "https://www.youtube.com/watch?v=22Btuugzr6E"
+    },
+    "80131": {
+        "id": 80131,
+        "anime_id": 52481,
+        "text": "#1: \"Tenshi-tachi no Uta (\u5929\u4f7f\u305f\u3061\u306e\u6b4c)\" by fh\u00e1na (ep 1)",
+        "index": "1",
+        "name": "Tenshi-tachi no Uta (\u5929\u4f7f\u305f\u3061\u306e\u6b4c)",
+        "artist": "fh\u00e1na",
+        "episode": "ep 1",
+        "yt_url": "https://www.youtube.com/watch?v=GBvAVGsZPNA"
+    },
+    "80132": {
+        "id": 80132,
+        "anime_id": 52481,
+        "text": "#2: \"Suisou no Buranko (\u6c34\u69fd\u306e\u30d6\u30e9\u30f3\u30b3)\" by Kitri (eps 2-8, 10-11)",
+        "index": "2",
+        "name": "Suisou no Buranko (\u6c34\u69fd\u306e\u30d6\u30e9\u30f3\u30b3)",
+        "artist": "Kitri",
+        "episode": "eps 2-8, 10-11",
+        "yt_url": "https://www.youtube.com/watch?v=22Btuugzr6E"
+    },
+    "80137": {
+        "id": 80137,
+        "anime_id": 54968,
+        "text": "\"Blouse (\u30d6\u30e9\u30a6\u30b9)\" by Gohobi (\u30b4\u30db\u30a6\u30d3) (eps 1-11)",
+        "index": null,
+        "name": "Blouse (\u30d6\u30e9\u30a6\u30b9)",
+        "artist": "Gohobi (\u30b4\u30db\u30a6\u30d3)",
+        "episode": "eps 1-11",
+        "yt_url": "https://www.youtube.com/watch?v=XV6H7KyFcwY"
+    },
+    "80135": {
+        "id": 80135,
+        "anime_id": 54968,
+        "text": "#1: \"Ad-lib (\u30a2\u30c9\u30ea\u30d6)\" by Rin Nanakura (CV: Saori Hayami) (eps 1-11)",
+        "index": "1",
+        "name": "Ad-lib (\u30a2\u30c9\u30ea\u30d6)",
+        "artist": "Rin Nanakura (CV: Saori Hayami)",
+        "episode": "eps 1-11",
+        "yt_url": "https://www.youtube.com/watch?v=ib6xGN31BjE"
+    },
+    "80136": {
+        "id": 80136,
+        "anime_id": 54968,
+        "text": "#2: \"Blouse (\u30d6\u30e9\u30a6\u30b9)\" by Gohobi (\u30b4\u30db\u30a6\u30d3) (ep 12)",
+        "index": "2",
+        "name": "Blouse (\u30d6\u30e9\u30a6\u30b9)",
+        "artist": "Gohobi (\u30b4\u30db\u30a6\u30d3)",
+        "episode": "ep 12",
+        "yt_url": "https://www.youtube.com/watch?v=XV6H7KyFcwY"
+    },
+    "72687": {
+        "id": 72687,
+        "anime_id": 50346,
+        "text": "\"Daten (\u5815\u5929)\" by Creepy Nuts",
+        "index": null,
+        "name": "Daten (\u5815\u5929)",
+        "artist": "Creepy Nuts",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=HRL5Cp_mPeo"
+    },
+    "72688": {
+        "id": 72688,
+        "anime_id": 50346,
+        "text": "\"Yofukashi no Uta (\u3088\u3075\u304b\u3057\u306e\u3046\u305f)\" by Creepy Nuts",
+        "index": null,
+        "name": "Yofukashi no Uta (\u3088\u3075\u304b\u3057\u306e\u3046\u305f)",
+        "artist": "Creepy Nuts",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=F6_zbnfxoBA"
+    },
+    "76102": {
+        "id": 76102,
+        "anime_id": 44074,
+        "text": "\"Dive Back In Time\" by Bai Sha JAWS (\u767d\u9ca8JAWS)",
+        "index": null,
+        "name": "Dive Back In Time",
+        "artist": "Bai Sha JAWS (\u767d\u9ca8JAWS)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=33YjUPqiQEo"
+    },
+    "76103": {
+        "id": 76103,
+        "anime_id": 44074,
+        "text": "J1: \"Dive Back In Time\" by bicaso feat. Gen Kakon",
+        "index": null,
+        "name": "Dive Back In Time",
+        "artist": "bicaso feat. Gen Kakon",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=mEj8RQRBo_E"
+    },
+    "76107": {
+        "id": 76107,
+        "anime_id": 44074,
+        "text": "J1: \"OverThink\" by bicaso feat. EAERAN",
+        "index": null,
+        "name": "OverThink",
+        "artist": "bicaso feat. EAERAN",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=uumQcmD313M"
+    },
+    "76108": {
+        "id": 76108,
+        "anime_id": 44074,
+        "text": "\"OverThink\" by Fan Ka (\u996d\u5361)",
+        "index": null,
+        "name": "OverThink",
+        "artist": "Fan Ka (\u996d\u5361)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=J92G4o8wQnU"
+    },
+    "78521": {
+        "id": 78521,
+        "anime_id": 56449,
+        "text": "\"Chiisana Tsubomi (\u3061\u3044\u3055\u306a\u857e)\" by Nako Misaki (\u5cac\u306a\u3053)",
+        "index": null,
+        "name": "Chiisana Tsubomi (\u3061\u3044\u3055\u306a\u857e)",
+        "artist": "Nako Misaki (\u5cac\u306a\u3053)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=La20U_Cyd6g"
+    },
+    "78522": {
+        "id": 78522,
+        "anime_id": 56449,
+        "text": "\"Glitter\" by Marina Horiuchi (\u5800\u5185\u307e\u308a\u83dc)",
+        "index": null,
+        "name": "Glitter",
+        "artist": "Marina Horiuchi (\u5800\u5185\u307e\u308a\u83dc)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=du20uVdkeiM"
+    },
+    "80177": {
+        "id": 80177,
+        "anime_id": 54913,
+        "text": "\"Kouya ni Sake yo Boukensha-tachi (\u8352\u91ce\u306b\u54b2\u3051\u3088\u5192\u967a\u8005\u305f\u3061)\" by Akira Kushida (\u4e32\u7530\u30a2\u30ad\u30e9) (eps 1-9, 11)",
+        "index": null,
+        "name": "Kouya ni Sake yo Boukensha-tachi (\u8352\u91ce\u306b\u54b2\u3051\u3088\u5192\u967a\u8005\u305f\u3061)",
+        "artist": "Akira Kushida (\u4e32\u7530\u30a2\u30ad\u30e9)",
+        "episode": "eps 1-9, 11",
+        "yt_url": "https://www.youtube.com/watch?v=JQuF8WFs2JQ"
+    },
+    "80175": {
+        "id": 80175,
+        "anime_id": 54913,
+        "text": "#1: \"Sagashimono (\u3055\u304c\u3057\u3082\u306e)\" by Chiai Fujikawa (\u85e4\u5ddd\u5343\u611b) (eps 2-11)",
+        "index": "1",
+        "name": "Sagashimono (\u3055\u304c\u3057\u3082\u306e)",
+        "artist": "Chiai Fujikawa (\u85e4\u5ddd\u5343\u611b)",
+        "episode": "eps 2-11",
+        "yt_url": "https://www.youtube.com/watch?v=0W16us5sFno"
+    },
+    "80176": {
+        "id": 80176,
+        "anime_id": 54913,
+        "text": "#2: \"Kouya ni Sake yo Boukensha-tachi (\u8352\u91ce\u306b\u54b2\u3051\u3088\u5192\u967a\u8005\u305f\u3061)\" by Akira Kushida (\u4e32\u7530\u30a2\u30ad\u30e9) (ep 12)",
+        "index": "2",
+        "name": "Kouya ni Sake yo Boukensha-tachi (\u8352\u91ce\u306b\u54b2\u3051\u3088\u5192\u967a\u8005\u305f\u3061)",
+        "artist": "Akira Kushida (\u4e32\u7530\u30a2\u30ad\u30e9)",
+        "episode": "ep 12",
+        "yt_url": "https://www.youtube.com/watch?v=JQuF8WFs2JQ"
+    },
+    "66316": {
+        "id": 66316,
+        "anime_id": 38680,
+        "text": "#1: \"Again\" by Beverly (eps 1-13)",
+        "index": "1",
+        "name": "Again",
+        "artist": "Beverly",
+        "episode": "eps 1-13",
+        "yt_url": "https://www.youtube.com/watch?v=-T1m089pABo"
+    },
+    "66317": {
+        "id": 66317,
+        "anime_id": 38680,
+        "text": "#2: \"Chime\" by Ai Otsuka (eps 14-24)",
+        "index": "2",
+        "name": "Chime",
+        "artist": "Ai Otsuka",
+        "episode": "eps 14-24",
+        "yt_url": "https://www.youtube.com/watch?v=BQqt2UmzGUY"
+    },
+    "67548": {
+        "id": 67548,
+        "anime_id": 38680,
+        "text": "#1: \"Lucky Ending\" by Vickeblanka (eps 1-13)",
+        "index": "1",
+        "name": "Lucky Ending",
+        "artist": "Vickeblanka",
+        "episode": "eps 1-13",
+        "yt_url": "https://www.youtube.com/watch?v=iINmKP6N6Fo"
+    },
+    "67549": {
+        "id": 67549,
+        "anime_id": 38680,
+        "text": "#2: \"One Step Closer\" by INTERSECTION (eps 14-25)",
+        "index": "2",
+        "name": "One Step Closer",
+        "artist": "INTERSECTION",
+        "episode": "eps 14-25",
+        "yt_url": "https://www.youtube.com/watch?v=YZg8DYDR_8g"
+    },
+    "68946": {
+        "id": 68946,
+        "anime_id": 40417,
+        "text": "#1: \"Prism\" by AmPm ft. Miyuna (eps 1-13)",
+        "index": "1",
+        "name": "Prism",
+        "artist": "AmPm ft. Miyuna",
+        "episode": "eps 1-13",
+        "yt_url": "https://www.youtube.com/watch?v=BEIVwm1XyDQ"
+    },
+    "68947": {
+        "id": 68947,
+        "anime_id": 40417,
+        "text": "#2: \"HOME\" by Asako Toki (\u571f\u5c90\u9ebb\u5b50) (eps 14-25)",
+        "index": "2",
+        "name": "HOME",
+        "artist": "Asako Toki (\u571f\u5c90\u9ebb\u5b50)",
+        "episode": "eps 14-25",
+        "yt_url": "https://www.youtube.com/watch?v=ti62cJ_3oEM"
+    },
+    "68948": {
+        "id": 68948,
+        "anime_id": 40417,
+        "text": "#1: \"ad meliora\" by THE CHARM PARK (eps 1-6, 8-13)",
+        "index": "1",
+        "name": "ad meliora",
+        "artist": "THE CHARM PARK",
+        "episode": "eps 1-6, 8-13",
+        "yt_url": "https://www.youtube.com/watch?v=rzB5eAj9kYw"
+    },
+    "68949": {
+        "id": 68949,
+        "anime_id": 40417,
+        "text": "#2: \"Haseru Mirai (\u99b3\u305b\u308b\u672a\u6765)\" by Uta Arii (\u30a6\u30bf\u30fb\u30a2\u30ea\u30a3) (ep 7)",
+        "index": "2",
+        "name": "Haseru Mirai (\u99b3\u305b\u308b\u672a\u6765)",
+        "artist": "Uta Arii (\u30a6\u30bf\u30fb\u30a2\u30ea\u30a3)",
+        "episode": "ep 7",
+        "yt_url": "https://www.youtube.com/watch?v=n4VrQx7Ta7I"
+    },
+    "68950": {
+        "id": 68950,
+        "anime_id": 40417,
+        "text": "#3: \"Eden\" by MONKEY MAJIK (eps 14-25)",
+        "index": "3",
+        "name": "Eden",
+        "artist": "MONKEY MAJIK",
+        "episode": "eps 14-25",
+        "yt_url": "https://www.youtube.com/watch?v=tkJMlcQESto"
+    },
+    "71121": {
+        "id": 71121,
+        "anime_id": 42938,
+        "text": "\"Pleasure\" by WARPs UP (eps 1-12)",
+        "index": null,
+        "name": "Pleasure",
+        "artist": "WARPs UP",
+        "episode": "eps 1-12",
+        "yt_url": "https://www.youtube.com/watch?v=j98v9k9_0I0"
+    },
+    "71130": {
+        "id": 71130,
+        "anime_id": 42938,
+        "text": "\"Haru Urara (\u6625\u3046\u3089\u3089)\" by GENIC (eps 1-11, 13)",
+        "index": null,
+        "name": "Haru Urara (\u6625\u3046\u3089\u3089)",
+        "artist": "GENIC",
+        "episode": "eps 1-11, 13",
+        "yt_url": "https://www.youtube.com/watch?v=3FKqAbb2X9c"
+    },
+    "80192": {
+        "id": 80192,
+        "anime_id": 55996,
+        "text": "\"Parallel na Heart (\u30d1\u30e9\u30ec\u30eb\u306a\u30cf\u30fc\u30c8)\" by Maaya Uchida (eps 1-11)",
+        "index": null,
+        "name": "Parallel na Heart (\u30d1\u30e9\u30ec\u30eb\u306a\u30cf\u30fc\u30c8)",
+        "artist": "Maaya Uchida",
+        "episode": "eps 1-11",
+        "yt_url": "https://www.youtube.com/watch?v=QUGaLWd_R8Y"
+    },
+    "80189": {
+        "id": 80189,
+        "anime_id": 55996,
+        "text": "#1: \"Honey Citron -Strings Arrange- (\u30cf\u30cb\u30fc\u30b7\u30c8\u30ed\u30f3 -Strings Arrange-) \" by Rumi Jinguuji (CV: Moeha Nochimoto), Naori Jinguuji (CV: Maaya Uchida) (eps 1, 4, 7-8, 10)",
+        "index": "1",
+        "name": "Honey Citron -Strings Arrange- (\u30cf\u30cb\u30fc\u30b7\u30c8\u30ed\u30f3 -Strings Arrange-) ",
+        "artist": "Rumi Jinguuji (CV: Moeha Nochimoto), Naori Jinguuji (CV: Maaya Uchida)",
+        "episode": "eps 1, 4, 7-8, 10",
+        "yt_url": []
+    },
+    "80190": {
+        "id": 80190,
+        "anime_id": 55996,
+        "text": "#2: \"Honey Citron (\u30cf\u30cb\u30fc\u30b7\u30c8\u30ed\u30f3)\" by Rumi Jinguuji (CV: Moeha Nochimoto), Naori Jinguuji (CV: Maaya Uchida) (eps 2-3, 5-6, 9, 11)",
+        "index": "2",
+        "name": "Honey Citron (\u30cf\u30cb\u30fc\u30b7\u30c8\u30ed\u30f3)",
+        "artist": "Rumi Jinguuji (CV: Moeha Nochimoto), Naori Jinguuji (CV: Maaya Uchida)",
+        "episode": "eps 2-3, 5-6, 9, 11",
+        "yt_url": "https://www.youtube.com/watch?v=5PCpTuMjIN8"
+    },
+    "80191": {
+        "id": 80191,
+        "anime_id": 55996,
+        "text": "#3: \"Parallel na Heart (\u30d1\u30e9\u30ec\u30eb\u306a\u30cf\u30fc\u30c8)\" by Maaya Uchida (ep 12)",
+        "index": "3",
+        "name": "Parallel na Heart (\u30d1\u30e9\u30ec\u30eb\u306a\u30cf\u30fc\u30c8)",
+        "artist": "Maaya Uchida",
+        "episode": "ep 12",
+        "yt_url": "https://www.youtube.com/watch?v=QUGaLWd_R8Y"
+    },
+    "80106": {
+        "id": 80106,
+        "anime_id": 57892,
+        "text": "\"Hazure\" by Chogakusei (\u8d85\u5b66\u751f) (eps 3-10)",
+        "index": null,
+        "name": "Hazure",
+        "artist": "Chogakusei (\u8d85\u5b66\u751f)",
+        "episode": "eps 3-10",
+        "yt_url": "https://www.youtube.com/watch?v=t7ktk2GI0OI"
+    },
+    "80138": {
+        "id": 80138,
+        "anime_id": 57892,
+        "text": "#1: \"Hazure\" by Chogakusei (\u8d85\u5b66\u751f) (eps 1, 12)",
+        "index": "1",
+        "name": "Hazure",
+        "artist": "Chogakusei (\u8d85\u5b66\u751f)",
+        "episode": "eps 1, 12",
+        "yt_url": "https://www.youtube.com/watch?v=t7ktk2GI0OI"
+    },
+    "80139": {
+        "id": 80139,
+        "anime_id": 57892,
+        "text": "#2: \"pray\" by Hakubi (eps 2-11)",
+        "index": "2",
+        "name": "pray",
+        "artist": "Hakubi",
+        "episode": "eps 2-11",
+        "yt_url": "https://www.youtube.com/watch?v=dvrzGJNUvRk"
+    },
+    "50896": {
+        "id": 50896,
+        "anime_id": 29803,
+        "text": "\"Clattanoia\" by O\u00d7T (Masayoshi Oishi \u00d7 Tom-H@ck)",
+        "index": null,
+        "name": "Clattanoia",
+        "artist": "O\u00d7T (Masayoshi Oishi \u00d7 Tom-H@ck)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=saah9UTwaUI"
+    },
+    "50897": {
+        "id": 50897,
+        "anime_id": 29803,
+        "text": "\"L.L.L.\" by MYTH&ROID",
+        "index": null,
+        "name": "L.L.L.",
+        "artist": "MYTH&ROID",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=skqKOt73rvM"
+    },
+    "79184": {
+        "id": 79184,
+        "anime_id": 53580,
+        "text": "#1: \"PEACEKEEPER\" by STEREO DIVE FOUNDATION",
+        "index": "1",
+        "name": "PEACEKEEPER",
+        "artist": "STEREO DIVE FOUNDATION",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=X7M8WjlKBkE"
+    },
+    "79185": {
+        "id": 79185,
+        "anime_id": 53580,
+        "text": "#2: \"Renacer Serenade (\u30ec\u30ca\u30bb\u30fc\u30eb\u30bb\u30ec\u30ca\u30fc\u30c7)\" by Momoiro Clover Z (\u3082\u3082\u3044\u308d\u30af\u30ed\u30fc\u30d0\u30fcZ)",
+        "index": "2",
+        "name": "Renacer Serenade (\u30ec\u30ca\u30bb\u30fc\u30eb\u30bb\u30ec\u30ca\u30fc\u30c7)",
+        "artist": "Momoiro Clover Z (\u3082\u3082\u3044\u308d\u30af\u30ed\u30fc\u30d0\u30fcZ)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=_qxHz8vH5KM"
+    },
+    "79186": {
+        "id": 79186,
+        "anime_id": 53580,
+        "text": "#1: \"Believer\" by Rin Kurusu (\u6765\u6816\u308a\u3093)",
+        "index": "1",
+        "name": "Believer",
+        "artist": "Rin Kurusu (\u6765\u6816\u308a\u3093)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=ptyp93BBwJs"
+    },
+    "79187": {
+        "id": 79187,
+        "anime_id": 53580,
+        "text": "#2: \"Miracle soup\" by MindaRyn",
+        "index": "2",
+        "name": "Miracle soup",
+        "artist": "MindaRyn",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=fOGS2tn-eog"
+    },
+    "78913": {
+        "id": 78913,
+        "anime_id": 54855,
+        "text": "\"Wagamama (\u6211\u304c\u307e\u307e)\" by Kujira (\u304f\u3058\u3089)",
+        "index": null,
+        "name": "Wagamama (\u6211\u304c\u307e\u307e)",
+        "artist": "Kujira (\u304f\u3058\u3089)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=q2uxFkb7znE"
+    },
+    "78914": {
+        "id": 78914,
+        "anime_id": 54855,
+        "text": "\"Are ga Koi Datta no ka na (\u3042\u308c\u304c\u604b\u3060\u3063\u305f\u306e\u304b\u306a)\" by Kujira (\u304f\u3058\u3089)",
+        "index": null,
+        "name": "Are ga Koi Datta no ka na (\u3042\u308c\u304c\u604b\u3060\u3063\u305f\u306e\u304b\u306a)",
+        "artist": "Kujira (\u304f\u3058\u3089)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=LItcuyLdnsk"
+    },
+    "60532": {
+        "id": 60532,
+        "anime_id": 35073,
+        "text": "\"GO CRY GO\" by OxT",
+        "index": null,
+        "name": "GO CRY GO",
+        "artist": "OxT",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=efL4a9zIMBQ"
+    },
+    "60533": {
+        "id": 60533,
+        "anime_id": 35073,
+        "text": "\"HYDRA\" by MYTH\uff06ROID",
+        "index": null,
+        "name": "HYDRA",
+        "artist": "MYTH\uff06ROID",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=qrvCAJbXc_o"
+    },
+    "80115": {
+        "id": 80115,
+        "anime_id": 57524,
+        "text": "\"Tsuyogaru Girl (\u3064\u3088\u304c\u308b\u30ac\u30fc\u30eb)\" by Botchi Boromaru feat. Mossa (Necry Talkie) (eps 2-10)",
+        "index": null,
+        "name": "Tsuyogaru Girl (\u3064\u3088\u304c\u308b\u30ac\u30fc\u30eb)",
+        "artist": "Botchi Boromaru feat. Mossa (Necry Talkie)",
+        "episode": "eps 2-10",
+        "yt_url": "https://www.youtube.com/watch?v=AuRNbKRVV-Y"
+    },
+    "80213": {
+        "id": 80213,
+        "anime_id": 57524,
+        "text": "#1: \"LOVE 2000\" by Anna Yanami (CV: Hikaru Toono) (eps 1-4)",
+        "index": "1",
+        "name": "LOVE 2000",
+        "artist": "Anna Yanami (CV: Hikaru Toono)",
+        "episode": "eps 1-4",
+        "yt_url": "https://www.youtube.com/watch?v=oXZcuHIR5ko"
+    },
+    "80214": {
+        "id": 80214,
+        "anime_id": 57524,
+        "text": "#2: \"CRAZY FOR YOU\" by Lemon Yakishio (CV: Shion Wakayama) (eps 5-7)",
+        "index": "2",
+        "name": "CRAZY FOR YOU",
+        "artist": "Lemon Yakishio (CV: Shion Wakayama)",
+        "episode": "eps 5-7",
+        "yt_url": "https://www.youtube.com/watch?v=fWVhcojPqQI"
+    },
+    "80215": {
+        "id": 80215,
+        "anime_id": 57524,
+        "text": "#3: \"feel my soul\" by Chika Komari (CV: Momoka Terasawa) (eps 8-11)",
+        "index": "3",
+        "name": "feel my soul",
+        "artist": "Chika Komari (CV: Momoka Terasawa)",
+        "episode": "eps 8-11",
+        "yt_url": "https://www.youtube.com/watch?v=7vEp8UPHdnE"
+    },
+    "80216": {
+        "id": 80216,
+        "anime_id": 57524,
+        "text": "#4: \"Tsuyogaru Girl (\u3064\u3088\u304c\u308b\u30ac\u30fc\u30eb)\" by Botchi Boromaru feat. Mossa (Necry Talkie) (ep 12)",
+        "index": "4",
+        "name": "Tsuyogaru Girl (\u3064\u3088\u304c\u308b\u30ac\u30fc\u30eb)",
+        "artist": "Botchi Boromaru feat. Mossa (Necry Talkie)",
+        "episode": "ep 12",
+        "yt_url": "https://www.youtube.com/watch?v=AuRNbKRVV-Y"
+    },
+    "79311": {
+        "id": 79311,
+        "anime_id": 54724,
+        "text": "\"Plan A (\u30d7\u30e9\u30f3A)\" by DISH//",
+        "index": null,
+        "name": "Plan A (\u30d7\u30e9\u30f3A)",
+        "artist": "DISH//",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=l1HeItO98FI"
+    },
+    "79312": {
+        "id": 79312,
+        "anime_id": 54724,
+        "text": "\"Kamakura STYLE (\u938c\u5009STYLE)\" by Botchi Boromaru (\u307c\u3063\u3061\u307c\u308d\u307e\u308b)",
+        "index": null,
+        "name": "Kamakura STYLE (\u938c\u5009STYLE)",
+        "artist": "Botchi Boromaru (\u307c\u3063\u3061\u307c\u308d\u307e\u308b)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=ikzBo9_Qdnk"
+    },
+    "80226": {
+        "id": 80226,
+        "anime_id": 58059,
+        "text": "\"Fire and Fear\" by PENGUIN RESEARCH (eps 2-12)",
+        "index": null,
+        "name": "Fire and Fear",
+        "artist": "PENGUIN RESEARCH",
+        "episode": "eps 2-12",
+        "yt_url": "https://www.youtube.com/watch?v=-ly2itFTLfQ"
+    },
+    "80227": {
+        "id": 80227,
+        "anime_id": 58059,
+        "text": "#1: \"Fire and Fear\" by PENGUIN RESEARCH (ep 1)",
+        "index": "1",
+        "name": "Fire and Fear",
+        "artist": "PENGUIN RESEARCH",
+        "episode": "ep 1",
+        "yt_url": "https://www.youtube.com/watch?v=-ly2itFTLfQ"
+    },
+    "80228": {
+        "id": 80228,
+        "anime_id": 58059,
+        "text": "#2: \"Frozen (\u30d5\u30ed\u30fc\u30ba\u30f3)\" by TRUE (eps 2-9, 12)",
+        "index": "2",
+        "name": "Frozen (\u30d5\u30ed\u30fc\u30ba\u30f3)",
+        "artist": "TRUE",
+        "episode": "eps 2-9, 12",
+        "yt_url": "https://www.youtube.com/watch?v=YJJSdQldxtM"
+    },
+    "62556": {
+        "id": 62556,
+        "anime_id": 37675,
+        "text": "\"VORACITY\" by MYTH\uff06ROID",
+        "index": null,
+        "name": "VORACITY",
+        "artist": "MYTH\uff06ROID",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=XPOIe6WdhPQ"
+    },
+    "62889": {
+        "id": 62889,
+        "anime_id": 37675,
+        "text": "\"Silent Solitude\" by OxT",
+        "index": null,
+        "name": "Silent Solitude",
+        "artist": "OxT",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=KnZhuGMnhds"
+    },
+    "72607": {
+        "id": 72607,
+        "anime_id": 48895,
+        "text": "\"HOLLOW HUNGER\" by OxT",
+        "index": null,
+        "name": "HOLLOW HUNGER",
+        "artist": "OxT",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=Tkkp3FhDVxQ"
+    },
+    "72615": {
+        "id": 72615,
+        "anime_id": 48895,
+        "text": "\"No Man's Dawn\" by Mayu Maeshima",
+        "index": null,
+        "name": "No Man's Dawn",
+        "artist": "Mayu Maeshima",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=9kPy5LT56v8"
+    },
+    "59197": {
+        "id": 59197,
+        "anime_id": 34280,
+        "text": "\"GAMERS!\" by Karen Tendou (Hisako Kanemoto), Chiaki Hoshinomori (Manaka Iwami), Aguri (Rumi Ookubo)",
+        "index": null,
+        "name": "GAMERS!",
+        "artist": "Karen Tendou (Hisako Kanemoto), Chiaki Hoshinomori (Manaka Iwami), Aguri (Rumi Ookubo)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=BAQXoW3ljpE"
+    },
+    "60975": {
+        "id": 60975,
+        "anime_id": 34280,
+        "text": "#1: \"Fight on!\" by Luce Twinkle Wink\u2606 (eps 2-8, ep 11-12)",
+        "index": "1",
+        "name": "Fight on!",
+        "artist": "Luce Twinkle Wink\u2606",
+        "episode": "eps 2-8, ep 11-12",
+        "yt_url": "https://www.youtube.com/watch?v=HpqxXlCqo4U"
+    },
+    "60976": {
+        "id": 60976,
+        "anime_id": 34280,
+        "text": "#2: \"Koi no Prologue* (\u604b\u306eprologue\uff0a)\" by Luce Twinkle Wink\u2606 (eps 9-10)",
+        "index": "2",
+        "name": "Koi no Prologue* (\u604b\u306eprologue\uff0a)",
+        "artist": "Luce Twinkle Wink\u2606",
+        "episode": "eps 9-10",
+        "yt_url": "https://www.youtube.com/watch?v=L44cwmkxDqg"
+    },
+    "68071": {
+        "id": 68071,
+        "anime_id": 38555,
+        "text": "\"Otome no Route wa Hitotsu janai! (\u4e59\u5973\u306e\u30eb\u30fc\u30c8\u306f\u3072\u3068\u3064\u3058\u3083\u306a\u3044\uff01)\" by angela (eps 1-11)",
+        "index": null,
+        "name": "Otome no Route wa Hitotsu janai! (\u4e59\u5973\u306e\u30eb\u30fc\u30c8\u306f\u3072\u3068\u3064\u3058\u3083\u306a\u3044\uff01)",
+        "artist": "angela",
+        "episode": "eps 1-11",
+        "yt_url": "https://www.youtube.com/watch?v=wrub7h0EGn4"
+    },
+    "72786": {
+        "id": 72786,
+        "anime_id": 38555,
+        "text": "#1: \"BAD END\" by Shouta Aoi (\u84bc\u4e95\u7fd4\u592a) (eps 2-11)",
+        "index": "1",
+        "name": "BAD END",
+        "artist": "Shouta Aoi (\u84bc\u4e95\u7fd4\u592a)",
+        "episode": "eps 2-11",
+        "yt_url": "https://www.youtube.com/watch?v=uVTSGCWCxrY"
+    },
+    "72787": {
+        "id": 72787,
+        "anime_id": 38555,
+        "text": "#2: \"Otome no Route wa Hitotsu Janai! (\u4e59\u5973\u306e\u30eb\u30fc\u30c8\u306f\u3072\u3068\u3064\u3058\u3083\u306a\u3044\uff01)\" by angela (ep 12)",
+        "index": "2",
+        "name": "Otome no Route wa Hitotsu Janai! (\u4e59\u5973\u306e\u30eb\u30fc\u30c8\u306f\u3072\u3068\u3064\u3058\u3083\u306a\u3044\uff01)",
+        "artist": "angela",
+        "episode": "ep 12",
+        "yt_url": "https://www.youtube.com/watch?v=wrub7h0EGn4"
+    },
+    "54011": {
+        "id": 54011,
+        "anime_id": 32542,
+        "text": "\"COOLEST\" by Customi Z",
+        "index": null,
+        "name": "COOLEST",
+        "artist": "Customi Z",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=f607MHZ8s0U"
+    },
+    "54012": {
+        "id": 54012,
+        "anime_id": 32542,
+        "text": "\"Nakushita Hibi ni Sayonara (\u7121\u304f\u3057\u305f\u65e5\u3005\u306b\u3055\u3088\u306a\u3089)\" by Suneohair",
+        "index": null,
+        "name": "Nakushita Hibi ni Sayonara (\u7121\u304f\u3057\u305f\u65e5\u3005\u306b\u3055\u3088\u306a\u3089)",
+        "artist": "Suneohair",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=JcuFqdmX0VY"
+    },
+    "79025": {
+        "id": 79025,
+        "anime_id": 55791,
+        "text": "\"Fatale (\u30d5\u30a1\u30bf\u30fc\u30eb)\" by GEMN",
+        "index": null,
+        "name": "Fatale (\u30d5\u30a1\u30bf\u30fc\u30eb)",
+        "artist": "GEMN",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=8tQiWHXSGN0"
+    },
+    "79365": {
+        "id": 79365,
+        "anime_id": 55791,
+        "text": "\"Burning\" by Hitsujibungaku (\u7f8a\u6587\u5b66)",
+        "index": null,
+        "name": "Burning",
+        "artist": "Hitsujibungaku (\u7f8a\u6587\u5b66)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=AmrXrZ_LhQ8"
+    },
+    "79397": {
+        "id": 79397,
+        "anime_id": 56538,
+        "text": "\"Et cetera (\u30a8\u30c8\u30bb\u30c8\u30e9)\" by imase",
+        "index": null,
+        "name": "Et cetera (\u30a8\u30c8\u30bb\u30c8\u30e9)",
+        "artist": "imase",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=xaojVEqHIqc"
+    },
+    "79520": {
+        "id": 79520,
+        "anime_id": 56538,
+        "text": "#1: \"First Song Kimi ni Todoke! (\u30d5\u30a1\u30fc\u30b9\u30c8\u30fb\u30bd\u30f3\u30b0 \u541b\u306b\u5c4a\u3051\uff01)\" by Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc) (ep 1)",
+        "index": "1",
+        "name": "First Song Kimi ni Todoke! (\u30d5\u30a1\u30fc\u30b9\u30c8\u30fb\u30bd\u30f3\u30b0 \u541b\u306b\u5c4a\u3051\uff01)",
+        "artist": "Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc)",
+        "episode": "ep 1",
+        "yt_url": "https://www.youtube.com/watch?v=wklsbhzT3Zg"
+    },
+    "79521": {
+        "id": 79521,
+        "anime_id": 56538,
+        "text": "#2: \"Natsu no Oto (\u590f\u306e\u97f3)\" by Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc) (ep 2)",
+        "index": "2",
+        "name": "Natsu no Oto (\u590f\u306e\u97f3)",
+        "artist": "Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc)",
+        "episode": "ep 2",
+        "yt_url": "https://www.youtube.com/watch?v=OF699hcALvc"
+    },
+    "79522": {
+        "id": 79522,
+        "anime_id": 56538,
+        "text": "#3: \"Everything Is but a Passing Point\" by Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc) (ep 3)",
+        "index": "3",
+        "name": "Everything Is but a Passing Point",
+        "artist": "Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc)",
+        "episode": "ep 3",
+        "yt_url": "https://www.youtube.com/watch?v=j8bYM2iplo8"
+    },
+    "79523": {
+        "id": 79523,
+        "anime_id": 56538,
+        "text": "#4: \"Second Dance\" by Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc) (ep 4)",
+        "index": "4",
+        "name": "Second Dance",
+        "artist": "Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc)",
+        "episode": "ep 4",
+        "yt_url": "https://www.youtube.com/watch?v=qVfsaYrDsOs"
+    },
+    "79524": {
+        "id": 79524,
+        "anime_id": 56538,
+        "text": "#5: \"Que Sera Sera (\u30b1\u30fb\u30bb\u30e9\u30fb\u30bb\u30e9)\" by Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc) (ep 5)",
+        "index": "5",
+        "name": "Que Sera Sera (\u30b1\u30fb\u30bb\u30e9\u30fb\u30bb\u30e9)",
+        "artist": "Gorou Itou (\u4f0a\u85e4\u30b4\u30ed\u30fc)",
+        "episode": "ep 5",
+        "yt_url": "https://www.youtube.com/watch?v=5JR3wrRtzCo"
+    },
+    "65371": {
+        "id": 65371,
+        "anime_id": 36882,
+        "text": "\"FLARE\" by Void_Chords feat.LIO",
+        "index": null,
+        "name": "FLARE",
+        "artist": "Void_Chords feat.LIO",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=jekubzaLQ3w"
+    },
+    "65372": {
+        "id": 65372,
+        "anime_id": 36882,
+        "text": "\"Hajime no Uta (\u30cf\u30b8\u30e1\u30ce\u30a6\u30bf)\" by DracoVirgo",
+        "index": null,
+        "name": "Hajime no Uta (\u30cf\u30b8\u30e1\u30ce\u30a6\u30bf)",
+        "artist": "DracoVirgo",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=7V6JvkAg2OY"
+    },
+    "71912": {
+        "id": 71912,
+        "anime_id": 40507,
+        "text": "\"Daylight\" by MindaRyn",
+        "index": null,
+        "name": "Daylight",
+        "artist": "MindaRyn",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=k2-ygljRjsk"
+    },
+    "72000": {
+        "id": 72000,
+        "anime_id": 40507,
+        "text": "\"Gedou Sanka (\u5916\u9053\u8b83\u6b4c)\" by FantasticYouth",
+        "index": null,
+        "name": "Gedou Sanka (\u5916\u9053\u8b83\u6b4c)",
+        "artist": "FantasticYouth",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=GR5bjT5o5_s"
+    },
+    "69623": {
+        "id": 69623,
+        "anime_id": 37999,
+        "text": "\"Love Dramatic feat. Rikka Ihara (\u30e9\u30d6\u30fb\u30c9\u30e9\u30de\u30c6\u30a3\u30c3\u30af feat.\u4f0a\u539f\u516d\u82b1)\" by Masayuki Suzuki (\u9234\u6728\u96c5\u4e4b) (eps 1-12)",
+        "index": null,
+        "name": "Love Dramatic feat. Rikka Ihara (\u30e9\u30d6\u30fb\u30c9\u30e9\u30de\u30c6\u30a3\u30c3\u30af feat.\u4f0a\u539f\u516d\u82b1)",
+        "artist": "Masayuki Suzuki (\u9234\u6728\u96c5\u4e4b)",
+        "episode": "eps 1-12",
+        "yt_url": "https://www.youtube.com/watch?v=P_XF8vjOrWE"
+    },
+    "69621": {
+        "id": 69621,
+        "anime_id": 37999,
+        "text": "#1: \"Sentimental Crisis (\u30bb\u30f3\u30c1\u30e1\u30f3\u30bf\u30eb\u30af\u30e9\u30a4\u30b7\u30b9)\" by halca (eps 1-2, 4-12)",
+        "index": "1",
+        "name": "Sentimental Crisis (\u30bb\u30f3\u30c1\u30e1\u30f3\u30bf\u30eb\u30af\u30e9\u30a4\u30b7\u30b9)",
+        "artist": "halca",
+        "episode": "eps 1-2, 4-12",
+        "yt_url": "https://www.youtube.com/watch?v=RHfaZZAMwA0"
+    },
+    "69622": {
+        "id": 69622,
+        "anime_id": 37999,
+        "text": "#2: \"Chikatto Chika Chika\u2661 (\u30c1\u30ab\u3063\u3068\u30c1\u30ab\u5343\u82b1\u3063\u2661)\" by Chika Fujiwara (Konomi Kohara (ep 3)",
+        "index": "2",
+        "name": "Chikatto Chika Chika\u2661 (\u30c1\u30ab\u3063\u3068\u30c1\u30ab\u5343\u82b1\u3063\u2661)",
+        "artist": "Chika Fujiwara (Konomi Kohara",
+        "episode": "ep 3",
+        "yt_url": "https://www.youtube.com/watch?v=Qe46yzEcQOo"
+    },
+    "68430": {
+        "id": 68430,
+        "anime_id": 40591,
+        "text": "\"DADDY! DADDY! DO! feat. Airi Suzuki (DADDY! DADDY! DO! feat. \u9234\u6728\u611b\u7406)\" by Masayuki Suzuki (eps 2-10)",
+        "index": null,
+        "name": "DADDY! DADDY! DO! feat. Airi Suzuki (DADDY! DADDY! DO! feat. \u9234\u6728\u611b\u7406)",
+        "artist": "Masayuki Suzuki",
+        "episode": "eps 2-10",
+        "yt_url": "https://www.youtube.com/watch?v=DTJsnV0WTVU"
+    },
+    "68162": {
+        "id": 68162,
+        "anime_id": 40591,
+        "text": "#1: \"DADDY! DADDY! DO! feat. Airi Suzuki (DADDY! DADDY! DO! feat. \u9234\u6728\u611b\u7406)\" by Masayuki Suzuki (eps 1, 12)",
+        "index": "1",
+        "name": "DADDY! DADDY! DO! feat. Airi Suzuki (DADDY! DADDY! DO! feat. \u9234\u6728\u611b\u7406)",
+        "artist": "Masayuki Suzuki",
+        "episode": "eps 1, 12",
+        "yt_url": "https://www.youtube.com/watch?v=DTJsnV0WTVU"
+    },
+    "68163": {
+        "id": 68163,
+        "anime_id": 40591,
+        "text": "#2: \"Kaze ni Fukarete (\u98a8\u306b\u5439\u304b\u308c\u3066)\" by Haruka Fukuhara (eps 2-4, 6-11)",
+        "index": "2",
+        "name": "Kaze ni Fukarete (\u98a8\u306b\u5439\u304b\u308c\u3066)",
+        "artist": "Haruka Fukuhara",
+        "episode": "eps 2-4, 6-11",
+        "yt_url": "https://www.youtube.com/watch?v=ncnHddqNqhM"
+    },
+    "72907": {
+        "id": 72907,
+        "anime_id": 43608,
+        "text": "\"GIRI GIRI feat Suu (GIRI GIRI feat. \u3059\u3045)\" by Masayuki Suzuki (eps 2-4, 6-8, 10-13)",
+        "index": null,
+        "name": "GIRI GIRI feat Suu (GIRI GIRI feat. \u3059\u3045)",
+        "artist": "Masayuki Suzuki",
+        "episode": "eps 2-4, 6-8, 10-13",
+        "yt_url": "https://www.youtube.com/watch?v=vptdHEUZN10"
+    },
+    "72908": {
+        "id": 72908,
+        "anime_id": 43608,
+        "text": "#1: \"GIRI GIRI feat Suu (GIRI GIRI feat. \u3059\u3045)\" by Masayuki Suzuki (ep 1)",
+        "index": "1",
+        "name": "GIRI GIRI feat Suu (GIRI GIRI feat. \u3059\u3045)",
+        "artist": "Masayuki Suzuki",
+        "episode": "ep 1",
+        "yt_url": "https://www.youtube.com/watch?v=vptdHEUZN10"
+    },
+    "72909": {
+        "id": 72909,
+        "anime_id": 43608,
+        "text": "#2: \"Heart wa Oteage (\u30cf\u30fc\u30c8\u306f\u304a\u624b\u4e0a\u3052)\" by Airi Suzuki (eps 2-4, 6-13)",
+        "index": "2",
+        "name": "Heart wa Oteage (\u30cf\u30fc\u30c8\u306f\u304a\u624b\u4e0a\u3052)",
+        "artist": "Airi Suzuki",
+        "episode": "eps 2-4, 6-13",
+        "yt_url": "https://www.youtube.com/watch?v=GSuselwRqcE"
+    },
+    "72910": {
+        "id": 72910,
+        "anime_id": 43608,
+        "text": "#3: \"My Nonfiction\" by Miyuki Shirogane (Makoto Furukawa) & Chika Fujiwara (Konomi Kohara) (ep 5)",
+        "index": "3",
+        "name": "My Nonfiction",
+        "artist": "Miyuki Shirogane (Makoto Furukawa) & Chika Fujiwara (Konomi Kohara)",
+        "episode": "ep 5",
+        "yt_url": "https://www.youtube.com/watch?v=kuEl3LL3CD0"
+    },
+    "71866": {
+        "id": 71866,
+        "anime_id": 48239,
+        "text": "\"Happy Encount\" by TRUE",
+        "index": null,
+        "name": "Happy Encount",
         "artist": "TRUE",
         "episode": null,
-        "yt_url": "https://www.youtube.com/watch?v=TcQXtGYFFkM"
+        "yt_url": "https://www.youtube.com/watch?v=l-126BD6zVI"
     },
-    "79318": {
-        "id": 79318,
-        "anime_id": 55265,
-        "text": "\"Finally\" by Licia Pleide (CV: Kana Hanazawa) (eps 2-12)",
+    "71822": {
+        "id": 71822,
+        "anime_id": 48239,
+        "text": "\"Hakone no Koufuku (\u7bb1\u5ead\u306e\u5e78\u798f)\" by Azusa Tadokoro",
         "index": null,
-        "name": "Finally",
-        "artist": "Licia Pleide (CV: Kana Hanazawa)",
-        "episode": "eps 2-12",
-        "yt_url": "https://www.youtube.com/watch?v=RfGHSp4oViI"
+        "name": "Hakone no Koufuku (\u7bb1\u5ead\u306e\u5e78\u798f)",
+        "artist": "Azusa Tadokoro",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=8xronI95g38"
+    },
+    "69851": {
+        "id": 69851,
+        "anime_id": 42897,
+        "text": "\"Iro Kousui (\u8272\u9999\u6c34)\" by You Kamiyama",
+        "index": null,
+        "name": "Iro Kousui (\u8272\u9999\u6c34)",
+        "artist": "You Kamiyama",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=kQYLHjgUh_g"
+    },
+    "69852": {
+        "id": 69852,
+        "anime_id": 42897,
+        "text": "\"Yakusoku (\u7d04\u675f)\" by Friends (\u30d5\u30ec\u30f3\u30ba)",
+        "index": null,
+        "name": "Yakusoku (\u7d04\u675f)",
+        "artist": "Friends (\u30d5\u30ec\u30f3\u30ba)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=fd1jD7-XX5g"
+    },
+    "44875": {
+        "id": 44875,
+        "anime_id": 20785,
+        "text": "#1: \"Rising Hope\" by LiSA (eps 2-3, 5-13)",
+        "index": "1",
+        "name": "Rising Hope",
+        "artist": "LiSA",
+        "episode": "eps 2-3, 5-13",
+        "yt_url": "https://www.youtube.com/watch?v=IzhMzY5avLI"
+    },
+    "44877": {
+        "id": 44877,
+        "anime_id": 20785,
+        "text": "#2: \"grilletto\" by GARNiDELiA (eps 14-26)",
+        "index": "2",
+        "name": "grilletto",
+        "artist": "GARNiDELiA",
+        "episode": "eps 14-26",
+        "yt_url": "https://www.youtube.com/watch?v=hUf1NoPK-8Q"
+    },
+    "44879": {
+        "id": 44879,
+        "anime_id": 20785,
+        "text": "#1: \"Rising Hope\" by LiSA (ep 1)",
+        "index": "1",
+        "name": "Rising Hope",
+        "artist": "LiSA",
+        "episode": "ep 1",
+        "yt_url": "https://www.youtube.com/watch?v=IzhMzY5avLI"
+    },
+    "44881": {
+        "id": 44881,
+        "anime_id": 20785,
+        "text": "#2: \"Millenario (\u30df\u30ec\u30ca\u30ea\u30aa)\" by ELISA (eps 2-13, 18)",
+        "index": "2",
+        "name": "Millenario (\u30df\u30ec\u30ca\u30ea\u30aa)",
+        "artist": "ELISA",
+        "episode": "eps 2-13, 18",
+        "yt_url": "https://www.youtube.com/watch?v=MNlaZt5i8jU"
+    },
+    "44883": {
+        "id": 44883,
+        "anime_id": 20785,
+        "text": "#3: \"Mirror\" by Rei Yasuda (eps 14-17, 19-26)",
+        "index": "3",
+        "name": "Mirror",
+        "artist": "Rei Yasuda",
+        "episode": "eps 14-17, 19-26",
+        "yt_url": "https://www.youtube.com/watch?v=j0N5XpHDfUM"
+    },
+    "75734": {
+        "id": 75734,
+        "anime_id": 54856,
+        "text": "\"Shiawase (\u5e78\u305b)\" by Omoinotake",
+        "index": null,
+        "name": "Shiawase (\u5e78\u305b)",
+        "artist": "Omoinotake",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=WSJQcgBAyys"
+    },
+    "76556": {
+        "id": 76556,
+        "anime_id": 54856,
+        "text": "1: \"URL\" by Ami Sakaguchi (eps 1-6, 8-13)",
+        "index": null,
+        "name": "URL",
+        "artist": "Ami Sakaguchi",
+        "episode": "eps 1-6, 8-13",
+        "yt_url": "https://www.youtube.com/watch?v=71EHMNg6KIc"
+    },
+    "76557": {
+        "id": 76557,
+        "anime_id": 54856,
+        "text": "2: \"Dokuro Ninja Konoha (\u30c9\u30af\u30ed\u30cb\u30f3\u30b8\u30e3\u30b3\u30ce\u30cf)\" by Sakura Kouno (CV: Reina Kondou) & Akane Yanagi (CV: Jun Fukuyama) (ep 7)",
+        "index": null,
+        "name": "Dokuro Ninja Konoha (\u30c9\u30af\u30ed\u30cb\u30f3\u30b8\u30e3\u30b3\u30ce\u30cf)",
+        "artist": "Sakura Kouno (CV: Reina Kondou) & Akane Yanagi (CV: Jun Fukuyama)",
+        "episode": "ep 7",
+        "yt_url": "https://www.youtube.com/watch?v=gXgjL0TrRD4"
+    },
+    "41957": {
+        "id": 41957,
+        "anime_id": 23289,
+        "text": "\"Kimi ja Nakya Dame Mitai (\u541b\u3058\u3083\u306a\u304d\u3083\u30c0\u30e1\u307f\u305f\u3044)\" by Masayoshi Ooishi (\u5927\u77f3\u660c\u826f)",
+        "index": null,
+        "name": "Kimi ja Nakya Dame Mitai (\u541b\u3058\u3083\u306a\u304d\u3083\u30c0\u30e1\u307f\u305f\u3044)",
+        "artist": "Masayoshi Ooishi (\u5927\u77f3\u660c\u826f)",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=_NbjKXEbde4"
+    },
+    "44575": {
+        "id": 44575,
+        "anime_id": 23289,
+        "text": "\"Ura Omote Fortune (\u30a6\u30e9\u30aa\u30e2\u30c6\u30fb\u30d5\u30a9\u30fc\u30c1\u30e5\u30f3)\" by Chiyo Sakura (CV: Ari Ozawa) (eps 1-11)",
+        "index": null,
+        "name": "Ura Omote Fortune (\u30a6\u30e9\u30aa\u30e2\u30c6\u30fb\u30d5\u30a9\u30fc\u30c1\u30e5\u30f3)",
+        "artist": "Chiyo Sakura (CV: Ari Ozawa)",
+        "episode": "eps 1-11",
+        "yt_url": "https://www.youtube.com/watch?v=U_3aFM3H1DE"
+    },
+    "70692": {
+        "id": 70692,
+        "anime_id": 44203,
+        "text": "\"New story\" by Marika Kouno",
+        "index": null,
+        "name": "New story",
+        "artist": "Marika Kouno",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=-SdEFi3yqOc"
+    },
+    "70693": {
+        "id": 70693,
+        "anime_id": 44203,
+        "text": "\"Elder flower\" by Aguri Oonishi",
+        "index": null,
+        "name": "Elder flower",
+        "artist": "Aguri Oonishi",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=oAyY_NhZgqE"
+    },
+    "37381": {
+        "id": 37381,
+        "anime_id": 17265,
+        "text": "\"database feat. TAKUMA (10 Feet)\" by MAN WITH A MISSION",
+        "index": null,
+        "name": "database feat. TAKUMA (10 Feet)",
+        "artist": "MAN WITH A MISSION",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=d2Kj7YybM5o"
+    },
+    "35083": {
+        "id": 35083,
+        "anime_id": 17265,
+        "text": "\"Your song*\" by Yun*chi",
+        "index": null,
+        "name": "Your song*",
+        "artist": "Yun*chi",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=fNfboNEFh-g"
+    },
+    "70718": {
+        "id": 70718,
+        "anime_id": 34599,
+        "text": "\"Deep in Abyss\" by Riko (Miyu Tomita) and Regu (Mariya Ise) (eps 2-13)",
+        "index": null,
+        "name": "Deep in Abyss",
+        "artist": "Riko (Miyu Tomita) and Regu (Mariya Ise)",
+        "episode": "eps 2-13",
+        "yt_url": "https://www.youtube.com/watch?v=EJYKsY0Vcts"
+    },
+    "70719": {
+        "id": 70719,
+        "anime_id": 34599,
+        "text": "#1: \"Deep in Abyss\" by Riko (Miyu Tomita) and Regu (Mariya Ise) (ep 1)",
+        "index": "1",
+        "name": "Deep in Abyss",
+        "artist": "Riko (Miyu Tomita) and Regu (Mariya Ise)",
+        "episode": "ep 1",
+        "yt_url": "https://www.youtube.com/watch?v=EJYKsY0Vcts"
+    },
+    "70720": {
+        "id": 70720,
+        "anime_id": 34599,
+        "text": "#2: \"Tabi no Hidarite, Saihate no Migite (\u65c5\u306e\u5de6\u624b\u3001\u6700\u679c\u3066\u306e\u53f3\u624b)\" by Riko (Miyu Tomita) and Regu (Mariya Ise) (eps 2, 4-9)",
+        "index": "2",
+        "name": "Tabi no Hidarite, Saihate no Migite (\u65c5\u306e\u5de6\u624b\u3001\u6700\u679c\u3066\u306e\u53f3\u624b)",
+        "artist": "Riko (Miyu Tomita) and Regu (Mariya Ise)",
+        "episode": "eps 2, 4-9",
+        "yt_url": "https://www.youtube.com/watch?v=B2StG3qW5HI"
+    },
+    "70721": {
+        "id": 70721,
+        "anime_id": 34599,
+        "text": "#3: \"Tabi no Hidarite, Saihate no Migite (\u65c5\u306e\u5de6\u624b\u3001\u6700\u679c\u3066\u306e\u53f3\u624b)\" by Riko (Miyu Tomita), Regu (Mariya Ise), and Nanachi (Shiori Izawa) (eps 10-12)",
+        "index": "3",
+        "name": "Tabi no Hidarite, Saihate no Migite (\u65c5\u306e\u5de6\u624b\u3001\u6700\u679c\u3066\u306e\u53f3\u624b)",
+        "artist": "Riko (Miyu Tomita), Regu (Mariya Ise), and Nanachi (Shiori Izawa)",
+        "episode": "eps 10-12",
+        "yt_url": "https://www.youtube.com/watch?v=B2StG3qW5HI"
+    },
+    "68228": {
+        "id": 68228,
+        "anime_id": 36862,
+        "text": "\"Forever Lost\" by MYTH & ROID",
+        "index": null,
+        "name": "Forever Lost",
+        "artist": "MYTH & ROID",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=HE5ld2PCWvw"
+    },
+    "76642": {
+        "id": 76642,
+        "anime_id": 41084,
+        "text": "#1: \"GRAVITY\" by Arn\u00f3r Dan (ep 1)",
+        "index": "1",
+        "name": "GRAVITY",
+        "artist": "Arn\u00f3r Dan",
+        "episode": "ep 1",
+        "yt_url": "https://www.youtube.com/watch?v=Gyi2rurV4JE"
+    },
+    "76643": {
+        "id": 76643,
+        "anime_id": 41084,
+        "text": "#2: \"Katachi (\u304b\u305f\u3061)\" by Riko Azuna (eps 2-6, 8-9, 11-12)",
+        "index": "2",
+        "name": "Katachi (\u304b\u305f\u3061)",
+        "artist": "Riko Azuna",
+        "episode": "eps 2-6, 8-9, 11-12",
+        "yt_url": "https://www.youtube.com/watch?v=8GGu3fILcGA"
+    },
+    "72589": {
+        "id": 72589,
+        "anime_id": 41084,
+        "text": "\"Endless Embrace\" by MYTH & ROID",
+        "index": null,
+        "name": "Endless Embrace",
+        "artist": "MYTH & ROID",
+        "episode": null,
+        "yt_url": "https://www.youtube.com/watch?v=Q-0s23Wu4QI"
     }
 }
