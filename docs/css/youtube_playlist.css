@@ -114,8 +114,8 @@ body {
 }
 
 .playlist-item:hover {
-    background-color: #1c7ed6;
-    color: #f8f9fa;
+    background-color: #1c7ed6 !important;
+    color: #f8f9fa !important;
 }
 
 .playlist-item:last-child {
