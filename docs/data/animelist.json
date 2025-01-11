@@ -23879,6 +23879,140 @@
                     "yt_url": "https://www.youtube.com/watch?v=Q-0s23Wu4QI"
                 }
             ]
+        },
+        {
+            "id": 50306,
+            "title": "Seirei Gensouki 2",
+            "picture": "https://cdn.myanimelist.net/images/anime/1087/144583.jpg",
+            "opening_themes": [
+                {
+                    "id": 79504,
+                    "anime_id": 50306,
+                    "text": "\"Auftakt (\u30a2\u30a6\u30d5\u30bf\u30af\u30c8)\" by Aguri Onishi (\u5927\u897f\u4e9c\u7396\u7483)",
+                    "index": null,
+                    "name": "Auftakt (\u30a2\u30a6\u30d5\u30bf\u30af\u30c8)",
+                    "artist": "Aguri Onishi (\u5927\u897f\u4e9c\u7396\u7483)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=P09Si6ceP_M"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 79505,
+                    "anime_id": 50306,
+                    "text": "\"Harumachi Uta (\u6625\u5f85\u6b4c)\" by Nanaka Suwa (\u8acf\u8a2a\u306a\u306a\u304b)",
+                    "index": null,
+                    "name": "Harumachi Uta (\u6625\u5f85\u6b4c)",
+                    "artist": "Nanaka Suwa (\u8acf\u8a2a\u306a\u306a\u304b)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=V8DTAe69H4c"
+                }
+            ]
+        },
+        {
+            "id": 56228,
+            "title": "Rekishi ni Nokoru Akujo ni Naru zo",
+            "picture": "https://cdn.myanimelist.net/images/anime/1005/145339.jpg",
+            "opening_themes": [
+                {
+                    "id": 79930,
+                    "anime_id": 56228,
+                    "text": "\"Baddududu (\u30d0\u30c3\u30c9\u30a5\u30c9\u30a5\u30c9\u30a5)\" by Liyuu",
+                    "index": null,
+                    "name": "Baddududu (\u30d0\u30c3\u30c9\u30a5\u30c9\u30a5\u30c9\u30a5)",
+                    "artist": "Liyuu",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=eYYht0RvjUE"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 79937,
+                    "anime_id": 56228,
+                    "text": "\"What's Your Name? (\u308f\u3063\u3061\u3085\u3042\u306d\uff1f)\" by Rin Kurusu (\u6765\u6816\u308a\u3093)",
+                    "index": null,
+                    "name": "What's Your Name? (\u308f\u3063\u3061\u3085\u3042\u306d\uff1f)",
+                    "artist": "Rin Kurusu (\u6765\u6816\u308a\u3093)",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=FkLgDQUNl-I"
+                }
+            ]
+        },
+        {
+            "id": 57334,
+            "title": "Dandadan",
+            "picture": "https://cdn.myanimelist.net/images/anime/1584/143719.jpg",
+            "opening_themes": [
+                {
+                    "id": 79301,
+                    "anime_id": 57334,
+                    "text": "\"Otonoke (\u30aa\u30c8\u30ce\u30b1)\" by Creepy Nuts",
+                    "index": null,
+                    "name": "Otonoke (\u30aa\u30c8\u30ce\u30b1)",
+                    "artist": "Creepy Nuts",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=tRwHpyOq4P4"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 79806,
+                    "anime_id": 57334,
+                    "text": "\"TAIDADA\" by ZUTOMAYO",
+                    "index": null,
+                    "name": "TAIDADA",
+                    "artist": "ZUTOMAYO",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=Tf8LO2ZTfLo"
+                }
+            ]
+        },
+        {
+            "id": 578,
+            "title": "Hotaru no Haka",
+            "picture": "https://cdn.myanimelist.net/images/anime/1485/141208.jpg",
+            "opening_themes": [
+                {
+                    "id": 611,
+                    "anime_id": 578,
+                    "text": "\"Setsuko and Seita\" by Michio Mamiya",
+                    "index": null,
+                    "name": "Setsuko and Seita",
+                    "artist": "Michio Mamiya",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=MkQlsDnPRMw"
+                }
+            ],
+            "ending_themes": [
+                {
+                    "id": 612,
+                    "anime_id": 578,
+                    "text": "\"Futari\" by Michio Mamiya",
+                    "index": null,
+                    "name": "Futari",
+                    "artist": "Michio Mamiya",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=MkQlsDnPRMw"
+                }
+            ]
+        },
+        {
+            "id": 21557,
+            "title": "Omoide no Marnie",
+            "picture": "https://cdn.myanimelist.net/images/anime/7/64293.webp",
+            "opening_themes": [],
+            "ending_themes": [
+                {
+                    "id": 45439,
+                    "anime_id": 21557,
+                    "text": "\"Fine on the Outside\" by Priscilla Ahn",
+                    "index": null,
+                    "name": "Fine on the Outside",
+                    "artist": "Priscilla Ahn",
+                    "episode": null,
+                    "yt_url": "https://www.youtube.com/watch?v=cjr2WEGiUeY"
+                }
+            ]
         }
     ]
 }
