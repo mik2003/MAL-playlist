@@ -29,14 +29,14 @@ def html_encode(username: str) -> None:
                 '<li class="anime-item"><div class="anime-content"><img sr'
                 + f'c="{anime.picture}" alt="{anime.title}" width="100">'
                 + '<div class="anime-details"><a href'
-                f'="{MALAPI.url_anime.format(anime.id)}", '
+                f'="{MALAPI.url_anime.format(anime.id)}" target="_blank", '
                 + f'style="font-weight: bold;">{anime.title}</a>'
                 + "<ul><li>Opening Theme</li><ol>"
             )
             for opening in anime.opening_themes:
                 li_content = (
                     (
-                        f'<a href="{opening.yt_url[0]}">'
+                        f'<a href="{opening.yt_url}" target="_blank">'
                         if opening.yt_url
                         else ""
                     )
@@ -44,16 +44,30 @@ def html_encode(username: str) -> None:
                     + (f" by {opening.artist}" if opening.artist else "")
                     + (f" ({opening.episode})" if opening.episode else "")
                     + ("</a>" if opening.yt_url else "")
+                    + (
+                        f' [<a href="{opening.yt_query}" target="_blank">YT Query</a>]'
+                        if opening.yt_query
+                        else ""
+                    )
                 )
                 f.write(f"<li>{li_content}</li>")
             f.write("</ol><li>Ending Theme</li><ol>")
             for ending in anime.ending_themes:
                 li_content = (
-                    (f'<a href="{ending.yt_url[0]}">' if ending.yt_url else "")
+                    (
+                        f'<a href="{ending.yt_url}" target="_blank">'
+                        if ending.yt_url
+                        else ""
+                    )
                     + f'"{ending.name}"'
                     + (f" by {ending.artist}" if ending.artist else "")
                     + (f" ({ending.episode})" if ending.episode else "")
                     + ("</a>" if ending.yt_url else "")
+                    + (
+                        f' [<a href="{ending.yt_query}" target="_blank">YT Query</a>]'
+                        if ending.yt_query
+                        else ""
+                    )
                 )
                 f.write(f"<li>{li_content}</li>")
             f.write("</ol></li></ul></div></div></li>")

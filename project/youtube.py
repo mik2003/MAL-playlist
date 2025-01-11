@@ -32,16 +32,23 @@ def yt_search(search_str: str, suffix: str = "") -> list[str]:
     search_keyword = quote(search_str)
     if suffix:
         search_keyword += f"+{suffix}"
+    search_query = (
+        "https://www.youtube.com/results?search_query=" + search_keyword
+    )
     # Perform Youtube search
     try:
-        html = urllib.request.urlopen(
-            "https://www.youtube.com/results?search_query=" + search_keyword
+        html = urllib.request.urlopen(search_query)
+        video_ids = list(
+            dict.fromkeys(
+                re.findall(r"watch\?v=(\S{11})", html.read().decode())
+            )
         )
-        video_ids = re.findall(r"watch\?v=(\S{11})", html.read().decode())
-        return [
+        url_list = [
             "https://www.youtube.com/watch?v=" + video_id
             for video_id in video_ids
         ]
+        url_list.append(search_query)
+        return url_list
     # YouTube search failed
     except urllib.request.HTTPError:
-        return []
+        return [search_query]

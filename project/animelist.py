@@ -51,7 +51,8 @@ class ThemeSong:
         self.name: str
         self.artist: str
         self.episode: str
-        self.yt_url: list[str]
+        self.yt_url: str
+        self.yt_query: str
         if theme_song:
             self.id = theme_song["id"]
             self.anime_id = theme_song["anime_id"]
@@ -80,14 +81,18 @@ class ThemeSong:
         with open(MALAPI.yt, "r", encoding="utf-8") as youtube_json:
             youtube_data = json.load(youtube_json)
         if str(self.id) in youtube_data:
-            self.yt_url = youtube_data[str(self.id)]
+            yt_url_list = youtube_data[str(self.id)]
         else:
-            self.yt_url = yt_search(
-                f"{self.name} {self.artist} {Anime.id_to_title(self.anime_id)}"
+            yt_url_list = yt_search(
+                f"{self.name}"
+                + f" by {self.artist}"
+                # + f" {Anime.id_to_title(self.anime_id)}"
             )
-            youtube_data[str(self.id)] = self.yt_url
+            youtube_data[str(self.id)] = yt_url_list
             with open(MALAPI.yt, "w", encoding="utf-8") as youtube_json:
                 json.dump(youtube_data, youtube_json, indent=4)
+        self.yt_url = yt_url_list[0]
+        self.yt_query = yt_url_list[-1]
 
     def json_encode(self) -> dict[str, Any]:
         out: dict[str, Any] = {}
@@ -98,7 +103,8 @@ class ThemeSong:
         out["name"] = self.name
         out["artist"] = self.artist
         out["episode"] = self.episode
-        out["yt_url"] = self.yt_url[0] if self.yt_url else []
+        out["yt_url"] = self.yt_url
+        out["yt_query"] = self.yt_query
 
         return out
 
@@ -112,8 +118,8 @@ class ThemeSong:
         out.name = theme_song["name"]
         out.artist = theme_song["artist"]
         out.episode = theme_song["episode"]
-        yt_url = theme_song["yt_url"]
-        out.yt_url = [yt_url] if yt_url else []
+        out.yt_url = theme_song["yt_url"]
+        out.yt_query = theme_song["yt_query"]
 
         return out
 
