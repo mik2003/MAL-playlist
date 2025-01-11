@@ -82,7 +82,9 @@ class ThemeSong:
         if str(self.id) in youtube_data:
             self.yt_url = youtube_data[str(self.id)]
         else:
-            self.yt_url = yt_search(f"{self.name} {self.artist}")
+            self.yt_url = yt_search(
+                f"{self.name} {self.artist} {Anime.id_to_title(self.anime_id)}"
+            )
             youtube_data[str(self.id)] = self.yt_url
             with open(MALAPI.yt, "w", encoding="utf-8") as youtube_json:
                 json.dump(youtube_data, youtube_json, indent=4)
@@ -96,7 +98,7 @@ class ThemeSong:
         out["name"] = self.name
         out["artist"] = self.artist
         out["episode"] = self.episode
-        out["yt_url"] = (self.yt_url[0] if self.yt_url else [])
+        out["yt_url"] = self.yt_url[0] if self.yt_url else []
 
         return out
 
@@ -111,7 +113,7 @@ class ThemeSong:
         out.artist = theme_song["artist"]
         out.episode = theme_song["episode"]
         yt_url = theme_song["yt_url"]
-        out.yt_url = ([yt_url] if yt_url else [])
+        out.yt_url = [yt_url] if yt_url else []
 
         return out
 
@@ -216,6 +218,26 @@ class Anime:
         ]
 
         return out
+
+    @staticmethod
+    def id_to_title(anime_id: int) -> str:
+        """Converts anime MAL ID to title."""
+        try:
+            with open(
+                MALAPI.anime_cache.format(anime_id), "r", encoding="utf-8"
+            ) as anime_json:
+                anime_data = json.load(anime_json)
+            if anime_data and "title" in anime_data:
+                return anime_data["title"]
+            else:
+                print(
+                    f"Anime with id {anime_id} not found in cache. "
+                    + "First retrieve the anime through the MAL API."
+                )
+                return ""
+        except FileNotFoundError as file_err:
+            print(file_err)
+            return ""
 
     def __repr__(self) -> str:
         return (
@@ -370,7 +392,7 @@ class AnimeList:
             with open(
                 MALAPI.animelist_raw_cache.format(username),
                 "r",
-                encoding="utf-8"
+                encoding="utf-8",
             ) as animelist_json:
                 anime_list_raw = json.loads(animelist_json.read())
         else:
@@ -382,9 +404,7 @@ class AnimeList:
             driver = webdriver.Firefox(options=options)
 
             # Load the MAL page
-            driver.get(
-                MALAPI.url_animelist.format(username)
-            )
+            driver.get(MALAPI.url_animelist.format(username))
 
             # Scroll to the bottom of the page multiple times
             num_scrolls = 5
@@ -399,7 +419,7 @@ class AnimeList:
             # Extract anime titles
             anime_list_raw = re.findall(
                 r'<a href="/anime/(\d+)/[^"]+" class="link sort">([^<]+)</a>',
-                driver.page_source
+                driver.page_source,
             )
 
             # Terminate browser
@@ -407,7 +427,7 @@ class AnimeList:
             with open(
                 MALAPI.animelist_raw_cache.format(username),
                 "w",
-                encoding="utf-8"
+                encoding="utf-8",
             ) as animelist_json:
                 animelist_json.write(json.dumps(anime_list_raw, indent=4))
 
@@ -440,7 +460,7 @@ class AnimeList:
             with open(
                 MALAPI.animelist_full_cache.format(username),
                 "r",
-                encoding="utf-8"
+                encoding="utf-8",
             ) as animelist_json:
                 anime_list_full = AnimeList.json_decode(
                     json.loads(animelist_json.read())
@@ -451,7 +471,7 @@ class AnimeList:
             with open(
                 MALAPI.animelist_full_cache.format(username),
                 "w",
-                encoding="utf-8"
+                encoding="utf-8",
             ) as animelist_json:
                 animelist_json.write(json.dumps(anime_list_full.json_encode()))
 
