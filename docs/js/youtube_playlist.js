@@ -125,7 +125,7 @@ async function fetchAnimeList(animeListUrl) {
 
 async function loadAnimeList() {
 
-    animeList = await fetchAnimeList('https://mik2003.github.io/MAL-playlist/data/animelist.json');
+    animeList = await fetchAnimeList('https://mal.secondo.aero/data/animelist.json');
     console.log(animeList);
 
 }
