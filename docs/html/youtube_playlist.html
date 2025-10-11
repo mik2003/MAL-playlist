@@ -3,6 +3,15 @@
 
 <head>
     <title>mik2003 Anime Playlist</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1c7ed6">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+
     <link rel="icon"
         href="https://cdn.myanimelist.net/s/common/userimages/34ca6c0c-5a73-4171-aaaf-3ee6a9732a9f_225w?s=5de06d8dd57f0e2d95b047f56a7f55aa"
         type="image/x-icon">
@@ -10,7 +19,6 @@
 </head>
 
 <body>
-    <!-- <h1>Anime Themes Playlist</h1> -->
     <div>
         <div id="player">
         </div>
@@ -21,6 +29,7 @@
             <button id="next">⏭</button>
             <button id="shuffle">🔀</button>
             <button id="loop">🔁</button>
+            <span id="loop-status">Loop: On</span>
         </div>
     </div>
     <div id="playlist">

@@ -7,6 +7,7 @@ var playlistDiv;
 var i, j, k, n = 0;
 var player;
 var loop = true;
+var isPlaying = false;
 
 // https://stackoverflow.com/questions/45408920/plain-javascript-scrollintoview-inside-div
 function scrollParentToChild(parent, child) {
@@ -160,6 +161,16 @@ async function retrievePlaylist() {
 async function initializePlayer() {
     await retrievePlaylist();
 
+    // Register service worker for PWA functionality
+    if ('serviceWorker' in navigator) {
+        try {
+            await navigator.serviceWorker.register('sw.js');
+            console.log('Service Worker registered');
+        } catch (error) {
+            console.log('Service Worker registration failed:', error);
+        }
+    }
+
     // 2. This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
 
@@ -176,8 +187,16 @@ function onYouTubeIframeAPIReady() {
         width: '640',
         videoId: getCurrentSongId(),
         playerVars: {
+            'playsinline': 1,
+            'enablejsapi': 1,
+            'origin': window.location.origin,
+            'widget_referrer': window.location.origin,
             'autoplay': 1,
-            'controls': 1,
+            'controls': 0,
+            'modestbranding': 1,
+            'rel': 0,
+            'showinfo': 0,
+            'iv_load_policy': 3
         },
         events: {
             'onReady': onPlayerReady,
@@ -189,19 +208,37 @@ function onYouTubeIframeAPIReady() {
 
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
+    muteYouTubeMediaSession();
     initializeMediaSession();
     applySongDivStyle();
     updateMediaSession();
     event.target.playVideo();
+    isPlaying = true;
+    updatePlayPauseButtons();
+
+    // Additional protection - mute YouTube's audio track (we'll handle audio separately)
+    event.target.setVolume(100); // Ensure volume is at max for our controls
 }
 
 // 5. The API calls this function when the player's state changes.
-//    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
-var done = false;
 function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.ENDED) {
-        goToNextSong();
+    switch (event.data) {
+        case YT.PlayerState.PLAYING:
+            isPlaying = true;
+            updateMediaSessionPlaybackState('playing');
+            updatePlayPauseButtons();
+            break;
+        case YT.PlayerState.PAUSED:
+            isPlaying = false;
+            updateMediaSessionPlaybackState('paused');
+            updatePlayPauseButtons();
+            break;
+        case YT.PlayerState.ENDED:
+            isPlaying = false;
+            updateMediaSessionPlaybackState('none');
+            updatePlayPauseButtons();
+            goToNextSong();
+            break;
     }
 }
 
@@ -224,6 +261,25 @@ function onPlayerError(event) {
 
 function stopVideo() {
     player.stopVideo();
+}
+
+function updatePlayPauseButtons() {
+    const playBtn = document.getElementById('play');
+    const pauseBtn = document.getElementById('pause');
+
+    if (isPlaying) {
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'inline-block';
+    } else {
+        playBtn.style.display = 'inline-block';
+        pauseBtn.style.display = 'none';
+    }
+}
+
+function updateMediaSessionPlaybackState(state) {
+    if ('mediaSession' in navigator) {
+        navigator.mediaSession.playbackState = state;
+    }
 }
 
 function initializeMediaSession() {
@@ -252,14 +308,39 @@ function initializeMediaSession() {
 }
 
 function updateMediaSession() {
-    var currentSongMap = animePlaylistMap[n];
+    var currentSongMap = animePlaylistMap[playlistIndeces[n]];
     var currentSong = animeList.anime[currentSongMap[0]][currentSongMap[1]][currentSongMap[2]];
 
     if ("mediaSession" in navigator) {
-        navigator.mediaSession.metadata = new MediaMetadata({
-            title: currentSong.name,
-            artist: currentSong.artist,
-        });
+        // Force clear any existing metadata first
+        navigator.mediaSession.metadata = null;
+
+        // Small delay to ensure YouTube's session is cleared
+        setTimeout(() => {
+            navigator.mediaSession.metadata = new MediaMetadata({
+                title: currentSong.name,
+                artist: currentSong.artist,
+                album: animeList.anime[currentSongMap[0]].title,
+                artwork: [
+                    { src: animeList.anime[currentSongMap[0]].picture, sizes: '225x225', type: 'image/jpeg' }
+                ]
+            });
+            navigator.mediaSession.playbackState = isPlaying ? 'playing' : 'paused';
+        }, 100);
+    }
+}
+
+function muteYouTubeMediaSession() {
+    // This prevents YouTube from taking over media controls
+    const iframe = document.querySelector('#player iframe');
+    if (iframe) {
+        iframe.setAttribute('aria-hidden', 'true');
+        iframe.setAttribute('tabindex', '-1');
+    }
+
+    // Remove any existing YouTube media session
+    if (navigator.mediaSession && navigator.mediaSession.metadata) {
+        navigator.mediaSession.metadata = null;
     }
 }
 
@@ -308,10 +389,16 @@ function goToSong(new_n) {
 
 function pauseSong() {
     player.pauseVideo();
+    isPlaying = false;
+    updateMediaSessionPlaybackState('paused');
+    updatePlayPauseButtons();
 }
 
 function playSong() {
     player.playVideo();
+    isPlaying = true;
+    updateMediaSessionPlaybackState('playing');
+    updatePlayPauseButtons();
 }
 
 function jumpN(m) {
@@ -342,12 +429,9 @@ function shufflePlaylist() {
 }
 
 function toggleLoop() {
-    if (loop) {
-        loop = false;
-    } else {
-        loop = true;
-    }
-
+    loop = !loop;
+    const loopStatus = document.getElementById('loop-status');
+    loopStatus.textContent = `Loop: ${loop ? 'On' : 'Off'}`;
     console.log("Toggled loop: " + loop);
 }
 

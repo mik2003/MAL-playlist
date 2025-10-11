@@ -3,6 +3,11 @@
     :root {
         --body-bg: #FFFFFF;
         --body-color: #000000;
+        --container-bg: #f8f9fa;
+        --item-bg: #e9ecef;
+        --item-hover: #1c7ed6;
+        --controls-bg: #1864ab;
+        --controls-hover: #1c7ed6;
     }
 }
 
@@ -11,6 +16,11 @@
     :root {
         --body-bg: #000000;
         --body-color: #FFFFFF;
+        --container-bg: #343a40;
+        --item-bg: #495057;
+        --item-hover: #1c7ed6;
+        --controls-bg: #1864ab;
+        --controls-hover: #1c7ed6;
     }
 }
 
@@ -18,8 +28,6 @@ body {
     background: var(--body-bg);
     color: var(--body-color);
     font-family: Arial, sans-serif;
-    background-color: #212529;
-    color: #f8f9fa;
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -65,7 +73,7 @@ body {
     aspect-ratio: 16/9;
     padding: 20px;
     margin: 10px;
-    background-color: #343a40;
+    background-color: var(--container-bg);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -74,47 +82,64 @@ body {
 #controls {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
+    gap: 5px;
+    flex-wrap: wrap;
 }
 
 #controls button {
-    background-color: #1864ab;
+    background-color: var(--controls-bg);
     color: #e7f5ff;
     border: none;
     border-radius: 5px;
     padding: 10px 10px;
-    margin: 5px 5px;
+    margin: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 16px;
 }
 
 #controls button:hover {
-    background-color: #1c7ed6;
+    background-color: var(--controls-hover);
     color: #d0ebff;
+}
+
+#pause {
+    display: none;
+}
+
+#loop-status {
+    color: var(--body-color);
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 5px 10px;
 }
 
 #playlist {
     padding: 20px;
     margin: 10px;
-    background-color: #343a40;
+    background-color: var(--container-bg);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     overflow-x: auto;
     overflow-y: scroll;
+    max-height: 70vh;
 }
 
 .playlist-item {
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #495057;
+    background-color: var(--item-bg);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     display: flex;
+    color: var(--body-color);
 }
 
 .playlist-item:hover {
-    background-color: #1c7ed6 !important;
+    background-color: var(--item-hover) !important;
     color: #f8f9fa !important;
 }
 
@@ -128,25 +153,100 @@ body {
 
 .playlist-item-image {
     margin-right: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .playlist-item-animeimage {
     width: 50px;
     height: auto;
+    border-radius: 3px;
 }
 
-/*.playlist-item-artistline {}*/
+.playlist-item-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
 
 .playlist-item-animeline {
     font-size: small;
+    margin-top: 2px;
 }
 
 .playlist-item-episodeline {
     font-size: small;
+    margin-top: 2px;
 }
 
 @media (max-width: 600px) {
     #controls button {
-        padding: 10px;
+        padding: 8px;
+        font-size: 14px;
     }
+
+    #loop-status {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+
+    .playlist-item-animeimage {
+        width: 40px;
+    }
+
+    .playlist-item {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* Scrollbar styling */
+#playlist::-webkit-scrollbar {
+    width: 8px;
+}
+
+#playlist::-webkit-scrollbar-track {
+    background: var(--item-bg);
+    border-radius: 4px;
+}
+
+#playlist::-webkit-scrollbar-thumb {
+    background: var(--controls-bg);
+    border-radius: 4px;
+}
+
+#playlist::-webkit-scrollbar-thumb:hover {
+    background: var(--controls-hover);
+}
+
+/* Hide YouTube branding and controls */
+#player iframe {
+    border: none !important;
+}
+
+/* Hide YouTube title and controls that might peek through */
+.ytp-chrome-top,
+.ytp-title-link,
+.ytp-title-text,
+.ytp-chrome-controls {
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Ensure our player container is clean */
+#player {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add a protective overlay to prevent YouTube UI interactions */
+#player::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    pointer-events: none;
 }
