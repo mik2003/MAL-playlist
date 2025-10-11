@@ -8,6 +8,7 @@ var i, j, k, n = 0;
 var player;
 var loop = true;
 var isPlaying = false;
+var shouldAutoplay = false;
 
 // Add this debug function
 function checkMediaSession() {
@@ -254,7 +255,7 @@ function onYouTubeIframeAPIReady() {
             'playsinline': 1,
             'enablejsapi': 1,
             'origin': window.location.origin,
-            'autoplay': 1,
+            'autoplay': 0, // CHANGE: 0 instead of 1 (start paused)
             'controls': 0,
             'modestbranding': 1,
             'rel': 0,
@@ -276,12 +277,12 @@ function onPlayerReady(event) {
     applySongDivStyle();
     updateMediaSessionMetadata();
     updateStatusDisplay();
-    event.target.playVideo();
-    isPlaying = true;
-    updatePlayPauseButtons();
-    updateMediaSessionPlaybackState('playing');
 
-    // Add this line to debug media session
+    isPlaying = false;
+    updatePlayPauseButtons();
+    updateMediaSessionPlaybackState('paused');
+    console.log('Player ready and paused - click play to start');
+
     setTimeout(checkMediaSession, 2000);
 }
 
@@ -372,6 +373,7 @@ function playSong() {
     if (player && player.playVideo) {
         player.playVideo();
         isPlaying = true;
+        shouldAutoplay = true; // Add this line
         updatePlayPauseButtons();
         updateMediaSessionPlaybackState('playing');
         updateStatusDisplay();
@@ -383,6 +385,7 @@ function pauseSong() {
     if (player && player.pauseVideo) {
         player.pauseVideo();
         isPlaying = false;
+        shouldAutoplay = false; // Add this line
         updatePlayPauseButtons();
         updateMediaSessionPlaybackState('paused');
         updateStatusDisplay();
@@ -431,14 +434,22 @@ function loadNewSong() {
         updateMediaSessionMetadata();
         updateStatusDisplay();
 
-        // Auto-play the new song
-        setTimeout(() => {
-            player.playVideo();
-            isPlaying = true;
+        // Only auto-play if user was already playing
+        if (shouldAutoplay) {
+            setTimeout(() => {
+                player.playVideo();
+                isPlaying = true;
+                updatePlayPauseButtons();
+                updateMediaSessionPlaybackState('playing');
+                updateStatusDisplay();
+            }, 500);
+        } else {
+            // Keep it paused for new songs
+            isPlaying = false;
             updatePlayPauseButtons();
-            updateMediaSessionPlaybackState('playing');
+            updateMediaSessionPlaybackState('paused');
             updateStatusDisplay();
-        }, 500);
+        }
     }
 }
 
