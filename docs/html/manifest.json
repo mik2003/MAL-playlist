@@ -2,16 +2,26 @@
     "name": "Anime Playlist",
     "short_name": "AnimePlaylist",
     "description": "Anime themes playlist player",
-    "start_url": "youtube_playlist.html",
+    "start_url": "./youtube_playlist.html",
     "display": "standalone",
     "background_color": "#1c7ed6",
     "theme_color": "#1c7ed6",
     "orientation": "any",
     "icons": [
         {
-            "src": "https://cdn.myanimelist.net/s/common/userimages/34ca6c0c-5a73-4171-aaaf-3ee6a9732a9f_225w?s=5de06d8dd57f0e2d95b047f56a7f55aa",
-            "sizes": "225x225",
-            "type": "image/jpeg"
+            "src": "https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-128.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-64.png",
+            "sizes": "64x64",
+            "type": "image/png"
         }
     ],
     "categories": [

@@ -8,28 +8,7 @@ var i, j, k, n = 0;
 var player;
 var loop = true;
 var isPlaying = false;
-
-// Add this debug function
-function checkMediaSession() {
-    console.log('=== Media Session Debug ===');
-    console.log('Media Session supported:', 'mediaSession' in navigator);
-    if ('mediaSession' in navigator) {
-        console.log('Current metadata:', navigator.mediaSession.metadata);
-        console.log('Playback state:', navigator.mediaSession.playbackState);
-
-        // Check which handlers are set
-        const actions = ['play', 'pause', 'previoustrack', 'nexttrack'];
-        actions.forEach(action => {
-            try {
-                navigator.mediaSession.setActionHandler(action, () => { });
-                console.log(`${action} handler: CAN be set`);
-                navigator.mediaSession.setActionHandler(action, null);
-            } catch (e) {
-                console.log(`${action} handler: CANNOT be set - ${e.message}`);
-            }
-        });
-    }
-}
+var isMediaSessionControlled = false;
 
 // Function to create an array with n integers
 function createArray(n) {
@@ -158,9 +137,6 @@ async function retrievePlaylist() {
 async function initializePlayer() {
     await retrievePlaylist();
 
-    // Initialize our independent media session FIRST
-    initializeIndependentMediaSession();
-
     // Register service worker
     if ('serviceWorker' in navigator) {
         try {
@@ -178,78 +154,12 @@ async function initializePlayer() {
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 }
 
-// Create our own independent media session
-function initializeIndependentMediaSession() {
-    if (!('mediaSession' in navigator)) {
-        console.log('Media Session API not supported');
-        return;
-    }
-
-    console.log('Initializing independent media session...');
-
-    // Set up our media session completely independently
-    try {
-        // Clear any existing handlers
-        const actions = ['play', 'pause', 'previoustrack', 'nexttrack', 'seekbackward', 'seekforward'];
-        actions.forEach(action => {
-            try {
-                navigator.mediaSession.setActionHandler(action, null);
-            } catch (e) { }
-        });
-
-        // Set our custom handlers
-        navigator.mediaSession.setActionHandler('play', () => {
-            console.log('🎵 Independent Media session: PLAY');
-            playSong();
-        });
-
-        navigator.mediaSession.setActionHandler('pause', () => {
-            console.log('⏸️ Independent Media session: PAUSE');
-            pauseSong();
-        });
-
-        navigator.mediaSession.setActionHandler('previoustrack', () => {
-            console.log('⏮️ Independent Media session: PREVIOUS');
-            goToPreviousSong();
-        });
-
-        navigator.mediaSession.setActionHandler('nexttrack', () => {
-            console.log('⏭️ Independent Media session: NEXT');
-            goToNextSong();
-        });
-
-        navigator.mediaSession.setActionHandler('seekbackward', (details) => {
-            console.log('⏪ Independent Media session: SEEK BACKWARD');
-            if (player && player.getCurrentTime) {
-                const newTime = Math.max(player.getCurrentTime() - (details.seekOffset || 10), 0);
-                player.seekTo(newTime, true);
-            }
-        });
-
-        navigator.mediaSession.setActionHandler('seekforward', (details) => {
-            console.log('⏩ Independent Media session: SEEK FORWARD');
-            if (player && player.getCurrentTime) {
-                const newTime = Math.min(player.getCurrentTime() + (details.seekOffset || 10), player.getDuration());
-                player.seekTo(newTime, true);
-            }
-        });
-
-        // Set initial metadata
-        updateMediaSessionMetadata();
-
-        console.log('✅ Independent media session initialized');
-    } catch (error) {
-        console.error('❌ Error setting independent media session:', error);
-    }
-}
-
-// YouTube Player setup with youtube-nocookie.com
+// YouTube Player setup
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '390',
         width: '640',
         videoId: getCurrentSongId(),
-        host: 'https://www.youtube-nocookie.com',
         playerVars: {
             'playsinline': 1,
             'enablejsapi': 1,
@@ -259,9 +169,7 @@ function onYouTubeIframeAPIReady() {
             'modestbranding': 1,
             'rel': 0,
             'showinfo': 0,
-            'iv_load_policy': 3,
-            'fs': 0,
-            'disablekb': 1
+            'iv_load_policy': 3
         },
         events: {
             'onReady': onPlayerReady,
@@ -272,17 +180,13 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-    console.log('YouTube player ready (no-cookie version)');
+    console.log('YouTube player ready');
     applySongDivStyle();
-    updateMediaSessionMetadata();
-    updateStatusDisplay();
+    initializeMediaSession();
     event.target.playVideo();
     isPlaying = true;
     updatePlayPauseButtons();
-    updateMediaSessionPlaybackState('playing');
-
-    // Add this line to debug media session
-    setTimeout(checkMediaSession, 2000);
+    updateMediaSessionMetadata();
 }
 
 function onPlayerStateChange(event) {
@@ -291,20 +195,18 @@ function onPlayerStateChange(event) {
         case YT.PlayerState.PLAYING:
             isPlaying = true;
             updatePlayPauseButtons();
+            updateMediaSessionMetadata();
             updateMediaSessionPlaybackState('playing');
-            updateStatusDisplay();
             break;
         case YT.PlayerState.PAUSED:
             isPlaying = false;
             updatePlayPauseButtons();
             updateMediaSessionPlaybackState('paused');
-            updateStatusDisplay();
             break;
         case YT.PlayerState.ENDED:
             isPlaying = false;
             updatePlayPauseButtons();
             updateMediaSessionPlaybackState('none');
-            updateStatusDisplay();
             goToNextSong();
             break;
     }
@@ -315,6 +217,70 @@ function onPlayerError(event) {
     goToNextSong();
 }
 
+// Media Session Control
+function initializeMediaSession() {
+    if (!('mediaSession' in navigator)) {
+        console.log('Media Session API not supported');
+        return;
+    }
+
+    console.log('Initializing media session...');
+
+    // Clear any existing handlers first
+    const actions = ['play', 'pause', 'previoustrack', 'nexttrack', 'seekbackward', 'seekforward'];
+    actions.forEach(action => {
+        try {
+            navigator.mediaSession.setActionHandler(action, null);
+        } catch (e) {
+            // Ignore errors when clearing non-existent handlers
+        }
+    });
+
+    // Set our custom handlers
+    try {
+        navigator.mediaSession.setActionHandler('play', () => {
+            console.log('Media session: PLAY');
+            playSong();
+        });
+
+        navigator.mediaSession.setActionHandler('pause', () => {
+            console.log('Media session: PAUSE');
+            pauseSong();
+        });
+
+        navigator.mediaSession.setActionHandler('previoustrack', () => {
+            console.log('Media session: PREVIOUS');
+            goToPreviousSong();
+        });
+
+        navigator.mediaSession.setActionHandler('nexttrack', () => {
+            console.log('Media session: NEXT');
+            goToNextSong();
+        });
+
+        navigator.mediaSession.setActionHandler('seekbackward', (details) => {
+            console.log('Media session: SEEK BACKWARD');
+            if (player && player.getCurrentTime) {
+                const newTime = Math.max(player.getCurrentTime() - (details.seekOffset || 10), 0);
+                player.seekTo(newTime, true);
+            }
+        });
+
+        navigator.mediaSession.setActionHandler('seekforward', (details) => {
+            console.log('Media session: SEEK FORWARD');
+            if (player && player.getCurrentTime) {
+                const newTime = Math.min(player.getCurrentTime() + (details.seekOffset || 10), player.getDuration());
+                player.seekTo(newTime, true);
+            }
+        });
+
+        isMediaSessionControlled = true;
+        console.log('Media session handlers set successfully');
+    } catch (error) {
+        console.error('Error setting media session handlers:', error);
+    }
+}
+
 function updateMediaSessionMetadata() {
     if (!('mediaSession' in navigator)) return;
 
@@ -322,6 +288,7 @@ function updateMediaSessionMetadata() {
     const currentSong = animeList.anime[currentSongMap[0]][currentSongMap[1]][currentSongMap[2]];
 
     try {
+        // Create new metadata object
         const metadata = new MediaMetadata({
             title: currentSong.name || 'Unknown Title',
             artist: currentSong.artist || 'Unknown Artist',
@@ -335,8 +302,9 @@ function updateMediaSessionMetadata() {
             ]
         });
 
+        // Update the media session
         navigator.mediaSession.metadata = metadata;
-        console.log('Independent media session metadata updated:', currentSong.name);
+        console.log('Media session metadata updated:', currentSong.name);
     } catch (error) {
         console.error('Error updating media session metadata:', error);
     }
@@ -348,24 +316,6 @@ function updateMediaSessionPlaybackState(state) {
     }
 }
 
-function updateStatusDisplay() {
-    const currentSongMap = animePlaylistMap[playlistIndeces[n]];
-    const currentSong = animeList.anime[currentSongMap[0]][currentSongMap[1]][currentSongMap[2]];
-
-    if (document.getElementById('current-song-name')) {
-        document.getElementById('current-song-name').textContent = currentSong.name || 'Unknown';
-    }
-    if (document.getElementById('playback-status')) {
-        document.getElementById('playback-status').textContent = isPlaying ? '▶️ Playing' : '⏸️ Paused';
-    }
-    if (document.getElementById('player-status')) {
-        document.getElementById('player-status').textContent = '✅ Ready';
-    }
-    if (document.getElementById('current-position')) {
-        document.getElementById('current-position').textContent = `Song ${n + 1} of ${animePlaylist.length}`;
-    }
-}
-
 // Playback control functions
 function playSong() {
     console.log('Playing song');
@@ -374,7 +324,6 @@ function playSong() {
         isPlaying = true;
         updatePlayPauseButtons();
         updateMediaSessionPlaybackState('playing');
-        updateStatusDisplay();
     }
 }
 
@@ -385,7 +334,6 @@ function pauseSong() {
         isPlaying = false;
         updatePlayPauseButtons();
         updateMediaSessionPlaybackState('paused');
-        updateStatusDisplay();
     }
 }
 
@@ -429,7 +377,6 @@ function loadNewSong() {
         player.loadVideoById(getCurrentSongId());
         applySongDivStyle();
         updateMediaSessionMetadata();
-        updateStatusDisplay();
 
         // Auto-play the new song
         setTimeout(() => {
@@ -437,7 +384,6 @@ function loadNewSong() {
             isPlaying = true;
             updatePlayPauseButtons();
             updateMediaSessionPlaybackState('playing');
-            updateStatusDisplay();
         }, 500);
     }
 }
@@ -481,7 +427,6 @@ function shufflePlaylist() {
     playlistDiv.innerHTML = "";
     populatePlaylistDiv();
     applySongDivStyle();
-    updateStatusDisplay();
     loadNewSong();
 }
 
