@@ -1,11 +1,11 @@
 {
-    "name": "Anime Playlist",
-    "short_name": "AnimePlaylist",
-    "description": "Anime themes playlist player",
-    "start_url": "./youtube_playlist.html",
+    "name": "Anime Playlist - Spotify",
+    "short_name": "AnimeSpotify",
+    "description": "Anime themes playlist player with Spotify",
+    "start_url": "./spotify_playlist.html",
     "display": "standalone",
-    "background_color": "#1c7ed6",
-    "theme_color": "#1c7ed6",
+    "background_color": "#191414",
+    "theme_color": "#1DB954",
     "orientation": "any",
     "icons": [
         {
@@ -16,11 +16,6 @@
         {
             "src": "https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-128.png",
             "sizes": "128x128",
-            "type": "image/png"
-        },
-        {
-            "src": "https://cdn.myanimelist.net/img/sp/icon/apple-touch-icon-64.png",
-            "sizes": "64x64",
             "type": "image/png"
         }
     ],

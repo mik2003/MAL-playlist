@@ -4,9 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+project = {file = ".", editable = true}
 selenium = "*"
 beautifulsoup4 = "*"
 requests = "*"
+spotipy = "*"
+setuptools = "*"
 
 [dev-packages]
 black = "*"
