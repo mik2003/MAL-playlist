@@ -41,6 +41,11 @@ class MALAPI:
     # YouTube Data Cache
     yt = os.path.join("project", "cache", "youtube", "youtube.json")
 
+    spotify = os.path.join(
+        "project", "cache", "spotify", "spotify_uri_cache.json"
+    )
+    spotify_keys = os.path.join("project", ".secret", "spotify_api.json")
+
 
 def get_keys(path: str) -> Any:
     with open(path, "r", encoding="utf-8") as f:

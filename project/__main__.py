@@ -1,4 +1,4 @@
-from project.html import html_encode
+from project.mal_html import html_encode
 
 if __name__ == "__main__":
     html_encode("mik2003")
