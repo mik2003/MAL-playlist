@@ -9,36 +9,42 @@ var player;
 var loop = true;
 var isPlaying = false;
 
-// https://stackoverflow.com/questions/45408920/plain-javascript-scrollintoview-inside-div
-function scrollParentToChild(parent, child) {
+// Audio context for media session control
+var audioContext;
+var isAudioActive = false;
 
-    // Where is the parent on page
-    var parentRect = parent.getBoundingClientRect();
-    // What can you see?
-    var parentViewableArea = {
-        height: parent.clientHeight,
-        width: parent.clientWidth
-    };
+// Initialize silent audio to claim media session
+function initializeAudioContext() {
+    try {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        console.log('Audio context initialized for media session');
+    } catch (error) {
+        console.error('Error initializing audio context:', error);
+    }
+}
 
-    // Where is the child
-    var childRect = child.getBoundingClientRect();
-    // Is the child viewable?
-    var isViewable = (childRect.top >= parentRect.top) && (childRect.bottom <= parentRect.top + parentViewableArea.height);
-
-    // if you can't see the child try to scroll parent
-    if (!isViewable) {
-        // Should we scroll using top or bottom? Find the smaller ABS adjustment
-        const scrollTop = childRect.top - parentRect.top;
-        const scrollBot = childRect.bottom - parentRect.bottom;
-        if (Math.abs(scrollTop) < Math.abs(scrollBot)) {
-            // we're near the top of the list
-            parent.scrollTop += scrollTop;
-        } else {
-            // we're near the bottom of the list
-            parent.scrollTop += scrollBot;
-        }
+function startSilentAudio() {
+    if (!audioContext) {
+        initializeAudioContext();
     }
 
+    try {
+        if (audioContext.state === 'suspended') {
+            audioContext.resume();
+        }
+
+        // Create a silent audio buffer
+        const buffer = audioContext.createBuffer(1, 1, 22050);
+        const source = audioContext.createBufferSource();
+        source.buffer = buffer;
+        source.connect(audioContext.destination);
+        source.start();
+
+        isAudioActive = true;
+        console.log('Silent audio started - claiming media session');
+    } catch (error) {
+        console.error('Error starting silent audio:', error);
+    }
 }
 
 // Function to create an array with n integers
@@ -54,17 +60,53 @@ function createArray(n) {
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+        [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
 }
 
+function updateStatusDisplay() {
+    const currentSongMap = animePlaylistMap[playlistIndeces[n]];
+    const currentSong = animeList.anime[currentSongMap[0]][currentSongMap[1]][currentSongMap[2]];
+
+    if (document.getElementById('current-song-name')) {
+        document.getElementById('current-song-name').textContent = currentSong.name || 'Unknown';
+    }
+    if (document.getElementById('playback-status')) {
+        document.getElementById('playback-status').textContent = isPlaying ? '▶️ Playing' : '⏸️ Paused';
+    }
+    if (document.getElementById('player-status')) {
+        document.getElementById('player-status').textContent = '✅ Ready';
+    }
+    if (document.getElementById('current-position')) {
+        document.getElementById('current-position').textContent = `Song ${n + 1} of ${animePlaylist.length}`;
+    }
+}
+
+function scrollParentToChild(parent, child) {
+    var parentRect = parent.getBoundingClientRect();
+    var parentViewableArea = {
+        height: parent.clientHeight,
+        width: parent.clientWidth
+    };
+    var childRect = child.getBoundingClientRect();
+    var isViewable = (childRect.top >= parentRect.top) && (childRect.bottom <= parentRect.top + parentViewableArea.height);
+
+    if (!isViewable) {
+        const scrollTop = childRect.top - parentRect.top;
+        const scrollBot = childRect.bottom - parentRect.bottom;
+        if (Math.abs(scrollTop) < Math.abs(scrollBot)) {
+            parent.scrollTop += scrollTop;
+        } else {
+            parent.scrollTop += scrollBot;
+        }
+    }
+}
+
 function populatePlaylistDiv() {
     playlistDiv = document.getElementById('playlist');
+    playlistDiv.innerHTML = '';
 
-    //var playlistItem;
-    //var currentSongMap;
-    //var currentSong;
     for (i = 0; i < animePlaylistMap.length; i++) {
         let playlistItem = document.createElement("div");
         playlistItem.setAttribute("class", "playlist-item");
@@ -80,7 +122,6 @@ function populatePlaylistDiv() {
         let animeImage = document.createElement("img");
         animeImage.setAttribute("class", "playlist-item-animeimage");
         animeImage.setAttribute("src", animeList.anime[currentSongMap[0]].picture);
-
 
         let nameLine = document.createElement("span");
         nameLine.setAttribute("class", "playlist-item-nameline");
@@ -102,18 +143,15 @@ function populatePlaylistDiv() {
         episodeLine.innerText = ` ${currentSongMap[1].split("_")[0]}${currentSong.index !== null ? ` #${currentSong.index}` : ''}${currentSong.episode !== null ? ` (${currentSong.episode})` : ''}`;
         playlistItemText.appendChild(episodeLine);
 
-        // Create the anchor tag for the image and set the dynamic URL
         let animeLink = document.createElement("a");
         animeLink.setAttribute("href", `https://myanimelist.net/anime/${currentSong.anime_id}`);
-        animeLink.setAttribute("target", "_blank"); // Opens the link in a new tab
+        animeLink.setAttribute("target", "_blank");
         animeLink.appendChild(animeImage);
         playlistItemImage.appendChild(animeLink);
 
         playlistItem.setAttribute('onclick', 'goToSong(' + i + ')');
-
         playlistItem.appendChild(playlistItemImage);
         playlistItem.appendChild(playlistItemText);
-
         playlistDiv.appendChild(playlistItem);
     }
 }
@@ -125,10 +163,8 @@ async function fetchAnimeList(animeListUrl) {
 }
 
 async function loadAnimeList() {
-
     animeList = await fetchAnimeList('https://mal.secondo.aero/data/animelist.json');
     console.log(animeList);
-
 }
 
 async function retrievePlaylist() {
@@ -149,19 +185,18 @@ async function retrievePlaylist() {
     }
 
     i = 0; j = 0; k = 0;
-
-    console.log(animePlaylist);
-    console.log(animePlaylistMap);
-
     playlistIndeces = createArray(animePlaylist.length);
-
     populatePlaylistDiv();
 }
 
 async function initializePlayer() {
     await retrievePlaylist();
 
-    // Register service worker for PWA functionality
+    // Initialize audio context FIRST to claim media session
+    initializeAudioContext();
+    startSilentAudio();
+
+    // Register service worker
     if ('serviceWorker' in navigator) {
         try {
             await navigator.serviceWorker.register('sw.js');
@@ -171,16 +206,17 @@ async function initializePlayer() {
         }
     }
 
-    // 2. This code loads the IFrame Player API code asynchronously.
-    var tag = document.createElement('script');
+    // Initialize media session immediately (before YouTube loads)
+    initializeMediaSession();
 
+    // Load YouTube IFrame API
+    var tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 }
 
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
+// YouTube Player setup
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '390',
@@ -190,7 +226,6 @@ function onYouTubeIframeAPIReady() {
             'playsinline': 1,
             'enablejsapi': 1,
             'origin': window.location.origin,
-            'widget_referrer': window.location.origin,
             'autoplay': 1,
             'controls': 0,
             'modestbranding': 1,
@@ -206,61 +241,169 @@ function onYouTubeIframeAPIReady() {
     });
 }
 
-// 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
-    muteYouTubeMediaSession();
-    initializeMediaSession();
+    console.log('YouTube player ready');
     applySongDivStyle();
-    updateMediaSession();
+    updateMediaSessionMetadata();
+    updateStatusDisplay(); // Add this line
     event.target.playVideo();
     isPlaying = true;
     updatePlayPauseButtons();
-
-    // Additional protection - mute YouTube's audio track (we'll handle audio separately)
-    event.target.setVolume(100); // Ensure volume is at max for our controls
+    updateMediaSessionPlaybackState('playing');
+    updateStatusDisplay(); // Add this line
 }
 
-// 5. The API calls this function when the player's state changes.
 function onPlayerStateChange(event) {
+    console.log('Player state:', event.data);
     switch (event.data) {
         case YT.PlayerState.PLAYING:
             isPlaying = true;
-            updateMediaSessionPlaybackState('playing');
             updatePlayPauseButtons();
+            updateMediaSessionPlaybackState('playing');
+            updateStatusDisplay(); // Add this line
             break;
         case YT.PlayerState.PAUSED:
             isPlaying = false;
-            updateMediaSessionPlaybackState('paused');
             updatePlayPauseButtons();
+            updateMediaSessionPlaybackState('paused');
+            updateStatusDisplay(); // Add this line
             break;
         case YT.PlayerState.ENDED:
             isPlaying = false;
-            updateMediaSessionPlaybackState('none');
             updatePlayPauseButtons();
+            updateMediaSessionPlaybackState('none');
+            updateStatusDisplay(); // Add this line
             goToNextSong();
             break;
     }
 }
 
 function onPlayerError(event) {
-    if (event.data == 2) {
-        console.log('onError 2: Invalid video ID')
-    } else if (event.data == 5) {
-        console.log('onError 5: HTML5 error')
-    } else if (event.data == 100) {
-        console.log('onError 100: Video not found')
-    } else if (event.data == 101) {
-        console.log('onError 101: Video cannot be embedded')
-    } else if (event.data == 150) {
-        console.log('onError 150: Video cannot be embedded')
-    } else {
-        console.log('onError: Unknown error')
-    }
+    console.log('Player error:', event.data);
     goToNextSong();
 }
 
-function stopVideo() {
-    player.stopVideo();
+// Media Session Control
+function initializeMediaSession() {
+    if (!('mediaSession' in navigator)) {
+        console.log('Media Session API not supported');
+        return;
+    }
+
+    console.log('Initializing media session...');
+
+    // Clear any existing handlers first
+    const actions = ['play', 'pause', 'previoustrack', 'nexttrack', 'seekbackward', 'seekforward'];
+    actions.forEach(action => {
+        try {
+            navigator.mediaSession.setActionHandler(action, null);
+        } catch (e) {
+            // Ignore errors when clearing non-existent handlers
+        }
+    });
+
+    // Set our custom handlers
+    try {
+        navigator.mediaSession.setActionHandler('play', () => {
+            console.log('Media session: PLAY');
+            playSong();
+        });
+
+        navigator.mediaSession.setActionHandler('pause', () => {
+            console.log('Media session: PAUSE');
+            pauseSong();
+        });
+
+        navigator.mediaSession.setActionHandler('previoustrack', () => {
+            console.log('Media session: PREVIOUS');
+            goToPreviousSong();
+        });
+
+        navigator.mediaSession.setActionHandler('nexttrack', () => {
+            console.log('Media session: NEXT');
+            goToNextSong();
+        });
+
+        navigator.mediaSession.setActionHandler('seekbackward', (details) => {
+            console.log('Media session: SEEK BACKWARD');
+            if (player && player.getCurrentTime) {
+                const newTime = Math.max(player.getCurrentTime() - (details.seekOffset || 10), 0);
+                player.seekTo(newTime, true);
+            }
+        });
+
+        navigator.mediaSession.setActionHandler('seekforward', (details) => {
+            console.log('Media session: SEEK FORWARD');
+            if (player && player.getCurrentTime) {
+                const newTime = Math.min(player.getCurrentTime() + (details.seekOffset || 10), player.getDuration());
+                player.seekTo(newTime, true);
+            }
+        });
+
+        console.log('Media session handlers set successfully');
+    } catch (error) {
+        console.error('Error setting media session handlers:', error);
+    }
+}
+
+function updateMediaSessionMetadata() {
+    if (!('mediaSession' in navigator)) return;
+
+    const currentSongMap = animePlaylistMap[playlistIndeces[n]];
+    const currentSong = animeList.anime[currentSongMap[0]][currentSongMap[1]][currentSongMap[2]];
+
+    try {
+        // Create new metadata object
+        const metadata = new MediaMetadata({
+            title: currentSong.name || 'Unknown Title',
+            artist: currentSong.artist || 'Unknown Artist',
+            album: animeList.anime[currentSongMap[0]].title || 'Anime Themes',
+            artwork: [
+                {
+                    src: animeList.anime[currentSongMap[0]].picture || '',
+                    sizes: '225x225',
+                    type: 'image/jpeg'
+                }
+            ]
+        });
+
+        // Update the media session
+        navigator.mediaSession.metadata = metadata;
+        console.log('Media session metadata updated:', currentSong.name);
+    } catch (error) {
+        console.error('Error updating media session metadata:', error);
+    }
+}
+
+function updateMediaSessionPlaybackState(state) {
+    if ('mediaSession' in navigator) {
+        navigator.mediaSession.playbackState = state;
+    }
+}
+
+// Playback control functions
+function playSong() {
+    console.log('Playing song');
+    startSilentAudio(); // Maintain media session control
+
+    if (player && player.playVideo) {
+        player.playVideo();
+        isPlaying = true;
+        updatePlayPauseButtons();
+        updateMediaSessionPlaybackState('playing');
+        updateStatusDisplay(); // Add this line
+    }
+}
+
+function pauseSong() {
+    console.log('Pausing song');
+    if (player && player.pauseVideo) {
+        player.pauseVideo();
+        isPlaying = false;
+        updatePlayPauseButtons();
+        updateMediaSessionPlaybackState('paused');
+        updateStatusDisplay(); // Add this line
+    }
 }
 
 function updatePlayPauseButtons() {
@@ -276,129 +419,44 @@ function updatePlayPauseButtons() {
     }
 }
 
-function updateMediaSessionPlaybackState(state) {
-    if ('mediaSession' in navigator) {
-        navigator.mediaSession.playbackState = state;
-    }
-}
-
-function initializeMediaSession() {
-    if ('mediaSession' in navigator) {
-        navigator.mediaSession.setActionHandler('play', () => {
-            playSong();
-        });
-        navigator.mediaSession.setActionHandler('pause', () => {
-            pauseSong();
-        });
-        navigator.mediaSession.setActionHandler('seekbackward', (details) => {
-            let newTime = Math.max(player.getCurrentTime() - (details.seekOffset || 10), 0);
-            player.seekTo(newTime, true);
-        });
-        navigator.mediaSession.setActionHandler('seekforward', (details) => {
-            let newTime = Math.min(player.getCurrentTime() + (details.seekOffset || 10), player.getDuration());
-            player.seekTo(newTime, true);
-        });
-        navigator.mediaSession.setActionHandler('previoustrack', () => {
-            goToPreviousSong();
-        });
-        navigator.mediaSession.setActionHandler('nexttrack', () => {
-            goToNextSong();
-        });
-    }
-}
-
-function updateMediaSession() {
-    var currentSongMap = animePlaylistMap[playlistIndeces[n]];
-    var currentSong = animeList.anime[currentSongMap[0]][currentSongMap[1]][currentSongMap[2]];
-
-    if ("mediaSession" in navigator) {
-        // Force clear any existing metadata first
-        navigator.mediaSession.metadata = null;
-
-        // Small delay to ensure YouTube's session is cleared
-        setTimeout(() => {
-            navigator.mediaSession.metadata = new MediaMetadata({
-                title: currentSong.name,
-                artist: currentSong.artist,
-                album: animeList.anime[currentSongMap[0]].title,
-                artwork: [
-                    { src: animeList.anime[currentSongMap[0]].picture, sizes: '225x225', type: 'image/jpeg' }
-                ]
-            });
-            navigator.mediaSession.playbackState = isPlaying ? 'playing' : 'paused';
-        }, 100);
-    }
-}
-
-function muteYouTubeMediaSession() {
-    // This prevents YouTube from taking over media controls
-    const iframe = document.querySelector('#player iframe');
-    if (iframe) {
-        iframe.setAttribute('aria-hidden', 'true');
-        iframe.setAttribute('tabindex', '-1');
-    }
-
-    // Remove any existing YouTube media session
-    if (navigator.mediaSession && navigator.mediaSession.metadata) {
-        navigator.mediaSession.metadata = null;
-    }
-}
-
-function clearSongDivStyle() {
-    songDiv = document.getElementById(n);
-    songDiv.style.color = "#f8f9fa";
-    songDiv.style.backgroundColor = "#495057";
-}
-
-function applySongDivStyle() {
-    songDiv = document.getElementById(n);
-    songDiv.style.color = "#f8f9fa";
-    songDiv.style.backgroundColor = "#1c7ed6";
-    scrollParentToChild(document.getElementById("playlist"), songDiv);
-}
-
+// Navigation functions
 function goToNextSong() {
+    console.log('Next song');
     clearSongDivStyle();
     n = jumpN(1);
-    applySongDivStyle();
-    player.loadVideoById(getCurrentSongId());
-    updateMediaSession();
-
-    console.log('next ' + n);
+    loadNewSong();
 }
 
 function goToPreviousSong() {
+    console.log('Previous song');
     clearSongDivStyle();
     n = jumpN(-1);
-    applySongDivStyle();
-    player.loadVideoById(getCurrentSongId());
-    updateMediaSession();
-
-    console.log('prev ' + n);
+    loadNewSong();
 }
 
 function goToSong(new_n) {
+    console.log('Go to song:', new_n);
     clearSongDivStyle();
     n = new_n;
-    applySongDivStyle();
-    player.loadVideoById(getCurrentSongId());
-    updateMediaSession();
-
-    console.log('song ' + n);
+    loadNewSong();
 }
 
-function pauseSong() {
-    player.pauseVideo();
-    isPlaying = false;
-    updateMediaSessionPlaybackState('paused');
-    updatePlayPauseButtons();
-}
+function loadNewSong() {
+    if (player && player.loadVideoById) {
+        player.loadVideoById(getCurrentSongId());
+        applySongDivStyle();
+        updateMediaSessionMetadata();
+        updateStatusDisplay(); // Add this line
 
-function playSong() {
-    player.playVideo();
-    isPlaying = true;
-    updateMediaSessionPlaybackState('playing');
-    updatePlayPauseButtons();
+        // Auto-play the new song
+        setTimeout(() => {
+            player.playVideo();
+            isPlaying = true;
+            updatePlayPauseButtons();
+            updateMediaSessionPlaybackState('playing');
+            updateStatusDisplay(); // Add this line
+        }, 500);
+    }
 }
 
 function jumpN(m) {
@@ -418,14 +476,30 @@ function getCurrentSongId() {
     return animePlaylist[playlistIndeces[n]]
 }
 
+function clearSongDivStyle() {
+    if (songDiv) {
+        songDiv.style.color = "#f8f9fa";
+        songDiv.style.backgroundColor = "#495057";
+    }
+}
+
+function applySongDivStyle() {
+    songDiv = document.getElementById(n);
+    if (songDiv) {
+        songDiv.style.color = "#f8f9fa";
+        songDiv.style.backgroundColor = "#1c7ed6";
+        scrollParentToChild(document.getElementById("playlist"), songDiv);
+    }
+}
+
 function shufflePlaylist() {
     shuffleArray(playlistIndeces);
     playlistDiv = document.getElementById("playlist");
     playlistDiv.innerHTML = "";
     populatePlaylistDiv();
     applySongDivStyle();
-    player.loadVideoById(getCurrentSongId());
-    updateMediaSession();
+    updateStatusDisplay(); // Add this line
+    loadNewSong();
 }
 
 function toggleLoop() {
@@ -435,22 +509,13 @@ function toggleLoop() {
     console.log("Toggled loop: " + loop);
 }
 
+// Initialize the app
 initializePlayer();
 
-// Previous video button
+// Event listeners
 document.getElementById('prev').addEventListener('click', goToPreviousSong);
-
-// Next video button
 document.getElementById('next').addEventListener('click', goToNextSong);
-
-// Pause button
 document.getElementById('pause').addEventListener('click', pauseSong);
-
-// Play button
 document.getElementById('play').addEventListener('click', playSong);
-
-// Shuffle button
 document.getElementById('shuffle').addEventListener('click', shufflePlaylist);
-
-// Loop button
 document.getElementById('loop').addEventListener('click', toggleLoop);

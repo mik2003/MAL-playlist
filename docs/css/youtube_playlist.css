@@ -77,6 +77,23 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+/* YouTube iframe styling */
+#player iframe {
+    border: none !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Hide some YouTube controls but keep functionality */
+.ytp-chrome-top,
+.ytp-title-link,
+.ytp-title-text,
+.ytp-watermark {
+    display: none !important;
 }
 
 #controls {
@@ -198,6 +215,16 @@ body {
         padding: 8px;
         font-size: 14px;
     }
+
+    #player {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    #playlist {
+        padding: 10px;
+        margin: 5px;
+    }
 }
 
 /* Scrollbar styling */
@@ -219,34 +246,14 @@ body {
     background: var(--controls-hover);
 }
 
-/* Hide YouTube branding and controls */
-#player iframe {
-    border: none !important;
+/* Active song styling */
+.playlist-item.active {
+    border-left: 4px solid #1c7ed6;
+    background-color: #1c7ed6 !important;
+    color: #f8f9fa !important;
 }
 
-/* Hide YouTube title and controls that might peek through */
-.ytp-chrome-top,
-.ytp-title-link,
-.ytp-title-text,
-.ytp-chrome-controls {
-    visibility: hidden !important;
-    opacity: 0 !important;
-}
-
-/* Ensure our player container is clean */
-#player {
-    position: relative;
-    overflow: hidden;
-}
-
-/* Add a protective overlay to prevent YouTube UI interactions */
-#player::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    pointer-events: none;
+/* Ensure active song stays highlighted */
+.playlist-item.active:hover {
+    background-color: #1864ab !important;
 }
