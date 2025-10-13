@@ -1,7 +1,5 @@
 import json
-import os
 import re
-import time
 from typing import Any, Optional
 
 from project.utils import Cache
@@ -94,9 +92,7 @@ class ThemeSong:
     @property
     def at_url(self) -> str:
         if not self._at_url:
-            self._at_url = Cache.retrieve_animethemes(
-                theme_id=self.id, title=self.name, artist=self.artist
-            )
+            raise ValueError
         return self._at_url
 
     @at_url.setter
@@ -109,7 +105,7 @@ class ThemeSong:
     def yt_url(self) -> str:
         if not self._yt_url:
             self._yt_url = Cache.retrieve_youtube(
-                theme_id=self.id, title=self.name, artist=self.artist
+                theme_id=str(self.id), title=self.name, artist=self.artist
             )
         return self._yt_url
 
@@ -242,12 +238,32 @@ class Anime:
                     self.picture = anime_picture["medium"]
                 elif "large" in anime_picture:
                     self.picture = anime_picture["large"]
+            i = 0
+            animethemes_data_full = Cache.retrieve_animethemes(
+                anime_id=anime_id, log=True
+            )
+            animethemes_bool = "animethemes" in animethemes_data_full
+            if animethemes_bool:
+                animethemes_data = animethemes_data_full["animethemes"]
+                n = len(animethemes_data)
+            else:
+                n = 0
             if "opening_themes" in anime_data:
                 for opening_theme in anime_data["opening_themes"]:
                     self.opening_themes.append(ThemeSong(opening_theme))
+                    if animethemes_bool and i < n:
+                        self.opening_themes[-1].at_url = animethemes_data[i][
+                            "animethemeentries"
+                        ][0]["videos"][0]["link"]
+                    i += 1
             if "ending_themes" in anime_data:
                 for ending_theme in anime_data["ending_themes"]:
                     self.ending_themes.append(ThemeSong(ending_theme))
+                    if animethemes_bool and i < n:
+                        self.ending_themes[-1].at_url = animethemes_data[i][
+                            "animethemeentries"
+                        ][0]["videos"][0]["link"]
+                    i += 1
 
     def json_encode(self) -> dict[str, Any]:
         """
@@ -402,50 +418,8 @@ class AnimeList:
             + ")"
         )
 
-    @staticmethod
-    def full(
-        username: str, update_cache: bool = False, use_spotify: bool = False
-    ) -> "AnimeList":
-        """
-        Retrieve User's full MyAnimeList.
 
-        Parameters
-        ----------
-        username : str
-            User's MyAnimeList username
-        update_cache : bool, optional
-            If true, anime list will be retrieved from the web regardless
-            of cache status, and cache is updated (default: False)
-        use_spotify : bool, optional
-            Whether to use Spotify for theme songs (default: False)
-
-        Returns
-        -------
-        AnimeList
-            Initialised AnimeList object
-        """
-
-        if not update_cache and os.path.exists(
-            MALAPI.animelist_full_cache.format(username)
-        ):
-            print(f"Anime list for {username} already in cache.")
-
-            with open(
-                MALAPI.animelist_full_cache.format(username),
-                "r",
-                encoding="utf-8",
-            ) as animelist_json:
-                anime_list_full = AnimeList.json_decode(
-                    json.loads(animelist_json.read())
-                )
-        else:
-            anime_list_full = AnimeList.mal_scrape(username, use_spotify)
-
-            with open(
-                MALAPI.animelist_full_cache.format(username),
-                "w",
-                encoding="utf-8",
-            ) as animelist_json:
-                animelist_json.write(json.dumps(anime_list_full.json_encode()))
-
-        return anime_list_full
+if __name__ == "__main__":
+    al = AnimeList("mik2003")
+    with open("test.json", "w", encoding="utf-8") as f:
+        json.dump(al.json_encode(), f)

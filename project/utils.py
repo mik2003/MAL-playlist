@@ -124,7 +124,12 @@ class Cache:
         else:
             if log:
                 print(f"Retrieved animethemes {anime_id} from cache")
-        return json_read(filepath)
+        try:
+            out = json_read(filepath)
+        except json.decoder.JSONDecodeError:
+            Cache.update_animethemes(anime_id, log=log)
+            out = json_read(filepath)
+        return out
 
     @staticmethod
     def retrieve_youtube(
@@ -359,7 +364,7 @@ class API:
     """
 
     # Sleep time between API calls [s]
-    sleep_time = 0.1
+    sleep_time = 2
 
     @dataclass(frozen=True)
     class MAL:
@@ -592,18 +597,19 @@ class API:
             time.sleep(API.sleep_time)
 
             if r.status_code == 200:
-                data = r.json()["anime"][0]
-                if log:
-                    print(
-                        f"Successfully fetched animethemes for {anime_id}: {len(data.get('animethemes', []))} themes found"
-                    )
-                return data
-            else:
-                if log:
-                    print(
-                        f"Failed to fetch animethemes for {anime_id}: HTTP {r.status_code}"
-                    )
-                raise requests.HTTPError(f"HTTP {r.status_code}: {r.text}")
+                anime_data = r.json()["anime"]
+                if anime_data:
+                    data = anime_data[0]
+                    if log:
+                        print(
+                            f"Successfully fetched animethemes for {anime_id}: {len(data.get('animethemes', []))} themes found"
+                        )
+                    return data
+            if log:
+                print(
+                    f"Failed to fetch animethemes for {anime_id}: HTTP {r.status_code}"
+                )
+            return {}
 
     class YT:
         search_query_url = "https://www.youtube.com/results?search_query={}"
@@ -735,7 +741,7 @@ if __name__ == "__main__":
 
     # print(Cache.retrieve_animelist(un, log=True))
 
-    mal_id = "37450"
+    mal_id = "512"
 
     # # Example usage with logging
     # print("=== Without logging ===")
