@@ -91,8 +91,8 @@ class ThemeSong:
 
     @property
     def at_url(self) -> str:
-        if not self._at_url:
-            raise ValueError
+        # if not self._at_url:
+        #     raise ValueError
         return self._at_url
 
     @at_url.setter
@@ -103,10 +103,10 @@ class ThemeSong:
 
     @property
     def yt_url(self) -> str:
-        if not self._yt_url:
-            self._yt_url = Cache.retrieve_youtube(
-                theme_id=str(self.id), title=self.name, artist=self.artist
-            )
+        # if not self._yt_url:
+        #     self._yt_url = Cache.retrieve_youtube(
+        #         theme_id=str(self.id), title=self.name, artist=self.artist
+        #     )
         return self._yt_url
 
     @yt_url.setter
@@ -117,10 +117,10 @@ class ThemeSong:
 
     @property
     def spotify_uri(self) -> str:
-        if not self._spotify_uri:
-            self._spotify_uri = Cache.retrieve_spotify(
-                theme_id=str(self.id), title=self.name, artist=self.artist
-            )
+        # if not self._spotify_uri:
+        #     self._spotify_uri = Cache.retrieve_spotify(
+        #         theme_id=str(self.id), title=self.name, artist=self.artist
+        #     )
         return self._spotify_uri
 
     @spotify_uri.setter
