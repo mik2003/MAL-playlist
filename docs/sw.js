@@ -1,4 +1,4 @@
-const CACHE_NAME = 'anime-playlist-v2';
+const CACHE_NAME = 'anime-playlist';
 
 self.addEventListener('install', (event) => {
     console.log('Service Worker installing');

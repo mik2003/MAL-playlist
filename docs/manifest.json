@@ -1,8 +1,8 @@
 {
-    "name": "Anime Playlist - Spotify",
-    "short_name": "AnimeSpotify",
-    "description": "Anime themes playlist player with Spotify",
-    "start_url": "./spotify_playlist.html",
+    "name": "Anime Playlist",
+    "short_name": "AnimePlaylist",
+    "description": "Anime themes playlist player",
+    "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#191414",
     "theme_color": "#1DB954",

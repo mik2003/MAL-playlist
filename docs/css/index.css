@@ -3,6 +3,11 @@
     :root {
         --body-bg: #FFFFFF;
         --body-color: #000000;
+        --container-bg: #f8f9fa;
+        --item-bg: #e9ecef;
+        --item-hover: #1c7ed6;
+        --controls-bg: #1864ab;
+        --controls-hover: #1c7ed6;
     }
 }
 
@@ -11,49 +16,244 @@
     :root {
         --body-bg: #000000;
         --body-color: #FFFFFF;
+        --container-bg: #343a40;
+        --item-bg: #495057;
+        --item-hover: #1c7ed6;
+        --controls-bg: #1864ab;
+        --controls-hover: #1c7ed6;
     }
 }
 
 body {
     background: var(--body-bg);
     color: var(--body-color);
-}
-
-ol.anime-list {
-    counter-reset: anime-counter;
-    margin-left: -30px;
-}
-
-li.anime-item {
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    justify-content: center;
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    counter-increment: anime-counter;
 }
 
-.anime-content {
+@media (orientation: landscape) {
+    body {
+        flex-direction: row;
+        align-items: top;
+    }
+
+    #player {
+        width: 40vw;
+        max-width: 400px;
+        height: auto;
+    }
+
+    #playlist {
+        max-height: 90vh;
+    }
+}
+
+@media (orientation: portrait) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #player {
+        width: 90vw;
+        max-width: 400px;
+        height: auto;
+    }
+
+    #playlist {
+        max-width: 90%;
+    }
+}
+
+#player {
+    aspect-ratio: 16/9;
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--container-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     display: flex;
-    align-items: flex-start;
-}
-
-.anime-content img {
-    margin-right: 15px;
-    float: left;
-    display: block;
+    position: relative;
     overflow: hidden;
 }
 
-.anime-details {
+/* YouTube iframe styling */
+#player iframe {
+    border: none !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Hide some YouTube controls but keep functionality */
+.ytp-chrome-top,
+.ytp-title-link,
+.ytp-title-text,
+.ytp-watermark {
+    display: none !important;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+#controls button {
+    background-color: var(--controls-bg);
+    color: #e7f5ff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+#controls button:hover {
+    background-color: var(--controls-hover);
+    color: #d0ebff;
+}
+
+#pause {
+    display: none;
+}
+
+#loop-status {
+    color: var(--body-color);
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+#playlist {
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--container-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow-x: auto;
+    overflow-y: scroll;
+    max-height: 70vh;
+}
+
+.playlist-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--item-bg);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    color: var(--body-color);
+}
+
+.playlist-item:hover {
+    background-color: var(--item-hover) !important;
+    color: #f8f9fa !important;
+}
+
+.playlist-item:last-child {
+    margin-bottom: 0;
+}
+
+.playlist-item-nameline {
+    font-weight: bold;
+}
+
+.playlist-item-image {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.playlist-item-animeimage {
+    width: 50px;
+    height: auto;
+    border-radius: 3px;
+}
+
+.playlist-item-text {
+    display: flex;
+    flex-direction: column;
     flex: 1;
 }
 
-.anime-details::before {
-    content: "[" counter(anime-counter) "]";
-    font-weight: bold;
-    margin-right: 10px;
+.playlist-item-animeline {
+    font-size: small;
+    margin-top: 2px;
 }
 
-.anime-details ul {
-    margin: 0;
-    padding-left: 20px;
+.playlist-item-episodeline {
+    font-size: small;
+    margin-top: 2px;
+}
+
+@media (max-width: 600px) {
+    #controls button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #loop-status {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+
+    .playlist-item-animeimage {
+        width: 40px;
+    }
+
+    .playlist-item {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    #player {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    #playlist {
+        padding: 10px;
+        margin: 5px;
+    }
+}
+
+/* Scrollbar styling */
+#playlist::-webkit-scrollbar {
+    width: 8px;
+}
+
+#playlist::-webkit-scrollbar-track {
+    background: var(--item-bg);
+    border-radius: 4px;
+}
+
+#playlist::-webkit-scrollbar-thumb {
+    background: var(--controls-bg);
+    border-radius: 4px;
+}
+
+#playlist::-webkit-scrollbar-thumb:hover {
+    background: var(--controls-hover);
+}
+
+/* Active song styling */
+.playlist-item.active {
+    border-left: 4px solid #1c7ed6;
+    background-color: #1c7ed6 !important;
+    color: #f8f9fa !important;
+}
+
+/* Ensure active song stays highlighted */
+.playlist-item.active:hover {
+    background-color: #1864ab !important;
 }
