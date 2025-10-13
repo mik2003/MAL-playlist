@@ -1,35 +1,30 @@
-var animeList;
-var animePlaylist;
-var playlistIndeces;
-var animePlaylistMap;
-var songDiv;
-var playlistDiv;
-var i, j, k, n = 0;
-var player;
-var loop = true;
-var isPlaying = false;
-var shouldAutoplay = false;
+const animeListUrl = 'https://mal.secondo.aero/data/animelist.json';
+let player;
+let video;
+let animeList;
+let animePlaylist = [];
+let animePlaylistMap = [];
+let playlistIndeces = [];
+let playlistDiv;
+let songDiv;
+let n = 0;
+let isPlaying = false;
+let loop = false;
 
-// Add this debug function
-function checkMediaSession() {
-    console.log('=== Media Session Debug ===');
-    console.log('Media Session supported:', 'mediaSession' in navigator);
-    if ('mediaSession' in navigator) {
-        console.log('Current metadata:', navigator.mediaSession.metadata);
-        console.log('Playback state:', navigator.mediaSession.playbackState);
-
-        // Check which handlers are set
-        const actions = ['play', 'pause', 'previoustrack', 'nexttrack'];
-        actions.forEach(action => {
-            try {
-                navigator.mediaSession.setActionHandler(action, () => { });
-                console.log(`${action} handler: CAN be set`);
-                navigator.mediaSession.setActionHandler(action, null);
-            } catch (e) {
-                console.log(`${action} handler: CANNOT be set - ${e.message}`);
-            }
-        });
+async function registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        try {
+            // Use a more specific path if needed
+            const registration = await navigator.serviceWorker.register('/sw.js');
+            console.log('SW registered: ', registration);
+            return registration;
+        } catch (registrationError) {
+            console.log('SW registration failed: ', registrationError);
+            return null;
+        }
     }
+    console.log('Service Workers not supported');
+    return null;
 }
 
 // Function to create an array with n integers
@@ -120,17 +115,37 @@ function populatePlaylistDiv() {
         playlistItem.appendChild(playlistItemImage);
         playlistItem.appendChild(playlistItemText);
         playlistDiv.appendChild(playlistItem);
+
+        animeImage.addEventListener('error', function () {
+            console.warn('Failed to load image:', this.src);
+            // Set a placeholder image or hide the image
+            this.style.display = 'none';
+        });
+
+        animeImage.addEventListener('load', function () {
+            console.log('Successfully loaded image:', this.src);
+        });
     }
 }
 
 async function fetchAnimeList(animeListUrl) {
-    let response = await fetch(animeListUrl);
-    let data = await response.json()
-    return data
+    try {
+        let response = await fetch(animeListUrl);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Failed to fetch anime list:', error);
+        // You might want to show a user-friendly error message here
+        document.getElementById('player-status').textContent = '❌ Failed to load playlist';
+        throw error; // Re-throw to handle in calling function
+    }
 }
 
 async function loadAnimeList() {
-    animeList = await fetchAnimeList('https://mal.secondo.aero/data/animelist.json');
+    animeList = await fetchAnimeList(animeListUrl);
     console.log(animeList);
 }
 
@@ -142,41 +157,95 @@ async function retrievePlaylist() {
 
     for (i = 0; i < animeList.anime.length; i++) {
         for (j = 0; j < animeList.anime[i].opening_themes.length; j++) {
-            animePlaylist.push(animeList.anime[i].opening_themes[j].yt_url.slice(32, 43));
-            animePlaylistMap.push([i, "opening_themes", j]);
+            const at_url = animeList.anime[i].opening_themes[j].at_url;
+            if (at_url) { // Only add if URL exists
+                animePlaylist.push(at_url);
+                animePlaylistMap.push([i, "opening_themes", j]);
+            }
         }
         for (k = 0; k < animeList.anime[i].ending_themes.length; k++) {
-            animePlaylist.push(animeList.anime[i].ending_themes[k].yt_url.slice(32, 43));
-            animePlaylistMap.push([i, "ending_themes", k]);
+            const at_url = animeList.anime[i].ending_themes[k].at_url;
+            if (at_url) { // Only add if URL exists
+                animePlaylist.push(at_url);
+                animePlaylistMap.push([i, "ending_themes", k]);
+            }
         }
     }
 
+    console.log(`Loaded ${animePlaylist.length} songs with valid URLs`);
     i = 0; j = 0; k = 0;
     playlistIndeces = createArray(animePlaylist.length);
     populatePlaylistDiv();
 }
 
 async function initializePlayer() {
-    await retrievePlaylist();
+    player = document.getElementById('player');
+    video = document.createElement('video');
 
-    // Initialize our independent media session FIRST
+    // Add essential video attributes
+    video.controls = true;
+    video.style.width = '100%';
+    video.style.maxWidth = '800px';
+    video.autoplay = true;
+
+    // Add event listeners for the video
+    video.addEventListener('play', () => {
+        console.log('Video play event');
+        isPlaying = true;
+        updatePlayPauseButtons();
+        updateMediaSessionPlaybackState('playing');
+        updateStatusDisplay();
+    });
+
+    video.addEventListener('pause', () => {
+        console.log('Video pause event');
+        isPlaying = false;
+        updatePlayPauseButtons();
+        updateMediaSessionPlaybackState('paused');
+        updateStatusDisplay();
+    });
+
+    video.addEventListener('ended', () => {
+        console.log('Video ended event');
+        if (loop || n < animePlaylist.length - 1) {
+            goToNextSong();
+        }
+    });
+
+    video.addEventListener('error', (e) => {
+        console.error('Video error:', e);
+        console.error('Video error details:', video.error);
+        document.getElementById('player-status').textContent = '❌ Error loading video';
+    });
+
+    video.addEventListener('loadeddata', () => {
+        console.log('Video loaded successfully');
+        document.getElementById('player-status').textContent = '✅ Ready';
+    });
+
+    player.appendChild(video);
+
+    await retrievePlaylist();
     initializeIndependentMediaSession();
 
-    // Register service worker
+    // Register service worker with better error handling
     if ('serviceWorker' in navigator) {
         try {
-            await navigator.serviceWorker.register('sw.js');
-            console.log('Service Worker registered');
+            const registration = await navigator.serviceWorker.register('sw.js');
+            console.log('Service Worker registered successfully');
         } catch (error) {
-            console.log('Service Worker registration failed:', error);
+            console.warn('Service Worker registration failed:', error);
         }
     }
 
-    // Load YouTube IFrame API
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    applySongDivStyle();
+    updateMediaSessionMetadata();
+    updateStatusDisplay();
+
+    isPlaying = false;
+    updatePlayPauseButtons();
+    updateMediaSessionPlaybackState('paused');
+    console.log('Player ready and paused - click play to start');
 }
 
 // Create our own independent media session
@@ -244,78 +313,6 @@ function initializeIndependentMediaSession() {
     }
 }
 
-// YouTube Player setup with youtube-nocookie.com
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-        height: '390',
-        width: '640',
-        videoId: getCurrentSongId(),
-        host: 'https://www.youtube-nocookie.com',
-        playerVars: {
-            'playsinline': 1,
-            'enablejsapi': 1,
-            'origin': window.location.origin,
-            'autoplay': 0, // CHANGE: 0 instead of 1 (start paused)
-            'controls': 0,
-            'modestbranding': 1,
-            'rel': 0,
-            'showinfo': 0,
-            'iv_load_policy': 3,
-            'fs': 0,
-            'disablekb': 1
-        },
-        events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange,
-            'onError': onPlayerError,
-        }
-    });
-}
-
-function onPlayerReady(event) {
-    console.log('YouTube player ready (no-cookie version)');
-    applySongDivStyle();
-    updateMediaSessionMetadata();
-    updateStatusDisplay();
-
-    isPlaying = false;
-    updatePlayPauseButtons();
-    updateMediaSessionPlaybackState('paused');
-    console.log('Player ready and paused - click play to start');
-
-    setTimeout(checkMediaSession, 2000);
-}
-
-function onPlayerStateChange(event) {
-    console.log('Player state:', event.data);
-    switch (event.data) {
-        case YT.PlayerState.PLAYING:
-            isPlaying = true;
-            updatePlayPauseButtons();
-            updateMediaSessionPlaybackState('playing');
-            updateStatusDisplay();
-            break;
-        case YT.PlayerState.PAUSED:
-            isPlaying = false;
-            updatePlayPauseButtons();
-            updateMediaSessionPlaybackState('paused');
-            updateStatusDisplay();
-            break;
-        case YT.PlayerState.ENDED:
-            isPlaying = false;
-            updatePlayPauseButtons();
-            updateMediaSessionPlaybackState('none');
-            updateStatusDisplay();
-            goToNextSong();
-            break;
-    }
-}
-
-function onPlayerError(event) {
-    console.log('Player error:', event.data);
-    goToNextSong();
-}
-
 function updateMediaSessionMetadata() {
     if (!('mediaSession' in navigator)) return;
 
@@ -369,26 +366,58 @@ function updateStatusDisplay() {
 
 // Playback control functions
 function playSong() {
-    console.log('Playing song');
-    if (player && player.playVideo) {
-        player.playVideo();
-        isPlaying = true;
-        shouldAutoplay = true; // Add this line
-        updatePlayPauseButtons();
-        updateMediaSessionPlaybackState('playing');
-        updateStatusDisplay();
+    console.log('Attempting to play song');
+    if (video && video.src) {
+        video.play().then(() => {
+            console.log('Playback started successfully');
+        }).catch(error => {
+            console.error('Playback failed:', error);
+            document.getElementById('player-status').textContent = '❌ Playback failed';
+        });
+    } else {
+        console.error('No video source available');
+        loadNewSong();
+        // Try playing again after a short delay
+        setTimeout(() => {
+            if (video.src) {
+                video.play().catch(e => console.error('Retry playback failed:', e));
+            }
+        }, 100);
     }
 }
 
 function pauseSong() {
     console.log('Pausing song');
-    if (player && player.pauseVideo) {
-        player.pauseVideo();
-        isPlaying = false;
-        shouldAutoplay = false; // Add this line
-        updatePlayPauseButtons();
-        updateMediaSessionPlaybackState('paused');
+    if (video) {
+        video.pause();
+    }
+}
+
+function loadNewSong() {
+    const songUrl = getCurrentSongURL();
+    console.log('Loading new song:', songUrl);
+
+    if (songUrl && video) {
+        video.src = songUrl;
+        video.load(); // Important: load the new source
+
+        // Update UI immediately
+        applySongDivStyle();
+        updateMediaSessionMetadata();
         updateStatusDisplay();
+
+        // Auto-play if was playing before
+        if (isPlaying) {
+            setTimeout(() => {
+                video.play().catch(e => {
+                    console.warn('Auto-play prevented:', e);
+                    isPlaying = false;
+                    updatePlayPauseButtons();
+                });
+            }, 100);
+        }
+    } else {
+        console.error('Invalid song URL or video element:', songUrl);
     }
 }
 
@@ -427,32 +456,6 @@ function goToSong(new_n) {
     loadNewSong();
 }
 
-function loadNewSong() {
-    if (player && player.loadVideoById) {
-        player.loadVideoById(getCurrentSongId());
-        applySongDivStyle();
-        updateMediaSessionMetadata();
-        updateStatusDisplay();
-
-        // Only auto-play if user was already playing
-        if (shouldAutoplay) {
-            setTimeout(() => {
-                player.playVideo();
-                isPlaying = true;
-                updatePlayPauseButtons();
-                updateMediaSessionPlaybackState('playing');
-                updateStatusDisplay();
-            }, 500);
-        } else {
-            // Keep it paused for new songs
-            isPlaying = false;
-            updatePlayPauseButtons();
-            updateMediaSessionPlaybackState('paused');
-            updateStatusDisplay();
-        }
-    }
-}
-
 function jumpN(m) {
     const length = animePlaylist.length;
     if (loop) {
@@ -466,7 +469,7 @@ function jumpN(m) {
     }
 }
 
-function getCurrentSongId() {
+function getCurrentSongURL() {
     return animePlaylist[playlistIndeces[n]]
 }
 
