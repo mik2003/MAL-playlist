@@ -98,7 +98,7 @@ class Cache:
         return json_read(filepath)
 
     @staticmethod
-    def retrieve_animethemes_anime(
+    def retrieve_animethemes(
         anime_id: str, log: bool = False
     ) -> Dict[str, Any]:
         """
@@ -120,7 +120,7 @@ class Cache:
         if not os.path.exists(filepath):
             if log:
                 print(f"Cache miss for animethemes {anime_id}, updating...")
-            Cache.update_animethemes_anime(anime_id, log=log)
+            Cache.update_animethemes(anime_id, log=log)
         else:
             if log:
                 print(f"Retrieved animethemes {anime_id} from cache")
@@ -255,7 +255,7 @@ class Cache:
             print(f"Successfully updated animelist cache for ID: {username}")
 
     @staticmethod
-    def update_animethemes_anime(anime_id: str, log: bool = False) -> None:
+    def update_animethemes(anime_id: str, log: bool = False) -> None:
         """
         Update animethemes cache with fresh data from AnimeThemes API.
 
@@ -276,35 +276,6 @@ class Cache:
 
         if log:
             print(f"Successfully updated animethemes cache for ID: {anime_id}")
-
-    @staticmethod
-    def update_animethemes(
-        theme_id: str, title: str, artist: str, log: bool = False
-    ) -> None:
-        """
-        Update animethemes cache with fresh data from AnimeThemes API.
-
-        Parameters
-        ----------
-        anime_id : str
-            MyAnimeList anime ID
-        title : str
-            Theme title
-        artist : str
-            Theme artist(s)
-        log : bool, optional
-            Whether to print log messages to console, by default False
-        """
-        if log:
-            print(f"Updating animethemes cache for ID: {theme_id}")
-
-        with open(
-            Cache.animethemes.format(theme_id), "w", encoding="utf-8"
-        ) as f:
-            json.dump(API.AT.retrieve_theme(title, artist, log=log), f)
-
-        if log:
-            print(f"Successfully updated animethemes cache for ID: {theme_id}")
 
     @staticmethod
     def update_youtube(
@@ -562,7 +533,6 @@ class API:
         """
 
         enpoint_anime = "https://api.animethemes.moe/anime"
-        endpoint_animetheme = "https://api.animethemes.moe/animetheme"
 
         @staticmethod
         def params_mal_anime_id(anime_id: str) -> Dict[str, str]:
@@ -632,94 +602,6 @@ class API:
                 if log:
                     print(
                         f"Failed to fetch animethemes for {anime_id}: HTTP {r.status_code}"
-                    )
-                raise requests.HTTPError(f"HTTP {r.status_code}: {r.text}")
-
-        @staticmethod
-        def params_theme_search(title: str, artist: str) -> Dict[str, str]:
-            """
-            Get query parameters for AnimeThemes API theme search.
-
-            Parameters
-            ----------
-            title : str
-                Theme title to search for
-            artist : str
-                Artist name to search for
-
-            Returns
-            -------
-            Dict[str, str]
-                Query parameters for AnimeThemes API request
-            """
-            return {
-                "filter[has]": "animethemeentries.videos",
-                "filter[title]": title,
-                "filter[artist]": artist,
-                "fields[animetheme]": "id,type,sequence,slug,animethemeentries",
-                "include": "anime,animethemeentries.videos",
-                "page[size]": "1",  # Limit results to most relevant
-            }
-
-        @staticmethod
-        def retrieve_theme(
-            title: str, artist: str, log: bool = False
-        ) -> Dict[str, Any]:
-            """
-            Retrieve theme data from AnimeThemes API by title and artist.
-
-            Parameters
-            ----------
-            title : str
-                Theme title to search for
-            artist : str
-                Artist name to search for
-            log : bool, optional
-                Whether to print log messages to console, by default False
-
-            Returns
-            -------
-            Optional[Dict[str, Any]]
-                Theme data from AnimeThemes API, None if not found
-
-            Raises
-            ------
-            requests.HTTPError
-                If the API request fails
-            """
-            if log:
-                print(f"Searching AnimeThemes for '{title}' by '{artist}'...")
-
-            r = requests.get(
-                API.AT.endpoint_animetheme,
-                params=API.AT.params_theme_search(title, artist),
-                timeout=10,
-            )
-            time.sleep(API.sleep_time)
-
-            if r.status_code == 200:
-                data = r.json()
-                animethemes = data.get("animethemes", [])
-
-                if animethemes:
-                    # Return the first (most relevant) result
-                    song_data = animethemes[0]
-                    if log:
-                        anime_name = song_data.get("anime", {}).get(
-                            "name", "Unknown Anime"
-                        )
-                        print(
-                            f"Found '{title}' by '{artist}' for anime: {anime_name}"
-                        )
-                    return song_data
-                else:
-                    if log:
-                        print(f"No results found for '{title}' by '{artist}'")
-                    return {}
-            else:
-                if log:
-                    print(
-                        f"Failed to search AnimeThemes: HTTP {r.status_code}"
                     )
                 raise requests.HTTPError(f"HTTP {r.status_code}: {r.text}")
 
@@ -853,7 +735,7 @@ if __name__ == "__main__":
 
     # print(Cache.retrieve_animelist(un, log=True))
 
-    mal_id = "30"
+    mal_id = "37450"
 
     # # Example usage with logging
     # print("=== Without logging ===")
@@ -861,5 +743,5 @@ if __name__ == "__main__":
     # print(f"Retrieved anime: {anime_data.get('title', 'Unknown')}")
 
     print("\n=== With logging ===")
-    animethemes_data = Cache.retrieve_animethemes_anime(mal_id, log=True)
+    animethemes_data = Cache.retrieve_animethemes(mal_id, log=True)
     print(f"Retrieved {len(animethemes_data.get('animethemes', []))} themes")
