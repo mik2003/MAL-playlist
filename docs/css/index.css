@@ -89,7 +89,6 @@ body {
     background: #000;
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 0;
     flex-shrink: 0;
 }
 
@@ -98,18 +97,16 @@ body {
     border-radius: 8px !important;
 }
 
+.mejs__controls {
+    background: rgba(28, 126, 214, 0.9) !important;
+}
+
 .mejs__button>button {
     filter: brightness(0) invert(1) !important;
-    opacity: 1 !important;
-    visibility: visible !important;
 }
 
 .mejs__button>button:hover {
     filter: brightness(0) invert(0.8) !important;
-}
-
-.mejs__controls {
-    background: rgba(28, 126, 214, 0.9) !important;
 }
 
 /* Controls */
@@ -146,7 +143,6 @@ body {
 
 #controls button:hover {
     background-color: var(--controls-hover);
-    color: #d0ebff;
     transform: translateY(-1px);
 }
 
@@ -167,54 +163,14 @@ body {
 }
 
 /* Loop button states */
-#loop {
-    transition: all 0.3s ease;
-}
-
 #loop.loop-on {
     background-color: var(--item-active) !important;
-    color: #ffffff !important;
     box-shadow: 0 0 0 2px var(--item-active);
 }
 
-#loop.loop-off {
-    background-color: var(--controls-bg);
-    color: #e7f5ff;
-}
-
-/* Switch source button - icon only */
-#switch-source {
-    font-size: 16px;
-    /* Remove any text content */
-    color: transparent !important;
-    position: relative;
-}
-
-#switch-source::before {
-    content: "🔄";
-    /* Source switch emoji */
-    color: #e7f5ff;
-    /* Match other button text color */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 16px;
-}
-
-#switch-source:hover::before {
-    color: #d0ebff;
-    /* Match other button hover text color */
-}
-
-#switch-source:disabled::before {
+/* Switch source button - using HTML emoji */
+#switch-source:disabled {
     opacity: 0.5;
-}
-
-/* Hide text status indicators */
-#loop-status,
-#source-status {
-    display: none;
 }
 
 /* Tooltips */
@@ -243,43 +199,6 @@ body {
     bottom: -35px;
 }
 
-/* Specific tooltips */
-#prev::after {
-    content: "Previous";
-}
-
-#play::after {
-    content: "Play";
-}
-
-#pause::after {
-    content: "Pause";
-}
-
-#next::after {
-    content: "Next";
-}
-
-#shuffle::after {
-    content: "Shuffle";
-}
-
-#switch-source::after {
-    content: "Switch Source";
-}
-
-#loop::after {
-    content: "Loop: On";
-}
-
-#loop.loop-on::after {
-    content: "Loop: On";
-}
-
-#loop.loop-off::after {
-    content: "Loop: Off";
-}
-
 /* Status display */
 .status-display {
     text-align: center;
@@ -294,20 +213,6 @@ body {
 
 .status-display p {
     margin: 5px 0;
-}
-
-/* Playlist header */
-.playlist-header {
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--item-bg);
-    flex-shrink: 0;
-}
-
-.playlist-header h2 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: var(--body-color);
 }
 
 /* Playlist */
@@ -438,9 +343,7 @@ body {
 
 /* Transitions */
 .playlist-item,
-#controls button,
-.player-section,
-.playlist-section {
+#controls button {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -527,11 +430,9 @@ body {
 
     .playlist-item {
         padding: 10px;
-        font-size: 14px;
     }
 
     .status-display {
-        font-size: 13px;
         padding: 12px;
     }
 }

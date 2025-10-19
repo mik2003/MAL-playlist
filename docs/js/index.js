@@ -12,7 +12,12 @@ let n = 0;
 let isPlaying = false;
 let loop = false;
 let currentSourceType = 'yt_url';
-let wantsToAutoplay = true;
+
+// Source display names
+const SOURCE_DISPLAY_NAMES = {
+    'yt_url': 'YouTube',
+    'at_url': 'AnimeThemes'
+};
 
 // ==================== UTILITY FUNCTIONS ====================
 
@@ -66,7 +71,7 @@ async function fetchAnimeList(url) {
 
 async function loadAnimeList() {
     animeList = await fetchAnimeList(animeListUrl);
-    console.log('Anime list loaded:', animeList);
+    console.log('Anime list loaded');
 }
 
 async function retrievePlaylist() {
@@ -114,21 +119,21 @@ function populatePlaylistDiv() {
     playlistDiv = document.getElementById('playlist');
     playlistDiv.innerHTML = '';
 
-    animePlaylistMap.forEach((songMap, index) => {
-        const playlistItem = createPlaylistItem(songMap, index);
+    // Create playlist items in shuffled order
+    playlistIndeces.forEach((shuffledIndex, displayIndex) => {
+        const playlistItem = createPlaylistItem(shuffledIndex, displayIndex);
         playlistDiv.appendChild(playlistItem);
     });
 }
 
-function createPlaylistItem(songMap, index) {
-    const currentSongData = animePlaylist[playlistIndeces[index]];
-    const anime = animeList.anime[songMap[0]];
+function createPlaylistItem(shuffledIndex, displayIndex) {
+    const currentSongData = animePlaylist[shuffledIndex];
+    const anime = animeList.anime[currentSongData.anime_index]; // Use the anime_index from the song data
 
-    // Create elements
     const playlistItem = document.createElement("div");
     playlistItem.className = "playlist-item";
-    playlistItem.id = index;
-    playlistItem.onclick = () => goToSong(index);
+    playlistItem.id = displayIndex;
+    playlistItem.onclick = () => goToSong(displayIndex);
 
     const playlistItemText = document.createElement("div");
     playlistItemText.className = "playlist-item-text";
@@ -140,11 +145,10 @@ function createPlaylistItem(songMap, index) {
     playlistItemText.appendChild(createTextElement("nameline", currentSongData.name));
     playlistItemText.appendChild(createTextElement("artistline", ` by ${currentSongData.artist}`));
     playlistItemText.appendChild(createTextElement("animeline", `【${anime.title}】`));
-    playlistItemText.appendChild(createEpisodeContainer(songMap[1], currentSongData));
+    playlistItemText.appendChild(createEpisodeContainer(currentSongData.type, currentSongData));
 
     playlistItemImage.appendChild(createAnimeImage(anime.picture, currentSongData.anime_id));
 
-    // Assemble item
     playlistItem.appendChild(playlistItemImage);
     playlistItem.appendChild(playlistItemText);
 
@@ -169,8 +173,8 @@ function createEpisodeContainer(type, songData) {
     const sourceIndicator = document.createElement("span");
     sourceIndicator.className = "playlist-item-source";
     const sources = [];
-    if (songData.yt_url) sources.push('YT');
-    if (songData.at_url) sources.push('AT');
+    if (songData.yt_url) sources.push('YouTube');
+    if (songData.at_url) sources.push('AnimeThemes');
     sourceIndicator.textContent = ` [${sources.join('/')}]`;
 
     container.appendChild(episodeLine);
@@ -188,10 +192,6 @@ function createAnimeImage(src, animeId) {
         image.style.display = 'none';
     });
 
-    image.addEventListener('load', () => {
-        console.log('Successfully loaded image:', src);
-    });
-
     const link = document.createElement("a");
     link.href = `https://myanimelist.net/anime/${animeId}`;
     link.target = "_blank";
@@ -204,14 +204,14 @@ function createAnimeImage(src, animeId) {
 
 function getCurrentSongURL() {
     const currentSong = animePlaylist[playlistIndeces[n]];
-    return currentSong[currentSourceType] || currentSong.at_url || currentSong.yt_url;
+    return currentSong[currentSourceType];
 }
 
 function getAvailableSources() {
     const currentSong = animePlaylist[playlistIndeces[n]];
     const sources = [];
-    if (currentSong.at_url) sources.push('at_url');
     if (currentSong.yt_url) sources.push('yt_url');
+    if (currentSong.at_url) sources.push('at_url');
     return sources;
 }
 
@@ -242,7 +242,9 @@ function loadNewSong() {
     updateSourceDisplay();
 
     // Auto-play the new song
-    setTimeout(playSongAutomatic, 100);
+    setTimeout(() => {
+        playSongAutomatic();
+    }, 100);
 }
 
 function playSongAutomatic() {
@@ -263,15 +265,17 @@ function playSongAutomatic() {
         .catch(error => {
             console.warn('Automatic playback failed:', error);
 
-            if (error.name === 'NotSupportedError' || error.name === 'NotAllowedError') {
-                // Source might be unavailable, skip to next song
+            if (error.name === 'NotSupportedError') {
                 console.log('Source unavailable, skipping to next song');
                 switchSourceOnError();
-            } else {
+            } else if (error.name === 'NotAllowedError') {
+                console.log('Autoplay blocked by browser policy');
                 document.getElementById('player-status').textContent = '⏸️ Click play to start';
                 isPlaying = false;
                 updatePlayPauseButtons();
-                wantsToAutoplay = true;
+            } else {
+                console.log('Other playback error, skipping to next song');
+                switchSourceOnError();
             }
         });
 }
@@ -290,7 +294,6 @@ function playSong() {
             updatePlayPauseButtons();
             updateMediaSessionPlaybackState('playing');
             updateStatusDisplay();
-            wantsToAutoplay = false;
         })
         .catch(error => {
             console.error('User playback failed:', error);
@@ -308,7 +311,6 @@ function pauseSong() {
 function updatePlayPauseButtons() {
     const playBtn = document.getElementById('play');
     const pauseBtn = document.getElementById('pause');
-
     playBtn.style.display = isPlaying ? 'none' : 'inline-block';
     pauseBtn.style.display = isPlaying ? 'inline-block' : 'none';
 }
@@ -331,14 +333,9 @@ function goToSong(new_n) {
 }
 
 function navigateToSong(newIndex) {
-    const wasPlaying = isPlaying;
     clearSongDivStyle();
     n = newIndex;
     loadNewSong();
-
-    if (wasPlaying) {
-        wantsToAutoplay = true;
-    }
 }
 
 function clearSongDivStyle() {
@@ -355,24 +352,6 @@ function applySongDivStyle() {
 
 // ==================== SOURCE MANAGEMENT ====================
 
-const SOURCE_DISPLAY_NAMES = {
-    'yt_url': 'YouTube',
-    'at_url': 'AnimeThemes'
-};
-
-function getCurrentSongURL() {
-    const currentSong = animePlaylist[playlistIndeces[n]];
-    return currentSong[currentSourceType];
-}
-
-function getAvailableSources() {
-    const currentSong = animePlaylist[playlistIndeces[n]];
-    const sources = [];
-    if (currentSong.yt_url) sources.push('yt_url');
-    if (currentSong.at_url) sources.push('at_url');
-    return sources;
-}
-
 function switchSource() {
     const availableSources = getAvailableSources();
 
@@ -381,14 +360,13 @@ function switchSource() {
         return;
     }
 
-    // Cycle to next available source
     const currentIndex = availableSources.indexOf(currentSourceType);
     const nextIndex = (currentIndex + 1) % availableSources.length;
     currentSourceType = availableSources[nextIndex];
 
     console.log(`Switched source to: ${currentSourceType}`);
 
-    // Update tooltip with next source in cycle
+    // Update tooltip
     const nextSourceIndex = (nextIndex + 1) % availableSources.length;
     const nextSource = availableSources[nextSourceIndex];
     const switchButton = document.getElementById('switch-source');
@@ -406,17 +384,13 @@ function switchSource() {
 }
 
 function switchSourceOnError() {
-    // Don't auto-switch sources, just go to next song
     console.log('Source unavailable, skipping to next song');
     goToNextSong();
 }
 
 function updateSourceDisplay() {
-    const sourceStatus = document.getElementById('source-status');
     const currentSource = document.getElementById('current-source');
     const displayName = SOURCE_DISPLAY_NAMES[currentSourceType] || currentSourceType;
-
-    sourceStatus && (sourceStatus.textContent = `Source: ${displayName}`);
     currentSource && (currentSource.textContent = displayName);
 }
 
@@ -424,6 +398,7 @@ function updateSourceDisplay() {
 
 function shufflePlaylist() {
     shuffleArray(playlistIndeces);
+    n = 0;
     playlistDiv.innerHTML = "";
     populatePlaylistDiv();
     applySongDivStyle();
@@ -438,9 +413,11 @@ function toggleLoop() {
     if (loop) {
         loopButton.classList.add('loop-on');
         loopButton.classList.remove('loop-off');
+        loopButton.setAttribute('data-tooltip', 'Loop: On');
     } else {
         loopButton.classList.add('loop-off');
         loopButton.classList.remove('loop-on');
+        loopButton.setAttribute('data-tooltip', 'Loop: Off');
     }
 
     console.log("Toggled loop:", loop);
@@ -453,7 +430,7 @@ function updateStatusDisplay() {
     const elements = {
         'current-song-name': currentSongData.name || 'Unknown',
         'playback-status': isPlaying ? '▶️ Playing' : '⏸️ Paused',
-        'player-status': wantsToAutoplay && !isPlaying ? '⏳ Loading...' : isPlaying ? '✅ Playing' : '✅ Ready',
+        'player-status': isPlaying ? '✅ Playing' : '✅ Ready',
         'current-position': `Song ${n + 1} of ${animePlaylist.length}`
     };
 
@@ -466,10 +443,7 @@ function updateStatusDisplay() {
 // ==================== MEDIA SESSION ====================
 
 function initializeIndependentMediaSession() {
-    if (!('mediaSession' in navigator)) {
-        console.log('Media Session API not supported');
-        return;
-    }
+    if (!('mediaSession' in navigator)) return;
 
     console.log('Initializing independent media session...');
 
@@ -524,7 +498,7 @@ function updateMediaSessionMetadata() {
                 type: 'image/jpeg'
             }]
         });
-        console.log('Media session metadata updated:', currentSongData.name);
+        console.log('Media session metadata updated');
     } catch (error) {
         console.error('Error updating media session metadata:', error);
     }
@@ -538,13 +512,21 @@ function updateMediaSessionPlaybackState(state) {
 
 // ==================== PLAYER INITIALIZATION ====================
 
-function handleAutoplayPolicies() {
-    const tryAutoplay = () => {
-        if (wantsToAutoplay && !isPlaying) playSongAutomatic();
+function initializeTooltips() {
+    const tooltips = {
+        'prev': 'Previous',
+        'play': 'Play',
+        'pause': 'Pause',
+        'next': 'Next',
+        'shuffle': 'Shuffle',
+        'loop': loop ? 'Loop: On' : 'Loop: Off',
+        'switch-source': 'Switch Source'
     };
 
-    document.addEventListener('click', tryAutoplay, { once: true });
-    document.addEventListener('touchstart', tryAutoplay, { once: true });
+    Object.entries(tooltips).forEach(([id, tooltip]) => {
+        const button = document.getElementById(id);
+        button && button.setAttribute('data-tooltip', tooltip);
+    });
 }
 
 function initializeControls() {
@@ -557,8 +539,7 @@ function initializeControls() {
     if (availableSources.length > 1) {
         const currentIndex = availableSources.indexOf(currentSourceType);
         const nextSource = availableSources[(currentIndex + 1) % availableSources.length];
-        const nextDisplayName = SOURCE_DISPLAY_NAMES[nextSource] || nextSource;
-        switchButton.setAttribute('data-tooltip', `Switch to ${nextDisplayName}`);
+        switchButton.setAttribute('data-tooltip', `Switch to ${SOURCE_DISPLAY_NAMES[nextSource]}`);
         switchButton.disabled = false;
         switchButton.style.opacity = '1';
     } else {
@@ -579,32 +560,21 @@ async function initializePlayer() {
         success: function (media) {
             console.log('MediaElement.js player initialized successfully');
 
-            const eventHandlers = {
-                play: () => handlePlayerEvent('Play', true),
-                pause: () => handlePlayerEvent('Pause', false),
-                ended: handlePlaybackEnded,
-                error: (e) => {
-                    console.error('MediaElement.js error:', e);
-                    document.getElementById('player-status').textContent = '❌ Error loading video';
+            // Set up event handlers
+            media.addEventListener('play', () => handlePlayerEvent('Play', true));
+            media.addEventListener('pause', () => handlePlayerEvent('Pause', false));
+            media.addEventListener('ended', handlePlaybackEnded);
+            media.addEventListener('error', handlePlayerError);
+            media.addEventListener('loadeddata', handlePlayerLoaded);
 
-                    // On error, skip to next song instead of switching source
-                    setTimeout(() => {
-                        switchSourceOnError();
-                    }, 1000);
-                },
-                loadeddata: () => {
-                    console.log('MediaElement.js: Video loaded successfully');
-                    document.getElementById('player-status').textContent = '✅ Ready';
-                    if (wantsToAutoplay) setTimeout(playSongAutomatic, 200);
-                },
-                canplay: () => {
-                    if (wantsToAutoplay && !isPlaying) setTimeout(playSongAutomatic, 300);
-                }
+            // Try to start playing immediately when ready
+            const tryInitialPlay = () => {
+                console.log('Player ready, attempting to play first song');
+                loadNewSong();
+                media.removeEventListener('canplay', tryInitialPlay);
             };
 
-            Object.entries(eventHandlers).forEach(([event, handler]) => {
-                media.addEventListener(event, handler);
-            });
+            media.addEventListener('canplay', tryInitialPlay);
         },
 
         error: (error) => {
@@ -625,18 +595,12 @@ async function initializePlayer() {
         }
     }
 
+    initializeTooltips();
     initializeControls();
-    applySongDivStyle();
     updateMediaSessionMetadata();
     updateStatusDisplay();
 
-    wantsToAutoplay = true;
-    isPlaying = false;
-    updatePlayPauseButtons();
-    updateMediaSessionPlaybackState('paused');
-    handleAutoplayPolicies();
-
-    console.log('Player ready - attempting autoplay...');
+    console.log('Player initialization complete');
 }
 
 function handlePlayerEvent(eventName, playing) {
@@ -656,8 +620,18 @@ function handlePlaybackEnded() {
         updatePlayPauseButtons();
         updateMediaSessionPlaybackState('none');
         updateStatusDisplay();
-        wantsToAutoplay = false;
     }
+}
+
+function handlePlayerError(e) {
+    console.error('MediaElement.js error:', e);
+    document.getElementById('player-status').textContent = '❌ Error loading video';
+    setTimeout(switchSourceOnError, 1000);
+}
+
+function handlePlayerLoaded() {
+    console.log('MediaElement.js: Video loaded successfully');
+    document.getElementById('player-status').textContent = '✅ Ready';
 }
 
 // ==================== INITIALIZATION ====================
