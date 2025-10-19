@@ -128,7 +128,7 @@ function populatePlaylistDiv() {
 
 function createPlaylistItem(shuffledIndex, displayIndex) {
     const currentSongData = animePlaylist[shuffledIndex];
-    const anime = animeList.anime[currentSongData.anime_index]; // Use the anime_index from the song data
+    const anime = animeList.anime[currentSongData.anime_index];
 
     const playlistItem = document.createElement("div");
     playlistItem.className = "playlist-item";
@@ -221,7 +221,9 @@ function loadNewSong() {
 
     if (!songUrl) {
         console.log('No URL available for current source, skipping to next song');
-        switchSourceOnError();
+        if (animePlaylist && animePlaylist.length > 0) {
+            goToNextSong();
+        }
         return;
     }
 
@@ -230,9 +232,16 @@ function loadNewSong() {
         return;
     }
 
-    // Set the source based on URL type
     const isYouTube = songUrl.includes('youtube.com') || songUrl.includes('youtu.be');
-    player.setSrc(songUrl, isYouTube ? 'video/youtube' : undefined);
+
+    // Clear previous source and stop
+    player.pause();
+    player.setSrc('');
+
+    // Let MediaElement.js handle the source detection
+    console.log('Setting source for MediaElement.js');
+    player.setSrc(songUrl);
+
     player.load();
 
     // Update UI
@@ -241,47 +250,47 @@ function loadNewSong() {
     updateStatusDisplay();
     updateSourceDisplay();
 
-    // Auto-play the new song
+    // Use MediaElement.js events to detect when it's ready to play
+    const onCanPlay = () => {
+        console.log('MediaElement.js: Can play event received');
+        player.media.removeEventListener('canplay', onCanPlay);
+        player.media.removeEventListener('loadeddata', onLoadedData);
+        playSong();
+    };
+
+    const onLoadedData = () => {
+        console.log('MediaElement.js: Loaded data event received');
+        player.media.removeEventListener('canplay', onCanPlay);
+        player.media.removeEventListener('loadeddata', onLoadedData);
+        playSong();
+    };
+
+    // For YouTube, also listen for the YouTube-specific ready event
+    if (isYouTube) {
+        const onYouTubeReady = () => {
+            console.log('YouTube player ready');
+            player.media.removeEventListener('canplay', onCanPlay);
+            player.media.removeEventListener('loadeddata', onLoadedData);
+            // Small delay for YouTube iframe to initialize
+            setTimeout(playSong, 500);
+        };
+        player.media.addEventListener('canplay', onYouTubeReady);
+    } else {
+        player.media.addEventListener('canplay', onCanPlay);
+        player.media.addEventListener('loadeddata', onLoadedData);
+    }
+
+    // Fallback: if no events fire within 5 seconds, try to play anyway
     setTimeout(() => {
-        playSongAutomatic();
-    }, 100);
-}
-
-function playSongAutomatic() {
-    console.log('Attempting automatic playback');
-    if (!player?.media) return;
-
-    const playPromise = player.media.play();
-    if (!playPromise) return;
-
-    playPromise
-        .then(() => {
-            console.log('Automatic playback started successfully');
-            isPlaying = true;
-            updatePlayPauseButtons();
-            updateMediaSessionPlaybackState('playing');
-            updateStatusDisplay();
-        })
-        .catch(error => {
-            console.warn('Automatic playback failed:', error);
-
-            if (error.name === 'NotSupportedError') {
-                console.log('Source unavailable, skipping to next song');
-                switchSourceOnError();
-            } else if (error.name === 'NotAllowedError') {
-                console.log('Autoplay blocked by browser policy');
-                document.getElementById('player-status').textContent = '⏸️ Click play to start';
-                isPlaying = false;
-                updatePlayPauseButtons();
-            } else {
-                console.log('Other playback error, skipping to next song');
-                switchSourceOnError();
-            }
-        });
+        player.media.removeEventListener('canplay', onCanPlay);
+        player.media.removeEventListener('loadeddata', onLoadedData);
+        console.log('Fallback: attempting playback after timeout');
+        playSong();
+    }, 5000);
 }
 
 function playSong() {
-    console.log('User-initiated playback');
+    console.log('Attempting playback');
     if (!player) return;
 
     const playPromise = player.play();
@@ -289,23 +298,37 @@ function playSong() {
 
     playPromise
         .then(() => {
-            console.log('User playback started successfully');
+            console.log('Playback started successfully');
             isPlaying = true;
             updatePlayPauseButtons();
             updateMediaSessionPlaybackState('playing');
             updateStatusDisplay();
         })
         .catch(error => {
-            console.error('User playback failed:', error);
-            document.getElementById('player-status').textContent = '❌ Playback error';
-            isPlaying = false;
-            updatePlayPauseButtons();
+            console.warn('Playback failed:', error);
+
+            if (error.name === 'NotAllowedError') {
+                console.log('Autoplay blocked by browser policy');
+                document.getElementById('player-status').textContent = '⏸️ Click play to start';
+                isPlaying = false;
+                updatePlayPauseButtons();
+            } else if (error.name === 'NotSupportedError' || error.message.includes('decoders')) {
+                console.log('Format not supported, this might be a YouTube iframe issue - skipping to next song');
+                goToNextSong();
+            } else {
+                console.log('Playback error, skipping to next song');
+                goToNextSong();
+            }
         });
 }
 
 function pauseSong() {
     console.log('Pausing song');
     player?.pause();
+    isPlaying = false;
+    updatePlayPauseButtons();
+    updateMediaSessionPlaybackState('paused');
+    updateStatusDisplay();
 }
 
 function updatePlayPauseButtons() {
@@ -364,7 +387,7 @@ function switchSource() {
     const nextIndex = (currentIndex + 1) % availableSources.length;
     currentSourceType = availableSources[nextIndex];
 
-    console.log(`Switched source to: ${currentSourceType}`);
+    console.log(`User switched source to: ${currentSourceType}`);
 
     // Update tooltip
     const nextSourceIndex = (nextIndex + 1) % availableSources.length;
@@ -381,11 +404,6 @@ function switchSource() {
     }
 
     updateSourceDisplay();
-}
-
-function switchSourceOnError() {
-    console.log('Source unavailable, skipping to next song');
-    goToNextSong();
 }
 
 function updateSourceDisplay() {
@@ -552,40 +570,86 @@ function initializeControls() {
 }
 
 async function initializePlayer() {
+    // First load the playlist data
+    await retrievePlaylist();
+
+    // Then initialize the player
     player = new MediaElementPlayer('mediaelement-player', {
         features: ['playpause', 'current', 'progress', 'duration', 'volume', 'fullscreen'],
         stretching: 'auto',
-        youtube: { cc_load_policy: 1, iv_load_policy: 3, modestbranding: 1, rel: 0 },
-
-        success: function (media) {
+        youtube: {
+            cc_load_policy: 1,
+            iv_load_policy: 3,
+            modestbranding: 1,
+            rel: 0,
+            autoplay: 1
+        },
+        success: function (media, node, instance) {
             console.log('MediaElement.js player initialized successfully');
 
             // Set up event handlers
-            media.addEventListener('play', () => handlePlayerEvent('Play', true));
-            media.addEventListener('pause', () => handlePlayerEvent('Pause', false));
-            media.addEventListener('ended', handlePlaybackEnded);
-            media.addEventListener('error', handlePlayerError);
-            media.addEventListener('loadeddata', handlePlayerLoaded);
+            media.addEventListener('play', () => {
+                console.log('MediaElement.js: Play event');
+                isPlaying = true;
+                updatePlayPauseButtons();
+                updateMediaSessionPlaybackState('playing');
+                updateStatusDisplay();
+            });
 
-            // Try to start playing immediately when ready
-            const tryInitialPlay = () => {
-                console.log('Player ready, attempting to play first song');
+            media.addEventListener('pause', () => {
+                console.log('MediaElement.js: Pause event');
+                isPlaying = false;
+                updatePlayPauseButtons();
+                updateMediaSessionPlaybackState('paused');
+                updateStatusDisplay();
+            });
+
+            media.addEventListener('ended', () => {
+                console.log('MediaElement.js: Ended event');
+                if (loop || n < animePlaylist.length - 1) {
+                    setTimeout(goToNextSong, 500);
+                } else {
+                    isPlaying = false;
+                    updatePlayPauseButtons();
+                    updateMediaSessionPlaybackState('none');
+                    updateStatusDisplay();
+                }
+            });
+
+            media.addEventListener('error', (e) => {
+                console.error('MediaElement.js error:', e, media.error);
+                document.getElementById('player-status').textContent = '❌ Error loading video';
+                setTimeout(goToNextSong, 1000);
+            });
+
+            media.addEventListener('loadeddata', () => {
+                console.log('MediaElement.js: Video loaded successfully');
+                document.getElementById('player-status').textContent = '✅ Ready';
+            });
+
+            media.addEventListener('canplay', () => {
+                console.log('MediaElement.js: Can play event');
+            });
+
+            // Now load the first song - use setTimeout to ensure player assignment is complete
+            setTimeout(() => {
+                console.log('Loading first song after player initialization');
                 loadNewSong();
-                media.removeEventListener('canplay', tryInitialPlay);
-            };
-
-            media.addEventListener('canplay', tryInitialPlay);
+            }, 0);
         },
-
         error: (error) => {
             console.error('MediaElement.js initialization error:', error);
         }
     });
 
-    await retrievePlaylist();
+    // These should happen AFTER player is assigned
     initializeIndependentMediaSession();
+    initializeTooltips();
+    initializeControls();
+    updateMediaSessionMetadata();
+    updateStatusDisplay();
 
-    // Register service worker
+    // Register service worker (can happen anytime)
     if ('serviceWorker' in navigator) {
         try {
             await navigator.serviceWorker.register('sw.js');
@@ -595,43 +659,22 @@ async function initializePlayer() {
         }
     }
 
-    initializeTooltips();
-    initializeControls();
-    updateMediaSessionMetadata();
-    updateStatusDisplay();
-
     console.log('Player initialization complete');
 }
-
-function handlePlayerEvent(eventName, playing) {
-    console.log(`MediaElement.js: ${eventName} event`);
-    isPlaying = playing;
-    updatePlayPauseButtons();
-    updateMediaSessionPlaybackState(playing ? 'playing' : 'paused');
-    updateStatusDisplay();
-}
-
-function handlePlaybackEnded() {
-    console.log('MediaElement.js: Ended event');
-    if (loop || n < animePlaylist.length - 1) {
-        setTimeout(goToNextSong, 500);
-    } else {
-        isPlaying = false;
-        updatePlayPauseButtons();
-        updateMediaSessionPlaybackState('none');
-        updateStatusDisplay();
+// Also add a safety check in getCurrentSongURL
+function getCurrentSongURL() {
+    if (!animePlaylist || animePlaylist.length === 0 || !playlistIndeces || playlistIndeces.length === 0) {
+        console.warn('Playlist not loaded yet');
+        return null;
     }
-}
 
-function handlePlayerError(e) {
-    console.error('MediaElement.js error:', e);
-    document.getElementById('player-status').textContent = '❌ Error loading video';
-    setTimeout(switchSourceOnError, 1000);
-}
+    const currentSong = animePlaylist[playlistIndeces[n]];
+    if (!currentSong) {
+        console.warn('Current song not found at index:', n, 'playlistIndeces:', playlistIndeces);
+        return null;
+    }
 
-function handlePlayerLoaded() {
-    console.log('MediaElement.js: Video loaded successfully');
-    document.getElementById('player-status').textContent = '✅ Ready';
+    return currentSong[currentSourceType];
 }
 
 // ==================== INITIALIZATION ====================
