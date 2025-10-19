@@ -5,226 +5,316 @@
         --body-color: #000000;
         --container-bg: #f8f9fa;
         --item-bg: #e9ecef;
-        --item-hover: #1c7ed6;
+        --item-hover: #dee2e6;
+        --item-active: #1c7ed6;
         --controls-bg: #1864ab;
         --controls-hover: #1c7ed6;
+        --scrollbar-track: #e9ecef;
+        --scrollbar-thumb: #adb5bd;
     }
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --body-bg: #000000;
+        --body-bg: #121212;
         --body-color: #FFFFFF;
-        --container-bg: #343a40;
-        --item-bg: #495057;
-        --item-hover: #1c7ed6;
+        --container-bg: #1e1e1e;
+        --item-bg: #2d2d2d;
+        --item-hover: #3d3d3d;
+        --item-active: #1c7ed6;
         --controls-bg: #1864ab;
         --controls-hover: #1c7ed6;
+        --scrollbar-track: #2d2d2d;
+        --scrollbar-thumb: #495057;
     }
 }
 
+* {
+    box-sizing: border-box;
+}
+
+/* Base styles */
 body {
     background: var(--body-bg);
     color: var(--body-color);
-    font-family: Arial, sans-serif;
-    width: 100vw;
-    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     margin: 0;
-    justify-content: center;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
     display: flex;
+    flex-direction: column;
 }
 
-@media (orientation: landscape) {
-    body {
-        flex-direction: row;
-        align-items: top;
-    }
-
-    #player {
-        width: 40vw;
-        max-width: 400px;
-        height: auto;
-    }
-
-    #playlist {
-        max-height: 90vh;
-    }
-}
-
-@media (orientation: portrait) {
-    body {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #player {
-        width: 90vw;
-        max-width: 400px;
-        height: auto;
-    }
-
-    #playlist {
-        max-width: 90%;
-    }
-}
-
-#player {
-    aspect-ratio: 16/9;
+/* Layout */
+.app-container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 100%;
     padding: 20px;
-    margin: 10px;
-    background-color: var(--container-bg);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
-    position: relative;
+    gap: 20px;
     overflow: hidden;
 }
 
-/* YouTube iframe styling */
-#player iframe {
-    border: none !important;
-    width: 100% !important;
-    height: 100% !important;
+.player-section {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    min-width: 400px;
+    max-width: 600px;
+    height: 100%;
+    overflow: hidden;
 }
 
-/* Hide some YouTube controls but keep functionality */
-.ytp-chrome-top,
-.ytp-title-link,
-.ytp-title-text,
-.ytp-watermark {
-    display: none !important;
+.playlist-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: var(--container-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    min-width: 300px;
+    height: 100%;
+    overflow: hidden;
 }
 
+/* Player */
+#player-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+/* MediaElement.js player customization */
+.mejs__container {
+    border-radius: 8px !important;
+}
+
+.mejs__controls {
+    background: rgba(28, 126, 214, 0.9) !important;
+}
+
+.mejs__button>button {
+    filter: brightness(0) invert(1) !important;
+}
+
+.mejs__button>button:hover {
+    filter: brightness(0) invert(0.8) !important;
+}
+
+/* Controls */
 #controls {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    gap: 5px;
+    gap: 8px;
     flex-wrap: wrap;
+    margin-top: 15px;
+    padding: 15px;
+    background: var(--container-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
 }
 
 #controls button {
     background-color: var(--controls-bg);
     color: #e7f5ff;
     border: none;
-    border-radius: 5px;
-    padding: 10px 10px;
-    margin: 5px;
+    border-radius: 6px;
+    padding: 12px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     font-size: 16px;
+    min-width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 #controls button:hover {
     background-color: var(--controls-hover);
-    color: #d0ebff;
+    transform: translateY(-1px);
+}
+
+#controls button:active {
+    transform: translateY(0);
+}
+
+/* Play/Pause buttons */
+#play,
+#pause {
+    font-size: 18px;
+    min-width: 50px;
+    height: 50px;
 }
 
 #pause {
     display: none;
 }
 
-#loop-status {
-    color: var(--body-color);
-    margin-left: 10px;
+/* Loop button states */
+#loop.loop-on {
+    background-color: var(--item-active) !important;
+    box-shadow: 0 0 0 2px var(--item-active);
+}
+
+/* Switch source button - using HTML emoji */
+#switch-source:disabled {
+    opacity: 0.5;
+}
+
+/* Tooltips */
+#controls button::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+#controls button:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: -35px;
+}
+
+/* Status display */
+.status-display {
+    text-align: center;
+    margin-top: 15px;
+    padding: 15px;
+    background: var(--container-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-size: 14px;
-    padding: 5px 10px;
+    flex-shrink: 0;
 }
 
+.status-display p {
+    margin: 5px 0;
+}
+
+/* Playlist */
 #playlist {
-    padding: 20px;
-    margin: 10px;
-    background-color: var(--container-bg);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    overflow-x: auto;
-    overflow-y: scroll;
-    max-height: 70vh;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 5px;
 }
 
+/* Playlist items */
 .playlist-item {
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 8px;
     background-color: var(--item-bg);
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     display: flex;
     color: var(--body-color);
+    border: 2px solid transparent;
 }
 
 .playlist-item:hover {
-    background-color: var(--item-hover) !important;
-    color: #f8f9fa !important;
+    background-color: var(--item-hover);
+    transform: translateX(4px);
+}
+
+.playlist-item.active {
+    background-color: var(--item-active) !important;
+    color: #ffffff !important;
+    border-color: var(--controls-hover);
+    transform: translateX(4px);
 }
 
 .playlist-item:last-child {
     margin-bottom: 0;
 }
 
-.playlist-item-nameline {
-    font-weight: bold;
-}
-
 .playlist-item-image {
-    margin-right: 10px;
+    margin-right: 12px;
     display: flex;
     align-items: center;
 }
 
 .playlist-item-animeimage {
-    width: 50px;
-    height: auto;
-    border-radius: 3px;
+    width: 60px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .playlist-item-text {
     display: flex;
     flex-direction: column;
     flex: 1;
+    min-width: 0;
+}
+
+.playlist-item-nameline {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.playlist-item-artistline {
+    font-size: 13px;
+    opacity: 0.9;
 }
 
 .playlist-item-animeline {
-    font-size: small;
+    font-size: 13px;
+    margin-top: 4px;
+    opacity: 0.9;
+}
+
+.playlist-item-episode-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     margin-top: 2px;
 }
 
 .playlist-item-episodeline {
-    font-size: small;
-    margin-top: 2px;
+    font-size: 12px;
+    opacity: 0.8;
 }
 
-@media (max-width: 600px) {
-    #controls button {
-        padding: 8px;
-        font-size: 14px;
-    }
+.playlist-item-source {
+    font-style: italic;
+    font-size: 0.8em;
+    opacity: 0.7;
+    color: var(--body-color);
+}
 
-    #loop-status {
-        font-size: 12px;
-        margin-left: 5px;
-    }
-
-    .playlist-item-animeimage {
-        width: 40px;
-    }
-
-    .playlist-item {
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    #player {
-        padding: 10px;
-        margin: 5px;
-    }
-
-    #playlist {
-        padding: 10px;
-        margin: 5px;
-    }
+/* Text overflow handling */
+.playlist-item-nameline,
+.playlist-item-artistline,
+.playlist-item-animeline {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Scrollbar styling */
@@ -233,12 +323,12 @@ body {
 }
 
 #playlist::-webkit-scrollbar-track {
-    background: var(--item-bg);
+    background: var(--scrollbar-track);
     border-radius: 4px;
 }
 
 #playlist::-webkit-scrollbar-thumb {
-    background: var(--controls-bg);
+    background: var(--scrollbar-thumb);
     border-radius: 4px;
 }
 
@@ -246,14 +336,156 @@ body {
     background: var(--controls-hover);
 }
 
-/* Active song styling */
-.playlist-item.active {
-    border-left: 4px solid #1c7ed6;
-    background-color: #1c7ed6 !important;
-    color: #f8f9fa !important;
+#playlist {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
-/* Ensure active song stays highlighted */
-.playlist-item.active:hover {
-    background-color: #1864ab !important;
+/* Transitions */
+.playlist-item,
+#controls button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Accessibility */
+#controls button:focus,
+.playlist-item:focus {
+    outline: 2px solid var(--item-active);
+    outline-offset: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .app-container {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .player-section {
+        width: 45%;
+        min-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+        height: auto;
+        overflow: auto;
+    }
+
+    body {
+        height: auto;
+        overflow: auto;
+    }
+
+    .player-section {
+        width: 100%;
+        min-width: auto;
+        max-width: none;
+        height: auto;
+    }
+
+    .playlist-section {
+        width: 100%;
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    #controls {
+        padding: 12px;
+        gap: 6px;
+    }
+
+    #controls button {
+        padding: 10px;
+        font-size: 14px;
+        min-width: 40px;
+        height: 40px;
+    }
+
+    #play,
+    #pause {
+        font-size: 16px;
+        min-width: 45px;
+        height: 45px;
+    }
+
+    #controls button::after {
+        font-size: 11px;
+        padding: 4px 8px;
+        bottom: -35px;
+    }
+
+    #controls button:hover::after {
+        bottom: -30px;
+    }
+
+    .playlist-item-animeimage {
+        width: 50px;
+        height: 70px;
+    }
+
+    .playlist-item {
+        padding: 10px;
+    }
+
+    .status-display {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-container {
+        padding: 8px;
+        gap: 10px;
+    }
+
+    #controls {
+        gap: 4px;
+        padding: 10px;
+    }
+
+    #controls button {
+        padding: 8px;
+        font-size: 12px;
+        min-width: 36px;
+        height: 36px;
+    }
+
+    #play,
+    #pause {
+        font-size: 14px;
+        min-width: 40px;
+        height: 40px;
+    }
+
+    .playlist-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .playlist-item-image {
+        margin-right: 0;
+        margin-bottom: 8px;
+        justify-content: center;
+    }
+
+    .playlist-item-animeimage {
+        width: 80px;
+        height: 112px;
+    }
+
+    .playlist-item-episode-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .playlist-section {
+        height: 50vh;
+        min-height: 300px;
+    }
 }

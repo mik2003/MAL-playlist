@@ -103,10 +103,10 @@ class ThemeSong:
 
     @property
     def yt_url(self) -> str:
-        # if not self._yt_url:
-        #     self._yt_url = Cache.retrieve_youtube(
-        #         theme_id=str(self.id), title=self.name, artist=self.artist
-        #     )
+        if not self._yt_url:
+            self._yt_url = Cache.retrieve_youtube(
+                theme_id=str(self.id), title=self.name, artist=self.artist
+            )
         return self._yt_url
 
     @yt_url.setter
