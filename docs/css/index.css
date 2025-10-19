@@ -34,7 +34,7 @@
     box-sizing: border-box;
 }
 
-/* Prevent body scrolling */
+/* Base styles */
 body {
     background: var(--body-bg);
     color: var(--body-color);
@@ -42,16 +42,13 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    /* Full viewport height */
     width: 100vw;
-    /* Full viewport width */
     overflow: hidden;
-    /* Prevent entire page scrolling */
     display: flex;
     flex-direction: column;
 }
 
-/* Main container for the entire app */
+/* Layout */
 .app-container {
     display: flex;
     flex: 1;
@@ -60,10 +57,8 @@ body {
     padding: 20px;
     gap: 20px;
     overflow: hidden;
-    /* Prevent container scrolling */
 }
 
-/* Player section - left side */
 .player-section {
     display: flex;
     flex-direction: column;
@@ -71,12 +66,23 @@ body {
     min-width: 400px;
     max-width: 600px;
     height: 100%;
-    /* Take full height */
     overflow: hidden;
-    /* Prevent scrolling */
 }
 
-/* Player container */
+.playlist-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: var(--container-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    min-width: 300px;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Player */
 #player-container {
     width: 100%;
     aspect-ratio: 16/9;
@@ -85,10 +91,28 @@ body {
     overflow: hidden;
     margin-bottom: 0;
     flex-shrink: 0;
-    /* Prevent shrinking */
 }
 
-/* Controls - under the player */
+/* MediaElement.js player customization */
+.mejs__container {
+    border-radius: 8px !important;
+}
+
+.mejs__button>button {
+    filter: brightness(0) invert(1) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.mejs__button>button:hover {
+    filter: brightness(0) invert(0.8) !important;
+}
+
+.mejs__controls {
+    background: rgba(28, 126, 214, 0.9) !important;
+}
+
+/* Controls */
 #controls {
     display: flex;
     justify-content: center;
@@ -101,10 +125,162 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     flex-shrink: 0;
-    /* Prevent shrinking */
 }
 
-/* Status display - under controls */
+#controls button {
+    background-color: var(--controls-bg);
+    color: #e7f5ff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    min-width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#controls button:hover {
+    background-color: var(--controls-hover);
+    color: #d0ebff;
+    transform: translateY(-1px);
+}
+
+#controls button:active {
+    transform: translateY(0);
+}
+
+/* Play/Pause buttons */
+#play,
+#pause {
+    font-size: 18px;
+    min-width: 50px;
+    height: 50px;
+}
+
+#pause {
+    display: none;
+}
+
+/* Loop button states */
+#loop {
+    transition: all 0.3s ease;
+}
+
+#loop.loop-on {
+    background-color: var(--item-active) !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 0 2px var(--item-active);
+}
+
+#loop.loop-off {
+    background-color: var(--controls-bg);
+    color: #e7f5ff;
+}
+
+/* Switch source button - icon only */
+#switch-source {
+    font-size: 16px;
+    /* Remove any text content */
+    color: transparent !important;
+    position: relative;
+}
+
+#switch-source::before {
+    content: "🔄";
+    /* Source switch emoji */
+    color: #e7f5ff;
+    /* Match other button text color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+}
+
+#switch-source:hover::before {
+    color: #d0ebff;
+    /* Match other button hover text color */
+}
+
+#switch-source:disabled::before {
+    opacity: 0.5;
+}
+
+/* Hide text status indicators */
+#loop-status,
+#source-status {
+    display: none;
+}
+
+/* Tooltips */
+#controls button::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+#controls button:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: -35px;
+}
+
+/* Specific tooltips */
+#prev::after {
+    content: "Previous";
+}
+
+#play::after {
+    content: "Play";
+}
+
+#pause::after {
+    content: "Pause";
+}
+
+#next::after {
+    content: "Next";
+}
+
+#shuffle::after {
+    content: "Shuffle";
+}
+
+#switch-source::after {
+    content: "Switch Source";
+}
+
+#loop::after {
+    content: "Loop: On";
+}
+
+#loop.loop-on::after {
+    content: "Loop: On";
+}
+
+#loop.loop-off::after {
+    content: "Loop: Off";
+}
+
+/* Status display */
 .status-display {
     text-align: center;
     margin-top: 15px;
@@ -114,37 +290,10 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-size: 14px;
     flex-shrink: 0;
-    /* Prevent shrinking */
 }
 
 .status-display p {
     margin: 5px 0;
-}
-
-#loop-status,
-#source-status {
-    color: var(--body-color);
-    font-size: 14px;
-    padding: 6px 12px;
-    background: var(--item-bg);
-    border-radius: 6px;
-    margin: 0 5px;
-}
-
-/* Playlist section - right side */
-.playlist-section {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    background: var(--container-bg);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    min-width: 300px;
-    height: 100%;
-    /* Take full height */
-    overflow: hidden;
-    /* Contain scrolling to playlist only */
 }
 
 /* Playlist header */
@@ -153,7 +302,6 @@ body {
     padding-bottom: 10px;
     border-bottom: 1px solid var(--item-bg);
     flex-shrink: 0;
-    /* Prevent header from scrolling */
 }
 
 .playlist-header h2 {
@@ -162,17 +310,15 @@ body {
     color: var(--body-color);
 }
 
-/* Playlist - ONLY this element scrolls */
+/* Playlist */
 #playlist {
     flex: 1;
     overflow-y: auto;
-    /* Only this scrolls */
     overflow-x: hidden;
     padding-right: 5px;
-    /* Allow scrolling within playlist only */
 }
 
-/* Rest of your existing styles remain the same */
+/* Playlist items */
 .playlist-item {
     padding: 12px;
     margin-bottom: 8px;
@@ -201,16 +347,6 @@ body {
     margin-bottom: 0;
 }
 
-.playlist-item-nameline {
-    font-weight: bold;
-    font-size: 15px;
-}
-
-.playlist-item-artistline {
-    font-size: 13px;
-    opacity: 0.9;
-}
-
 .playlist-item-image {
     margin-right: 12px;
     display: flex;
@@ -230,6 +366,16 @@ body {
     flex-direction: column;
     flex: 1;
     min-width: 0;
+}
+
+.playlist-item-nameline {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.playlist-item-artistline {
+    font-size: 13px;
+    opacity: 0.9;
 }
 
 .playlist-item-animeline {
@@ -257,19 +403,6 @@ body {
     color: var(--body-color);
 }
 
-/* MediaElement.js player customization */
-.mejs__container {
-    border-radius: 8px !important;
-}
-
-.mejs__controls {
-    background: rgba(28, 126, 214, 0.9) !important;
-}
-
-.mejs__button>button {
-    background: transparent !important;
-}
-
 /* Text overflow handling */
 .playlist-item-nameline,
 .playlist-item-artistline,
@@ -277,6 +410,45 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+/* Scrollbar styling */
+#playlist::-webkit-scrollbar {
+    width: 8px;
+}
+
+#playlist::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+    border-radius: 4px;
+}
+
+#playlist::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 4px;
+}
+
+#playlist::-webkit-scrollbar-thumb:hover {
+    background: var(--controls-hover);
+}
+
+#playlist {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/* Transitions */
+.playlist-item,
+#controls button,
+.player-section,
+.playlist-section {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Accessibility */
+#controls button:focus,
+.playlist-item:focus {
+    outline: 2px solid var(--item-active);
+    outline-offset: 2px;
 }
 
 /* Responsive design */
@@ -298,16 +470,12 @@ body {
         padding: 10px;
         gap: 15px;
         height: auto;
-        /* Allow natural height on mobile */
         overflow: auto;
-        /* Allow scrolling on mobile */
     }
 
     body {
         height: auto;
-        /* Allow natural height on mobile */
         overflow: auto;
-        /* Allow scrolling on mobile */
     }
 
     .player-section {
@@ -315,24 +483,41 @@ body {
         min-width: auto;
         max-width: none;
         height: auto;
-        /* Allow natural height on mobile */
     }
 
     .playlist-section {
         width: 100%;
         height: 60vh;
-        /* Fixed height on mobile */
         min-height: 400px;
     }
 
     #controls {
         padding: 12px;
+        gap: 6px;
     }
 
     #controls button {
-        padding: 8px 10px;
+        padding: 10px;
         font-size: 14px;
         min-width: 40px;
+        height: 40px;
+    }
+
+    #play,
+    #pause {
+        font-size: 16px;
+        min-width: 45px;
+        height: 45px;
+    }
+
+    #controls button::after {
+        font-size: 11px;
+        padding: 4px 8px;
+        bottom: -35px;
+    }
+
+    #controls button:hover::after {
+        bottom: -30px;
     }
 
     .playlist-item-animeimage {
@@ -358,14 +543,22 @@ body {
     }
 
     #controls {
-        gap: 5px;
+        gap: 4px;
         padding: 10px;
     }
 
     #controls button {
-        padding: 6px 8px;
+        padding: 8px;
         font-size: 12px;
         min-width: 36px;
+        height: 36px;
+    }
+
+    #play,
+    #pause {
+        font-size: 14px;
+        min-width: 40px;
+        height: 40px;
     }
 
     .playlist-item {
@@ -392,47 +585,6 @@ body {
 
     .playlist-section {
         height: 50vh;
-        /* Smaller height on very small screens */
         min-height: 300px;
     }
-}
-
-/* Scrollbar styling - ONLY for playlist */
-#playlist::-webkit-scrollbar {
-    width: 8px;
-}
-
-#playlist::-webkit-scrollbar-track {
-    background: var(--scrollbar-track);
-    border-radius: 4px;
-}
-
-#playlist::-webkit-scrollbar-thumb {
-    background: var(--scrollbar-thumb);
-    border-radius: 4px;
-}
-
-#playlist::-webkit-scrollbar-thumb:hover {
-    background: var(--controls-hover);
-}
-
-/* Firefox scrollbar - ONLY for playlist */
-#playlist {
-    scrollbar-width: thin;
-    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
-}
-
-/* Animation for smooth transitions */
-.playlist-item,
-#controls button,
-.player-section,
-.playlist-section {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Focus states for accessibility */
-#controls button:focus,
-.playlist-item:focus {
-    outline: 2px solid var(--item-active);
-    outline-offset: 2px;
 }
