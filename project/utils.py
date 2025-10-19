@@ -159,7 +159,7 @@ class Cache:
             if theme_id in cache:
                 if log:
                     print(f"Retrieved theme with ID  {theme_id} from cache")
-                return cache[theme_id]
+                return cache[theme_id][0]
         if title and artist:
             if log:
                 print(
@@ -167,7 +167,7 @@ class Cache:
                 )
             Cache.update_youtube(theme_id, title, artist, log=log)
             cache = json_read(Cache.youtube)
-            return cache[theme_id]
+            return cache[theme_id][0]
         raise AttributeError(
             "Cache.retrieve_youtube: title and/or artist not present, "
             + "unable to retrieve URL."

@@ -5,159 +5,196 @@
         --body-color: #000000;
         --container-bg: #f8f9fa;
         --item-bg: #e9ecef;
-        --item-hover: #1c7ed6;
+        --item-hover: #dee2e6;
+        --item-active: #1c7ed6;
         --controls-bg: #1864ab;
         --controls-hover: #1c7ed6;
+        --scrollbar-track: #e9ecef;
+        --scrollbar-thumb: #adb5bd;
     }
 }
 
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
-        --body-bg: #000000;
+        --body-bg: #121212;
         --body-color: #FFFFFF;
-        --container-bg: #343a40;
-        --item-bg: #495057;
-        --item-hover: #1c7ed6;
+        --container-bg: #1e1e1e;
+        --item-bg: #2d2d2d;
+        --item-hover: #3d3d3d;
+        --item-active: #1c7ed6;
         --controls-bg: #1864ab;
         --controls-hover: #1c7ed6;
+        --scrollbar-track: #2d2d2d;
+        --scrollbar-thumb: #495057;
     }
 }
 
+* {
+    box-sizing: border-box;
+}
+
+/* Prevent body scrolling */
 body {
     background: var(--body-bg);
     color: var(--body-color);
-    font-family: Arial, sans-serif;
-    width: 100vw;
-    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     margin: 0;
-    justify-content: center;
-    display: flex;
-}
-
-@media (orientation: landscape) {
-    body {
-        flex-direction: row;
-        align-items: top;
-    }
-
-    #player {
-        width: 40vw;
-        max-width: 400px;
-        height: auto;
-    }
-
-    #playlist {
-        max-height: 90vh;
-    }
-}
-
-@media (orientation: portrait) {
-    body {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #player {
-        width: 90vw;
-        max-width: 400px;
-        height: auto;
-    }
-
-    #playlist {
-        max-width: 90%;
-    }
-}
-
-#player {
-    aspect-ratio: 16/9;
-    padding: 20px;
-    margin: 10px;
-    background-color: var(--container-bg);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    display: flex;
-    position: relative;
+    padding: 0;
+    height: 100vh;
+    /* Full viewport height */
+    width: 100vw;
+    /* Full viewport width */
     overflow: hidden;
+    /* Prevent entire page scrolling */
+    display: flex;
+    flex-direction: column;
 }
 
-/* YouTube iframe styling */
-#player iframe {
-    border: none !important;
-    width: 100% !important;
-    height: 100% !important;
+/* Main container for the entire app */
+.app-container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    gap: 20px;
+    overflow: hidden;
+    /* Prevent container scrolling */
 }
 
-/* Hide some YouTube controls but keep functionality */
-.ytp-chrome-top,
-.ytp-title-link,
-.ytp-title-text,
-.ytp-watermark {
-    display: none !important;
+/* Player section - left side */
+.player-section {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    min-width: 400px;
+    max-width: 600px;
+    height: 100%;
+    /* Take full height */
+    overflow: hidden;
+    /* Prevent scrolling */
 }
 
+/* Player container */
+#player-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 0;
+    flex-shrink: 0;
+    /* Prevent shrinking */
+}
+
+/* Controls - under the player */
 #controls {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
-    gap: 5px;
+    gap: 8px;
     flex-wrap: wrap;
+    margin-top: 15px;
+    padding: 15px;
+    background: var(--container-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+    /* Prevent shrinking */
 }
 
-#controls button {
-    background-color: var(--controls-bg);
-    color: #e7f5ff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 10px;
-    margin: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-}
-
-#controls button:hover {
-    background-color: var(--controls-hover);
-    color: #d0ebff;
-}
-
-#pause {
-    display: none;
-}
-
-#loop-status {
-    color: var(--body-color);
-    margin-left: 10px;
+/* Status display - under controls */
+.status-display {
+    text-align: center;
+    margin-top: 15px;
+    padding: 15px;
+    background: var(--container-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-size: 14px;
-    padding: 5px 10px;
+    flex-shrink: 0;
+    /* Prevent shrinking */
 }
 
-#playlist {
-    padding: 20px;
-    margin: 10px;
-    background-color: var(--container-bg);
+.status-display p {
+    margin: 5px 0;
+}
+
+#loop-status,
+#source-status {
+    color: var(--body-color);
+    font-size: 14px;
+    padding: 6px 12px;
+    background: var(--item-bg);
+    border-radius: 6px;
+    margin: 0 5px;
+}
+
+/* Playlist section - right side */
+.playlist-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: var(--container-bg);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    overflow-x: auto;
-    overflow-y: scroll;
-    max-height: 70vh;
+    padding: 20px;
+    min-width: 300px;
+    height: 100%;
+    /* Take full height */
+    overflow: hidden;
+    /* Contain scrolling to playlist only */
 }
 
+/* Playlist header */
+.playlist-header {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--item-bg);
+    flex-shrink: 0;
+    /* Prevent header from scrolling */
+}
+
+.playlist-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--body-color);
+}
+
+/* Playlist - ONLY this element scrolls */
+#playlist {
+    flex: 1;
+    overflow-y: auto;
+    /* Only this scrolls */
+    overflow-x: hidden;
+    padding-right: 5px;
+    /* Allow scrolling within playlist only */
+}
+
+/* Rest of your existing styles remain the same */
 .playlist-item {
-    padding: 10px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 8px;
     background-color: var(--item-bg);
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     display: flex;
     color: var(--body-color);
+    border: 2px solid transparent;
 }
 
 .playlist-item:hover {
-    background-color: var(--item-hover) !important;
-    color: #f8f9fa !important;
+    background-color: var(--item-hover);
+    transform: translateX(4px);
+}
+
+.playlist-item.active {
+    background-color: var(--item-active) !important;
+    color: #ffffff !important;
+    border-color: var(--controls-hover);
+    transform: translateX(4px);
 }
 
 .playlist-item:last-child {
@@ -166,79 +203,212 @@ body {
 
 .playlist-item-nameline {
     font-weight: bold;
+    font-size: 15px;
+}
+
+.playlist-item-artistline {
+    font-size: 13px;
+    opacity: 0.9;
 }
 
 .playlist-item-image {
-    margin-right: 10px;
+    margin-right: 12px;
     display: flex;
     align-items: center;
 }
 
 .playlist-item-animeimage {
-    width: 50px;
-    height: auto;
-    border-radius: 3px;
+    width: 60px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .playlist-item-text {
     display: flex;
     flex-direction: column;
     flex: 1;
+    min-width: 0;
 }
 
 .playlist-item-animeline {
-    font-size: small;
+    font-size: 13px;
+    margin-top: 4px;
+    opacity: 0.9;
+}
+
+.playlist-item-episode-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     margin-top: 2px;
 }
 
 .playlist-item-episodeline {
-    font-size: small;
-    margin-top: 2px;
+    font-size: 12px;
+    opacity: 0.8;
 }
 
-@media (max-width: 600px) {
-    #controls button {
-        padding: 8px;
-        font-size: 14px;
+.playlist-item-source {
+    font-style: italic;
+    font-size: 0.8em;
+    opacity: 0.7;
+    color: var(--body-color);
+}
+
+/* MediaElement.js player customization */
+.mejs__container {
+    border-radius: 8px !important;
+}
+
+.mejs__controls {
+    background: rgba(28, 126, 214, 0.9) !important;
+}
+
+.mejs__button>button {
+    background: transparent !important;
+}
+
+/* Text overflow handling */
+.playlist-item-nameline,
+.playlist-item-artistline,
+.playlist-item-animeline {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .app-container {
+        padding: 15px;
+        gap: 15px;
     }
 
-    #loop-status {
-        font-size: 12px;
-        margin-left: 5px;
+    .player-section {
+        width: 45%;
+        min-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+        height: auto;
+        /* Allow natural height on mobile */
+        overflow: auto;
+        /* Allow scrolling on mobile */
+    }
+
+    body {
+        height: auto;
+        /* Allow natural height on mobile */
+        overflow: auto;
+        /* Allow scrolling on mobile */
+    }
+
+    .player-section {
+        width: 100%;
+        min-width: auto;
+        max-width: none;
+        height: auto;
+        /* Allow natural height on mobile */
+    }
+
+    .playlist-section {
+        width: 100%;
+        height: 60vh;
+        /* Fixed height on mobile */
+        min-height: 400px;
+    }
+
+    #controls {
+        padding: 12px;
+    }
+
+    #controls button {
+        padding: 8px 10px;
+        font-size: 14px;
+        min-width: 40px;
     }
 
     .playlist-item-animeimage {
-        width: 40px;
+        width: 50px;
+        height: 70px;
     }
 
     .playlist-item {
-        padding: 8px;
+        padding: 10px;
         font-size: 14px;
     }
 
-    #player {
-        padding: 10px;
-        margin: 5px;
-    }
-
-    #playlist {
-        padding: 10px;
-        margin: 5px;
+    .status-display {
+        font-size: 13px;
+        padding: 12px;
     }
 }
 
-/* Scrollbar styling */
+@media (max-width: 480px) {
+    .app-container {
+        padding: 8px;
+        gap: 10px;
+    }
+
+    #controls {
+        gap: 5px;
+        padding: 10px;
+    }
+
+    #controls button {
+        padding: 6px 8px;
+        font-size: 12px;
+        min-width: 36px;
+    }
+
+    .playlist-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .playlist-item-image {
+        margin-right: 0;
+        margin-bottom: 8px;
+        justify-content: center;
+    }
+
+    .playlist-item-animeimage {
+        width: 80px;
+        height: 112px;
+    }
+
+    .playlist-item-episode-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .playlist-section {
+        height: 50vh;
+        /* Smaller height on very small screens */
+        min-height: 300px;
+    }
+}
+
+/* Scrollbar styling - ONLY for playlist */
 #playlist::-webkit-scrollbar {
     width: 8px;
 }
 
 #playlist::-webkit-scrollbar-track {
-    background: var(--item-bg);
+    background: var(--scrollbar-track);
     border-radius: 4px;
 }
 
 #playlist::-webkit-scrollbar-thumb {
-    background: var(--controls-bg);
+    background: var(--scrollbar-thumb);
     border-radius: 4px;
 }
 
@@ -246,14 +416,23 @@ body {
     background: var(--controls-hover);
 }
 
-/* Active song styling */
-.playlist-item.active {
-    border-left: 4px solid #1c7ed6;
-    background-color: #1c7ed6 !important;
-    color: #f8f9fa !important;
+/* Firefox scrollbar - ONLY for playlist */
+#playlist {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
-/* Ensure active song stays highlighted */
-.playlist-item.active:hover {
-    background-color: #1864ab !important;
+/* Animation for smooth transitions */
+.playlist-item,
+#controls button,
+.player-section,
+.playlist-section {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus states for accessibility */
+#controls button:focus,
+.playlist-item:focus {
+    outline: 2px solid var(--item-active);
+    outline-offset: 2px;
 }
