@@ -646,16 +646,11 @@ if __name__ == "__main__":
     with open("test.json", "w", encoding="utf-8") as f:
         json.dump(
             al.json_encode(
-                include_null=False,
-                anime_exclude=[
-                    "picture",
-                ],
-                themesong_include=[
-                    "id",
-                    "name",
-                    "artist",
+                include_null=True,
+                themesong_exclude=[
                     "yt_id",
                     "yt_query",
+                    "spotify_uri",
                 ],
             ),
             f,
