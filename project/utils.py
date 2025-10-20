@@ -41,6 +41,9 @@ class Cache:
     animelist = os.path.join("project", "cache", "animelist", "{}.json")
     animethemes = os.path.join("project", "cache", "animethemes", "{}.json")
     youtube = os.path.join("project", "cache", "youtube", "youtube.json")
+    youtube_query = os.path.join(
+        "project", "cache", "youtube", "youtube_query.json"
+    )
     spotify = os.path.join("project", "cache", "spotify", "spotify.json")
 
     @staticmethod
@@ -154,12 +157,41 @@ class Cache:
         str
             YouTube URL for theme
         """
+        return API.YT.video_url.format(
+            Cache.retrieve_youtube_id(
+                theme_id=theme_id, title=title, artist=artist, log=log
+            )
+        )
+
+    @staticmethod
+    def retrieve_youtube_id(
+        theme_id: str, title: str = "", artist: str = "", log: bool = False
+    ) -> str:
+        """
+        Retrieve YouTube video ID for theme from cache or update if not present.
+
+        Parameters
+        ----------
+        theme_id : str
+            MyAnimeList's ID for anime theme
+        title : str, optional
+            Theme title
+        artist : str, optional
+            Theme artist(s)
+        log : bool, optional
+            Whether to print log messages to console, by default False
+
+        Returns
+        -------
+        str
+            YouTube video ID for theme
+        """
         if os.path.exists(Cache.youtube):
             cache = json_read(Cache.youtube)
             if theme_id in cache:
                 if log:
                     print(f"Retrieved theme with ID  {theme_id} from cache")
-                return cache[theme_id][0]
+                return cache[theme_id]
         if title and artist:
             if log:
                 print(
@@ -167,10 +199,52 @@ class Cache:
                 )
             Cache.update_youtube(theme_id, title, artist, log=log)
             cache = json_read(Cache.youtube)
-            return cache[theme_id][0]
+            return cache[theme_id]
         raise AttributeError(
             "Cache.retrieve_youtube: title and/or artist not present, "
-            + "unable to retrieve URL."
+            + "unable to retrieve video ID."
+        )
+
+    @staticmethod
+    def retrieve_youtube_query(
+        theme_id: str, title: str = "", artist: str = "", log: bool = False
+    ) -> str:
+        """
+        Retrieve YouTube query URL for theme from cache or update if not present.
+
+        Parameters
+        ----------
+        theme_id : str
+            MyAnimeList's ID for anime theme
+        title : str, optional
+            Theme title
+        artist : str, optional
+            Theme artist(s)
+        log : bool, optional
+            Whether to print log messages to console, by default False
+
+        Returns
+        -------
+        str
+            YouTube query URL for theme
+        """
+        if os.path.exists(Cache.youtube_query):
+            cache = json_read(Cache.youtube_query)
+            if theme_id in cache:
+                if log:
+                    print(f"Retrieved theme with ID  {theme_id} from cache")
+                return cache[theme_id]
+        if title and artist:
+            if log:
+                print(
+                    f"YouTube query cache missing for theme with ID  {theme_id}, creating..."
+                )
+            Cache.update_youtube_query(theme_id, title, artist, log=log)
+            cache = json_read(Cache.youtube_query)
+            return cache[theme_id]
+        raise AttributeError(
+            "Cache.retrieve_youtube_query: title and/or artist not present, "
+            + "unable to retrieve query URL."
         )
 
     @staticmethod
@@ -308,7 +382,7 @@ class Cache:
         else:
             cache = {}
 
-        cache[theme_id] = API.YT.get_theme_url(title=title, artist=artist)
+        cache[theme_id] = API.YT.get_theme_id(title=title, artist=artist)
 
         with open(Cache.youtube, "w", encoding="utf-8") as f:
             json.dump(cache, f)
@@ -316,6 +390,42 @@ class Cache:
         if log:
             print(
                 f"Successfully updated YouTube cache for theme ID: {theme_id}"
+            )
+
+    @staticmethod
+    def update_youtube_query(
+        theme_id: str, title: str, artist: str, log: bool = False
+    ) -> None:
+        """
+        Update anime theme cache with YouTube query URL.
+
+        Parameters
+        ----------
+        theme_id : str
+            MyAnimeList' anime theme ID
+        title : str
+            Theme title
+        artist : str
+            Theme artist(s)
+        log : bool, optional
+            Whether to print log messages to console, by default False
+        """
+        if log:
+            print(f"Updating YouTube query cache for ID: {theme_id}")
+
+        if os.path.exists(Cache.youtube_query):
+            cache = json_read(Cache.youtube_query)
+        else:
+            cache = {}
+
+        cache[theme_id] = API.YT.get_query(title=title, artist=artist)
+
+        with open(Cache.youtube_query, "w", encoding="utf-8") as f:
+            json.dump(cache, f)
+
+        if log:
+            print(
+                f"Successfully updated YouTube query cache for theme ID: {theme_id}"
             )
 
     @staticmethod
@@ -617,9 +727,9 @@ class API:
         video_url_re = r"watch\?v=(\S{11})"
 
         @staticmethod
-        def get_theme_url(title: str, artist: str, log: bool = False) -> str:
+        def get_theme_id(title: str, artist: str, log: bool = False) -> str:
             """
-            Get YouTube URL for a theme song.
+            Get YouTube video ID for a theme song.
 
             Searches YouTube for a theme song and returns the URL of the first result.
 
@@ -635,7 +745,7 @@ class API:
             Returns
             -------
             str
-                YouTube video URL for the theme song
+                YouTube video ID for the theme song
 
             Raises
             ------
@@ -660,12 +770,12 @@ class API:
                     f"No YouTube videos found for: '{title}' by {artist}"
                 )
 
-            url = API.YT.video_url.format(video_ids[0])
+            video_id = video_ids[0]
 
             if log:
-                print(f"Selected YouTube URL: {url}")
+                print(f"Selected YouTube video ID: {video_id}")
 
-            return url
+            return video_id
 
         @staticmethod
         def get_theme_ids(
@@ -695,12 +805,9 @@ class API:
             requests.HTTPError
                 If the YouTube search request fails
             """
-            search_query = f"{title} by {artist}"
-            encoded_query = quote(search_query)
-            search_url = API.YT.search_query_url.format(encoded_query)
+            search_url = API.YT.get_query(title=title, artist=artist, log=log)
 
             if log:
-                print(f"YouTube search query: '{search_query}'")
                 print(f"Search URL: {search_url}")
 
             r = requests.get(search_url, timeout=10)
@@ -723,6 +830,31 @@ class API:
                 raise requests.HTTPError(
                     f"YouTube search failed: HTTP {r.status_code}"
                 )
+
+        @staticmethod
+        def get_query(title: str, artist: str, log: bool = False) -> str:
+            """
+            Get YouTube query for a theme song search.
+
+            Parameters
+            ----------
+            title : str
+                Title of the theme song
+            artist : str
+                Artist name of the theme song
+            log : bool, optional
+                Whether to print log messages to console, by default False
+
+            Returns
+            -------
+            str
+                URL of YouTube query
+            """
+            search_query = f"{title} by {artist}"
+            encoded_query = quote(search_query)
+            if log:
+                print(f"YouTube search query: '{search_query}'")
+            return API.YT.search_query_url.format(encoded_query)
 
     class Spotify:
         keys = os.path.join("project", ".secret", "spotify_api.json")

@@ -1,8 +1,93 @@
 import json
 import re
-from typing import Any, Optional
+from typing import Any, List, Literal, Optional, TypedDict, Unpack, cast
 
 from project.utils import Cache
+
+
+class EncodeOptions(TypedDict, total=False):
+    """
+    Configuration options for JSON encoding of Anime and AnimeTheme objects.
+
+    This TypedDict defines all available options for controlling which fields
+    are included when serializing Anime and AnimeTheme instances to JSON.
+
+    Options are organized by object type and allow for fine-grained control
+    over serialization output through include/exclude patterns.
+
+    Parameters
+    ----------
+    include_null : bool, default True
+        Whether to include null fields
+
+    anime_include : List[AnimeField], optional
+        Whitelist of fields to include for Anime objects.
+        If specified, only these fields will be present in the output.
+        Available fields: "id", "title", "picture", "opening_themes", "ending_themes"
+
+    anime_exclude : List[AnimeField], optional
+        Blacklist of fields to exclude for Anime objects.
+        Only used if `anime_include` is not provided.
+        Available fields: "id", "title", "picture", "opening_themes", "ending_themes"
+
+    themesong_include : List[ThemeSongField], optional
+        Whitelist of fields to include for AnimeTheme objects.
+        If specified, only these fields will be present in the output.
+        Available fields: "id", "anime_id", "text", "index", "name", "artist",
+        "episode", "yt_id", "yt_url", "yt_query", "at_url", "spotify_uri"
+
+    themesong_exclude : List[ThemeSongField], optional
+        Blacklist of fields to exclude for AnimeTheme objects.
+        Only used if `themesong_include` is not provided.
+        Available fields: "id", "anime_id", "text", "index", "name", "artist",
+        "episode", "yt_id", "yt_url", "yt_query", "at_url", "spotify_uri"
+
+    Behavior
+    --------
+    - If neither include nor exclude options are provided for an object type,
+      all fields for that object type are included.
+    - Include options take precedence over exclude options.
+    """
+
+    include_null: bool
+    anime_include: List[
+        Literal["id", "title", "picture", "opening_themes", "ending_themes"]
+    ]
+    anime_exclude: List[
+        Literal["id", "title", "picture", "opening_themes", "ending_themes"]
+    ]
+    themesong_include: List[
+        Literal[
+            "id",
+            "anime_id",
+            "text",
+            "index",
+            "name",
+            "artist",
+            "episode",
+            "yt_id",
+            "yt_url",
+            "yt_query",
+            "at_url",
+            "spotify_uri",
+        ]
+    ]
+    themesong_exclude: List[
+        Literal[
+            "id",
+            "anime_id",
+            "text",
+            "index",
+            "name",
+            "artist",
+            "episode",
+            "yt_id",
+            "yt_url",
+            "yt_query",
+            "at_url",
+            "spotify_uri",
+        ]
+    ]
 
 
 class ThemeSong:
@@ -33,18 +118,19 @@ class ThemeSong:
         Artist of the theme song
     episode : str
         Episodes for which the theme song is used
-    at_url : str
-        AnimeThemes.moe URL for the theme song
+    yt_id : str
+        YouTube video ID for theme song
     yt_url : str
         YouTube URL for the theme song
+    yt_query : str
+        YouTube query URL for the theme song
+    at_url : str
+        AnimeThemes.moe URL for the theme song
     spotify_uri : str
         Spotify URI for the theme song
     """
 
-    def __init__(
-        self,
-        theme_song: Any,
-    ) -> None:
+    def __init__(self, theme_song: Any) -> None:
         self.id: int
         self.anime_id: int
         self.text: str
@@ -52,8 +138,10 @@ class ThemeSong:
         self.name: str
         self.artist: str
         self.episode: Optional[str]
-        self._at_url: str = ""
+        self._yt_id: str = ""
         self._yt_url: str = ""
+        self._yt_query: str = ""
+        self._at_url: str = ""
         self._spotify_uri: str = ""
 
         if theme_song:
@@ -90,16 +178,18 @@ class ThemeSong:
             self.episode = None
 
     @property
-    def at_url(self) -> str:
-        # if not self._at_url:
-        #     raise ValueError
-        return self._at_url
+    def yt_id(self) -> str:
+        if not self._yt_id:
+            self._yt_id = Cache.retrieve_youtube_id(
+                theme_id=str(self.id), title=self.name, artist=self.artist
+            )
+        return self._yt_id
 
-    @at_url.setter
-    def at_url(self, value: Any) -> None:
+    @yt_id.setter
+    def yt_id(self, value: Any) -> None:
         if not isinstance(value, str):
             raise TypeError
-        self._at_url = value
+        self._yt_id = value
 
     @property
     def yt_url(self) -> str:
@@ -116,6 +206,32 @@ class ThemeSong:
         self._yt_url = value
 
     @property
+    def yt_query(self) -> str:
+        if not self._yt_query:
+            self._yt_query = Cache.retrieve_youtube_query(
+                theme_id=str(self.id), title=self.name, artist=self.artist
+            )
+        return self._yt_query
+
+    @yt_query.setter
+    def yt_query(self, value: Any) -> None:
+        if not isinstance(value, str):
+            raise TypeError
+        self._yt_query = value
+
+    @property
+    def at_url(self) -> str:
+        # if not self._at_url:
+        #     raise ValueError
+        return self._at_url
+
+    @at_url.setter
+    def at_url(self, value: Any) -> None:
+        if not isinstance(value, str):
+            raise TypeError
+        self._at_url = value
+
+    @property
     def spotify_uri(self) -> str:
         # if not self._spotify_uri:
         #     self._spotify_uri = Cache.retrieve_spotify(
@@ -129,28 +245,59 @@ class ThemeSong:
             raise TypeError
         self._spotify_uri = value
 
-    def json_encode(self) -> dict[str, Any]:
+    def json_encode(
+        self, **encode_options: Unpack[EncodeOptions]
+    ) -> dict[str, Any]:
         """
         Encode theme song data to JSON-serializable dictionary.
+
+        Parameters
+        ----------
+        **encode_options : EncodeOptions
+            Encoding optional keyword arguments
+            (See EncodeOptions for more information)
 
         Returns
         -------
         dict[str, Any]
             Dictionary containing all theme song data
         """
-        out: dict[str, Any] = {}
-        out["id"] = self.id
-        out["anime_id"] = self.anime_id
-        out["text"] = self.text
-        out["index"] = self.index
-        out["name"] = self.name
-        out["artist"] = self.artist
-        out["episode"] = self.episode
-        out["at_url"] = self.at_url
-        out["yt_url"] = self.yt_url
-        out["spotify_uri"] = self.spotify_uri
+        all_fields = {
+            "id": self.id,
+            "anime_id": self.anime_id,
+            "text": self.text,
+            "index": self.index,
+            "name": self.name,
+            "artist": self.artist,
+            "episode": self.episode,
+            "yt_id": self.yt_id,
+            "yt_url": self.yt_url,
+            "yt_query": self.yt_query,
+            "at_url": self.at_url,
+            "spotify_uri": self.spotify_uri,
+        }
 
-        return out
+        include_null = cast(bool, encode_options.get("include_null", True))
+        include = cast(
+            List[str] | None, encode_options.get("themesong_include")
+        )
+        exclude = cast(List[str], encode_options.get("themesong_exclude", []))
+
+        if include:
+            # Include only specified fields
+            return {
+                field: all_fields[field]
+                for field in include
+                if field in all_fields
+                and (include_null or all_fields[field] is not None)
+            }
+        else:
+            # Include all fields except excluded ones
+            return {
+                field: value
+                for field, value in all_fields.items()
+                if field not in exclude and (include_null or value is not None)
+            }
 
     @staticmethod
     def json_decode(theme_song: dict[str, Any]) -> "ThemeSong":
@@ -167,17 +314,36 @@ class ThemeSong:
         ThemeSong
             New ThemeSong instance with decoded data
         """
-        out = ThemeSong(None)
-        out.id = theme_song["id"]
-        out.anime_id = theme_song["anime_id"]
-        out.text = theme_song["text"]
-        out.index = theme_song["index"]
-        out.name = theme_song["name"]
-        out.artist = theme_song["artist"]
-        out.episode = theme_song["episode"]
-        out.at_url = theme_song["at_url"]
-        out.yt_url = theme_song["yt_url"]
-        out.spotify_uri = theme_song["spotify_uri"]
+        # Create instance without calling _parse_text
+        out = ThemeSong.__new__(ThemeSong)
+
+        # Initialize all attributes to safe defaults
+        out.id = 0
+        out.anime_id = 0
+        out.text = ""
+        out.index = None
+        out.name = ""
+        out.artist = ""
+        out.episode = None
+        out.yt_id = ""
+        out.yt_url = ""
+        out.yt_query = ""
+        out.at_url = ""
+        out.spotify_uri = ""
+
+        # Set values with safe dictionary access
+        out.id = theme_song.get("id", 0)
+        out.anime_id = theme_song.get("anime_id", 0)
+        out.text = theme_song.get("text", "")
+        out.index = theme_song.get("index")
+        out.name = theme_song.get("name", "")
+        out.artist = theme_song.get("artist", "")
+        out.episode = theme_song.get("episode")
+        out.yt_id = theme_song.get("yt_id", "")
+        out.yt_url = theme_song.get("yt_url", "")
+        out.yt_query = theme_song.get("yt_query", "")
+        out.at_url = theme_song.get("at_url", "")
+        out.spotify_uri = theme_song.get("spotify_uri", "")
 
         return out
 
@@ -265,27 +431,67 @@ class Anime:
                         ][0]["videos"][0]["link"]
                     i += 1
 
-    def json_encode(self) -> dict[str, Any]:
+    def json_encode(
+        self, **encode_options: Unpack[EncodeOptions]
+    ) -> dict[str, Any]:
         """
         Encode anime data to JSON-serializable dictionary.
+
+        Parameters
+        ----------
+        **encode_options : EncodeOptions
+            Encoding optional keyword arguments
+            (See EncodeOptions for more information)
 
         Returns
         -------
         dict[str, Any]
             Dictionary containing all anime data
         """
-        out: dict[str, Any] = {}
-        out["id"] = self.id
-        out["title"] = self.title
-        out["picture"] = self.picture
-        out["opening_themes"] = [
-            theme.json_encode() for theme in self.opening_themes
-        ]
-        out["ending_themes"] = [
-            theme.json_encode() for theme in self.ending_themes
-        ]
+        all_fields = {
+            "id": self.id,
+            "title": self.title,
+            "picture": self.picture,
+            "opening_themes": [{}],
+            "ending_themes": [{}],
+        }
+        theme_types = ["opening_themes", "ending_themes"]
 
-        return out
+        include_null = cast(bool, encode_options.get("include_null", True))
+        include = cast(List[str] | None, encode_options.get("anime_include"))
+        exclude = cast(List[str], encode_options.get("anime_exclude", []))
+
+        if include:
+            # Include only specified fields
+            for theme_type in theme_types:
+                if theme_type in include:
+                    all_fields[theme_type] = [
+                        theme.json_encode(**encode_options)
+                        for theme in cast(
+                            List[ThemeSong], getattr(self, theme_type)
+                        )
+                    ]
+            return {
+                field: all_fields[field]
+                for field in include
+                if field in all_fields
+                and (include_null or all_fields[field] is not None)
+            }
+        else:
+            # Include all fields except excluded ones
+            for theme_type in theme_types:
+                if theme_type not in exclude:
+                    all_fields[theme_type] = [
+                        theme.json_encode(**encode_options)
+                        for theme in cast(
+                            List[ThemeSong], getattr(self, theme_type)
+                        )
+                    ]
+            return {
+                field: value
+                for field, value in all_fields.items()
+                if field not in exclude and (include_null or value is not None)
+            }
 
     @staticmethod
     def json_decode(anime: dict[str, Any]) -> "Anime":
@@ -302,15 +508,22 @@ class Anime:
         Anime
             New Anime instance with decoded data
         """
-        out = Anime(None)
-        out.id = anime["id"]
-        out.title = anime["title"]
-        out.picture = anime["picture"]
+        out = Anime.__new__(Anime)
+
+        # Initialize with safe defaults
+        out.id = anime.get("id", 0)
+        out.title = anime.get("title", "")
+        out.picture = anime.get("picture", "")
+
+        # Use list comprehensions with fallback
+        opening_data = anime.get("opening_themes", [])
         out.opening_themes = [
-            ThemeSong.json_decode(theme) for theme in anime["opening_themes"]
+            ThemeSong.json_decode(theme) for theme in opening_data
         ]
+
+        ending_data = anime.get("ending_themes", [])
         out.ending_themes = [
-            ThemeSong.json_decode(theme) for theme in anime["ending_themes"]
+            ThemeSong.json_decode(theme) for theme in ending_data
         ]
 
         return out
@@ -371,11 +584,18 @@ class AnimeList:
                     + f"anime '{title}'"
                 )
                 self.anime.append(Anime(anime_id=anime_id))
-            self.anime.reverse()
 
-    def json_encode(self) -> dict[str, Any]:
+    def json_encode(
+        self, **encode_options: Unpack[EncodeOptions]
+    ) -> dict[str, Any]:
         """
         Encode anime list data to JSON-serializable dictionary.
+
+        Parameters
+        ----------
+        **encode_options : EncodeOptions
+            Encoding optional keyword arguments
+            (See EncodeOptions for more information)
 
         Returns
         -------
@@ -384,7 +604,9 @@ class AnimeList:
         """
         out: dict[str, Any] = {}
         out["username"] = self.username
-        out["anime"] = [anime.json_encode() for anime in self.anime]
+        out["anime"] = [
+            anime.json_encode(**encode_options) for anime in self.anime
+        ]
 
         return out
 
@@ -403,7 +625,7 @@ class AnimeList:
         AnimeList
             New AnimeList instance with decoded data
         """
-        out = AnimeList(None)
+        out = AnimeList.__new__(AnimeList)
         out.username = anime_list["username"]
         out.anime = [Anime.json_decode(anime) for anime in anime_list["anime"]]
 
@@ -422,4 +644,20 @@ class AnimeList:
 if __name__ == "__main__":
     al = AnimeList("mik2003")
     with open("test.json", "w", encoding="utf-8") as f:
-        json.dump(al.json_encode(), f)
+        json.dump(
+            al.json_encode(
+                include_null=False,
+                anime_exclude=[
+                    "picture",
+                ],
+                themesong_include=[
+                    "id",
+                    "name",
+                    "artist",
+                    "yt_id",
+                    "yt_query",
+                ],
+            ),
+            f,
+            indent=4,
+        )

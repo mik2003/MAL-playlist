@@ -86,42 +86,77 @@ class AnimeAudioDownloader:
     def __init__(self, anime_list: AnimeList, cache: DownloadCache = None):
         self.anime_list = anime_list
         self.cache = cache or DownloadCache()
-        self.track_counter = 1
+
+    def calculate_track_number(
+        self, anime: Anime, track_type: str, theme_index: int
+    ) -> int:
+        """
+        Calculate progressive track number based on position in anime list.
+
+        For example: if anime has 3 OPs and we're downloading ED2, track number = 3 + 2 = 5
+
+        Args:
+            anime: The anime object
+            track_type: "OPi" or "EDi"
+            theme_index: The index within the track type (1-based)
+
+        Returns:
+            Progressive track number
+        """
+        if track_type.startswith("OP"):
+            # For OPs, track number is just the OP index
+            return theme_index
+        elif track_type.startswith("ED"):
+            # For EDs, track number is (number of OPs) + ED index
+            num_openings = len(anime.opening_themes)
+            return num_openings + theme_index
+        else:
+            return 1
 
     def find_theme_by_youtube_id(
         self, youtube_id: str
-    ) -> Tuple[Optional[Anime], Optional[ThemeSong], Optional[str]]:
+    ) -> Tuple[
+        Optional[Anime], Optional[ThemeSong], Optional[str], Optional[int]
+    ]:
         """Find theme information by YouTube ID."""
         for anime in self.anime_list.anime:
             for i, theme in enumerate(anime.opening_themes, 1):
                 if theme.yt_url and youtube_id in theme.yt_url:
-                    return anime, theme, f"OP{i}"
+                    track_number = self.calculate_track_number(anime, "OP", i)
+                    return anime, theme, f"OP{i}", track_number
             for i, theme in enumerate(anime.ending_themes, 1):
                 if theme.yt_url and youtube_id in theme.yt_url:
-                    return anime, theme, f"ED{i}"
-        return None, None, None
+                    track_number = self.calculate_track_number(anime, "ED", i)
+                    return anime, theme, f"ED{i}", track_number
+        return None, None, None, None
 
     def find_theme_by_id(
         self, theme_id: str
-    ) -> Tuple[Optional[Anime], Optional[ThemeSong], Optional[str]]:
+    ) -> Tuple[
+        Optional[Anime], Optional[ThemeSong], Optional[str], Optional[int]
+    ]:
         """Find theme information by theme ID."""
         for anime in self.anime_list.anime:
             for i, theme in enumerate(anime.opening_themes, 1):
                 if str(theme.id) == theme_id:
-                    return anime, theme, f"OP{i}"
+                    track_number = self.calculate_track_number(anime, "OP", i)
+                    return anime, theme, f"OP{i}", track_number
             for i, theme in enumerate(anime.ending_themes, 1):
                 if str(theme.id) == theme_id:
-                    return anime, theme, f"ED{i}"
-        return None, None, None
+                    track_number = self.calculate_track_number(anime, "ED", i)
+                    return anime, theme, f"ED{i}", track_number
+        return None, None, None, None
 
-    def get_all_themes(self) -> List[Tuple[Anime, ThemeSong, str]]:
-        """Get all themes from the anime list."""
+    def get_all_themes(self) -> List[Tuple[Anime, ThemeSong, str, int]]:
+        """Get all themes from the anime list with calculated track numbers."""
         themes = []
         for anime in self.anime_list.anime:
             for i, theme in enumerate(anime.opening_themes, 1):
-                themes.append((anime, theme, f"OP{i}"))
+                track_number = self.calculate_track_number(anime, "OP", i)
+                themes.append((anime, theme, f"OP{i}", track_number))
             for i, theme in enumerate(anime.ending_themes, 1):
-                themes.append((anime, theme, f"ED{i}"))
+                track_number = self.calculate_track_number(anime, "ED", i)
+                themes.append((anime, theme, f"ED{i}", track_number))
         return themes
 
     def sanitize_filename(self, name: str) -> str:
@@ -200,11 +235,13 @@ class AnimeAudioDownloader:
 
         # Find theme information
         if youtube_id:
-            anime, theme, track_type = self.find_theme_by_youtube_id(
-                youtube_id
+            anime, theme, track_type, track_number = (
+                self.find_theme_by_youtube_id(youtube_id)
             )
         else:
-            anime, theme, track_type = self.find_theme_by_id(theme_id)
+            anime, theme, track_type, track_number = self.find_theme_by_id(
+                theme_id
+            )
 
         if not anime or not theme:
             print(f"❌ No metadata found for: {theme_identifier}")
@@ -217,10 +254,17 @@ class AnimeAudioDownloader:
             )
             return True
 
-        return self._download_theme_file(anime, theme, track_type, output_dir)
+        return self._download_theme_file(
+            anime, theme, track_type, track_number, output_dir
+        )
 
     def _download_theme_file(
-        self, anime: Anime, theme: ThemeSong, track_type: str, output_dir: str
+        self,
+        anime: Anime,
+        theme: ThemeSong,
+        track_type: str,
+        track_number: int,
+        output_dir: str,
     ) -> bool:
         """Download and process a single theme file."""
         # Create filename
@@ -253,6 +297,7 @@ class AnimeAudioDownloader:
         try:
             print(f"🎵 {anime.title} {track_type} - {theme.name}")
             print(f"🎤 {theme.artist}")
+            print(f"🔢 Track number: {track_number}")
 
             # Download audio file
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -263,7 +308,7 @@ class AnimeAudioDownloader:
             # Add metadata and album art
             if os.path.exists(m4a_filename):
                 success = self._add_metadata(
-                    m4a_filename, anime, theme, track_type
+                    m4a_filename, anime, theme, track_type, track_number
                 )
                 if success:
                     # Add to cache
@@ -272,6 +317,7 @@ class AnimeAudioDownloader:
                         "theme_name": theme.name,
                         "artist": theme.artist,
                         "track_type": track_type,
+                        "track_number": track_number,
                         "theme_id": theme.id,
                     }
                     self.cache.mark_downloaded(
@@ -300,7 +346,12 @@ class AnimeAudioDownloader:
             return False
 
     def _add_metadata(
-        self, m4a_file: str, anime: Anime, theme: ThemeSong, track_type: str
+        self,
+        m4a_file: str,
+        anime: Anime,
+        theme: ThemeSong,
+        track_type: str,
+        track_number: int,
     ) -> bool:
         """Add metadata and album art to the audio file."""
         temp_output = None
@@ -342,7 +393,7 @@ class AnimeAudioDownloader:
                 "album": anime.title,
                 "genre": "Anime",
                 "comment": comment,
-                "track": str(self.track_counter),
+                "track": str(track_number),
             }
 
             for key, value in metadata.items():
@@ -402,7 +453,9 @@ class AnimeAudioDownloader:
 
         print(f"🎵 Processing {len(themes)} themes...")
 
-        for i, (anime, theme, track_type) in enumerate(themes, 1):
+        for i, (anime, theme, track_type, track_number) in enumerate(
+            themes, 1
+        ):
             print(f"\n--- [{i}/{len(themes)}] ---")
 
             # Check cache
@@ -415,7 +468,9 @@ class AnimeAudioDownloader:
                 results["skipped"] += 1
                 continue
 
-            if self._download_theme_file(anime, theme, track_type, output_dir):
+            if self._download_theme_file(
+                anime, theme, track_type, track_number, output_dir
+            ):
                 results["success"] += 1
             else:
                 results["failed"] += 1
