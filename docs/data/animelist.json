@@ -983,10 +983,10 @@
                 {
                     "id": 13536,
                     "anime_id": 8861,
-                    "text": "\"Hiyoku no Hane\" (\u6bd4\u7ffc\u306e\u7fbd\u6839) by eufonius",
+                    "text": "\"Hiyoku no Hane (\u6bd4\u7ffc\u306e\u7fbd\u6839)\" by eufonius",
                     "index": null,
-                    "name": "Hiyoku no Hane",
-                    "artist": null,
+                    "name": "Hiyoku no Hane (\u6bd4\u7ffc\u306e\u7fbd\u6839)",
+                    "artist": "eufonius",
                     "episode": null,
                     "yt_url": "https://www.youtube.com/watch?v=Q3GrcwZqZNU",
                     "at_url": "https://v.animethemes.moe/YosugaNoSora-OP1.webm"
@@ -1030,7 +1030,7 @@
                     "name": "Ashita no Kimi sae Ireba Ii. (\u660e\u65e5\u306e\u541b\u3055\u3048\u3044\u308c\u3070\u3044\u3044\u3002)",
                     "artist": "ChouCho",
                     "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=XCPTxNmB__E",
+                    "yt_url": "https://www.youtube.com/watch?v=GIthCv527nk",
                     "at_url": "https://v.animethemes.moe/ImoutoSae-OP1-NCBD1080.webm"
                 }
             ],
@@ -1065,7 +1065,7 @@
                     "name": "Innocent Lovely (\u30a4\u30ce\u30bb\u30f3\u30c8\u30fb\u30e9\u30d6\u30ea\u30fc)",
                     "artist": "Akane Fujita",
                     "episode": "ep 9",
-                    "yt_url": "https://www.youtube.com/watch?v=Ecagtp2uHMU",
+                    "yt_url": "https://www.youtube.com/watch?v=CCsaWEvOhaA",
                     "at_url": "https://v.animethemes.moe/ImoutoSae-ED3-NCBD1080.webm"
                 }
             ]
@@ -1096,7 +1096,7 @@
                     "name": "Lucky Tune (\u30e9\u30c3\u30ad\u30fc\u30c1\u30e5\u30fc\u30f3)",
                     "artist": "Anna (BON-BON BLANCO)",
                     "episode": "eps 1-13, 26",
-                    "yt_url": "https://www.youtube.com/watch?v=dKEmJVN-4zg",
+                    "yt_url": "https://www.youtube.com/watch?v=xJCwmXfQEao",
                     "at_url": "https://v.animethemes.moe/ToLoveRu-ED1.webm"
                 },
                 {
@@ -1107,7 +1107,7 @@
                     "name": "kiss no Yukue (kiss\u306e\u884c\u65b9)",
                     "artist": "Anna",
                     "episode": "eps 14-25",
-                    "yt_url": "https://www.youtube.com/watch?v=K7J6bcOxMLA",
+                    "yt_url": "https://www.youtube.com/watch?v=_VEOjaNvQtI",
                     "at_url": "https://v.animethemes.moe/ToLoveRu-ED2.webm"
                 }
             ]
@@ -1224,7 +1224,7 @@
                     "name": "Futari Fuwari ra (\u3075\u305f\u308a\u3075\u308f\u308a\u3089)",
                     "artist": "Kyouko Touno (Juri Kimura)",
                     "episode": "ep 12",
-                    "yt_url": "https://www.youtube.com/watch?v=MHdpAyUuumw",
+                    "yt_url": "https://www.youtube.com/watch?v=-2O1ky37gJM",
                     "at_url": "https://v.animethemes.moe/Seiren-ED6.webm"
                 }
             ]
@@ -1243,7 +1243,7 @@
                     "name": "Piece",
                     "artist": "Misuzu Togashi",
                     "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=77MANqS3JGU",
+                    "yt_url": "https://www.youtube.com/watch?v=UmYYDa9Xzkw",
                     "at_url": "https://v.animethemes.moe/OneechanGaKita-ED1.webm"
                 }
             ]
@@ -1262,7 +1262,7 @@
                     "name": "Koi no Katachi",
                     "artist": "KANA",
                     "episode": "eps 1-3",
-                    "yt_url": "https://www.youtube.com/watch?v=G5ov-kHfW3M",
+                    "yt_url": "https://www.youtube.com/watch?v=u_HxERZHmn8",
                     "at_url": "https://v.animethemes.moe/CandyBoy-ED1.webm"
                 },
                 {
@@ -1273,7 +1273,7 @@
                     "name": "Bring up...LOVE",
                     "artist": "nayuta",
                     "episode": "eps 4-6",
-                    "yt_url": "https://www.youtube.com/watch?v=s53fy_Z9zos",
+                    "yt_url": "https://www.youtube.com/watch?v=HsBIyvuXlJY",
                     "at_url": "https://v.animethemes.moe/CandyBoy-ED2.webm"
                 },
                 {
@@ -1284,7 +1284,7 @@
                     "name": "romance",
                     "artist": "Ryouka Yuzuki and Hitomi Nabatame",
                     "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=dJClLEc5dOo",
+                    "yt_url": "https://www.youtube.com/watch?v=7mn9wvHrxDA",
                     "at_url": "https://v.animethemes.moe/CandyBoy-ED3.webm"
                 }
             ]
@@ -1326,7 +1326,7 @@
                     "name": "Life-Ru is LOVE-Ru!! (Life\u308b is LOVE\u308b!!)",
                     "artist": "Liliana Sisters (Ibuki Kido, Minori Chihara, Eri Kitamura and Asami Shimoda)",
                     "episode": "eps 2-12",
-                    "yt_url": "https://www.youtube.com/watch?v=itILL-GWMHE",
+                    "yt_url": "https://www.youtube.com/watch?v=DCfw5OOiewI",
                     "at_url": ""
                 }
             ]
@@ -1357,7 +1357,7 @@
                     "name": "Elemental World",
                     "artist": "ChouCho",
                     "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=xf1vGBK-T-0",
+                    "yt_url": "https://www.youtube.com/watch?v=mFHCEPY_coM",
                     "at_url": "https://v.animethemes.moe/MasamuneKunNoRevenge-ED1.webm"
                 },
                 {
@@ -1425,12 +1425,12 @@
                 {
                     "id": 48391,
                     "anime_id": 29317,
-                    "text": "\"Colorful. (\u30ab\u30e9\u30d5\u30eb\u3002)\" Miku Sawai",
+                    "text": "\"Colorful. (\u30ab\u30e9\u30d5\u30eb\u3002)\" by Miku Sawai",
                     "index": null,
                     "name": "Colorful. (\u30ab\u30e9\u30d5\u30eb\u3002)",
-                    "artist": null,
+                    "artist": "Miku Sawai",
                     "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=12m5AQ6Mo3E",
+                    "yt_url": "https://www.youtube.com/watch?v=klbXQsHkHkA",
                     "at_url": ""
                 }
             ]
@@ -1540,7 +1540,7 @@
                     "name": "1st Love Story",
                     "artist": "Luce Twinkle Wink\u2606",
                     "episode": "eps 2-12",
-                    "yt_url": "https://www.youtube.com/watch?v=nGjuxN_fw3M",
+                    "yt_url": "https://www.youtube.com/watch?v=EotIWbOKeJs",
                     "at_url": "https://v.animethemes.moe/NetogeNoYome-OP1.webm"
                 }
             ],
@@ -1553,7 +1553,7 @@
                     "name": "1st Love Story",
                     "artist": "Luce Twinkle Wink\u2606",
                     "episode": "ep 1",
-                    "yt_url": "https://www.youtube.com/watch?v=nGjuxN_fw3M",
+                    "yt_url": "https://www.youtube.com/watch?v=EotIWbOKeJs",
                     "at_url": "https://v.animethemes.moe/NetogeNoYome-ED1.webm"
                 },
                 {
@@ -1582,7 +1582,7 @@
                     "name": "Cagayake! GIRLS",
                     "artist": "Sakurakou Keion-bu (Aki Toyosaki, Yoko Hisaka, Satomi Satou, Minako Kotobuki)",
                     "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=aU4_2aZ2png",
+                    "yt_url": "https://www.youtube.com/watch?v=ua02dloykJ4",
                     "at_url": "https://v.animethemes.moe/KOn-OP1.webm"
                 }
             ],
@@ -1595,7 +1595,7 @@
                     "name": "Don't say 'lazy'",
                     "artist": "Sakurakou Keion-bu (Aki Toyosaki, Yoko Hisaka, Satomi Satou, Minako Kotobuki)",
                     "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=4Es14PxkLGk",
+                    "yt_url": "https://www.youtube.com/watch?v=5CSNv9MNEC4",
                     "at_url": "https://v.animethemes.moe/KOn-ED1.webm"
                 }
             ]
@@ -1739,7 +1739,7 @@
                     "name": "STARTING NOW!",
                     "artist": "Nana Mizuki",
                     "episode": null,
-                    "yt_url": "https://www.youtube.com/watch?v=OCUQjXYEPmA",
+                    "yt_url": "https://www.youtube.com/watch?v=ekZf-AwMiRk",
                     "at_url": "https://v.animethemes.moe/Konobi-OP1-NCBD1080.webm"
                 }
             ],
@@ -1763,7 +1763,7 @@
                     "name": "Kokoro\uff0aPalette (Chorus ver.)",
                     "artist": "Mizuki Usami (CV: Ari Ozawa), Colette (CV: Sumire Uesaka), Maria Imari (CV: Nao Touyama), Yumeko Tachibana (CV: Nana Mizuki)",
                     "episode": "ep 12",
-                    "yt_url": "https://www.youtube.com/watch?v=gcGTin4S73M",
+                    "yt_url": "https://www.youtube.com/watch?v=mC_cqOD3WV8",
                     "at_url": "https://v.animethemes.moe/Konobi-ED2-NCBD1080.webm"
                 }
             ]
@@ -1794,11 +1794,11 @@
                 {
                     "id": 38223,
                     "anime_id": 19221,
-                    "text": "#2: \"Taiyou to Tsuki no Cross\" (\u592a\u967d\u3068\u6708\u306eCROSS) by TWO-FORMULA (Kaori Sadohara & Saeko Zougou) (ep 10)",
+                    "text": "#2: \"Taiyou to Tsuki no Cross (\u592a\u967d\u3068\u6708\u306eCROSS)\" by TWO-FORMULA (Kaori Sadohara & Saeko Zougou) (ep 10)",
                     "index": "2",
-                    "name": "Taiyou to Tsuki no Cross",
-                    "artist": null,
-                    "episode": null,
+                    "name": "Taiyou to Tsuki no Cross (\u592a\u967d\u3068\u6708\u306eCROSS)",
+                    "artist": "TWO-FORMULA (Kaori Sadohara & Saeko Zougou)",
+                    "episode": "ep 10",
                     "yt_url": "https://www.youtube.com/watch?v=N3u0kJlYX6M",
                     "at_url": "https://v.animethemes.moe/NouCome-OP2.webm"
                 }
@@ -1807,11 +1807,11 @@
                 {
                     "id": 38225,
                     "anime_id": 19221,
-                    "text": "#1: \"Taiyou to Tsuki no Cross\" (\u592a\u967d\u3068\u6708\u306eCROSS) by TWO-FORMULA (Kaori Sadohara & Saeko Zougou) (eps 1-9)",
+                    "text": "#1: \"Taiyou to Tsuki no Cross (\u592a\u967d\u3068\u6708\u306eCROSS)\" by TWO-FORMULA (Kaori Sadohara & Saeko Zougou) (eps 1-9)",
                     "index": "1",
-                    "name": "Taiyou to Tsuki no Cross",
-                    "artist": null,
-                    "episode": null,
+                    "name": "Taiyou to Tsuki no Cross (\u592a\u967d\u3068\u6708\u306eCROSS)",
+                    "artist": "TWO-FORMULA (Kaori Sadohara & Saeko Zougou)",
+                    "episode": "eps 1-9",
                     "yt_url": "https://www.youtube.com/watch?v=N3u0kJlYX6M",
                     "at_url": "https://v.animethemes.moe/NouCome-ED1.webm"
                 },
@@ -2004,10 +2004,10 @@
                 {
                     "id": 16511,
                     "anime_id": 10219,
-                    "text": "\"Ari Ari Mirai\" (\u30a2\u30ea\u30a2\u30ea\u672a\u6765\u2606) by Eri Kitamura, Marina Inoue, and Kazusa Aranami",
+                    "text": "\"Ari Ari Mirai (\u30a2\u30ea\u30a2\u30ea\u672a\u6765\u2606)\" by Eri Kitamura, Marina Inoue, and Kazusa Aranami",
                     "index": null,
-                    "name": "Ari Ari Mirai",
-                    "artist": null,
+                    "name": "Ari Ari Mirai (\u30a2\u30ea\u30a2\u30ea\u672a\u6765\u2606)",
+                    "artist": "Eri Kitamura, Marina Inoue, and Kazusa Aranami",
                     "episode": null,
                     "yt_url": "https://www.youtube.com/watch?v=TB70vzPzNPU",
                     "at_url": ""
@@ -3810,10 +3810,10 @@
                 {
                     "id": 8479,
                     "anime_id": 5042,
-                    "text": "\"Hoshizora Monogatari (\u661f\u7a7a\u7269\u8a9e)\"By Nana Takahashi",
+                    "text": "\"Hoshizora Monogatari (\u661f\u7a7a\u7269\u8a9e)\" by Nana Takahashi",
                     "index": null,
                     "name": "Hoshizora Monogatari (\u661f\u7a7a\u7269\u8a9e)",
-                    "artist": null,
+                    "artist": "Nana Takahashi",
                     "episode": null,
                     "yt_url": "https://www.youtube.com/watch?v=E0N78JH2z20",
                     "at_url": "https://v.animethemes.moe/KissxSis-ED1.webm"
@@ -5880,10 +5880,10 @@
                 {
                     "id": 61785,
                     "anime_id": 34618,
-                    "text": "#2: \"Bon App\u00e9tit\u2661S (\u307c\u306a\u307a\u3066\u3043\u30fc\u3068\u2661S)\" All staff version by Maika Sakuranomiya (Azumi Waki), Kaho Hinata (Akari Kito), Mafuyu Hoshikawa (Anzu Haruno), Hideri Kanzaki (Sora Tokui), Miu Amano (Atsumi Tanezaki), Dino (Tomoaki Maeno), Kouyou Akizu",
+                    "text": "#2: \"Bon App\u00e9tit\u2661S (\u307c\u306a\u307a\u3066\u3043\u30fc\u3068\u2661S) All staff version\" by Maika Sakuranomiya (Azumi Waki), Kaho Hinata (Akari Kito), Mafuyu Hoshikawa (Anzu Haruno), Hideri Kanzaki (Sora Tokui), Miu Amano (Atsumi Tanezaki), Dino (Tomoaki Maeno), Kouyou Akizu",
                     "index": "2",
-                    "name": "Bon App\u00e9tit\u2661S (\u307c\u306a\u307a\u3066\u3043\u30fc\u3068\u2661S)",
-                    "artist": null,
+                    "name": "Bon App\u00e9tit\u2661S (\u307c\u306a\u307a\u3066\u3043\u30fc\u3068\u2661S) All staff version",
+                    "artist": "Maika Sakuranomiya (Azumi Waki), Kaho Hinata (Akari Kito), Mafuyu Hoshikawa (Anzu Haruno), Hideri Kanzaki (Sora Tokui), Miu Amano (Atsumi Tanezaki), Dino (Tomoaki Maeno), Kouyou Akizu",
                     "episode": null,
                     "yt_url": "https://www.youtube.com/watch?v=6nVXFuKkHoU",
                     "at_url": "https://v.animethemes.moe/BlendS-ED2.webm"
@@ -8240,21 +8240,21 @@
                 {
                     "id": 42445,
                     "anime_id": 21033,
-                    "text": "#1: \"MOST Ijou no \"MOSTEST\" (MOST\u4ee5\u4e0a\u306e\u201cMOSTEST\u201d)\" by Eco (CV: Mariya Ise), Silvia (CV: Ayane Sakura), Rebecca (CV: Marina Inoue) (eps 1-6)",
+                    "text": "#1: \"MOST Ijou no MOSTEST (MOST\u4ee5\u4e0a\u306e\u201cMOSTEST\u201d)\" by Eco (CV: Mariya Ise), Silvia (CV: Ayane Sakura), Rebecca (CV: Marina Inoue) (eps 1-6)",
                     "index": "1",
-                    "name": "MOST Ijou no ",
-                    "artist": null,
-                    "episode": null,
+                    "name": "MOST Ijou no MOSTEST (MOST\u4ee5\u4e0a\u306e\u201cMOSTEST\u201d)",
+                    "artist": "Eco (CV: Mariya Ise), Silvia (CV: Ayane Sakura), Rebecca (CV: Marina Inoue)",
+                    "episode": "eps 1-6",
                     "yt_url": "https://www.youtube.com/watch?v=5nEQaBIrXLc",
                     "at_url": "https://v.animethemes.moe/SeikokuNoDragonar-ED1.webm"
                 },
                 {
                     "id": 42447,
                     "anime_id": 21033,
-                    "text": "#2: \"MOST Ijou no \"MOSTEST\" (MOST\u4ee5\u4e0a\u306e\u201cMOSTEST\u201d)\" by Lucca (CV: Asuka Oogame), Anya (CV: Asami Shimoda), Jessica (CV: Kana Hanazawa)(eps 7-11)",
+                    "text": "#2: \"MOST Ijou no MOSTEST (MOST\u4ee5\u4e0a\u306e\u201cMOSTEST\u201d)\" by Lucca (CV: Asuka Oogame), Anya (CV: Asami Shimoda), Jessica (CV: Kana Hanazawa)(eps 7-11)",
                     "index": "2",
-                    "name": "MOST Ijou no ",
-                    "artist": null,
+                    "name": "MOST Ijou no MOSTEST (MOST\u4ee5\u4e0a\u306e\u201cMOSTEST\u201d)",
+                    "artist": "Lucca (CV: Asuka Oogame), Anya (CV: Asami Shimoda), Jessica (CV: Kana Hanazawa)(eps 7-11)",
                     "episode": null,
                     "yt_url": "https://www.youtube.com/watch?v=5nEQaBIrXLc",
                     "at_url": "https://v.animethemes.moe/SeikokuNoDragonar-ED2.webm"
@@ -8262,11 +8262,11 @@
                 {
                     "id": 42449,
                     "anime_id": 21033,
-                    "text": "#3: \"MOST Ijou no \"MOSTEST\" (MOST\u4ee5\u4e0a\u306e\u201cMOSTEST\u201d)\" by Eco (CV: Mariya Ise), Silvia (CV: Ayane Sakura), Rebecca (CV: Marina Inoue), Lucca (CV: Asuka Oogame), Anya (CV: Asami Shimoda), Jessica (CV: Kana Hanazawa) (ep 12)",
+                    "text": "#3: \"MOST Ijou no MOSTEST (MOST\u4ee5\u4e0a\u306e\u201cMOSTEST\u201d)\" by Eco (CV: Mariya Ise), Silvia (CV: Ayane Sakura), Rebecca (CV: Marina Inoue), Lucca (CV: Asuka Oogame), Anya (CV: Asami Shimoda), Jessica (CV: Kana Hanazawa) (ep 12)",
                     "index": "3",
-                    "name": "MOST Ijou no ",
-                    "artist": null,
-                    "episode": null,
+                    "name": "MOST Ijou no MOSTEST (MOST\u4ee5\u4e0a\u306e\u201cMOSTEST\u201d)",
+                    "artist": "Eco (CV: Mariya Ise), Silvia (CV: Ayane Sakura), Rebecca (CV: Marina Inoue), Lucca (CV: Asuka Oogame), Anya (CV: Asami Shimoda), Jessica (CV: Kana Hanazawa)",
+                    "episode": "ep 12",
                     "yt_url": "https://www.youtube.com/watch?v=_QPtOwMw9T4",
                     "at_url": "https://v.animethemes.moe/SeikokuNoDragonar-ED3.webm"
                 }
@@ -9719,10 +9719,10 @@
                 {
                     "id": 71851,
                     "anime_id": 48997,
-                    "text": "\"\"FA\"NTASY to! (\u201cFA\u201cNTASY \u3068\uff01)\" by Luce Twinkle Wink\u2606",
+                    "text": "\"FANTASY to! (\u201cFA\u201cNTASY \u3068\uff01)\" by Luce Twinkle Wink\u2606",
                     "index": null,
-                    "name": "FA",
-                    "artist": null,
+                    "name": "FANTASY to! (\u201cFA\u201cNTASY \u3068\uff01)",
+                    "artist": "Luce Twinkle Wink\u2606",
                     "episode": null,
                     "yt_url": "https://www.youtube.com/watch?v=UlI8A6TBEDo",
                     "at_url": "https://v.animethemes.moe/Fabiniku-ED1.webm"
@@ -10901,11 +10901,11 @@
                 {
                     "id": 31785,
                     "anime_id": 15379,
-                    "text": "#2: \"ESP Ken no Theme (ESP\u7814\u306e\u30c6\u30fc\u30de)\" ESP Kenkyuukai (ESP\u7814\u7a76\u4f1a) (ep 5)",
+                    "text": "#2: \"ESP Ken no Theme (ESP\u7814\u306e\u30c6\u30fc\u30de)\" by ESP Kenkyuukai (ESP\u7814\u7a76\u4f1a) (ep 5)",
                     "index": "2",
                     "name": "ESP Ken no Theme (ESP\u7814\u306e\u30c6\u30fc\u30de)",
-                    "artist": null,
-                    "episode": null,
+                    "artist": "ESP Kenkyuukai (ESP\u7814\u7a76\u4f1a)",
+                    "episode": "ep 5",
                     "yt_url": "https://www.youtube.com/watch?v=YOL2hs_B_rE",
                     "at_url": "https://v.animethemes.moe/KotouraSan-ED2.webm"
                 },
@@ -12115,10 +12115,10 @@
                 {
                     "id": 63689,
                     "anime_id": 34612,
-                    "text": "#2: \"Duet\u2661Shitekuda\u03a8 (Duet\u2661\u3057\u3066\u304f\u3060\u03a8)\" Saiki-kku Lover feat Kusuo Saiki (Hiroshi Kamiya), Kokomi Teruhashi (Ai Kayano), Mikoto Aiura (Eri Kitamura)",
+                    "text": "#2: \"Duet\u2661Shitekuda\u03a8 (Duet\u2661\u3057\u3066\u304f\u3060\u03a8)\" by Saiki-kku Lover feat Kusuo Saiki (Hiroshi Kamiya), Kokomi Teruhashi (Ai Kayano), Mikoto Aiura (Eri Kitamura)",
                     "index": "2",
                     "name": "Duet\u2661Shitekuda\u03a8 (Duet\u2661\u3057\u3066\u304f\u3060\u03a8)",
-                    "artist": null,
+                    "artist": "Saiki-kku Lover feat Kusuo Saiki (Hiroshi Kamiya), Kokomi Teruhashi (Ai Kayano), Mikoto Aiura (Eri Kitamura)",
                     "episode": null,
                     "yt_url": "https://www.youtube.com/watch?v=d_bHC9QnLC8",
                     "at_url": "https://v.animethemes.moe/SaikiKusuoNoPsiNanS2-ED2-NCBD1080.webm"
@@ -14406,11 +14406,11 @@
                 {
                     "id": 76065,
                     "anime_id": 45576,
-                    "text": "1: \"Mezame no Uta (\u76ee\u899a\u3081\u306e\u5504)\"\" by Yuiko Oohara (eps 1-2)",
+                    "text": "1: \"Mezame no Uta (\u76ee\u899a\u3081\u306e\u5504)\" by Yuiko Oohara (eps 1-2)",
                     "index": null,
                     "name": "Mezame no Uta (\u76ee\u899a\u3081\u306e\u5504)",
-                    "artist": null,
-                    "episode": null,
+                    "artist": "Yuiko Oohara",
+                    "episode": "eps 1-2",
                     "yt_url": "https://www.youtube.com/watch?v=NEh3-Qmq1LE",
                     "at_url": "https://v.animethemes.moe/MushokuTenseiPart2-OP1.webm"
                 },
@@ -17192,10 +17192,10 @@
                 {
                     "id": 14078,
                     "anime_id": 9587,
-                    "text": "\"Ari Ari Mirai\" (\u30a2\u30ea\u30a2\u30ea\u672a\u6765\u2606) by Eri Kitamura, Marina Inoue, and Kazusa Aranami",
+                    "text": "\"Ari Ari Mirai (\u30a2\u30ea\u30a2\u30ea\u672a\u6765\u2606)\" by Eri Kitamura, Marina Inoue, and Kazusa Aranami",
                     "index": null,
-                    "name": "Ari Ari Mirai",
-                    "artist": null,
+                    "name": "Ari Ari Mirai (\u30a2\u30ea\u30a2\u30ea\u672a\u6765\u2606)",
+                    "artist": "Eri Kitamura, Marina Inoue, and Kazusa Aranami",
                     "episode": null,
                     "yt_url": "https://www.youtube.com/watch?v=TB70vzPzNPU",
                     "at_url": "https://v.animethemes.moe/Onisuki-ED1.webm"
@@ -18394,10 +18394,10 @@
                 {
                     "id": 69235,
                     "anime_id": 40750,
-                    "text": "\"Yume de Sekai wo Kaeru nara (\u5922\u3067\u4e16\u754c\u3092\u5909\u3048\u308b\u306a\u3089\")\" by ARCANA PROJECT",
+                    "text": "\"Yume de Sekai wo Kaeru nara (\u5922\u3067\u4e16\u754c\u3092\u5909\u3048\u308b\u306a\u3089)\" by ARCANA PROJECT",
                     "index": null,
-                    "name": "Yume de Sekai wo Kaeru nara (\u5922\u3067\u4e16\u754c\u3092\u5909\u3048\u308b\u306a\u3089",
-                    "artist": null,
+                    "name": "Yume de Sekai wo Kaeru nara (\u5922\u3067\u4e16\u754c\u3092\u5909\u3048\u308b\u306a\u3089)",
+                    "artist": "ARCANA PROJECT",
                     "episode": null,
                     "yt_url": "https://www.youtube.com/watch?v=dQUwHtHs38s",
                     "at_url": "https://v.animethemes.moe/Kaiyari-ED1.webm"
@@ -23597,11 +23597,11 @@
                 {
                     "id": 48083,
                     "anime_id": 17729,
-                    "text": "\"Rakuen no Tsubasa (\u697d\u5712\u306e\u7ffc)\" By Maon Kurosaki (eps 2-4, 6-12)",
+                    "text": "\"Rakuen no Tsubasa (\u697d\u5712\u306e\u7ffc)\" by Maon Kurosaki (eps 2-4, 6-12)",
                     "index": null,
                     "name": "Rakuen no Tsubasa (\u697d\u5712\u306e\u7ffc)",
-                    "artist": null,
-                    "episode": null,
+                    "artist": "Maon Kurosaki",
+                    "episode": "eps 2-4, 6-12",
                     "yt_url": "https://www.youtube.com/watch?v=Tu6j2YwPPPg",
                     "at_url": "https://v.animethemes.moe/GrisaiaNoKajitsu-OP1.webm"
                 }
@@ -23737,10 +23737,10 @@
                 {
                     "id": 64775,
                     "anime_id": 29095,
-                    "text": "#4: \"Ceremony\" (ep 10)",
+                    "text": "#4: \"Ceremony\" by Sayaka Sasaki (ep 10)",
                     "index": "4",
                     "name": "Ceremony",
-                    "artist": null,
+                    "artist": "Sayaka Sasaki",
                     "episode": "ep 10",
                     "yt_url": "https://www.youtube.com/watch?v=AMWYzz5HUwc",
                     "at_url": "https://v.animethemes.moe/GrisaiaNoRakuen-ED4.webm"

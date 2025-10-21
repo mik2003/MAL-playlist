@@ -643,16 +643,25 @@ class AnimeList:
 
 if __name__ == "__main__":
     al = AnimeList("mik2003")
+    al_params = {
+        "include_null": True,
+        "themesong_exclude": ["yt_id", "yt_query", "spotify_uri"],
+    }
+    query_params = {
+        "include_null": False,
+        "anime_exclude": ["picture"],
+        "themesong_include": [
+            "id",
+            "name",
+            "artist",
+            "yt_id",
+            "yt_url",
+            "yt_query",
+        ],
+    }
     with open("test.json", "w", encoding="utf-8") as f:
         json.dump(
-            al.json_encode(
-                include_null=True,
-                themesong_exclude=[
-                    "yt_id",
-                    "yt_query",
-                    "spotify_uri",
-                ],
-            ),
+            al.json_encode(**query_params),  # type: ignore
             f,
             indent=4,
         )
