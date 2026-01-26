@@ -1,0 +1,18 @@
+{
+  "name": "mal-playlist",
+  "version": "1.0.0",
+  "description": "Welcome to MAL-playlist, a python tool to retrieve your MyAnimeList and automatically search for YouTube videos of opening and ending themes for every anime. All of the results are then saved into an HTML file. The hope was to directly make a YouTube playlist but that would require working with the YouTube API and I am really not bothered to do it ._.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
