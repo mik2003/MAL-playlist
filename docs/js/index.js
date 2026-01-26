@@ -469,22 +469,45 @@ function filterPlaylist() {
 
     items.forEach(item => {
         const fields = {
-            nameline: item.querySelector('.playlist-item-nameline')?.textContent.toLowerCase() || '',
-            artistline: item.querySelector('.playlist-item-artistline')?.textContent.toLowerCase() || '',
-            animeline: item.querySelector('.playlist-item-animeline')?.textContent.toLowerCase() || ''
+            nameline: item.querySelector('.playlist-item-nameline'),
+            artistline: item.querySelector('.playlist-item-artistline'),
+            animeline: item.querySelector('.playlist-item-animeline')
         };
 
         let match = false;
 
-        if (filter === 'all') {
-            match = Object.values(fields).some(text => text.includes(query));
-        } else {
-            match = fields[filter].includes(query);
-        }
+        Object.entries(fields).forEach(([key, el]) => {
+            if (!el) return;
 
-        item.style.display = match ? '' : 'none';
+            const original = el.textContent;
+            const text = original.toLowerCase();
+
+            // Reset previous highlights
+            el.innerHTML = original;
+
+            if (
+                (filter === 'all' || filter === key) &&
+                query &&
+                text.includes(query)
+            ) {
+                match = true;
+                el.innerHTML = highlightMatch(original, query);
+            }
+        });
+
+        item.style.display = match || !query ? '' : 'none';
     });
 }
+
+function highlightMatch(text, query) {
+    if (!query) return text;
+
+    const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(${escaped})`, 'gi');
+
+    return text.replace(regex, '<span class="playlist-search-highlight">$1</span>');
+}
+
 
 
 // ==================== MEDIA SESSION ====================
@@ -734,6 +757,34 @@ document.getElementById('playlist-search-input')
 document.getElementById('playlist-search-filter')
     ?.addEventListener('change', filterPlaylist);
 
+document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        const active = document.activeElement;
+        const isTyping =
+            active.tagName === 'INPUT' ||
+            active.tagName === 'TEXTAREA' ||
+            active.isContentEditable;
+
+        if (!isTyping) {
+            e.preventDefault();
+            document.getElementById('playlist-search-input')?.focus();
+        }
+    }
+});
+
+document.getElementById('playlist-search-input')
+    ?.addEventListener('focus', e => e.target.select());
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+        const input = document.getElementById('playlist-search-input');
+        if (document.activeElement === input) {
+            input.value = '';
+            filterPlaylist();
+            input.blur();
+        }
+    }
+});
 
 // Initialize the app
 initializePlayer();

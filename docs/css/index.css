@@ -273,6 +273,14 @@ body {
     background: var(--item-hover);
 }
 
+.playlist-search-highlight {
+    background-color: var(--item-active);
+    color: #fff;
+    padding: 0 2px;
+    border-radius: 3px;
+}
+
+
 
 /* Playlist items */
 .playlist-item {
