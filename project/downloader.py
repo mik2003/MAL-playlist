@@ -164,7 +164,7 @@ class AnimeAudioDownloader:
         return re.sub(r'[<>:"/\\|?*]', "", name)
 
     def download_album_art(self, picture_url: str) -> Optional[str]:
-        """Download album art to temporary file."""
+        """Download album art to temporary file and convert WebP to JPEG if needed."""
         try:
             parsed_url = urlparse(picture_url)
             if not parsed_url.scheme or not parsed_url.netloc:
@@ -173,17 +173,63 @@ class AnimeAudioDownloader:
             response = requests.get(picture_url, timeout=10)
             response.raise_for_status()
 
-            content_type = response.headers.get("content-type", "")
+            content_type = response.headers.get("content-type", "").lower()
             if not content_type.startswith("image/"):
                 raise ValueError(
                     f"URL does not point to an image: {content_type}"
                 )
 
+            # Determine file extension from content type or URL
+            if "webp" in content_type or picture_url.lower().endswith(".webp"):
+                suffix = ".webp"
+            elif "jpeg" in content_type or "jpg" in content_type:
+                suffix = ".jpg"
+            elif "png" in content_type:
+                suffix = ".png"
+            else:
+                # Default to jpg for unknown image types
+                suffix = ".jpg"
+
             temp_file = tempfile.NamedTemporaryFile(
-                suffix=".jpg", delete=False
+                suffix=suffix, delete=False
             )
             temp_file.write(response.content)
             temp_file.close()
+
+            # Convert WebP to JPEG if needed
+            if suffix == ".webp":
+                jpeg_path = temp_file.name.replace(".webp", ".jpg")
+                try:
+                    cmd = [
+                        "ffmpeg",
+                        "-i",
+                        temp_file.name,
+                        "-qscale",
+                        "0",  # High quality
+                        jpeg_path,
+                        "-y",  # Overwrite output file
+                    ]
+                    result = subprocess.run(
+                        cmd, capture_output=True, text=True, check=False
+                    )
+
+                    if result.returncode == 0 and os.path.exists(jpeg_path):
+                        # Clean up original WebP file
+                        os.unlink(temp_file.name)
+                        print("✅ Converted WebP to JPEG for album art")
+                        return jpeg_path
+                    else:
+                        print(
+                            f"⚠️  WebP to JPEG conversion failed: {result.stderr}"
+                        )
+                        # Fall back to original WebP file
+                        return temp_file.name
+
+                except (subprocess.SubprocessError, OSError) as e:
+                    print(f"⚠️  Error converting WebP to JPEG: {e}")
+                    # Fall back to original WebP file
+                    return temp_file.name
+
             return temp_file.name
 
         except (RequestException, Timeout, HTTPError) as e:

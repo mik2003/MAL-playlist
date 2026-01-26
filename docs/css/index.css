@@ -223,6 +223,57 @@ body {
     padding-right: 5px;
 }
 
+/* Search */
+.playlist-search {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    background: var(--container-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+#playlist-search-input,
+#playlist-search-filter {
+    background: var(--item-bg);
+    color: var(--body-color);
+
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: 8px 10px;
+
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+#playlist-search-input {
+    flex: 1;
+}
+
+#playlist-search-filter {
+    cursor: pointer;
+}
+
+/* Hover / focus states */
+#playlist-search-input:hover,
+#playlist-search-filter:hover {
+    background: var(--item-hover);
+}
+
+#playlist-search-input:focus,
+#playlist-search-filter:focus {
+    outline: none;
+    border-color: var(--item-active);
+    background: var(--item-hover);
+}
+
+
 /* Playlist items */
 .playlist-item {
     padding: 12px;

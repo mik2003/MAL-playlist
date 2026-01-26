@@ -661,7 +661,7 @@ if __name__ == "__main__":
     }
     with open("test.json", "w", encoding="utf-8") as f:
         json.dump(
-            al.json_encode(**query_params),  # type: ignore
+            al.json_encode(),  # type: ignore
             f,
             indent=4,
         )

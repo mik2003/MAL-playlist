@@ -124,6 +124,9 @@ function populatePlaylistDiv() {
         const playlistItem = createPlaylistItem(shuffledIndex, displayIndex);
         playlistDiv.appendChild(playlistItem);
     });
+
+    // Add search
+    filterPlaylist();
 }
 
 function createPlaylistItem(shuffledIndex, displayIndex) {
@@ -458,6 +461,32 @@ function updateStatusDisplay() {
     });
 }
 
+function filterPlaylist() {
+    const query = document.getElementById('playlist-search-input').value.toLowerCase();
+    const filter = document.getElementById('playlist-search-filter').value;
+
+    const items = document.querySelectorAll('.playlist-item');
+
+    items.forEach(item => {
+        const fields = {
+            nameline: item.querySelector('.playlist-item-nameline')?.textContent.toLowerCase() || '',
+            artistline: item.querySelector('.playlist-item-artistline')?.textContent.toLowerCase() || '',
+            animeline: item.querySelector('.playlist-item-animeline')?.textContent.toLowerCase() || ''
+        };
+
+        let match = false;
+
+        if (filter === 'all') {
+            match = Object.values(fields).some(text => text.includes(query));
+        } else {
+            match = fields[filter].includes(query);
+        }
+
+        item.style.display = match ? '' : 'none';
+    });
+}
+
+
 // ==================== MEDIA SESSION ====================
 
 function initializeIndependentMediaSession() {
@@ -698,6 +727,13 @@ const controlHandlers = {
 Object.entries(controlHandlers).forEach(([id, handler]) => {
     document.getElementById(id)?.addEventListener('click', handler);
 });
+
+document.getElementById('playlist-search-input')
+    ?.addEventListener('input', filterPlaylist);
+
+document.getElementById('playlist-search-filter')
+    ?.addEventListener('change', filterPlaylist);
+
 
 // Initialize the app
 initializePlayer();
