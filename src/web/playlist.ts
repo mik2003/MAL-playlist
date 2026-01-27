@@ -65,6 +65,12 @@ export function createEpisodeContainer(type: 'opening_themes' | 'ending_themes',
     const episodeLine = document.createElement("span");
     episodeLine.className = "playlist-item-episodeline";
     episodeLine.textContent = type.split("_")[0];
+    if (songData.index) {
+        episodeLine.textContent += ` #${songData.index}`;
+    }
+    if (songData.episode) {
+        episodeLine.textContent += ` (${songData.episode})`
+    }
 
     const sourceIndicator = document.createElement("span");
     sourceIndicator.className = "playlist-item-source";

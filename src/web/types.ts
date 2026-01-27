@@ -5,6 +5,8 @@ export interface Theme {
     artist: string;
     yt_url?: string;
     at_url?: string;
+    index?: string;
+    episode?: string;
 }
 
 export interface Anime {
@@ -22,6 +24,8 @@ export interface AnimeList {
 export interface PlaylistSong {
     at_url?: string;
     yt_url?: string;
+    index?: string;
+    episode?: string;
     name: string;
     artist: string;
     anime_index: number;

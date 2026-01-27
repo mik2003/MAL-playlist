@@ -34,6 +34,8 @@ function addToPlaylist(anime, theme, animeIndex, type, themeIndex) {
     playerState.animePlaylist.push({
         at_url: theme.at_url,
         yt_url: theme.yt_url,
+        index: theme.index,
+        episode: theme.episode,
         name: theme.name,
         artist: theme.artist,
         anime_index: animeIndex,
