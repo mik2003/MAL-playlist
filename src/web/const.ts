@@ -1,17 +1,9 @@
-import type { AnimeList } from '../types/anime.js';
+import { AnimeList, PlaylistSong, SourceType } from "./types";
 
-export interface PlaylistSong {
-    at_url?: string;
-    yt_url?: string;
-    name: string;
-    artist: string;
-    anime_index: number;
-    type: 'opening_themes' | 'ending_themes';
-    theme_index: number;
-    anime_id: number;
-}
-
-export type SourceType = 'yt_url' | 'at_url';
+export const SOURCE_DISPLAY_NAMES = {
+    yt_url: 'YouTube',
+    at_url: 'AnimeThemes'
+} as const;
 
 export const playerState = {
     player: null as MediaElementPlayer | null,

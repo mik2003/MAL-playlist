@@ -7,7 +7,7 @@
             "es2017"
         ],
         "moduleResolution": "node",
-        "outDir": "docs/build",
+        "outDir": "docs/js",
         "rootDir": "src/web",
         "strict": true,
         "esModuleInterop": true,

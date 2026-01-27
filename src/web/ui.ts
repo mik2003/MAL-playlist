@@ -1,5 +1,5 @@
-import { playerState, SourceType } from '../state/playerState.js';
-import { SOURCE_DISPLAY_NAMES } from '../constants/sources.js';
+import { playerState, SOURCE_DISPLAY_NAMES } from './const.js';
+import { SourceType } from './types.js';
 import { getAvailableSources } from './playlist.js';
 
 export function initializeTooltips() {

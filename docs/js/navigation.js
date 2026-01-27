@@ -1,14 +1,11 @@
-// src/web/helpers/navigation.ts
-import { playerState } from '../state/playerState.js';
+import { playerState } from './const.js';
 import { updateMediaSessionMetadata } from './mediaSession.js';
 import { loadNewSong } from './playerControls.js';
 import { applySongDivStyle, clearSongDivStyle, updateSourceDisplay, updateStatusDisplay } from './ui.js';
-
-
 /**
  * Move forward/backward in the playlist, respecting loop
  */
-function jumpN(offset: number): number {
+function jumpN(offset) {
     const length = playerState.animePlaylist.length;
     if (playerState.loop) {
         // wrap around
@@ -17,11 +14,10 @@ function jumpN(offset: number): number {
     // clamp
     return Math.max(0, Math.min(length - 1, playerState.currentIndex + offset));
 }
-
 /**
  * Navigate to a specific song index
  */
-export function navigateToSong(newIndex: number) {
+export function navigateToSong(newIndex) {
     clearSongDivStyle();
     playerState.currentIndex = newIndex;
     loadNewSong();
@@ -30,7 +26,6 @@ export function navigateToSong(newIndex: number) {
     updateStatusDisplay();
     updateSourceDisplay();
 }
-
 /**
  * Go to next song
  */
@@ -38,7 +33,6 @@ export function goToNextSong() {
     console.log('Next song');
     navigateToSong(jumpN(1));
 }
-
 /**
  * Go to previous song
  */
@@ -46,11 +40,10 @@ export function goToPreviousSong() {
     console.log('Previous song');
     navigateToSong(jumpN(-1));
 }
-
 /**
  * Jump directly to a song by display index
  */
-export function goToSong(index: number) {
+export function goToSong(index) {
     console.log('Go to song:', index);
     navigateToSong(index);
 }

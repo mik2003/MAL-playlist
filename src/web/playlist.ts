@@ -1,5 +1,6 @@
+import { playerState } from './const.js';
+import { PlaylistSong, SourceType } from './types.js';
 import { highlightMatch } from './utils.js';
-import { playerState, PlaylistSong, SourceType } from '../state/playerState.js';
 import { goToSong } from './navigation.js';
 
 export function populatePlaylistDiv() {
