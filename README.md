@@ -1,3 +1,6 @@
+> [!NOTE]
+> Repository is archived and moved to [https://codeberg.org/mik2003/MAL-playlist](https://codeberg.org/mik2003/MAL-playlist)
+
 # MAL-playlist
 Welcome to MAL-playlist, a python tool to retrieve your MyAnimeList and automatically search for YouTube videos of opening and ending themes for every anime. All of the results are then saved into an HTML file. The hope was to directly make a YouTube playlist but that would require working with the YouTube API and I am really not bothered to do it ._.
 
